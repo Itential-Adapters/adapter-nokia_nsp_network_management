@@ -1,0 +1,23 @@
+{
+  "nsp-resource-pool:output": {
+    "consumed-resources": [
+      {
+        "0": {
+          "@": {
+            "nsp-model:schema-nodeid": "/nsp-resource-pool:resource-pools/ip-resource-pools/consumed-resources",
+            "nsp-model:identifier": "/nsp-resource-pool:resource-pools/ip-resource-pools[name='ip-2'][scope='net-1']/consumed-resources[value='10.0.0.28/32']",
+            "nsp-model:creation-time": "2023-11-28T16:24:07.141Z",
+            "nsp-model:last-modified-time": "2023-11-28T16:24:07.141Z"
+          },
+          "purpose": "undefined",
+          "ip-mask": "10.0.0.28/31",
+          "value": "10.0.0.28/32",
+          "registered-date": "2023-11-28T16:24:07.136Z",
+          "owner": "ztp",
+          "confirmed": true
+        }
+      }
+    ]
+  },
+  "statusCode": "OK"
+}

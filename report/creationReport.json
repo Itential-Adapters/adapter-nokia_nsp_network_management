@@ -1,0 +1,657 @@
+{
+  "errors": [],
+  "statistics": [
+    {
+      "owner": "errorJson",
+      "description": "Standard adapter errors available for use",
+      "value": 31
+    },
+    {
+      "owner": "packageJson",
+      "description": "Number of production dependencies",
+      "value": 17
+    },
+    {
+      "owner": "packageJson",
+      "description": "Number of development dependencies",
+      "value": 6
+    },
+    {
+      "owner": "packageJson",
+      "description": "Number of npm scripts",
+      "value": 22
+    },
+    {
+      "owner": "packageJson",
+      "description": "Runtime Library dependency",
+      "value": "^5.3.0"
+    },
+    {
+      "owner": "propertiesSchemaJson",
+      "description": "Adapter properties defined in the propertiesSchema file",
+      "value": 77
+    },
+    {
+      "owner": "adapterJS",
+      "description": "Lines of code generated in adapter.js",
+      "value": 11111
+    },
+    {
+      "owner": "adapterJS",
+      "description": "Number of Functions added to adapter.js",
+      "value": 108
+    },
+    {
+      "owner": "pronghornJson",
+      "description": "Number of Methods added to pronghorn.json",
+      "value": 108
+    },
+    {
+      "owner": "markdown",
+      "description": "Number of lines in the README.md",
+      "value": 347
+    },
+    {
+      "owner": "markdown",
+      "description": "Number of lines in the SUMMARY.md",
+      "value": 9
+    },
+    {
+      "owner": "markdown",
+      "description": "Number of lines in the PROPERTIES.md",
+      "value": 642
+    },
+    {
+      "owner": "markdown",
+      "description": "Number of lines in the TROUBLESHOOT.md",
+      "value": 48
+    },
+    {
+      "owner": "markdown",
+      "description": "Number of lines in the ENHANCE.md",
+      "value": 70
+    },
+    {
+      "owner": "markdown",
+      "description": "Number of lines in the BROKER.md",
+      "value": 200
+    },
+    {
+      "owner": "markdown",
+      "description": "Number of lines in the CALLS.md",
+      "value": 171
+    },
+    {
+      "owner": "markdown",
+      "description": "Number of lines in the AUTH.md",
+      "value": 40
+    },
+    {
+      "owner": "markdown",
+      "description": "Number of lines in the SYSTEMINFO.md",
+      "value": 11
+    },
+    {
+      "owner": "unitTestJS",
+      "description": "Number of lines of code in unit tests",
+      "value": 5400
+    },
+    {
+      "owner": "unitTestJS",
+      "description": "Number of unit tests",
+      "value": 329
+    },
+    {
+      "owner": "integrationTestJS",
+      "description": "Number of lines of code in integration tests",
+      "value": 3836
+    },
+    {
+      "owner": "integrationTestJS",
+      "description": "Number of integration tests",
+      "value": 117
+    },
+    {
+      "owner": "actionJson",
+      "description": "Number of actions for IETFLogicalInventoryRestconfAPI entity",
+      "value": 11
+    },
+    {
+      "owner": "actionJson",
+      "description": "Number of actions for Intent entity",
+      "value": 5
+    },
+    {
+      "owner": "actionJson",
+      "description": "Number of actions for ManageZTPListFromDeviceAdministrator entity",
+      "value": 4
+    },
+    {
+      "owner": "actionJson",
+      "description": "Number of actions for AddressPool entity",
+      "value": 3
+    },
+    {
+      "owner": "actionJson",
+      "description": "Number of actions for LogicalInventoryRestconfAPI entity",
+      "value": 5
+    },
+    {
+      "owner": "actionJson",
+      "description": "Number of actions for IETFL2Model entity",
+      "value": 3
+    },
+    {
+      "owner": "actionJson",
+      "description": "Number of actions for IETFL3Model entity",
+      "value": 13
+    },
+    {
+      "owner": "actionJson",
+      "description": "Number of actions for IETFSAPTopology entity",
+      "value": 3
+    },
+    {
+      "owner": "actionJson",
+      "description": "Number of actions for UploadMappingFiles entity",
+      "value": 2
+    },
+    {
+      "owner": "actionJson",
+      "description": "Number of actions for RouterNECorrelationMappingService entity",
+      "value": 7
+    },
+    {
+      "owner": "actionJson",
+      "description": "Number of actions for DataTablesRetention entity",
+      "value": 4
+    },
+    {
+      "owner": "actionJson",
+      "description": "Number of actions for IndicatorTemplates entity",
+      "value": 5
+    },
+    {
+      "owner": "actionJson",
+      "description": "Number of actions for IndicatorRules entity",
+      "value": 5
+    },
+    {
+      "owner": "actionJson",
+      "description": "Number of actions for BaselineOperationsRestconfAPI entity",
+      "value": 10
+    },
+    {
+      "owner": "actionJson",
+      "description": "Number of actions for IntentTypeManagement entity",
+      "value": 3
+    },
+    {
+      "owner": "actionJson",
+      "description": "Number of actions for ConfigurationTemplates entity",
+      "value": 4
+    },
+    {
+      "owner": "actionJson",
+      "description": "Number of actions for ConfigurationDeployments entity",
+      "value": 10
+    },
+    {
+      "owner": "actionJson",
+      "description": "Number of actions for Brownfield entity",
+      "value": 1
+    },
+    {
+      "owner": "actionJson",
+      "description": "Number of actions for AuditAndAlignment entity",
+      "value": 8
+    },
+    {
+      "owner": "actionJson",
+      "description": "Number of actions for TemplateMigration entity",
+      "value": 2
+    },
+    {
+      "owner": "actionJson",
+      "description": "Total number of actions",
+      "value": 108
+    },
+    {
+      "owner": "actionJson",
+      "description": "Total number of entities",
+      "value": 20
+    },
+    {
+      "owner": "schemaJson",
+      "description": "Number of schemas for IETFLogicalInventoryRestconfAPI entity",
+      "value": 1
+    },
+    {
+      "owner": "schemaJson",
+      "description": "Number of schemas for Intent entity",
+      "value": 1
+    },
+    {
+      "owner": "schemaJson",
+      "description": "Number of schemas for ManageZTPListFromDeviceAdministrator entity",
+      "value": 1
+    },
+    {
+      "owner": "schemaJson",
+      "description": "Number of schemas for AddressPool entity",
+      "value": 1
+    },
+    {
+      "owner": "schemaJson",
+      "description": "Number of schemas for LogicalInventoryRestconfAPI entity",
+      "value": 1
+    },
+    {
+      "owner": "schemaJson",
+      "description": "Number of schemas for IETFL2Model entity",
+      "value": 1
+    },
+    {
+      "owner": "schemaJson",
+      "description": "Number of schemas for IETFL3Model entity",
+      "value": 1
+    },
+    {
+      "owner": "schemaJson",
+      "description": "Number of schemas for IETFSAPTopology entity",
+      "value": 1
+    },
+    {
+      "owner": "schemaJson",
+      "description": "Number of schemas for UploadMappingFiles entity",
+      "value": 1
+    },
+    {
+      "owner": "schemaJson",
+      "description": "Number of schemas for RouterNECorrelationMappingService entity",
+      "value": 1
+    },
+    {
+      "owner": "schemaJson",
+      "description": "Number of schemas for DataTablesRetention entity",
+      "value": 1
+    },
+    {
+      "owner": "schemaJson",
+      "description": "Number of schemas for IndicatorTemplates entity",
+      "value": 1
+    },
+    {
+      "owner": "schemaJson",
+      "description": "Number of schemas for IndicatorRules entity",
+      "value": 1
+    },
+    {
+      "owner": "schemaJson",
+      "description": "Number of schemas for BaselineOperationsRestconfAPI entity",
+      "value": 1
+    },
+    {
+      "owner": "schemaJson",
+      "description": "Number of schemas for IntentTypeManagement entity",
+      "value": 1
+    },
+    {
+      "owner": "schemaJson",
+      "description": "Number of schemas for ConfigurationTemplates entity",
+      "value": 1
+    },
+    {
+      "owner": "schemaJson",
+      "description": "Number of schemas for ConfigurationDeployments entity",
+      "value": 1
+    },
+    {
+      "owner": "schemaJson",
+      "description": "Number of schemas for Brownfield entity",
+      "value": 1
+    },
+    {
+      "owner": "schemaJson",
+      "description": "Number of schemas for AuditAndAlignment entity",
+      "value": 1
+    },
+    {
+      "owner": "schemaJson",
+      "description": "Number of schemas for TemplateMigration entity",
+      "value": 1
+    },
+    {
+      "owner": "schemaJson",
+      "description": "Total number of schemas",
+      "value": 20
+    },
+    {
+      "owner": "mockdata",
+      "description": "Number of mock data files for IETFLogicalInventoryRestconfAPI entity",
+      "value": 8
+    },
+    {
+      "owner": "mockdata",
+      "description": "Number of mock data files for Intent entity",
+      "value": 2
+    },
+    {
+      "owner": "mockdata",
+      "description": "Number of mock data files for ManageZTPListFromDeviceAdministrator entity",
+      "value": 1
+    },
+    {
+      "owner": "mockdata",
+      "description": "Number of mock data files for AddressPool entity",
+      "value": 2
+    },
+    {
+      "owner": "mockdata",
+      "description": "Number of mock data files for LogicalInventoryRestconfAPI entity",
+      "value": 4
+    },
+    {
+      "owner": "mockdata",
+      "description": "Number of mock data files for IETFL2Model entity",
+      "value": 2
+    },
+    {
+      "owner": "mockdata",
+      "description": "Number of mock data files for IETFL3Model entity",
+      "value": 12
+    },
+    {
+      "owner": "mockdata",
+      "description": "Number of mock data files for IETFSAPTopology entity",
+      "value": 3
+    },
+    {
+      "owner": "mockdata",
+      "description": "Number of mock data files for UploadMappingFiles entity",
+      "value": 1
+    },
+    {
+      "owner": "mockdata",
+      "description": "Number of mock data files for RouterNECorrelationMappingService entity",
+      "value": 3
+    },
+    {
+      "owner": "mockdata",
+      "description": "Number of mock data files for DataTablesRetention entity",
+      "value": 2
+    },
+    {
+      "owner": "mockdata",
+      "description": "Number of mock data files for IndicatorTemplates entity",
+      "value": 4
+    },
+    {
+      "owner": "mockdata",
+      "description": "Number of mock data files for IndicatorRules entity",
+      "value": 2
+    },
+    {
+      "owner": "mockdata",
+      "description": "Number of mock data files for BaselineOperationsRestconfAPI entity",
+      "value": 5
+    },
+    {
+      "owner": "mockdata",
+      "description": "Number of mock data files for IntentTypeManagement entity",
+      "value": 3
+    },
+    {
+      "owner": "mockdata",
+      "description": "Number of mock data files for ConfigurationTemplates entity",
+      "value": 2
+    },
+    {
+      "owner": "mockdata",
+      "description": "Number of mock data files for ConfigurationDeployments entity",
+      "value": 9
+    },
+    {
+      "owner": "mockdata",
+      "description": "Number of mock data files for Brownfield entity",
+      "value": 1
+    },
+    {
+      "owner": "mockdata",
+      "description": "Number of mock data files for AuditAndAlignment entity",
+      "value": 8
+    },
+    {
+      "owner": "mockdata",
+      "description": "Number of mock data files for TemplateMigration entity",
+      "value": 2
+    },
+    {
+      "owner": "mockdata",
+      "description": "Total number of mock data files",
+      "value": 76
+    },
+    {
+      "owner": "actionJson",
+      "description": "Number of actions for .system entity",
+      "value": 2
+    },
+    {
+      "owner": "schemaJson",
+      "description": "Number of schemas for .system entity",
+      "value": 3
+    },
+    {
+      "owner": "mockdata",
+      "description": "Number of mock data files for .system entity",
+      "value": 2
+    },
+    {
+      "owner": "System",
+      "description": "System entity files",
+      "value": 6
+    },
+    {
+      "owner": "usecases",
+      "description": "Number of workflows",
+      "value": 0
+    },
+    {
+      "owner": "staticFile",
+      "description": "Number of lines of code in adapterBase.js",
+      "value": 1453
+    },
+    {
+      "owner": "staticFile",
+      "description": "Number of static files added",
+      "value": 37
+    },
+    {
+      "owner": "Overall",
+      "description": "Total lines of Code",
+      "value": 21800
+    },
+    {
+      "owner": "Overall",
+      "description": "Total Tests",
+      "value": 446
+    },
+    {
+      "owner": "Overall",
+      "description": "Total Files",
+      "value": 168
+    }
+  ],
+  "warnings": [],
+  "apiParsingReport": {
+    "no_mockdata": [
+      {
+        "fnName": "retrieveNetworkInterfaces",
+        "method": "get",
+        "path": "/restconf/data/ietf-network:networks/{network}/{node}/ne-management-nm:commissioning-configs/ne-interfaces/logical-interfaces/interfaces-root/openconfig-interfaces:interfaces/interface"
+      },
+      {
+        "fnName": "retrieveNetworkSubInterfaces",
+        "method": "get",
+        "path": "/restconf/data/ietf-network:networks/{network}/{node}/ne-management-nm:commissioning-configs/ne-interfaces/logical-interfaces/interfaces-root/openconfig-interfaces:interfaces/interface/subinterfaces/subinterface"
+      },
+      {
+        "fnName": "retrieveNetworkInstance",
+        "method": "get",
+        "path": "/restconf/data/ietf-network:networks/{network}/{node}/ne-management-nm:commissioning-configs/protocols-config/protocol-root/openconfig-network-instance:network-instances/network-instance"
+      },
+      {
+        "fnName": "createUsingIntent",
+        "method": "post",
+        "path": "/restconf/data/ibn:ibn"
+      },
+      {
+        "fnName": "modifyIntent",
+        "method": "put",
+        "path": "/restconf/data/ibn:ibn/{intent}"
+      },
+      {
+        "fnName": "deleteIntent",
+        "method": "delete",
+        "path": "/restconf/data/ibn:ibn/{intent}"
+      },
+      {
+        "fnName": "devAdminCreateAutodiscoveryNe",
+        "method": "post",
+        "path": "/:8545/restconf/data/nsp-ne-control:ne-control"
+      },
+      {
+        "fnName": "devAdminUpdateAutodiscoveryNe",
+        "method": "patch",
+        "path": "/restconf/data/nsp-ne-control:ne-control/{autodiscovery-ne}"
+      },
+      {
+        "fnName": "devAdminDeleteAutodiscoverNe",
+        "method": "delete",
+        "path": "/restconf/data/nsp-ne-control:ne-control/{autodiscovery-ne}"
+      },
+      {
+        "fnName": "createIPv4AddressPool",
+        "method": "post",
+        "path": "/restconf/data/nsp-resource-pool:resource-pools"
+      },
+      {
+        "fnName": "enableResyncPollingPolicy",
+        "method": "patch",
+        "path": "/restconf/data/nsp-admin-resync:resync-policies/mdm/{resync-policy}/{node}/{version}/{entity}"
+      },
+      {
+        "fnName": "gETL2TopologyLinks",
+        "method": "get",
+        "path": "/restconf/data/ietf-network:networks/{network}/ietf-network-topology:link"
+      },
+      {
+        "fnName": "gETNetwork",
+        "method": "get",
+        "path": "/restconf/data/ietf-network:networks/network"
+      },
+      {
+        "fnName": "loadIETFMappingFiles",
+        "method": "post",
+        "path": "/restconf/operations/nsp-yang-mapping-converter:nsp-yang-mapping-converter/uploadFile"
+      },
+      {
+        "fnName": "createMappingPolicy",
+        "method": "post",
+        "path": "/restconf/data/nsp-equipment-templates:correlation-policy"
+      },
+      {
+        "fnName": "updateMappingPolicy",
+        "method": "put",
+        "path": "/restconf/data/nsp-equipment-templates:correlation-policy/{router-ne-mapping}"
+      },
+      {
+        "fnName": "deleteAllPoliciesOnARouter",
+        "method": "delete",
+        "path": "/restconf/data/nsp-equipment-templates:correlation-policy/{router-ne-mapping}"
+      },
+      {
+        "fnName": "deleteOnePolicyOfRouter",
+        "method": "delete",
+        "path": "/restconf/data/nsp-equipment-templates:correlation-policy/{router-ne-mapping}/{router-infos}"
+      },
+      {
+        "fnName": "updateTheRetentionTimeForIndicators",
+        "method": "patch",
+        "path": "/restconf/data/indicators-admin:/ageout-policies/ageout-policy"
+      },
+      {
+        "fnName": "updateTheRetentionTimeForBaseline",
+        "method": "patch",
+        "path": "/restconf/data/rtanalytics-admin:/ageout-policies"
+      },
+      {
+        "fnName": "deleteIndicatorTemplate",
+        "method": "delete",
+        "path": "/restconf/data/nsp-indicator:rta-indicator-templates/{template}"
+      },
+      {
+        "fnName": "postavgCPUAllNodesAllActions",
+        "method": "post",
+        "path": "/restconf/data/nsp-indicator:rta-indicator-rules"
+      },
+      {
+        "fnName": "updateIndicatorRule",
+        "method": "put",
+        "path": "/restconf/data/nsp-indicator:rta-indicator-rules/{rule}"
+      },
+      {
+        "fnName": "deleteIndicatorRule",
+        "method": "delete",
+        "path": "/restconf/data/nsp-indicator:rta-indicator-rules/{rule}"
+      },
+      {
+        "fnName": "createSubscription",
+        "method": "post",
+        "path": "/restconf/data/md-subscription:/subscriptions/subscription"
+      },
+      {
+        "fnName": "createBaseline",
+        "method": "post",
+        "path": "/restconf/data/nsp-rt-analytics:baselines"
+      },
+      {
+        "fnName": "deleteBaseline",
+        "method": "delete",
+        "path": "/restconf/data/nsp-rt-analytics:baselines/{baseline}"
+      },
+      {
+        "fnName": "deleteBaselineDetector",
+        "method": "delete",
+        "path": "/restconf/data/nsp-rt-analytics:baselines/{baseline}/{baseline-detector}"
+      },
+      {
+        "fnName": "deleteSubscription",
+        "method": "delete",
+        "path": "/restconf/data/md-subscription:/subscriptions/{subscription}"
+      },
+      {
+        "fnName": "updateTemplateLifecycle",
+        "method": "patch",
+        "path": "/restconf/data/nsp-icm:icm/templates/{template}"
+      },
+      {
+        "fnName": "deleteTemplate",
+        "method": "delete",
+        "path": "/restconf/data/nsp-icm:icm/templates/{template}"
+      },
+      {
+        "fnName": "deleteSingleDeployment",
+        "method": "delete",
+        "path": "/restconf/data/nsp-icm:icm/deployments/{deployment}"
+      }
+    ],
+    "errors": [],
+    "warnings": [
+      "Method get in path /restconf/data/ietf-network:networks/{network}/{node}/ne-management-nm:commissioning-configs/ne-interfaces/logical-interfaces/interfaces-root/openconfig-interfaces:interfaces/{interface}/subinterfaces/{subinterface}/openconfig-if-ip:ipv4/addresses/address has parameter with the name of a javascript keyword. Parameter name changed from interface to interfaceParam to avoid errors."
+    ],
+    "callsTotal": 108,
+    "callsConverted": 108,
+    "no_mockdata_num": 32
+  }
+}

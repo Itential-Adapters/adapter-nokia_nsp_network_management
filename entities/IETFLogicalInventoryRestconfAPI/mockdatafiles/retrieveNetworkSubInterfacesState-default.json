@@ -1,0 +1,15 @@
+{
+  "openconfig-interfaces:state": {
+    "@": {
+      "nsp-model:schema-nodeid": "/ietf-network:networks/network/node/ne-management-nm:commissioning-configs/ne-interfaces/logical-interfaces/interfaces-root/openconfig-interfaces:interfaces/interface/subinterfaces/subinterface/state",
+      "nsp-model:identifier": "/ietf-network:networks/network[network-id='1']/node[node-id='92.168.96.58']/ne-management-nm:commissioning-configs/ne-interfaces/logical-interfaces/interfaces-root/openconfig-interfaces:interfaces/interface[name='network-interface']/subinterfaces/subinterface[index='1']/state",
+      "nsp-model:network-id": "92.168.96.58",
+      "nsp-model:sources": [
+        "fdn:app:mdm-ami:{\"_NE_\":\"92.168.96.58\",\"classId\":\"openconfig-interfaces:/interfaces/interface/subinterfaces/subinterface/state\",\"interface_name\":\"network-interface\",\"subinterface_index\":\"system\"}"
+      ]
+    },
+    "name": "system",
+    "ifindex": 1,
+    "oper-status": "UP"
+  }
+}

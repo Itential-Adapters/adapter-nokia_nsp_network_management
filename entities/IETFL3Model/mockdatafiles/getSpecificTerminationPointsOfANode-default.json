@@ -1,0 +1,17 @@
+{
+  "ietf-network-topology:termination-point": [
+    {
+      "tp-id": "11.30.39.6",
+      "ietf-l3-unicast-topology:l3-termination-point-attributes": {
+        "ip-address": [
+          "11.30.39.6"
+        ],
+        "ietf-l3-te-topology:l3-te-tp-attributes": {
+          "tp-ref": "/ietf-network:networks/network[network-id='TE-TopologyId-200:100:0-isis']/node[node-id='11.50.150.39']/ietf-network-topology:termination-point[tp-id='11.30.39.6']",
+          "node-ref": "/ietf-network:networks/network[network-id='TE-TopologyId-200:100:0-isis']/node[node-id='11.50.150.39']",
+          "network-ref": "/ietf-network:networks/network[network-id='TE-TopologyId-200:100:0-isis']"
+        }
+      }
+    }
+  ]
+}

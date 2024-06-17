@@ -1,0 +1,44 @@
+{
+  "actions": [
+    {
+      "name": "cloneTemplate",
+      "protocol": "REST",
+      "method": "POST",
+      "entitypath": "{base_path}/{version}/restconf/operations/nsp-icm:clone-template?{query}",
+      "requestSchema": "schema.json",
+      "responseSchema": "schema.json",
+      "timeout": 0,
+      "sendEmpty": false,
+      "requestDatatype": "JSON",
+      "responseDatatype": "JSON",
+      "headers": {},
+      "responseObjects": [
+        {
+          "type": "default",
+          "key": "",
+          "mockFile": "mockdatafiles/cloneTemplate-default.json"
+        }
+      ]
+    },
+    {
+      "name": "migrateDeployments",
+      "protocol": "REST",
+      "method": "POST",
+      "entitypath": "{base_path}/{version}/restconf/operations/nsp-icm:migrate-deployments?{query}",
+      "requestSchema": "schema.json",
+      "responseSchema": "schema.json",
+      "timeout": 0,
+      "sendEmpty": false,
+      "requestDatatype": "JSON",
+      "responseDatatype": "JSON",
+      "headers": {},
+      "responseObjects": [
+        {
+          "type": "default",
+          "key": "",
+          "mockFile": "mockdatafiles/migrateDeployments-default.json"
+        }
+      ]
+    }
+  ]
+}

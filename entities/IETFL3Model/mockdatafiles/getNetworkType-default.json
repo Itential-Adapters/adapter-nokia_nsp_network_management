@@ -1,0 +1,7 @@
+{
+  "ietf-network:network-types": {
+    "ietf-l3-unicast-topology:l3-unicast-topology": {
+      "ietf-sr-mpls-topology:sr-mpls": {}
+    }
+  }
+}

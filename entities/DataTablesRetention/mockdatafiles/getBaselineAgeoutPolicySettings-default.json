@@ -1,0 +1,22 @@
+{
+  "ageout-policy": [
+    {
+      "max-retention": 403,
+      "min-retention": 1,
+      "name": "rtanalytics:/base/window/anomalyevent",
+      "retention": 90
+    },
+    {
+      "max-retention": 403,
+      "min-retention": 1,
+      "name": "rtanalytics:/base/window/baseline",
+      "retention": 90
+    },
+    {
+      "max-retention": 403,
+      "min-retention": 1,
+      "name": "rtanalytics:/base/window/windowmeasurement",
+      "retention": 90
+    }
+  ]
+}

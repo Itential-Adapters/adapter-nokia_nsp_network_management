@@ -1,0 +1,7 @@
+{
+  "nsp-icm:output": {
+    "status-code": 200,
+    "message": "Template Alignment Started on Mis-Aligned Deployments."
+  },
+  "statusCode": "OK"
+}

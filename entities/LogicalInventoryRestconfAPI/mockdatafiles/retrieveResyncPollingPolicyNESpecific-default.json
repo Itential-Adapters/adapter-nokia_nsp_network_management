@@ -1,0 +1,1113 @@
+{
+  "nsp-admin-resync:node": [
+    {
+      "@": {
+        "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node",
+        "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']",
+        "nsp-model:creation-time": "2024-04-05T08:36:49.055Z",
+        "nsp-model:last-modified-time": "2024-04-05T08:36:49.055Z"
+      },
+      "node-type": "SR-7750",
+      "admin-state": "enabled",
+      "version": [
+        {
+          "@": {
+            "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version",
+            "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='0.0']",
+            "nsp-model:creation-time": "2024-04-05T08:36:49.055Z",
+            "nsp-model:last-modified-time": "2024-04-05T08:36:49.055Z"
+          },
+          "node-version": "0.0",
+          "admin-state": "enabled",
+          "entity": [
+            {
+              "@": {
+                "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+                "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='0.0']/entity[entity-type='nokia-state:/state/system']",
+                "nsp-model:creation-time": "2024-04-05T08:36:49.055Z",
+                "nsp-model:last-modified-time": "2024-04-05T08:36:49.055Z"
+              },
+              "period": 1440,
+              "admin-state": "disabled",
+              "entity-type": "nokia-state:/state/system"
+            },
+            {
+              "@": {
+                "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+                "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='0.0']/entity[entity-type='nokia-conf:/configure/oam-pm/bin-group']",
+                "nsp-model:creation-time": "2024-04-05T08:48:14.699Z",
+                "nsp-model:last-modified-time": "2024-04-05T08:52:09.413Z"
+              },
+              "period": 1440,
+              "admin-state": "enabled",
+              "entity-type": "nokia-conf:/configure/oam-pm/bin-group"
+            },
+            {
+              "@": {
+                "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+                "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='0.0']/entity[entity-type='nokia-conf:/configure/oam-pm/session']",
+                "nsp-model:creation-time": "2024-04-05T08:48:53.302Z",
+                "nsp-model:last-modified-time": "2024-04-05T08:52:18.086Z"
+              },
+              "period": 1440,
+              "admin-state": "enabled",
+              "entity-type": "nokia-conf:/configure/oam-pm/session"
+            },
+            {
+              "@": {
+                "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+                "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='0.0']/entity[entity-type='nokia-conf:/configure/service/vpls/mesh-sdp/eth-cfm/mep']",
+                "nsp-model:creation-time": "2024-04-05T08:50:10.133Z",
+                "nsp-model:last-modified-time": "2024-04-05T08:51:54.695Z"
+              },
+              "period": 1440,
+              "admin-state": "enabled",
+              "entity-type": "nokia-conf:/configure/service/vpls/mesh-sdp/eth-cfm/mep"
+            },
+            {
+              "@": {
+                "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+                "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='0.0']/entity[entity-type='nokia-conf:/configure/lag/eth-cfm/mep']",
+                "nsp-model:creation-time": "2024-04-05T08:50:10.133Z",
+                "nsp-model:last-modified-time": "2024-04-05T08:52:00.707Z"
+              },
+              "period": 1440,
+              "admin-state": "enabled",
+              "entity-type": "nokia-conf:/configure/lag/eth-cfm/mep"
+            },
+            {
+              "@": {
+                "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+                "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='0.0']/entity[entity-type='nokia-conf:/configure/service/vpls/sap/eth-cfm/mep']",
+                "nsp-model:creation-time": "2024-04-05T08:50:10.133Z",
+                "nsp-model:last-modified-time": "2024-04-05T08:52:14.248Z"
+              },
+              "period": 1440,
+              "admin-state": "enabled",
+              "entity-type": "nokia-conf:/configure/service/vpls/sap/eth-cfm/mep"
+            },
+            {
+              "@": {
+                "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+                "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='0.0']/entity[entity-type='nokia-conf:/configure/eth-cfm/domain/association']",
+                "nsp-model:creation-time": "2024-04-05T08:50:10.133Z",
+                "nsp-model:last-modified-time": "2024-04-05T08:52:20.776Z"
+              },
+              "period": 1440,
+              "admin-state": "enabled",
+              "entity-type": "nokia-conf:/configure/eth-cfm/domain/association"
+            },
+            {
+              "@": {
+                "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+                "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='0.0']/entity[entity-type='nokia-conf:/configure/service/epipe/sap/eth-cfm/mep']",
+                "nsp-model:creation-time": "2024-04-05T08:50:10.133Z",
+                "nsp-model:last-modified-time": "2024-04-05T08:52:23.357Z"
+              },
+              "period": 1440,
+              "admin-state": "enabled",
+              "entity-type": "nokia-conf:/configure/service/epipe/sap/eth-cfm/mep"
+            },
+            {
+              "@": {
+                "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+                "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='0.0']/entity[entity-type='nokia-conf:/configure/service/epipe/spoke-sdp/eth-cfm/mep']",
+                "nsp-model:creation-time": "2024-04-05T08:50:10.133Z",
+                "nsp-model:last-modified-time": "2024-04-05T08:52:26.124Z"
+              },
+              "period": 1440,
+              "admin-state": "enabled",
+              "entity-type": "nokia-conf:/configure/service/epipe/spoke-sdp/eth-cfm/mep"
+            },
+            {
+              "@": {
+                "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+                "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='0.0']/entity[entity-type='nokia-conf:/configure/eth-cfm/domain']",
+                "nsp-model:creation-time": "2024-04-05T08:50:10.133Z",
+                "nsp-model:last-modified-time": "2024-04-05T08:52:30.073Z"
+              },
+              "period": 1440,
+              "admin-state": "enabled",
+              "entity-type": "nokia-conf:/configure/eth-cfm/domain"
+            },
+            {
+              "@": {
+                "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+                "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='0.0']/entity[entity-type='nokia-conf:/configure/service/vpls/spoke-sdp/eth-cfm/mep']",
+                "nsp-model:creation-time": "2024-04-05T08:50:10.133Z",
+                "nsp-model:last-modified-time": "2024-04-05T08:52:38.570Z"
+              },
+              "period": 1440,
+              "admin-state": "enabled",
+              "entity-type": "nokia-conf:/configure/service/vpls/spoke-sdp/eth-cfm/mep"
+            },
+            {
+              "@": {
+                "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+                "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='0.0']/entity[entity-type='nokia-conf:/configure/router/twamp-light/reflector']",
+                "nsp-model:creation-time": "2024-04-05T08:50:30.708Z",
+                "nsp-model:last-modified-time": "2024-04-05T08:52:04.897Z"
+              },
+              "period": 1440,
+              "admin-state": "enabled",
+              "entity-type": "nokia-conf:/configure/router/twamp-light/reflector"
+            },
+            {
+              "@": {
+                "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+                "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='0.0']/entity[entity-type='nokia-conf:/configure/oam-pm/streaming/delay-template']",
+                "nsp-model:creation-time": "2024-04-05T08:50:30.708Z",
+                "nsp-model:last-modified-time": "2024-04-05T08:52:36.162Z"
+              },
+              "period": 1440,
+              "admin-state": "enabled",
+              "entity-type": "nokia-conf:/configure/oam-pm/streaming/delay-template"
+            },
+            {
+              "@": {
+                "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+                "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='0.0']/entity[entity-type='nokia-conf:/configure/test-oam/twamp/server']",
+                "nsp-model:creation-time": "2024-04-05T08:51:55.609Z",
+                "nsp-model:last-modified-time": "2024-04-05T08:52:28.164Z"
+              },
+              "period": 1440,
+              "admin-state": "enabled",
+              "entity-type": "nokia-conf:/configure/test-oam/twamp/server"
+            },
+            {
+              "@": {
+                "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+                "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='0.0']/entity[entity-type='nokia-conf:/configure/service/vprn/twamp-light/reflector']",
+                "nsp-model:creation-time": "2024-04-05T08:50:53.591Z",
+                "nsp-model:last-modified-time": "2024-04-05T08:52:32.151Z"
+              },
+              "period": 1440,
+              "admin-state": "enabled",
+              "entity-type": "nokia-conf:/configure/service/vprn/twamp-light/reflector"
+            }
+          ]
+        },
+        {
+          "@": {
+            "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version",
+            "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='25.+']",
+            "nsp-model:creation-time": "2024-04-05T08:36:49.055Z",
+            "nsp-model:last-modified-time": "2024-04-05T08:36:49.055Z"
+          },
+          "node-version": "25.+",
+          "admin-state": "enabled",
+          "entity": [
+            {
+              "@": {
+                "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+                "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='25.+']/entity[entity-type='nokia-state:/state/system']",
+                "nsp-model:creation-time": "2024-04-05T08:36:49.055Z",
+                "nsp-model:last-modified-time": "2024-04-05T08:36:49.055Z"
+              },
+              "period": 1440,
+              "admin-state": "disabled",
+              "entity-type": "nokia-state:/state/system"
+            }
+          ]
+        },
+        {
+          "@": {
+            "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version",
+            "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='24.+']",
+            "nsp-model:creation-time": "2024-04-05T08:36:49.055Z",
+            "nsp-model:last-modified-time": "2024-04-05T08:36:49.055Z"
+          },
+          "node-version": "24.+",
+          "admin-state": "enabled",
+          "entity": [
+            {
+              "@": {
+                "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+                "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='24.+']/entity[entity-type='nokia-state:/state/system']",
+                "nsp-model:creation-time": "2024-04-05T08:36:49.055Z",
+                "nsp-model:last-modified-time": "2024-04-05T08:36:49.055Z"
+              },
+              "period": 1440,
+              "admin-state": "disabled",
+              "entity-type": "nokia-state:/state/system"
+            }
+          ]
+        },
+        {
+          "@": {
+            "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version",
+            "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='23.+']",
+            "nsp-model:creation-time": "2024-04-05T08:36:49.055Z",
+            "nsp-model:last-modified-time": "2024-04-05T08:36:49.055Z"
+          },
+          "node-version": "23.+",
+          "admin-state": "enabled",
+          "entity": [
+            {
+              "@": {
+                "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+                "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='23.+']/entity[entity-type='nokia-state:/state/system']",
+                "nsp-model:creation-time": "2024-04-05T08:36:49.055Z",
+                "nsp-model:last-modified-time": "2024-04-05T08:36:49.055Z"
+              },
+              "period": 1440,
+              "admin-state": "disabled",
+              "entity-type": "nokia-state:/state/system"
+            },
+            {
+              "@": {
+                "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+                "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='23.+']/entity[entity-type='nokia-conf:/configure/oam-pm/bin-group']",
+                "nsp-model:creation-time": "2024-04-05T08:48:14.699Z",
+                "nsp-model:last-modified-time": "2024-04-05T08:52:09.544Z"
+              },
+              "period": 1440,
+              "admin-state": "enabled",
+              "entity-type": "nokia-conf:/configure/oam-pm/bin-group"
+            },
+            {
+              "@": {
+                "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+                "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='23.+']/entity[entity-type='nokia-conf:/configure/oam-pm/session']",
+                "nsp-model:creation-time": "2024-04-05T08:48:53.302Z",
+                "nsp-model:last-modified-time": "2024-04-05T08:52:18.344Z"
+              },
+              "period": 1440,
+              "admin-state": "enabled",
+              "entity-type": "nokia-conf:/configure/oam-pm/session"
+            },
+            {
+              "@": {
+                "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+                "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='23.+']/entity[entity-type='nokia-conf:/configure/service/vpls/mesh-sdp/eth-cfm/mep']",
+                "nsp-model:creation-time": "2024-04-05T08:50:10.133Z",
+                "nsp-model:last-modified-time": "2024-04-05T08:51:54.930Z"
+              },
+              "period": 1440,
+              "admin-state": "enabled",
+              "entity-type": "nokia-conf:/configure/service/vpls/mesh-sdp/eth-cfm/mep"
+            },
+            {
+              "@": {
+                "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+                "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='23.+']/entity[entity-type='nokia-conf:/configure/lag/eth-cfm/mep']",
+                "nsp-model:creation-time": "2024-04-05T08:50:10.133Z",
+                "nsp-model:last-modified-time": "2024-04-05T08:52:01.570Z"
+              },
+              "period": 1440,
+              "admin-state": "enabled",
+              "entity-type": "nokia-conf:/configure/lag/eth-cfm/mep"
+            },
+            {
+              "@": {
+                "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+                "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='23.+']/entity[entity-type='nokia-conf:/configure/service/vpls/sap/eth-cfm/mep']",
+                "nsp-model:creation-time": "2024-04-05T08:50:10.133Z",
+                "nsp-model:last-modified-time": "2024-04-05T08:52:14.475Z"
+              },
+              "period": 1440,
+              "admin-state": "enabled",
+              "entity-type": "nokia-conf:/configure/service/vpls/sap/eth-cfm/mep"
+            },
+            {
+              "@": {
+                "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+                "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='23.+']/entity[entity-type='nokia-conf:/configure/eth-cfm/domain/association']",
+                "nsp-model:creation-time": "2024-04-05T08:50:10.133Z",
+                "nsp-model:last-modified-time": "2024-04-05T08:52:20.908Z"
+              },
+              "period": 1440,
+              "admin-state": "enabled",
+              "entity-type": "nokia-conf:/configure/eth-cfm/domain/association"
+            },
+            {
+              "@": {
+                "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+                "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='23.+']/entity[entity-type='nokia-conf:/configure/service/epipe/sap/eth-cfm/mep']",
+                "nsp-model:creation-time": "2024-04-05T08:50:10.133Z",
+                "nsp-model:last-modified-time": "2024-04-05T08:52:23.551Z"
+              },
+              "period": 1440,
+              "admin-state": "enabled",
+              "entity-type": "nokia-conf:/configure/service/epipe/sap/eth-cfm/mep"
+            },
+            {
+              "@": {
+                "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+                "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='23.+']/entity[entity-type='nokia-conf:/configure/service/epipe/spoke-sdp/eth-cfm/mep']",
+                "nsp-model:creation-time": "2024-04-05T08:50:10.133Z",
+                "nsp-model:last-modified-time": "2024-04-05T08:52:26.245Z"
+              },
+              "period": 1440,
+              "admin-state": "enabled",
+              "entity-type": "nokia-conf:/configure/service/epipe/spoke-sdp/eth-cfm/mep"
+            },
+            {
+              "@": {
+                "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+                "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='23.+']/entity[entity-type='nokia-conf:/configure/eth-cfm/domain']",
+                "nsp-model:creation-time": "2024-04-05T08:50:10.133Z",
+                "nsp-model:last-modified-time": "2024-04-05T08:52:30.355Z"
+              },
+              "period": 1440,
+              "admin-state": "enabled",
+              "entity-type": "nokia-conf:/configure/eth-cfm/domain"
+            },
+            {
+              "@": {
+                "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+                "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='23.+']/entity[entity-type='nokia-conf:/configure/service/vpls/spoke-sdp/eth-cfm/mep']",
+                "nsp-model:creation-time": "2024-04-05T08:50:10.133Z",
+                "nsp-model:last-modified-time": "2024-04-05T08:52:38.683Z"
+              },
+              "period": 1440,
+              "admin-state": "enabled",
+              "entity-type": "nokia-conf:/configure/service/vpls/spoke-sdp/eth-cfm/mep"
+            },
+            {
+              "@": {
+                "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+                "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='23.+']/entity[entity-type='nokia-conf:/configure/oam-pm/streaming/delay-template']",
+                "nsp-model:creation-time": "2024-04-05T08:50:30.708Z",
+                "nsp-model:last-modified-time": "2024-04-05T08:52:36.410Z"
+              },
+              "period": 1440,
+              "admin-state": "enabled",
+              "entity-type": "nokia-conf:/configure/oam-pm/streaming/delay-template"
+            },
+            {
+              "@": {
+                "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+                "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='23.+']/entity[entity-type='nokia-conf:/configure/router/twamp-light/reflector']",
+                "nsp-model:creation-time": "2024-04-05T08:50:30.708Z",
+                "nsp-model:last-modified-time": "2024-04-05T08:52:05.352Z"
+              },
+              "period": 1440,
+              "admin-state": "enabled",
+              "entity-type": "nokia-conf:/configure/router/twamp-light/reflector"
+            },
+            {
+              "@": {
+                "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+                "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='23.+']/entity[entity-type='nokia-conf:/configure/test-oam/twamp/server']",
+                "nsp-model:creation-time": "2024-04-05T08:51:55.609Z",
+                "nsp-model:last-modified-time": "2024-04-05T08:52:28.306Z"
+              },
+              "period": 1440,
+              "admin-state": "enabled",
+              "entity-type": "nokia-conf:/configure/test-oam/twamp/server"
+            },
+            {
+              "@": {
+                "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+                "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='23.+']/entity[entity-type='nokia-conf:/configure/service/vprn/twamp-light/reflector']",
+                "nsp-model:creation-time": "2024-04-05T08:50:53.591Z",
+                "nsp-model:last-modified-time": "2024-04-05T08:52:32.343Z"
+              },
+              "period": 1440,
+              "admin-state": "enabled",
+              "entity-type": "nokia-conf:/configure/service/vprn/twamp-light/reflector"
+            }
+          ]
+        },
+        {
+          "@": {
+            "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version",
+            "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='22.+']",
+            "nsp-model:creation-time": "2024-04-05T08:36:49.055Z",
+            "nsp-model:last-modified-time": "2024-04-05T08:36:49.055Z"
+          },
+          "node-version": "22.+",
+          "admin-state": "enabled",
+          "entity": [
+            {
+              "@": {
+                "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+                "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='22.+']/entity[entity-type='nokia-state:/state/system']",
+                "nsp-model:creation-time": "2024-04-05T08:36:49.055Z",
+                "nsp-model:last-modified-time": "2024-04-05T08:36:49.055Z"
+              },
+              "period": 1440,
+              "admin-state": "disabled",
+              "entity-type": "nokia-state:/state/system"
+            },
+            {
+              "@": {
+                "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+                "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='22.+']/entity[entity-type='nokia-conf:/configure/oam-pm/bin-group']",
+                "nsp-model:creation-time": "2024-04-05T08:48:14.699Z",
+                "nsp-model:last-modified-time": "2024-04-05T08:52:09.616Z"
+              },
+              "period": 1440,
+              "admin-state": "enabled",
+              "entity-type": "nokia-conf:/configure/oam-pm/bin-group"
+            },
+            {
+              "@": {
+                "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+                "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='22.+']/entity[entity-type='nokia-conf:/configure/oam-pm/session']",
+                "nsp-model:creation-time": "2024-04-05T08:48:53.302Z",
+                "nsp-model:last-modified-time": "2024-04-05T08:52:18.414Z"
+              },
+              "period": 1440,
+              "admin-state": "enabled",
+              "entity-type": "nokia-conf:/configure/oam-pm/session"
+            },
+            {
+              "@": {
+                "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+                "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='22.+']/entity[entity-type='nokia-conf:/configure/service/vpls/mesh-sdp/eth-cfm/mep']",
+                "nsp-model:creation-time": "2024-04-05T08:50:10.133Z",
+                "nsp-model:last-modified-time": "2024-04-05T08:51:55.069Z"
+              },
+              "period": 1440,
+              "admin-state": "enabled",
+              "entity-type": "nokia-conf:/configure/service/vpls/mesh-sdp/eth-cfm/mep"
+            },
+            {
+              "@": {
+                "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+                "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='22.+']/entity[entity-type='nokia-conf:/configure/lag/eth-cfm/mep']",
+                "nsp-model:creation-time": "2024-04-05T08:50:10.133Z",
+                "nsp-model:last-modified-time": "2024-04-05T08:52:01.764Z"
+              },
+              "period": 1440,
+              "admin-state": "enabled",
+              "entity-type": "nokia-conf:/configure/lag/eth-cfm/mep"
+            },
+            {
+              "@": {
+                "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+                "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='22.+']/entity[entity-type='nokia-conf:/configure/service/vpls/sap/eth-cfm/mep']",
+                "nsp-model:creation-time": "2024-04-05T08:50:10.133Z",
+                "nsp-model:last-modified-time": "2024-04-05T08:52:14.555Z"
+              },
+              "period": 1440,
+              "admin-state": "enabled",
+              "entity-type": "nokia-conf:/configure/service/vpls/sap/eth-cfm/mep"
+            },
+            {
+              "@": {
+                "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+                "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='22.+']/entity[entity-type='nokia-conf:/configure/eth-cfm/domain/association']",
+                "nsp-model:creation-time": "2024-04-05T08:50:10.133Z",
+                "nsp-model:last-modified-time": "2024-04-05T08:52:20.964Z"
+              },
+              "period": 1440,
+              "admin-state": "enabled",
+              "entity-type": "nokia-conf:/configure/eth-cfm/domain/association"
+            },
+            {
+              "@": {
+                "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+                "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='22.+']/entity[entity-type='nokia-conf:/configure/service/epipe/sap/eth-cfm/mep']",
+                "nsp-model:creation-time": "2024-04-05T08:50:10.133Z",
+                "nsp-model:last-modified-time": "2024-04-05T08:52:23.715Z"
+              },
+              "period": 1440,
+              "admin-state": "enabled",
+              "entity-type": "nokia-conf:/configure/service/epipe/sap/eth-cfm/mep"
+            },
+            {
+              "@": {
+                "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+                "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='22.+']/entity[entity-type='nokia-conf:/configure/service/epipe/spoke-sdp/eth-cfm/mep']",
+                "nsp-model:creation-time": "2024-04-05T08:50:10.133Z",
+                "nsp-model:last-modified-time": "2024-04-05T08:52:26.291Z"
+              },
+              "period": 1440,
+              "admin-state": "enabled",
+              "entity-type": "nokia-conf:/configure/service/epipe/spoke-sdp/eth-cfm/mep"
+            },
+            {
+              "@": {
+                "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+                "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='22.+']/entity[entity-type='nokia-conf:/configure/eth-cfm/domain']",
+                "nsp-model:creation-time": "2024-04-05T08:50:10.133Z",
+                "nsp-model:last-modified-time": "2024-04-05T08:52:30.485Z"
+              },
+              "period": 1440,
+              "admin-state": "enabled",
+              "entity-type": "nokia-conf:/configure/eth-cfm/domain"
+            },
+            {
+              "@": {
+                "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+                "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='22.+']/entity[entity-type='nokia-conf:/configure/service/vpls/spoke-sdp/eth-cfm/mep']",
+                "nsp-model:creation-time": "2024-04-05T08:50:10.133Z",
+                "nsp-model:last-modified-time": "2024-04-05T08:52:38.746Z"
+              },
+              "period": 1440,
+              "admin-state": "enabled",
+              "entity-type": "nokia-conf:/configure/service/vpls/spoke-sdp/eth-cfm/mep"
+            },
+            {
+              "@": {
+                "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+                "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='22.+']/entity[entity-type='nokia-conf:/configure/router/twamp-light/reflector']",
+                "nsp-model:creation-time": "2024-04-05T08:50:30.708Z",
+                "nsp-model:last-modified-time": "2024-04-05T08:52:05.680Z"
+              },
+              "period": 1440,
+              "admin-state": "enabled",
+              "entity-type": "nokia-conf:/configure/router/twamp-light/reflector"
+            },
+            {
+              "@": {
+                "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+                "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='22.+']/entity[entity-type='nokia-conf:/configure/oam-pm/streaming/delay-template']",
+                "nsp-model:creation-time": "2024-04-05T08:50:30.708Z",
+                "nsp-model:last-modified-time": "2024-04-05T08:52:36.516Z"
+              },
+              "period": 1440,
+              "admin-state": "enabled",
+              "entity-type": "nokia-conf:/configure/oam-pm/streaming/delay-template"
+            },
+            {
+              "@": {
+                "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+                "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='22.+']/entity[entity-type='nokia-conf:/configure/test-oam/twamp/server']",
+                "nsp-model:creation-time": "2024-04-05T08:51:55.609Z",
+                "nsp-model:last-modified-time": "2024-04-05T08:52:28.405Z"
+              },
+              "period": 1440,
+              "admin-state": "enabled",
+              "entity-type": "nokia-conf:/configure/test-oam/twamp/server"
+            },
+            {
+              "@": {
+                "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+                "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='22.+']/entity[entity-type='nokia-conf:/configure/service/vprn/twamp-light/reflector']",
+                "nsp-model:creation-time": "2024-04-05T08:50:53.591Z",
+                "nsp-model:last-modified-time": "2024-04-05T08:52:32.419Z"
+              },
+              "period": 1440,
+              "admin-state": "enabled",
+              "entity-type": "nokia-conf:/configure/service/vprn/twamp-light/reflector"
+            }
+          ]
+        },
+        {
+          "@": {
+            "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version",
+            "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='21.+']",
+            "nsp-model:creation-time": "2024-04-05T08:36:49.055Z",
+            "nsp-model:last-modified-time": "2024-04-05T08:36:49.055Z"
+          },
+          "node-version": "21.+",
+          "admin-state": "enabled",
+          "entity": [
+            {
+              "@": {
+                "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+                "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='21.+']/entity[entity-type='nokia-state:/state/system']",
+                "nsp-model:creation-time": "2024-04-05T08:36:49.055Z",
+                "nsp-model:last-modified-time": "2024-04-05T08:36:49.055Z"
+              },
+              "period": 1440,
+              "admin-state": "disabled",
+              "entity-type": "nokia-state:/state/system"
+            },
+            {
+              "@": {
+                "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+                "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='21.+']/entity[entity-type='nokia-conf:/configure/oam-pm/bin-group']",
+                "nsp-model:creation-time": "2024-04-05T08:48:14.699Z",
+                "nsp-model:last-modified-time": "2024-04-05T08:52:09.717Z"
+              },
+              "period": 1440,
+              "admin-state": "enabled",
+              "entity-type": "nokia-conf:/configure/oam-pm/bin-group"
+            },
+            {
+              "@": {
+                "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+                "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='21.+']/entity[entity-type='nokia-conf:/configure/oam-pm/session']",
+                "nsp-model:creation-time": "2024-04-05T08:48:53.302Z",
+                "nsp-model:last-modified-time": "2024-04-05T08:52:18.472Z"
+              },
+              "period": 1440,
+              "admin-state": "enabled",
+              "entity-type": "nokia-conf:/configure/oam-pm/session"
+            },
+            {
+              "@": {
+                "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+                "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='21.+']/entity[entity-type='nokia-conf:/configure/service/vpls/mesh-sdp/eth-cfm/mep']",
+                "nsp-model:creation-time": "2024-04-05T08:50:10.133Z",
+                "nsp-model:last-modified-time": "2024-04-05T08:51:55.192Z"
+              },
+              "period": 1440,
+              "admin-state": "enabled",
+              "entity-type": "nokia-conf:/configure/service/vpls/mesh-sdp/eth-cfm/mep"
+            },
+            {
+              "@": {
+                "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+                "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='21.+']/entity[entity-type='nokia-conf:/configure/lag/eth-cfm/mep']",
+                "nsp-model:creation-time": "2024-04-05T08:50:10.133Z",
+                "nsp-model:last-modified-time": "2024-04-05T08:52:01.971Z"
+              },
+              "period": 1440,
+              "admin-state": "enabled",
+              "entity-type": "nokia-conf:/configure/lag/eth-cfm/mep"
+            },
+            {
+              "@": {
+                "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+                "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='21.+']/entity[entity-type='nokia-conf:/configure/service/vpls/sap/eth-cfm/mep']",
+                "nsp-model:creation-time": "2024-04-05T08:50:10.133Z",
+                "nsp-model:last-modified-time": "2024-04-05T08:52:14.764Z"
+              },
+              "period": 1440,
+              "admin-state": "enabled",
+              "entity-type": "nokia-conf:/configure/service/vpls/sap/eth-cfm/mep"
+            },
+            {
+              "@": {
+                "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+                "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='21.+']/entity[entity-type='nokia-conf:/configure/eth-cfm/domain/association']",
+                "nsp-model:creation-time": "2024-04-05T08:50:10.133Z",
+                "nsp-model:last-modified-time": "2024-04-05T08:52:21.025Z"
+              },
+              "period": 1440,
+              "admin-state": "enabled",
+              "entity-type": "nokia-conf:/configure/eth-cfm/domain/association"
+            },
+            {
+              "@": {
+                "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+                "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='21.+']/entity[entity-type='nokia-conf:/configure/service/epipe/sap/eth-cfm/mep']",
+                "nsp-model:creation-time": "2024-04-05T08:50:10.133Z",
+                "nsp-model:last-modified-time": "2024-04-05T08:52:23.797Z"
+              },
+              "period": 1440,
+              "admin-state": "enabled",
+              "entity-type": "nokia-conf:/configure/service/epipe/sap/eth-cfm/mep"
+            },
+            {
+              "@": {
+                "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+                "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='21.+']/entity[entity-type='nokia-conf:/configure/service/epipe/spoke-sdp/eth-cfm/mep']",
+                "nsp-model:creation-time": "2024-04-05T08:50:10.133Z",
+                "nsp-model:last-modified-time": "2024-04-05T08:52:26.416Z"
+              },
+              "period": 1440,
+              "admin-state": "enabled",
+              "entity-type": "nokia-conf:/configure/service/epipe/spoke-sdp/eth-cfm/mep"
+            },
+            {
+              "@": {
+                "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+                "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='21.+']/entity[entity-type='nokia-conf:/configure/eth-cfm/domain']",
+                "nsp-model:creation-time": "2024-04-05T08:50:10.133Z",
+                "nsp-model:last-modified-time": "2024-04-05T08:52:30.539Z"
+              },
+              "period": 1440,
+              "admin-state": "enabled",
+              "entity-type": "nokia-conf:/configure/eth-cfm/domain"
+            },
+            {
+              "@": {
+                "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+                "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='21.+']/entity[entity-type='nokia-conf:/configure/service/vpls/spoke-sdp/eth-cfm/mep']",
+                "nsp-model:creation-time": "2024-04-05T08:50:10.133Z",
+                "nsp-model:last-modified-time": "2024-04-05T08:52:38.803Z"
+              },
+              "period": 1440,
+              "admin-state": "enabled",
+              "entity-type": "nokia-conf:/configure/service/vpls/spoke-sdp/eth-cfm/mep"
+            },
+            {
+              "@": {
+                "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+                "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='21.+']/entity[entity-type='nokia-conf:/configure/router/twamp-light/reflector']",
+                "nsp-model:creation-time": "2024-04-05T08:50:30.708Z",
+                "nsp-model:last-modified-time": "2024-04-05T08:52:05.886Z"
+              },
+              "period": 1440,
+              "admin-state": "enabled",
+              "entity-type": "nokia-conf:/configure/router/twamp-light/reflector"
+            },
+            {
+              "@": {
+                "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+                "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='21.+']/entity[entity-type='nokia-conf:/configure/oam-pm/streaming/delay-template']",
+                "nsp-model:creation-time": "2024-04-05T08:50:30.708Z",
+                "nsp-model:last-modified-time": "2024-04-05T08:52:36.602Z"
+              },
+              "period": 1440,
+              "admin-state": "enabled",
+              "entity-type": "nokia-conf:/configure/oam-pm/streaming/delay-template"
+            },
+            {
+              "@": {
+                "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+                "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='21.+']/entity[entity-type='nokia-conf:/configure/test-oam/twamp/server']",
+                "nsp-model:creation-time": "2024-04-05T08:51:55.609Z",
+                "nsp-model:last-modified-time": "2024-04-05T08:52:28.488Z"
+              },
+              "period": 1440,
+              "admin-state": "enabled",
+              "entity-type": "nokia-conf:/configure/test-oam/twamp/server"
+            },
+            {
+              "@": {
+                "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+                "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='21.+']/entity[entity-type='nokia-conf:/configure/service/vprn/twamp-light/reflector']",
+                "nsp-model:creation-time": "2024-04-05T08:50:53.591Z",
+                "nsp-model:last-modified-time": "2024-04-05T08:52:32.488Z"
+              },
+              "period": 1440,
+              "admin-state": "enabled",
+              "entity-type": "nokia-conf:/configure/service/vprn/twamp-light/reflector"
+            }
+          ]
+        },
+        {
+          "@": {
+            "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version",
+            "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='20.+']",
+            "nsp-model:creation-time": "2024-04-05T08:36:49.055Z",
+            "nsp-model:last-modified-time": "2024-04-05T08:36:49.055Z"
+          },
+          "node-version": "20.+",
+          "admin-state": "enabled",
+          "entity": [
+            {
+              "@": {
+                "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+                "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='20.+']/entity[entity-type='nokia-state:/state/system']",
+                "nsp-model:creation-time": "2024-04-05T08:36:49.055Z",
+                "nsp-model:last-modified-time": "2024-04-05T08:36:49.055Z"
+              },
+              "period": 1440,
+              "admin-state": "disabled",
+              "entity-type": "nokia-state:/state/system"
+            },
+            {
+              "@": {
+                "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+                "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='20.+']/entity[entity-type='nokia-conf:/configure/oam-pm/bin-group']",
+                "nsp-model:creation-time": "2024-04-05T08:48:14.699Z",
+                "nsp-model:last-modified-time": "2024-04-05T08:52:09.839Z"
+              },
+              "period": 1440,
+              "admin-state": "enabled",
+              "entity-type": "nokia-conf:/configure/oam-pm/bin-group"
+            },
+            {
+              "@": {
+                "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+                "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='20.+']/entity[entity-type='nokia-conf:/configure/oam-pm/session']",
+                "nsp-model:creation-time": "2024-04-05T08:48:53.302Z",
+                "nsp-model:last-modified-time": "2024-04-05T08:52:18.529Z"
+              },
+              "period": 1440,
+              "admin-state": "enabled",
+              "entity-type": "nokia-conf:/configure/oam-pm/session"
+            },
+            {
+              "@": {
+                "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+                "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='20.+']/entity[entity-type='nokia-conf:/configure/service/vpls/sap/eth-cfm/mep']",
+                "nsp-model:creation-time": "2024-04-05T08:50:10.133Z",
+                "nsp-model:last-modified-time": "2024-04-05T08:52:14.861Z"
+              },
+              "period": 1440,
+              "admin-state": "enabled",
+              "entity-type": "nokia-conf:/configure/service/vpls/sap/eth-cfm/mep"
+            },
+            {
+              "@": {
+                "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+                "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='20.+']/entity[entity-type='nokia-conf:/configure/service/epipe/sap/eth-cfm/mep']",
+                "nsp-model:creation-time": "2024-04-05T08:50:10.133Z",
+                "nsp-model:last-modified-time": "2024-04-05T08:52:23.873Z"
+              },
+              "period": 1440,
+              "admin-state": "enabled",
+              "entity-type": "nokia-conf:/configure/service/epipe/sap/eth-cfm/mep"
+            },
+            {
+              "@": {
+                "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+                "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='20.+']/entity[entity-type='nokia-conf:/configure/service/epipe/spoke-sdp/eth-cfm/mep']",
+                "nsp-model:creation-time": "2024-04-05T08:50:10.133Z",
+                "nsp-model:last-modified-time": "2024-04-05T08:52:26.781Z"
+              },
+              "period": 1440,
+              "admin-state": "enabled",
+              "entity-type": "nokia-conf:/configure/service/epipe/spoke-sdp/eth-cfm/mep"
+            },
+            {
+              "@": {
+                "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+                "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='20.+']/entity[entity-type='nokia-conf:/configure/eth-cfm/domain']",
+                "nsp-model:creation-time": "2024-04-05T08:50:10.133Z",
+                "nsp-model:last-modified-time": "2024-04-05T08:52:30.588Z"
+              },
+              "period": 1440,
+              "admin-state": "enabled",
+              "entity-type": "nokia-conf:/configure/eth-cfm/domain"
+            },
+            {
+              "@": {
+                "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+                "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='20.+']/entity[entity-type='nokia-conf:/configure/service/vpls/mesh-sdp/eth-cfm/mep']",
+                "nsp-model:creation-time": "2024-04-05T08:50:10.133Z",
+                "nsp-model:last-modified-time": "2024-04-05T08:51:55.705Z"
+              },
+              "period": 1440,
+              "admin-state": "enabled",
+              "entity-type": "nokia-conf:/configure/service/vpls/mesh-sdp/eth-cfm/mep"
+            },
+            {
+              "@": {
+                "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+                "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='20.+']/entity[entity-type='nokia-conf:/configure/eth-cfm/domain/association']",
+                "nsp-model:creation-time": "2024-04-05T08:50:10.133Z",
+                "nsp-model:last-modified-time": "2024-04-05T08:52:21.091Z"
+              },
+              "period": 1440,
+              "admin-state": "enabled",
+              "entity-type": "nokia-conf:/configure/eth-cfm/domain/association"
+            },
+            {
+              "@": {
+                "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+                "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='20.+']/entity[entity-type='nokia-conf:/configure/service/vpls/spoke-sdp/eth-cfm/mep']",
+                "nsp-model:creation-time": "2024-04-05T08:50:10.133Z",
+                "nsp-model:last-modified-time": "2024-04-05T08:52:38.854Z"
+              },
+              "period": 1440,
+              "admin-state": "enabled",
+              "entity-type": "nokia-conf:/configure/service/vpls/spoke-sdp/eth-cfm/mep"
+            },
+            {
+              "@": {
+                "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+                "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='20.+']/entity[entity-type='nokia-conf:/configure/lag/eth-cfm/mep']",
+                "nsp-model:creation-time": "2024-04-05T08:50:10.133Z",
+                "nsp-model:last-modified-time": "2024-04-05T08:53:00.102Z"
+              },
+              "period": 1440,
+              "admin-state": "enabled",
+              "entity-type": "nokia-conf:/configure/lag/eth-cfm/mep"
+            },
+            {
+              "@": {
+                "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+                "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='20.+']/entity[entity-type='nokia-conf:/configure/router/twamp-light/reflector']",
+                "nsp-model:creation-time": "2024-04-05T08:50:30.708Z",
+                "nsp-model:last-modified-time": "2024-04-05T08:52:06.855Z"
+              },
+              "period": 1440,
+              "admin-state": "enabled",
+              "entity-type": "nokia-conf:/configure/router/twamp-light/reflector"
+            },
+            {
+              "@": {
+                "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+                "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='20.+']/entity[entity-type='nokia-conf:/configure/oam-pm/streaming/delay-template']",
+                "nsp-model:creation-time": "2024-04-05T08:50:30.708Z",
+                "nsp-model:last-modified-time": "2024-04-05T08:52:36.693Z"
+              },
+              "period": 1440,
+              "admin-state": "enabled",
+              "entity-type": "nokia-conf:/configure/oam-pm/streaming/delay-template"
+            },
+            {
+              "@": {
+                "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+                "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='20.+']/entity[entity-type='nokia-conf:/configure/test-oam/twamp/server']",
+                "nsp-model:creation-time": "2024-04-05T08:51:55.609Z",
+                "nsp-model:last-modified-time": "2024-04-05T08:52:28.580Z"
+              },
+              "period": 1440,
+              "admin-state": "enabled",
+              "entity-type": "nokia-conf:/configure/test-oam/twamp/server"
+            },
+            {
+              "@": {
+                "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+                "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='20.+']/entity[entity-type='nokia-conf:/configure/service/vprn/twamp-light/reflector']",
+                "nsp-model:creation-time": "2024-04-05T08:50:53.591Z",
+                "nsp-model:last-modified-time": "2024-04-05T08:52:32.580Z"
+              },
+              "period": 1440,
+              "admin-state": "enabled",
+              "entity-type": "nokia-conf:/configure/service/vprn/twamp-light/reflector"
+            }
+          ]
+        },
+        {
+          "@": {
+            "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version",
+            "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='19.10.+']",
+            "nsp-model:creation-time": "2024-04-05T08:48:14.699Z",
+            "nsp-model:last-modified-time": "2024-04-05T08:48:14.699Z"
+          },
+          "node-version": "19.10.+",
+          "admin-state": "enabled",
+          "entity": [
+            {
+              "@": {
+                "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+                "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='19.10.+']/entity[entity-type='nokia-conf:/configure/oam-pm/bin-group']",
+                "nsp-model:creation-time": "2024-04-05T08:48:14.699Z",
+                "nsp-model:last-modified-time": "2024-04-05T08:52:09.468Z"
+              },
+              "period": 1440,
+              "admin-state": "enabled",
+              "entity-type": "nokia-conf:/configure/oam-pm/bin-group"
+            },
+            {
+              "@": {
+                "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+                "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='19.10.+']/entity[entity-type='nokia-conf:/configure/oam-pm/session']",
+                "nsp-model:creation-time": "2024-04-05T08:48:53.302Z",
+                "nsp-model:last-modified-time": "2024-04-05T08:52:18.223Z"
+              },
+              "period": 1440,
+              "admin-state": "enabled",
+              "entity-type": "nokia-conf:/configure/oam-pm/session"
+            },
+            {
+              "@": {
+                "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+                "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='19.10.+']/entity[entity-type='nokia-conf:/configure/service/vpls/mesh-sdp/eth-cfm/mep']",
+                "nsp-model:creation-time": "2024-04-05T08:50:10.133Z",
+                "nsp-model:last-modified-time": "2024-04-05T08:51:54.801Z"
+              },
+              "period": 1440,
+              "admin-state": "enabled",
+              "entity-type": "nokia-conf:/configure/service/vpls/mesh-sdp/eth-cfm/mep"
+            },
+            {
+              "@": {
+                "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+                "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='19.10.+']/entity[entity-type='nokia-conf:/configure/lag/eth-cfm/mep']",
+                "nsp-model:creation-time": "2024-04-05T08:50:10.133Z",
+                "nsp-model:last-modified-time": "2024-04-05T08:52:00.949Z"
+              },
+              "period": 1440,
+              "admin-state": "enabled",
+              "entity-type": "nokia-conf:/configure/lag/eth-cfm/mep"
+            },
+            {
+              "@": {
+                "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+                "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='19.10.+']/entity[entity-type='nokia-conf:/configure/service/vpls/sap/eth-cfm/mep']",
+                "nsp-model:creation-time": "2024-04-05T08:50:10.133Z",
+                "nsp-model:last-modified-time": "2024-04-05T08:52:14.380Z"
+              },
+              "period": 1440,
+              "admin-state": "enabled",
+              "entity-type": "nokia-conf:/configure/service/vpls/sap/eth-cfm/mep"
+            },
+            {
+              "@": {
+                "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+                "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='19.10.+']/entity[entity-type='nokia-conf:/configure/eth-cfm/domain/association']",
+                "nsp-model:creation-time": "2024-04-05T08:50:10.133Z",
+                "nsp-model:last-modified-time": "2024-04-05T08:52:20.830Z"
+              },
+              "period": 1440,
+              "admin-state": "enabled",
+              "entity-type": "nokia-conf:/configure/eth-cfm/domain/association"
+            },
+            {
+              "@": {
+                "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+                "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='19.10.+']/entity[entity-type='nokia-conf:/configure/service/epipe/sap/eth-cfm/mep']",
+                "nsp-model:creation-time": "2024-04-05T08:50:10.133Z",
+                "nsp-model:last-modified-time": "2024-04-05T08:52:23.429Z"
+              },
+              "period": 1440,
+              "admin-state": "enabled",
+              "entity-type": "nokia-conf:/configure/service/epipe/sap/eth-cfm/mep"
+            },
+            {
+              "@": {
+                "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+                "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='19.10.+']/entity[entity-type='nokia-conf:/configure/service/epipe/spoke-sdp/eth-cfm/mep']",
+                "nsp-model:creation-time": "2024-04-05T08:50:10.133Z",
+                "nsp-model:last-modified-time": "2024-04-05T08:52:26.191Z"
+              },
+              "period": 1440,
+              "admin-state": "enabled",
+              "entity-type": "nokia-conf:/configure/service/epipe/spoke-sdp/eth-cfm/mep"
+            },
+            {
+              "@": {
+                "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+                "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='19.10.+']/entity[entity-type='nokia-conf:/configure/eth-cfm/domain']",
+                "nsp-model:creation-time": "2024-04-05T08:50:10.133Z",
+                "nsp-model:last-modified-time": "2024-04-05T08:52:30.173Z"
+              },
+              "period": 1440,
+              "admin-state": "enabled",
+              "entity-type": "nokia-conf:/configure/eth-cfm/domain"
+            },
+            {
+              "@": {
+                "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+                "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='19.10.+']/entity[entity-type='nokia-conf:/configure/service/vpls/spoke-sdp/eth-cfm/mep']",
+                "nsp-model:creation-time": "2024-04-05T08:50:10.133Z",
+                "nsp-model:last-modified-time": "2024-04-05T08:52:38.618Z"
+              },
+              "period": 1440,
+              "admin-state": "enabled",
+              "entity-type": "nokia-conf:/configure/service/vpls/spoke-sdp/eth-cfm/mep"
+            },
+            {
+              "@": {
+                "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+                "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='19.10.+']/entity[entity-type='nokia-conf:/configure/router/twamp-light/reflector']",
+                "nsp-model:creation-time": "2024-04-05T08:50:30.708Z",
+                "nsp-model:last-modified-time": "2024-04-05T08:52:05.137Z"
+              },
+              "period": 1440,
+              "admin-state": "enabled",
+              "entity-type": "nokia-conf:/configure/router/twamp-light/reflector"
+            },
+            {
+              "@": {
+                "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+                "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='19.10.+']/entity[entity-type='nokia-conf:/configure/oam-pm/streaming/delay-template']",
+                "nsp-model:creation-time": "2024-04-05T08:50:30.708Z",
+                "nsp-model:last-modified-time": "2024-04-05T08:52:36.307Z"
+              },
+              "period": 1440,
+              "admin-state": "enabled",
+              "entity-type": "nokia-conf:/configure/oam-pm/streaming/delay-template"
+            },
+            {
+              "@": {
+                "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+                "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='19.10.+']/entity[entity-type='nokia-conf:/configure/test-oam/twamp/server']",
+                "nsp-model:creation-time": "2024-04-05T08:51:55.609Z",
+                "nsp-model:last-modified-time": "2024-04-05T08:52:28.227Z"
+              },
+              "period": 1440,
+              "admin-state": "enabled",
+              "entity-type": "nokia-conf:/configure/test-oam/twamp/server"
+            },
+            {
+              "@": {
+                "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+                "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='19.10.+']/entity[entity-type='nokia-conf:/configure/service/vprn/twamp-light/reflector']",
+                "nsp-model:creation-time": "2024-04-05T08:50:53.591Z",
+                "nsp-model:last-modified-time": "2024-04-05T08:52:32.254Z"
+              },
+              "period": 1440,
+              "admin-state": "enabled",
+              "entity-type": "nokia-conf:/configure/service/vprn/twamp-light/reflector"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

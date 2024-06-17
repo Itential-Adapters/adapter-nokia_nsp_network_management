@@ -1,0 +1,818 @@
+{
+  "nsp-indicator:rta-indicator-rules": {
+    "@": {
+      "nsp-model:schema-nodeid": "/nsp-indicator:rta-indicator-rules",
+      "nsp-model:identifier": "/nsp-indicator:rta-indicator-rules"
+    },
+    "rule": [
+      {
+        "@": {
+          "nsp-model:schema-nodeid": "/nsp-indicator:rta-indicator-rules/rule",
+          "nsp-model:identifier": "/nsp-indicator:rta-indicator-rules/rule[name='AvgCpuAllNodesAllActions']"
+        },
+        "name": "AvgCpuAllNodesAllActions",
+        "description": "avg cpu from all nodes",
+        "units-name": "%",
+        "telemetry-type": "telemetry:/base/system-info/system",
+        "formula": "avg({cpu-usage_avg})",
+        "multiple-output": false,
+        "window-duration": "PT1M",
+        "enabled": true,
+        "collection-interval": 30,
+        "subscription-id": "ia-f95ea845-3569-4251-9c2b-2221c26b00cb",
+        "counters": [
+          {
+            "@": {
+              "nsp-model:schema-nodeid": "/nsp-indicator:rta-indicator-rules/rule/counters",
+              "nsp-model:identifier": "/nsp-indicator:rta-indicator-rules/rule[name='AvgCpuAllNodesAllActions']/counters[name='cpu-usage'][function='avg']"
+            },
+            "name": "cpu-usage",
+            "function": "avg"
+          }
+        ],
+        "thresholds": [
+          {
+            "@": {
+              "nsp-model:schema-nodeid": "/nsp-indicator:rta-indicator-rules/rule/thresholds",
+              "nsp-model:identifier": "/nsp-indicator:rta-indicator-rules/rule[name='AvgCpuAllNodesAllActions']/thresholds[threshold-value-decimal='20'][direction='increasing']"
+            },
+            "threshold-value-decimal": "20",
+            "direction": "increasing",
+            "actions": [
+              {
+                "@": {
+                  "nsp-model:schema-nodeid": "/nsp-indicator:rta-indicator-rules/rule/thresholds/actions",
+                  "nsp-model:identifier": "/nsp-indicator:rta-indicator-rules/rule[name='AvgCpuAllNodesAllActions']/thresholds[threshold-value-decimal='20'][direction='increasing']/actions[name='threshold_20_increasing_kafka_action1']"
+                },
+                "name": "threshold_20_increasing_kafka_action1",
+                "type": "kafka",
+                "kafka": {
+                  "@": {
+                    "nsp-model:schema-nodeid": "/nsp-indicator:rta-indicator-rules/rule/thresholds/actions/kafka",
+                    "nsp-model:identifier": "/nsp-indicator:rta-indicator-rules/rule[name='AvgCpuAllNodesAllActions']/thresholds[threshold-value-decimal='20'][direction='increasing']/actions[name='threshold_20_increasing_kafka_action1']/kafka"
+                  },
+                  "topic-name": "nsp-act-action-event",
+                  "topic-content": "CPU is a rising"
+                }
+              },
+              {
+                "@": {
+                  "nsp-model:schema-nodeid": "/nsp-indicator:rta-indicator-rules/rule/thresholds/actions",
+                  "nsp-model:identifier": "/nsp-indicator:rta-indicator-rules/rule[name='AvgCpuAllNodesAllActions']/thresholds[threshold-value-decimal='20'][direction='increasing']/actions[name='threshold_20_increasing_alarm_action2']"
+                },
+                "name": "threshold_20_increasing_alarm_action2",
+                "type": "alarm",
+                "alarm": {
+                  "@": {
+                    "nsp-model:schema-nodeid": "/nsp-indicator:rta-indicator-rules/rule/thresholds/actions/alarm",
+                    "nsp-model:identifier": "/nsp-indicator:rta-indicator-rules/rule[name='AvgCpuAllNodesAllActions']/thresholds[threshold-value-decimal='20'][direction='increasing']/actions[name='threshold_20_increasing_alarm_action2']/alarm"
+                  },
+                  "severity": "major"
+                }
+              },
+              {
+                "@": {
+                  "nsp-model:schema-nodeid": "/nsp-indicator:rta-indicator-rules/rule/thresholds/actions",
+                  "nsp-model:identifier": "/nsp-indicator:rta-indicator-rules/rule[name='AvgCpuAllNodesAllActions']/thresholds[threshold-value-decimal='20'][direction='increasing']/actions[name='threshold_20_increasing_email_action3']"
+                },
+                "name": "threshold_20_increasing_email_action3",
+                "type": "email",
+                "email": {
+                  "@": {
+                    "nsp-model:schema-nodeid": "/nsp-indicator:rta-indicator-rules/rule/thresholds/actions/email",
+                    "nsp-model:identifier": "/nsp-indicator:rta-indicator-rules/rule[name='AvgCpuAllNodesAllActions']/thresholds[threshold-value-decimal='20'][direction='increasing']/actions[name='threshold_20_increasing_email_action3']/email"
+                  },
+                  "email-address": "userid@user.com",
+                  "email-subject": "Hmmmmm, It's getting hot",
+                  "email-content": "Your temperature is rising.",
+                  "aggregation": false,
+                  "period": 5,
+                  "number-events": 5
+                }
+              }
+            ]
+          }
+        ],
+        "act-rules": [
+          {
+            "@": {
+              "nsp-model:schema-nodeid": "/nsp-indicator:rta-indicator-rules/rule/act-rules",
+              "nsp-model:identifier": "/nsp-indicator:rta-indicator-rules/rule[name='AvgCpuAllNodesAllActions']/act-rules[name='ind_act_rule_ae697e27_9eb7_46c6_9d30_8c668fd0ee9d']"
+            },
+            "name": "ind_act_rule_ae697e27_9eb7_46c6_9d30_8c668fd0ee9d",
+            "definition": "{\"name\":\"ind_act_rule_ae697e27_9eb7_46c6_9d30_8c668fd0ee9d\",\"description\":\"avg cpu from all nodes\",\"owner\":\"AvgCpuAllNodesAllActions\",\"keepalive\":120,\"enabled\":true,\"process\":[{\"name\":\"telemetrySource\",\"type\":\"stream-source\",\"stream-source\":{\"type\":\"kafka\",\"select-input-keys\":[\"ia-f95ea845-3569-4251-9c2b-2221c26b00cb\"],\"options\":[{\"name\":\"subscribe\",\"value\":\"rta-indicator-topic\"},{\"name\":\"failOnDataLoss\",\"value\":\"false\"}],\"schema\":{\"columns\":[{\"full-name\":\"data/ietf-restconf:notification/eventTime\",\"type\":\"timestamp\",\"timestamp-type-format\":\"yyyy-MM-dd'T'HH:mm:ss'Z'\",\"mandatory\":true},{\"full-name\":\"data/ietf-restconf:notification/nsp-kpi:real_time_rtindr-event/networkDeviceId\",\"type\":\"string\",\"mandatory\":true},{\"full-name\":\"data/ietf-restconf:notification/nsp-kpi:real_time_rtindr-event/neId\",\"type\":\"string\",\"mandatory\":true},{\"full-name\":\"data/ietf-restconf:notification/nsp-kpi:real_time_rtindr-event/neName\",\"type\":\"string\",\"mandatory\":true},{\"full-name\":\"data/ietf-restconf:notification/nsp-kpi:real_time_rtindr-event/subscriptionId\",\"type\":\"string\"},{\"full-name\":\"data/ietf-restconf:notification/nsp-kpi:real_time_rtindr-event/cpu-usage\",\"type\":\"decimal(30,4)\"}]}}},{\"name\":\"act-event-adapter-source\",\"input-process\":[\"telemetrySource\"],\"type\":\"adapter\",\"adapter\":{\"columns\":[{\"full-name\":\"eventTime\"},{\"full-name\":\"networkDeviceId\"},{\"full-name\":\"neId\"},{\"full-name\":\"neName\"},{\"full-name\":\"name\",\"type\":\"string\",\"value\":\"AvgCpuAllNodesAllActions\"},{\"full-name\":\"cpu-usage\"}]}},{\"name\":\"timebased-tumbling-window\",\"type\":\"timebased-tumbling-window\",\"input-process\":[\"act-event-adapter-source\"],\"timebased-tumbling-window\":{\"event-time-in-property\":\"eventTime\",\"in-object-key-property\":[\"networkDeviceId\",\"name\"],\"pass-through-property\":[\"networkDeviceId\",\"neId\",\"neName\",\"name\"],\"in-property\":[\"cpu-usage\"],\"window-period\":60,\"aggregations\":[{\"operation\":\"avg\",\"arguments\":[\"cpu-usage\"]}]}},{\"name\":\"stream-sink-source\",\"input-process\":[\"timebased-tumbling-window\"],\"type\":\"stream-sink\",\"stream-sink\":{\"type\":\"kafka\",\"options\":[{\"name\":\"topic\",\"value\":\"rta.internal-pipeline-topic\"}]}}]}"
+          },
+          {
+            "@": {
+              "nsp-model:schema-nodeid": "/nsp-indicator:rta-indicator-rules/rule/act-rules",
+              "nsp-model:identifier": "/nsp-indicator:rta-indicator-rules/rule[name='AvgCpuAllNodesAllActions']/act-rules[name='ind_compute_output_3d052cd9_944a_439f_a871_a653ec297107']"
+            },
+            "name": "ind_compute_output_3d052cd9_944a_439f_a871_a653ec297107",
+            "definition": "{\"name\":\"ind_compute_output_3d052cd9_944a_439f_a871_a653ec297107\",\"description\":\"Aggregation Operation Act Rule\",\"owner\":\"AvgCpuAllNodesAllActions\",\"keepalive\":120,\"enabled\":true,\"process\":[{\"name\":\"telemetrySource\",\"type\":\"stream-source\",\"stream-source\":{\"type\":\"kafka\",\"select-input-keys\":[\"ind_act_rule_ae697e27_9eb7_46c6_9d30_8c668fd0ee9d\"],\"options\":[{\"name\":\"subscribe\",\"value\":\"rta.internal-pipeline-topic\"},{\"name\":\"failOnDataLoss\",\"value\":\"false\"}],\"schema\":{\"columns\":[{\"full-name\":\"startTime\",\"type\":\"timestamp\",\"timestamp-type-format\":\"yyyy-MM-dd'T'HH:mm:ss.SSS'Z'\",\"rename-to\":\"eventTime\",\"mandatory\":true},{\"full-name\":\"name\",\"type\":\"string\",\"mandatory\":true},{\"full-name\":\"networkDeviceId\",\"type\":\"string\",\"mandatory\":true},{\"full-name\":\"neId\",\"type\":\"string\",\"mandatory\":true},{\"full-name\":\"neName\",\"type\":\"string\",\"mandatory\":true},{\"full-name\":\"cpu-usage_avg\",\"type\":\"decimal(30,4)\"}]}}},{\"name\":\"mixedOperations\",\"input-process\":[\"telemetrySource\"],\"type\":\"mixed-expression-operator\",\"mixed-expression-operator\":{\"event-time-in-property\":\"eventTime\",\"in-object-key-property\":[\"eventTime\",\"name\"],\"in-property\":[\"cpu-usage_avg\"],\"resource-property\":\"networkDeviceId\",\"mixed-operations\":[{\"aggregation-operation\":\"avg\",\"aggregation-operation-argument\":\"cpu-usage_avg\",\"result-property\":\"result1\"}],\"out-property\":\"resultData\"}},{\"name\":\"stream-sink-aggregation-operation\",\"input-process\":[\"mixedOperations\"],\"type\":\"stream-sink\",\"stream-sink\":{\"type\":\"kafka\",\"options\":[{\"name\":\"topic\",\"value\":\"rta.internal-pipeline-topic\"}]}}]}"
+          },
+          {
+            "@": {
+              "nsp-model:schema-nodeid": "/nsp-indicator:rta-indicator-rules/rule/act-rules",
+              "nsp-model:identifier": "/nsp-indicator:rta-indicator-rules/rule[name='AvgCpuAllNodesAllActions']/act-rules[name='ind_threshold_42d013e0_f4a0_4851_acd8_cb2e91a1c192']"
+            },
+            "name": "ind_threshold_42d013e0_f4a0_4851_acd8_cb2e91a1c192",
+            "definition": "{\"name\":\"ind_threshold_42d013e0_f4a0_4851_acd8_cb2e91a1c192\",\"description\":\"Absolute Threshold Act rule\",\"owner\":\"AvgCpuAllNodesAllActions\",\"keepalive\":120,\"enabled\":true,\"process\":[{\"name\":\"telemetrySource\",\"type\":\"stream-source\",\"stream-source\":{\"type\":\"kafka\",\"select-input-keys\":[\"ind_compute_output_3d052cd9_944a_439f_a871_a653ec297107\"],\"options\":[{\"name\":\"subscribe\",\"value\":\"rta.internal-pipeline-topic\"},{\"name\":\"failOnDataLoss\",\"value\":\"false\"}],\"schema\":{\"columns\":[{\"full-name\":\"eventTime\",\"type\":\"timestamp\",\"timestamp-type-format\":\"yyyy-MM-dd'T'HH:mm:ss.SSS'Z'\",\"mandatory\":true},{\"full-name\":\"name\",\"type\":\"string\",\"mandatory\":true},{\"full-name\":\"networkDeviceId\",\"type\":\"string\",\"mandatory\":true},{\"full-name\":\"neId\",\"type\":\"string\",\"mandatory\":true},{\"full-name\":\"neName\",\"type\":\"string\",\"mandatory\":true},{\"full-name\":\"resultData\",\"type\":\"decimal(30,4)\"}]}}},{\"name\":\"AvgCpuAllNodesAllActions_20_increasing\",\"input-process\":[\"telemetrySource\"],\"type\":\"absolute-thresholds\",\"absolute-thresholds\":{\"in-object-key-property\":[\"networkDeviceId\",\"name\"],\"pass-through-property\":[\"networkDeviceId\",\"eventTime\",\"neId\",\"neName\",\"name\"],\"thresholds\":[{\"name\":\"AvgCpuAllNodesAllActions_20_increasing\",\"threshold-value-decimal\":\"20\",\"direction\":\"increasing\",\"in-property\":\"resultData\"}]}},{\"name\":\"act-event-adapter-1\",\"input-process\":[\"AvgCpuAllNodesAllActions_20_increasing\"],\"type\":\"adapter\",\"adapter\":{\"columns\":[{\"full-name\":\"source\"},{\"full-name\":\"payload\"},{\"full-name\":\"timestamp\"},{\"full-name\":\"rule\"},{\"full-name\":\"process\"},{\"full-name\":\"type\"}]}}],\"action\":[{\"type\":\"kafka\",\"kafka\":{\"topic-name\":\"nsp-act-action-event\",\"topic-content\":\"CPU is a rising\"},\"action-name\":\"threshold_20_increasing_kafka_action1\",\"process-name\":\"AvgCpuAllNodesAllActions_20_increasing\"},{\"type\":\"alarm\",\"alarm\":{\"severity\":\"major\",\"alarm-name\":\"IndicatorThresholdCrossingEvent\",\"alarm-type\":\"qualityOfServiceAlarm\",\"probable-cause\":\"thresholdCrossed\",\"additional-text\":\"Threshold Crossing:\",\"additional-text-props\":[{\"property\":\"payload.threshold\",\"displayed-name\":\"threshold-value\"},{\"property\":\"payload.direction\",\"displayed-name\":\"direction\"},{\"property\":\"payload.value\",\"displayed-name\":\"value\"},{\"property\":\"source.eventTime\",\"displayed-name\":\"event-time\"},{\"property\":\"source.networkDeviceId\",\"displayed-name\":\"resource\"}],\"object-fdn\":\"fdn:yang:nsp-indicator:/nsp-indicator:rta-indicator-rules/rule[name='AvgCpuAllNodesAllActions']\",\"object-name\":\"AvgCpuAllNodesAllActions\",\"object-type\":\"nsp-indicator:rta-indicator-rules/rule\",\"source-type\":\"nsp\",\"key-prefix\":\"fm.Alarm\",\"key-properties\":[\"$ALARM_NAME\",\"source.name\"],\"ne-name-property\":null,\"ne-id-property\":null,\"last-time-detected-property\":\"source.eventTime\",\"last-time-detected-format\":\"yyyy-MM-dd'T'HH:mm:ss'Z'\",\"key-fdn-namespace\":\"nsp-indicator\",\"implicitly-cleared\":false},\"action-name\":\"threshold_20_increasing_alarm_action2\",\"process-name\":\"AvgCpuAllNodesAllActions_20_increasing\"},{\"type\":\"email\",\"email\":{\"aggregation\":false,\"period\":5,\"email-address\":\"userid@user.com\",\"email-subject\":\"Hmmmmm, It's getting hot\",\"email-content\":\"Your temperature is rising.\",\"number-events\":5},\"action-name\":\"threshold_20_increasing_email_action3\",\"process-name\":\"AvgCpuAllNodesAllActions_20_increasing\"}]}"
+          }
+        ]
+      },
+      {
+        "@": {
+          "nsp-model:schema-nodeid": "/nsp-indicator:rta-indicator-rules/rule",
+          "nsp-model:identifier": "/nsp-indicator:rta-indicator-rules/rule[name='MaxTempNfmp104']"
+        },
+        "name": "MaxTempNfmp104",
+        "description": "\"max\" temp on '10.10.10.4'",
+        "units-name": "deg C",
+        "telemetry-type": "telemetry:/base/hardware/temperature",
+        "formula": "max({temperature_avg})",
+        "multiple-output": false,
+        "window-duration": "PT1M",
+        "enabled": true,
+        "collection-interval": 60,
+        "subscription-filter": "/nsp-equipment:network/network-element[ne-id='10.10.10.4']",
+        "subscription-id": "ia-ce390286-fe1f-4d63-8d7b-aea6edb673d4",
+        "counters": [
+          {
+            "@": {
+              "nsp-model:schema-nodeid": "/nsp-indicator:rta-indicator-rules/rule/counters",
+              "nsp-model:identifier": "/nsp-indicator:rta-indicator-rules/rule[name='MaxTempNfmp104']/counters[name='temperature'][function='avg']"
+            },
+            "name": "temperature",
+            "function": "avg"
+          }
+        ],
+        "thresholds": [
+          {
+            "@": {
+              "nsp-model:schema-nodeid": "/nsp-indicator:rta-indicator-rules/rule/thresholds",
+              "nsp-model:identifier": "/nsp-indicator:rta-indicator-rules/rule[name='MaxTempNfmp104']/thresholds[threshold-value-decimal='60'][direction='increasing']"
+            },
+            "threshold-value-decimal": "60",
+            "direction": "increasing",
+            "actions": [
+              {
+                "@": {
+                  "nsp-model:schema-nodeid": "/nsp-indicator:rta-indicator-rules/rule/thresholds/actions",
+                  "nsp-model:identifier": "/nsp-indicator:rta-indicator-rules/rule[name='MaxTempNfmp104']/thresholds[threshold-value-decimal='60'][direction='increasing']/actions[name='threshold_60_increasing_kafka_action1']"
+                },
+                "name": "threshold_60_increasing_kafka_action1",
+                "type": "kafka",
+                "kafka": {
+                  "@": {
+                    "nsp-model:schema-nodeid": "/nsp-indicator:rta-indicator-rules/rule/thresholds/actions/kafka",
+                    "nsp-model:identifier": "/nsp-indicator:rta-indicator-rules/rule[name='MaxTempNfmp104']/thresholds[threshold-value-decimal='60'][direction='increasing']/actions[name='threshold_60_increasing_kafka_action1']/kafka"
+                  },
+                  "topic-name": "nsp-act-action-event",
+                  "topic-content": "Temperature is a rising on 10.10.10.4"
+                }
+              },
+              {
+                "@": {
+                  "nsp-model:schema-nodeid": "/nsp-indicator:rta-indicator-rules/rule/thresholds/actions",
+                  "nsp-model:identifier": "/nsp-indicator:rta-indicator-rules/rule[name='MaxTempNfmp104']/thresholds[threshold-value-decimal='60'][direction='increasing']/actions[name='threshold_60_increasing_alarm_action2']"
+                },
+                "name": "threshold_60_increasing_alarm_action2",
+                "type": "alarm",
+                "alarm": {
+                  "@": {
+                    "nsp-model:schema-nodeid": "/nsp-indicator:rta-indicator-rules/rule/thresholds/actions/alarm",
+                    "nsp-model:identifier": "/nsp-indicator:rta-indicator-rules/rule[name='MaxTempNfmp104']/thresholds[threshold-value-decimal='60'][direction='increasing']/actions[name='threshold_60_increasing_alarm_action2']/alarm"
+                  },
+                  "severity": "critical"
+                }
+              },
+              {
+                "@": {
+                  "nsp-model:schema-nodeid": "/nsp-indicator:rta-indicator-rules/rule/thresholds/actions",
+                  "nsp-model:identifier": "/nsp-indicator:rta-indicator-rules/rule[name='MaxTempNfmp104']/thresholds[threshold-value-decimal='60'][direction='increasing']/actions[name='threshold_60_increasing_email_action3']"
+                },
+                "name": "threshold_60_increasing_email_action3",
+                "type": "email",
+                "email": {
+                  "@": {
+                    "nsp-model:schema-nodeid": "/nsp-indicator:rta-indicator-rules/rule/thresholds/actions/email",
+                    "nsp-model:identifier": "/nsp-indicator:rta-indicator-rules/rule[name='MaxTempNfmp104']/thresholds[threshold-value-decimal='60'][direction='increasing']/actions[name='threshold_60_increasing_email_action3']/email"
+                  },
+                  "email-address": "userid@user.com",
+                  "email-subject": "Hmmmmm, It's getting hot 10.10.10.4",
+                  "email-content": "Your temperature is rising 10.10.10.4",
+                  "aggregation": false,
+                  "period": 5,
+                  "number-events": 5
+                }
+              }
+            ]
+          }
+        ],
+        "act-rules": [
+          {
+            "@": {
+              "nsp-model:schema-nodeid": "/nsp-indicator:rta-indicator-rules/rule/act-rules",
+              "nsp-model:identifier": "/nsp-indicator:rta-indicator-rules/rule[name='MaxTempNfmp104']/act-rules[name='ind_act_rule_d40bacfe_ad35_44e6_acc7_d925ab1a4d83']"
+            },
+            "name": "ind_act_rule_d40bacfe_ad35_44e6_acc7_d925ab1a4d83",
+            "definition": "{\"name\":\"ind_act_rule_d40bacfe_ad35_44e6_acc7_d925ab1a4d83\",\"description\":\"\\\"max\\\" temp on '10.10.10.4'\",\"owner\":\"MaxTempNfmp104\",\"keepalive\":120,\"enabled\":true,\"process\":[{\"name\":\"telemetrySource\",\"type\":\"stream-source\",\"stream-source\":{\"type\":\"kafka\",\"select-input-keys\":[\"ia-ce390286-fe1f-4d63-8d7b-aea6edb673d4\"],\"options\":[{\"name\":\"subscribe\",\"value\":\"rta-indicator-topic\"},{\"name\":\"failOnDataLoss\",\"value\":\"false\"}],\"schema\":{\"columns\":[{\"full-name\":\"data/ietf-restconf:notification/eventTime\",\"type\":\"timestamp\",\"timestamp-type-format\":\"yyyy-MM-dd'T'HH:mm:ss'Z'\",\"mandatory\":true},{\"full-name\":\"data/ietf-restconf:notification/nsp-kpi:real_time_rtindr-event/networkDeviceId\",\"type\":\"string\",\"mandatory\":true},{\"full-name\":\"data/ietf-restconf:notification/nsp-kpi:real_time_rtindr-event/neId\",\"type\":\"string\",\"mandatory\":true},{\"full-name\":\"data/ietf-restconf:notification/nsp-kpi:real_time_rtindr-event/neName\",\"type\":\"string\",\"mandatory\":true},{\"full-name\":\"data/ietf-restconf:notification/nsp-kpi:real_time_rtindr-event/subscriptionId\",\"type\":\"string\"},{\"full-name\":\"data/ietf-restconf:notification/nsp-kpi:real_time_rtindr-event/temperature\",\"type\":\"decimal(30,4)\"}]}}},{\"name\":\"act-event-adapter-source\",\"input-process\":[\"telemetrySource\"],\"type\":\"adapter\",\"adapter\":{\"columns\":[{\"full-name\":\"eventTime\"},{\"full-name\":\"networkDeviceId\"},{\"full-name\":\"neId\"},{\"full-name\":\"neName\"},{\"full-name\":\"name\",\"type\":\"string\",\"value\":\"MaxTempNfmp104\"},{\"full-name\":\"temperature\"}]}},{\"name\":\"timebased-tumbling-window\",\"type\":\"timebased-tumbling-window\",\"input-process\":[\"act-event-adapter-source\"],\"timebased-tumbling-window\":{\"event-time-in-property\":\"eventTime\",\"in-object-key-property\":[\"networkDeviceId\",\"name\"],\"pass-through-property\":[\"networkDeviceId\",\"neId\",\"neName\",\"name\"],\"in-property\":[\"temperature\"],\"window-period\":60,\"aggregations\":[{\"operation\":\"avg\",\"arguments\":[\"temperature\"]}]}},{\"name\":\"stream-sink-source\",\"input-process\":[\"timebased-tumbling-window\"],\"type\":\"stream-sink\",\"stream-sink\":{\"type\":\"kafka\",\"options\":[{\"name\":\"topic\",\"value\":\"rta.internal-pipeline-topic\"}]}}]}"
+          },
+          {
+            "@": {
+              "nsp-model:schema-nodeid": "/nsp-indicator:rta-indicator-rules/rule/act-rules",
+              "nsp-model:identifier": "/nsp-indicator:rta-indicator-rules/rule[name='MaxTempNfmp104']/act-rules[name='ind_compute_output_a2b34a60_0da7_4399_bdb5_46d15eefb2ef']"
+            },
+            "name": "ind_compute_output_a2b34a60_0da7_4399_bdb5_46d15eefb2ef",
+            "definition": "{\"name\":\"ind_compute_output_a2b34a60_0da7_4399_bdb5_46d15eefb2ef\",\"description\":\"Aggregation Operation Act Rule\",\"owner\":\"MaxTempNfmp104\",\"keepalive\":120,\"enabled\":true,\"process\":[{\"name\":\"telemetrySource\",\"type\":\"stream-source\",\"stream-source\":{\"type\":\"kafka\",\"select-input-keys\":[\"ind_act_rule_d40bacfe_ad35_44e6_acc7_d925ab1a4d83\"],\"options\":[{\"name\":\"subscribe\",\"value\":\"rta.internal-pipeline-topic\"},{\"name\":\"failOnDataLoss\",\"value\":\"false\"}],\"schema\":{\"columns\":[{\"full-name\":\"startTime\",\"type\":\"timestamp\",\"timestamp-type-format\":\"yyyy-MM-dd'T'HH:mm:ss.SSS'Z'\",\"rename-to\":\"eventTime\",\"mandatory\":true},{\"full-name\":\"name\",\"type\":\"string\",\"mandatory\":true},{\"full-name\":\"networkDeviceId\",\"type\":\"string\",\"mandatory\":true},{\"full-name\":\"neId\",\"type\":\"string\",\"mandatory\":true},{\"full-name\":\"neName\",\"type\":\"string\",\"mandatory\":true},{\"full-name\":\"temperature_avg\",\"type\":\"decimal(30,4)\"}]}}},{\"name\":\"mixedOperations\",\"input-process\":[\"telemetrySource\"],\"type\":\"mixed-expression-operator\",\"mixed-expression-operator\":{\"event-time-in-property\":\"eventTime\",\"in-object-key-property\":[\"eventTime\",\"name\"],\"in-property\":[\"temperature_avg\"],\"resource-property\":\"networkDeviceId\",\"mixed-operations\":[{\"aggregation-operation\":\"max\",\"aggregation-operation-argument\":\"temperature_avg\",\"result-property\":\"result1\"}],\"out-property\":\"resultData\"}},{\"name\":\"stream-sink-aggregation-operation\",\"input-process\":[\"mixedOperations\"],\"type\":\"stream-sink\",\"stream-sink\":{\"type\":\"kafka\",\"options\":[{\"name\":\"topic\",\"value\":\"rta.internal-pipeline-topic\"}]}}]}"
+          },
+          {
+            "@": {
+              "nsp-model:schema-nodeid": "/nsp-indicator:rta-indicator-rules/rule/act-rules",
+              "nsp-model:identifier": "/nsp-indicator:rta-indicator-rules/rule[name='MaxTempNfmp104']/act-rules[name='ind_threshold_bbc81edd_9f8b_41c8_acc4_de7f607428da']"
+            },
+            "name": "ind_threshold_bbc81edd_9f8b_41c8_acc4_de7f607428da",
+            "definition": "{\"name\":\"ind_threshold_bbc81edd_9f8b_41c8_acc4_de7f607428da\",\"description\":\"Absolute Threshold Act rule\",\"owner\":\"MaxTempNfmp104\",\"keepalive\":120,\"enabled\":true,\"process\":[{\"name\":\"telemetrySource\",\"type\":\"stream-source\",\"stream-source\":{\"type\":\"kafka\",\"select-input-keys\":[\"ind_compute_output_a2b34a60_0da7_4399_bdb5_46d15eefb2ef\"],\"options\":[{\"name\":\"subscribe\",\"value\":\"rta.internal-pipeline-topic\"},{\"name\":\"failOnDataLoss\",\"value\":\"false\"}],\"schema\":{\"columns\":[{\"full-name\":\"eventTime\",\"type\":\"timestamp\",\"timestamp-type-format\":\"yyyy-MM-dd'T'HH:mm:ss.SSS'Z'\",\"mandatory\":true},{\"full-name\":\"name\",\"type\":\"string\",\"mandatory\":true},{\"full-name\":\"networkDeviceId\",\"type\":\"string\",\"mandatory\":true},{\"full-name\":\"neId\",\"type\":\"string\",\"mandatory\":true},{\"full-name\":\"neName\",\"type\":\"string\",\"mandatory\":true},{\"full-name\":\"resultData\",\"type\":\"decimal(30,4)\"}]}}},{\"name\":\"MaxTempNfmp104_60_increasing\",\"input-process\":[\"telemetrySource\"],\"type\":\"absolute-thresholds\",\"absolute-thresholds\":{\"in-object-key-property\":[\"networkDeviceId\",\"name\"],\"pass-through-property\":[\"networkDeviceId\",\"eventTime\",\"neId\",\"neName\",\"name\"],\"thresholds\":[{\"name\":\"MaxTempNfmp104_60_increasing\",\"threshold-value-decimal\":\"60\",\"direction\":\"increasing\",\"in-property\":\"resultData\"}]}},{\"name\":\"act-event-adapter-1\",\"input-process\":[\"MaxTempNfmp104_60_increasing\"],\"type\":\"adapter\",\"adapter\":{\"columns\":[{\"full-name\":\"source\"},{\"full-name\":\"payload\"},{\"full-name\":\"timestamp\"},{\"full-name\":\"rule\"},{\"full-name\":\"process\"},{\"full-name\":\"type\"}]}}],\"action\":[{\"type\":\"kafka\",\"kafka\":{\"topic-name\":\"nsp-act-action-event\",\"topic-content\":\"Temperature is a rising on 10.10.10.4\"},\"action-name\":\"threshold_60_increasing_kafka_action1\",\"process-name\":\"MaxTempNfmp104_60_increasing\"},{\"type\":\"alarm\",\"alarm\":{\"severity\":\"critical\",\"alarm-name\":\"IndicatorThresholdCrossingEvent\",\"alarm-type\":\"qualityOfServiceAlarm\",\"probable-cause\":\"thresholdCrossed\",\"additional-text\":\"Threshold Crossing:\",\"additional-text-props\":[{\"property\":\"payload.threshold\",\"displayed-name\":\"threshold-value\"},{\"property\":\"payload.direction\",\"displayed-name\":\"direction\"},{\"property\":\"payload.value\",\"displayed-name\":\"value\"},{\"property\":\"source.eventTime\",\"displayed-name\":\"event-time\"},{\"property\":\"source.networkDeviceId\",\"displayed-name\":\"resource\"}],\"object-fdn\":\"fdn:yang:nsp-indicator:/nsp-indicator:rta-indicator-rules/rule[name='MaxTempNfmp104']\",\"object-name\":\"MaxTempNfmp104\",\"object-type\":\"nsp-indicator:rta-indicator-rules/rule\",\"source-type\":\"nsp\",\"key-prefix\":\"fm.Alarm\",\"key-properties\":[\"$ALARM_NAME\",\"source.name\"],\"ne-name-property\":null,\"ne-id-property\":null,\"last-time-detected-property\":\"source.eventTime\",\"last-time-detected-format\":\"yyyy-MM-dd'T'HH:mm:ss'Z'\",\"key-fdn-namespace\":\"nsp-indicator\",\"implicitly-cleared\":false},\"action-name\":\"threshold_60_increasing_alarm_action2\",\"process-name\":\"MaxTempNfmp104_60_increasing\"},{\"type\":\"email\",\"email\":{\"aggregation\":false,\"period\":5,\"email-address\":\"userid@user.com\",\"email-subject\":\"Hmmmmm, It's getting hot 10.10.10.4\",\"email-content\":\"Your temperature is rising 10.10.10.4\",\"number-events\":5},\"action-name\":\"threshold_60_increasing_email_action3\",\"process-name\":\"MaxTempNfmp104_60_increasing\"}]}"
+          }
+        ]
+      },
+      {
+        "@": {
+          "nsp-model:schema-nodeid": "/nsp-indicator:rta-indicator-rules/rule",
+          "nsp-model:identifier": "/nsp-indicator:rta-indicator-rules/rule[name='MinTempNfmp105']"
+        },
+        "name": "MinTempNfmp105",
+        "description": "min' temp\" on 10.10.10.5",
+        "units-name": "CELSIUS",
+        "telemetry-type": "telemetry:/base/hardware/temperature",
+        "formula": "min({temperature_avg})",
+        "multiple-output": false,
+        "window-duration": "PT5M",
+        "enabled": true,
+        "collection-interval": 50,
+        "subscription-filter": "/nsp-equipment:network/network-element[ne-id='10.10.10.5']",
+        "subscription-id": "ia-532a1a77-5b35-44b6-bce7-af1421d3a627",
+        "counters": [
+          {
+            "@": {
+              "nsp-model:schema-nodeid": "/nsp-indicator:rta-indicator-rules/rule/counters",
+              "nsp-model:identifier": "/nsp-indicator:rta-indicator-rules/rule[name='MinTempNfmp105']/counters[name='temperature'][function='avg']"
+            },
+            "name": "temperature",
+            "function": "avg"
+          }
+        ],
+        "thresholds": [
+          {
+            "@": {
+              "nsp-model:schema-nodeid": "/nsp-indicator:rta-indicator-rules/rule/thresholds",
+              "nsp-model:identifier": "/nsp-indicator:rta-indicator-rules/rule[name='MinTempNfmp105']/thresholds[threshold-value-decimal='50'][direction='increasing']"
+            },
+            "threshold-value-decimal": "50",
+            "direction": "increasing",
+            "actions": [
+              {
+                "@": {
+                  "nsp-model:schema-nodeid": "/nsp-indicator:rta-indicator-rules/rule/thresholds/actions",
+                  "nsp-model:identifier": "/nsp-indicator:rta-indicator-rules/rule[name='MinTempNfmp105']/thresholds[threshold-value-decimal='50'][direction='increasing']/actions[name='threshold_50_increasing_kafka_action1']"
+                },
+                "name": "threshold_50_increasing_kafka_action1",
+                "type": "kafka",
+                "kafka": {
+                  "@": {
+                    "nsp-model:schema-nodeid": "/nsp-indicator:rta-indicator-rules/rule/thresholds/actions/kafka",
+                    "nsp-model:identifier": "/nsp-indicator:rta-indicator-rules/rule[name='MinTempNfmp105']/thresholds[threshold-value-decimal='50'][direction='increasing']/actions[name='threshold_50_increasing_kafka_action1']/kafka"
+                  },
+                  "topic-name": "nsp-act-action-event",
+                  "topic-content": "Temperature is a rising 10.10.10.5"
+                }
+              },
+              {
+                "@": {
+                  "nsp-model:schema-nodeid": "/nsp-indicator:rta-indicator-rules/rule/thresholds/actions",
+                  "nsp-model:identifier": "/nsp-indicator:rta-indicator-rules/rule[name='MinTempNfmp105']/thresholds[threshold-value-decimal='50'][direction='increasing']/actions[name='threshold_50_increasing_alarm_action2']"
+                },
+                "name": "threshold_50_increasing_alarm_action2",
+                "type": "alarm",
+                "alarm": {
+                  "@": {
+                    "nsp-model:schema-nodeid": "/nsp-indicator:rta-indicator-rules/rule/thresholds/actions/alarm",
+                    "nsp-model:identifier": "/nsp-indicator:rta-indicator-rules/rule[name='MinTempNfmp105']/thresholds[threshold-value-decimal='50'][direction='increasing']/actions[name='threshold_50_increasing_alarm_action2']/alarm"
+                  },
+                  "severity": "major"
+                }
+              },
+              {
+                "@": {
+                  "nsp-model:schema-nodeid": "/nsp-indicator:rta-indicator-rules/rule/thresholds/actions",
+                  "nsp-model:identifier": "/nsp-indicator:rta-indicator-rules/rule[name='MinTempNfmp105']/thresholds[threshold-value-decimal='50'][direction='increasing']/actions[name='threshold_50_increasing_email_action3']"
+                },
+                "name": "threshold_50_increasing_email_action3",
+                "type": "email",
+                "email": {
+                  "@": {
+                    "nsp-model:schema-nodeid": "/nsp-indicator:rta-indicator-rules/rule/thresholds/actions/email",
+                    "nsp-model:identifier": "/nsp-indicator:rta-indicator-rules/rule[name='MinTempNfmp105']/thresholds[threshold-value-decimal='50'][direction='increasing']/actions[name='threshold_50_increasing_email_action3']/email"
+                  },
+                  "email-address": "userid@user.com",
+                  "email-subject": "Hmmmmm, It's getting hot 10.10.10.5",
+                  "email-content": "Your temperature is rising 10.10.10.5",
+                  "aggregation": false,
+                  "period": 5,
+                  "number-events": 5
+                }
+              }
+            ]
+          }
+        ],
+        "act-rules": [
+          {
+            "@": {
+              "nsp-model:schema-nodeid": "/nsp-indicator:rta-indicator-rules/rule/act-rules",
+              "nsp-model:identifier": "/nsp-indicator:rta-indicator-rules/rule[name='MinTempNfmp105']/act-rules[name='ind_act_rule_fd2f1787_9f49_422d_a52f_d32bd3461f3e']"
+            },
+            "name": "ind_act_rule_fd2f1787_9f49_422d_a52f_d32bd3461f3e",
+            "definition": "{\"name\":\"ind_act_rule_fd2f1787_9f49_422d_a52f_d32bd3461f3e\",\"description\":\"min' temp\\\" on 10.10.10.5\",\"owner\":\"MinTempNfmp105\",\"keepalive\":120,\"enabled\":true,\"process\":[{\"name\":\"telemetrySource\",\"type\":\"stream-source\",\"stream-source\":{\"type\":\"kafka\",\"select-input-keys\":[\"ia-532a1a77-5b35-44b6-bce7-af1421d3a627\"],\"options\":[{\"name\":\"subscribe\",\"value\":\"rta-indicator-topic\"},{\"name\":\"failOnDataLoss\",\"value\":\"false\"}],\"schema\":{\"columns\":[{\"full-name\":\"data/ietf-restconf:notification/eventTime\",\"type\":\"timestamp\",\"timestamp-type-format\":\"yyyy-MM-dd'T'HH:mm:ss'Z'\",\"mandatory\":true},{\"full-name\":\"data/ietf-restconf:notification/nsp-kpi:real_time_rtindr-event/networkDeviceId\",\"type\":\"string\",\"mandatory\":true},{\"full-name\":\"data/ietf-restconf:notification/nsp-kpi:real_time_rtindr-event/neId\",\"type\":\"string\",\"mandatory\":true},{\"full-name\":\"data/ietf-restconf:notification/nsp-kpi:real_time_rtindr-event/neName\",\"type\":\"string\",\"mandatory\":true},{\"full-name\":\"data/ietf-restconf:notification/nsp-kpi:real_time_rtindr-event/subscriptionId\",\"type\":\"string\"},{\"full-name\":\"data/ietf-restconf:notification/nsp-kpi:real_time_rtindr-event/temperature\",\"type\":\"decimal(30,4)\"}]}}},{\"name\":\"act-event-adapter-source\",\"input-process\":[\"telemetrySource\"],\"type\":\"adapter\",\"adapter\":{\"columns\":[{\"full-name\":\"eventTime\"},{\"full-name\":\"networkDeviceId\"},{\"full-name\":\"neId\"},{\"full-name\":\"neName\"},{\"full-name\":\"name\",\"type\":\"string\",\"value\":\"MinTempNfmp105\"},{\"full-name\":\"temperature\"}]}},{\"name\":\"timebased-tumbling-window\",\"type\":\"timebased-tumbling-window\",\"input-process\":[\"act-event-adapter-source\"],\"timebased-tumbling-window\":{\"event-time-in-property\":\"eventTime\",\"in-object-key-property\":[\"networkDeviceId\",\"name\"],\"pass-through-property\":[\"networkDeviceId\",\"neId\",\"neName\",\"name\"],\"in-property\":[\"temperature\"],\"window-period\":300,\"aggregations\":[{\"operation\":\"avg\",\"arguments\":[\"temperature\"]}]}},{\"name\":\"stream-sink-source\",\"input-process\":[\"timebased-tumbling-window\"],\"type\":\"stream-sink\",\"stream-sink\":{\"type\":\"kafka\",\"options\":[{\"name\":\"topic\",\"value\":\"rta.internal-pipeline-topic\"}]}}]}"
+          },
+          {
+            "@": {
+              "nsp-model:schema-nodeid": "/nsp-indicator:rta-indicator-rules/rule/act-rules",
+              "nsp-model:identifier": "/nsp-indicator:rta-indicator-rules/rule[name='MinTempNfmp105']/act-rules[name='ind_compute_output_1514708d_8ffb_43ce_9d37_853affd4ade3']"
+            },
+            "name": "ind_compute_output_1514708d_8ffb_43ce_9d37_853affd4ade3",
+            "definition": "{\"name\":\"ind_compute_output_1514708d_8ffb_43ce_9d37_853affd4ade3\",\"description\":\"Aggregation Operation Act Rule\",\"owner\":\"MinTempNfmp105\",\"keepalive\":120,\"enabled\":true,\"process\":[{\"name\":\"telemetrySource\",\"type\":\"stream-source\",\"stream-source\":{\"type\":\"kafka\",\"select-input-keys\":[\"ind_act_rule_fd2f1787_9f49_422d_a52f_d32bd3461f3e\"],\"options\":[{\"name\":\"subscribe\",\"value\":\"rta.internal-pipeline-topic\"},{\"name\":\"failOnDataLoss\",\"value\":\"false\"}],\"schema\":{\"columns\":[{\"full-name\":\"startTime\",\"type\":\"timestamp\",\"timestamp-type-format\":\"yyyy-MM-dd'T'HH:mm:ss.SSS'Z'\",\"rename-to\":\"eventTime\",\"mandatory\":true},{\"full-name\":\"name\",\"type\":\"string\",\"mandatory\":true},{\"full-name\":\"networkDeviceId\",\"type\":\"string\",\"mandatory\":true},{\"full-name\":\"neId\",\"type\":\"string\",\"mandatory\":true},{\"full-name\":\"neName\",\"type\":\"string\",\"mandatory\":true},{\"full-name\":\"temperature_avg\",\"type\":\"decimal(30,4)\"}]}}},{\"name\":\"mixedOperations\",\"input-process\":[\"telemetrySource\"],\"type\":\"mixed-expression-operator\",\"mixed-expression-operator\":{\"event-time-in-property\":\"eventTime\",\"in-object-key-property\":[\"eventTime\",\"name\"],\"in-property\":[\"temperature_avg\"],\"resource-property\":\"networkDeviceId\",\"mixed-operations\":[{\"aggregation-operation\":\"min\",\"aggregation-operation-argument\":\"temperature_avg\",\"result-property\":\"result1\"}],\"out-property\":\"resultData\"}},{\"name\":\"stream-sink-aggregation-operation\",\"input-process\":[\"mixedOperations\"],\"type\":\"stream-sink\",\"stream-sink\":{\"type\":\"kafka\",\"options\":[{\"name\":\"topic\",\"value\":\"rta.internal-pipeline-topic\"}]}}]}"
+          },
+          {
+            "@": {
+              "nsp-model:schema-nodeid": "/nsp-indicator:rta-indicator-rules/rule/act-rules",
+              "nsp-model:identifier": "/nsp-indicator:rta-indicator-rules/rule[name='MinTempNfmp105']/act-rules[name='ind_threshold_8a7a8614_674c_4ac7_ab05_33005a580924']"
+            },
+            "name": "ind_threshold_8a7a8614_674c_4ac7_ab05_33005a580924",
+            "definition": "{\"name\":\"ind_threshold_8a7a8614_674c_4ac7_ab05_33005a580924\",\"description\":\"Absolute Threshold Act rule\",\"owner\":\"MinTempNfmp105\",\"keepalive\":120,\"enabled\":true,\"process\":[{\"name\":\"telemetrySource\",\"type\":\"stream-source\",\"stream-source\":{\"type\":\"kafka\",\"select-input-keys\":[\"ind_compute_output_1514708d_8ffb_43ce_9d37_853affd4ade3\"],\"options\":[{\"name\":\"subscribe\",\"value\":\"rta.internal-pipeline-topic\"},{\"name\":\"failOnDataLoss\",\"value\":\"false\"}],\"schema\":{\"columns\":[{\"full-name\":\"eventTime\",\"type\":\"timestamp\",\"timestamp-type-format\":\"yyyy-MM-dd'T'HH:mm:ss.SSS'Z'\",\"mandatory\":true},{\"full-name\":\"name\",\"type\":\"string\",\"mandatory\":true},{\"full-name\":\"networkDeviceId\",\"type\":\"string\",\"mandatory\":true},{\"full-name\":\"neId\",\"type\":\"string\",\"mandatory\":true},{\"full-name\":\"neName\",\"type\":\"string\",\"mandatory\":true},{\"full-name\":\"resultData\",\"type\":\"decimal(30,4)\"}]}}},{\"name\":\"MinTempNfmp105_50_increasing\",\"input-process\":[\"telemetrySource\"],\"type\":\"absolute-thresholds\",\"absolute-thresholds\":{\"in-object-key-property\":[\"networkDeviceId\",\"name\"],\"pass-through-property\":[\"networkDeviceId\",\"eventTime\",\"neId\",\"neName\",\"name\"],\"thresholds\":[{\"name\":\"MinTempNfmp105_50_increasing\",\"threshold-value-decimal\":\"50\",\"direction\":\"increasing\",\"in-property\":\"resultData\"}]}},{\"name\":\"act-event-adapter-1\",\"input-process\":[\"MinTempNfmp105_50_increasing\"],\"type\":\"adapter\",\"adapter\":{\"columns\":[{\"full-name\":\"source\"},{\"full-name\":\"payload\"},{\"full-name\":\"timestamp\"},{\"full-name\":\"rule\"},{\"full-name\":\"process\"},{\"full-name\":\"type\"}]}}],\"action\":[{\"type\":\"kafka\",\"kafka\":{\"topic-name\":\"nsp-act-action-event\",\"topic-content\":\"Temperature is a rising 10.10.10.5\"},\"action-name\":\"threshold_50_increasing_kafka_action1\",\"process-name\":\"MinTempNfmp105_50_increasing\"},{\"type\":\"alarm\",\"alarm\":{\"severity\":\"major\",\"alarm-name\":\"IndicatorThresholdCrossingEvent\",\"alarm-type\":\"qualityOfServiceAlarm\",\"probable-cause\":\"thresholdCrossed\",\"additional-text\":\"Threshold Crossing:\",\"additional-text-props\":[{\"property\":\"payload.threshold\",\"displayed-name\":\"threshold-value\"},{\"property\":\"payload.direction\",\"displayed-name\":\"direction\"},{\"property\":\"payload.value\",\"displayed-name\":\"value\"},{\"property\":\"source.eventTime\",\"displayed-name\":\"event-time\"},{\"property\":\"source.networkDeviceId\",\"displayed-name\":\"resource\"}],\"object-fdn\":\"fdn:yang:nsp-indicator:/nsp-indicator:rta-indicator-rules/rule[name='MinTempNfmp105']\",\"object-name\":\"MinTempNfmp105\",\"object-type\":\"nsp-indicator:rta-indicator-rules/rule\",\"source-type\":\"nsp\",\"key-prefix\":\"fm.Alarm\",\"key-properties\":[\"$ALARM_NAME\",\"source.name\"],\"ne-name-property\":null,\"ne-id-property\":null,\"last-time-detected-property\":\"source.eventTime\",\"last-time-detected-format\":\"yyyy-MM-dd'T'HH:mm:ss'Z'\",\"key-fdn-namespace\":\"nsp-indicator\",\"implicitly-cleared\":false},\"action-name\":\"threshold_50_increasing_alarm_action2\",\"process-name\":\"MinTempNfmp105_50_increasing\"},{\"type\":\"email\",\"email\":{\"aggregation\":false,\"period\":5,\"email-address\":\"userid@user.com\",\"email-subject\":\"Hmmmmm, It's getting hot 10.10.10.5\",\"email-content\":\"Your temperature is rising 10.10.10.5\",\"number-events\":5},\"action-name\":\"threshold_50_increasing_email_action3\",\"process-name\":\"MinTempNfmp105_50_increasing\"}]}"
+          }
+        ]
+      },
+      {
+        "@": {
+          "nsp-model:schema-nodeid": "/nsp-indicator:rta-indicator-rules/rule",
+          "nsp-model:identifier": "/nsp-indicator:rta-indicator-rules/rule[name='AvgTempNfmp105']"
+        },
+        "name": "AvgTempNfmp105",
+        "description": "avg temp on 10.10.10.5",
+        "units-name": "deg C",
+        "telemetry-type": "telemetry:/base/hardware/temperature",
+        "formula": "avg({temperature_avg})",
+        "multiple-output": false,
+        "window-duration": "PT15M",
+        "enabled": true,
+        "collection-interval": 40,
+        "subscription-filter": "/nsp-equipment:network/network-element[ne-id='10.10.10.5']",
+        "subscription-id": "ia-31d09333-989a-4df3-8806-9ac357cc69f2",
+        "counters": [
+          {
+            "@": {
+              "nsp-model:schema-nodeid": "/nsp-indicator:rta-indicator-rules/rule/counters",
+              "nsp-model:identifier": "/nsp-indicator:rta-indicator-rules/rule[name='AvgTempNfmp105']/counters[name='temperature'][function='avg']"
+            },
+            "name": "temperature",
+            "function": "avg"
+          }
+        ],
+        "thresholds": [
+          {
+            "@": {
+              "nsp-model:schema-nodeid": "/nsp-indicator:rta-indicator-rules/rule/thresholds",
+              "nsp-model:identifier": "/nsp-indicator:rta-indicator-rules/rule[name='AvgTempNfmp105']/thresholds[threshold-value-decimal='40'][direction='increasing']"
+            },
+            "threshold-value-decimal": "40",
+            "direction": "increasing",
+            "actions": [
+              {
+                "@": {
+                  "nsp-model:schema-nodeid": "/nsp-indicator:rta-indicator-rules/rule/thresholds/actions",
+                  "nsp-model:identifier": "/nsp-indicator:rta-indicator-rules/rule[name='AvgTempNfmp105']/thresholds[threshold-value-decimal='40'][direction='increasing']/actions[name='threshold_40_increasing_kafka_action1']"
+                },
+                "name": "threshold_40_increasing_kafka_action1",
+                "type": "kafka",
+                "kafka": {
+                  "@": {
+                    "nsp-model:schema-nodeid": "/nsp-indicator:rta-indicator-rules/rule/thresholds/actions/kafka",
+                    "nsp-model:identifier": "/nsp-indicator:rta-indicator-rules/rule[name='AvgTempNfmp105']/thresholds[threshold-value-decimal='40'][direction='increasing']/actions[name='threshold_40_increasing_kafka_action1']/kafka"
+                  },
+                  "topic-name": "nsp-act-action-event",
+                  "topic-content": "Temperature is a rising 10.10.10.5"
+                }
+              },
+              {
+                "@": {
+                  "nsp-model:schema-nodeid": "/nsp-indicator:rta-indicator-rules/rule/thresholds/actions",
+                  "nsp-model:identifier": "/nsp-indicator:rta-indicator-rules/rule[name='AvgTempNfmp105']/thresholds[threshold-value-decimal='40'][direction='increasing']/actions[name='threshold_40_increasing_alarm_action2']"
+                },
+                "name": "threshold_40_increasing_alarm_action2",
+                "type": "alarm",
+                "alarm": {
+                  "@": {
+                    "nsp-model:schema-nodeid": "/nsp-indicator:rta-indicator-rules/rule/thresholds/actions/alarm",
+                    "nsp-model:identifier": "/nsp-indicator:rta-indicator-rules/rule[name='AvgTempNfmp105']/thresholds[threshold-value-decimal='40'][direction='increasing']/actions[name='threshold_40_increasing_alarm_action2']/alarm"
+                  },
+                  "severity": "minor"
+                }
+              },
+              {
+                "@": {
+                  "nsp-model:schema-nodeid": "/nsp-indicator:rta-indicator-rules/rule/thresholds/actions",
+                  "nsp-model:identifier": "/nsp-indicator:rta-indicator-rules/rule[name='AvgTempNfmp105']/thresholds[threshold-value-decimal='40'][direction='increasing']/actions[name='threshold_40_increasing_email_action3']"
+                },
+                "name": "threshold_40_increasing_email_action3",
+                "type": "email",
+                "email": {
+                  "@": {
+                    "nsp-model:schema-nodeid": "/nsp-indicator:rta-indicator-rules/rule/thresholds/actions/email",
+                    "nsp-model:identifier": "/nsp-indicator:rta-indicator-rules/rule[name='AvgTempNfmp105']/thresholds[threshold-value-decimal='40'][direction='increasing']/actions[name='threshold_40_increasing_email_action3']/email"
+                  },
+                  "email-address": "userid@user.com",
+                  "email-subject": "Hmmmmm, It\"s getting hot 10.10.10.5",
+                  "email-content": "Your temperature is rising 10.10.10.5",
+                  "aggregation": true,
+                  "period": 3,
+                  "number-events": 4
+                }
+              }
+            ]
+          }
+        ],
+        "act-rules": [
+          {
+            "@": {
+              "nsp-model:schema-nodeid": "/nsp-indicator:rta-indicator-rules/rule/act-rules",
+              "nsp-model:identifier": "/nsp-indicator:rta-indicator-rules/rule[name='AvgTempNfmp105']/act-rules[name='ind_act_rule_3c47011d_ac7d_4953_9f64_77922211f5f4']"
+            },
+            "name": "ind_act_rule_3c47011d_ac7d_4953_9f64_77922211f5f4",
+            "definition": "{\"name\":\"ind_act_rule_3c47011d_ac7d_4953_9f64_77922211f5f4\",\"description\":\"avg temp on 10.10.10.5\",\"owner\":\"AvgTempNfmp105\",\"keepalive\":120,\"enabled\":true,\"process\":[{\"name\":\"telemetrySource\",\"type\":\"stream-source\",\"stream-source\":{\"type\":\"kafka\",\"select-input-keys\":[\"ia-31d09333-989a-4df3-8806-9ac357cc69f2\"],\"options\":[{\"name\":\"subscribe\",\"value\":\"rta-indicator-topic\"},{\"name\":\"failOnDataLoss\",\"value\":\"false\"}],\"schema\":{\"columns\":[{\"full-name\":\"data/ietf-restconf:notification/eventTime\",\"type\":\"timestamp\",\"timestamp-type-format\":\"yyyy-MM-dd'T'HH:mm:ss'Z'\",\"mandatory\":true},{\"full-name\":\"data/ietf-restconf:notification/nsp-kpi:real_time_rtindr-event/networkDeviceId\",\"type\":\"string\",\"mandatory\":true},{\"full-name\":\"data/ietf-restconf:notification/nsp-kpi:real_time_rtindr-event/neId\",\"type\":\"string\",\"mandatory\":true},{\"full-name\":\"data/ietf-restconf:notification/nsp-kpi:real_time_rtindr-event/neName\",\"type\":\"string\",\"mandatory\":true},{\"full-name\":\"data/ietf-restconf:notification/nsp-kpi:real_time_rtindr-event/subscriptionId\",\"type\":\"string\"},{\"full-name\":\"data/ietf-restconf:notification/nsp-kpi:real_time_rtindr-event/temperature\",\"type\":\"decimal(30,4)\"}]}}},{\"name\":\"act-event-adapter-source\",\"input-process\":[\"telemetrySource\"],\"type\":\"adapter\",\"adapter\":{\"columns\":[{\"full-name\":\"eventTime\"},{\"full-name\":\"networkDeviceId\"},{\"full-name\":\"neId\"},{\"full-name\":\"neName\"},{\"full-name\":\"name\",\"type\":\"string\",\"value\":\"AvgTempNfmp105\"},{\"full-name\":\"temperature\"}]}},{\"name\":\"timebased-tumbling-window\",\"type\":\"timebased-tumbling-window\",\"input-process\":[\"act-event-adapter-source\"],\"timebased-tumbling-window\":{\"event-time-in-property\":\"eventTime\",\"in-object-key-property\":[\"networkDeviceId\",\"name\"],\"pass-through-property\":[\"networkDeviceId\",\"neId\",\"neName\",\"name\"],\"in-property\":[\"temperature\"],\"window-period\":900,\"aggregations\":[{\"operation\":\"avg\",\"arguments\":[\"temperature\"]}]}},{\"name\":\"stream-sink-source\",\"input-process\":[\"timebased-tumbling-window\"],\"type\":\"stream-sink\",\"stream-sink\":{\"type\":\"kafka\",\"options\":[{\"name\":\"topic\",\"value\":\"rta.internal-pipeline-topic\"}]}}]}"
+          },
+          {
+            "@": {
+              "nsp-model:schema-nodeid": "/nsp-indicator:rta-indicator-rules/rule/act-rules",
+              "nsp-model:identifier": "/nsp-indicator:rta-indicator-rules/rule[name='AvgTempNfmp105']/act-rules[name='ind_compute_output_7a55d903_e779_48b9_ac88_7ff48dc27d0f']"
+            },
+            "name": "ind_compute_output_7a55d903_e779_48b9_ac88_7ff48dc27d0f",
+            "definition": "{\"name\":\"ind_compute_output_7a55d903_e779_48b9_ac88_7ff48dc27d0f\",\"description\":\"Aggregation Operation Act Rule\",\"owner\":\"AvgTempNfmp105\",\"keepalive\":120,\"enabled\":true,\"process\":[{\"name\":\"telemetrySource\",\"type\":\"stream-source\",\"stream-source\":{\"type\":\"kafka\",\"select-input-keys\":[\"ind_act_rule_3c47011d_ac7d_4953_9f64_77922211f5f4\"],\"options\":[{\"name\":\"subscribe\",\"value\":\"rta.internal-pipeline-topic\"},{\"name\":\"failOnDataLoss\",\"value\":\"false\"}],\"schema\":{\"columns\":[{\"full-name\":\"startTime\",\"type\":\"timestamp\",\"timestamp-type-format\":\"yyyy-MM-dd'T'HH:mm:ss.SSS'Z'\",\"rename-to\":\"eventTime\",\"mandatory\":true},{\"full-name\":\"name\",\"type\":\"string\",\"mandatory\":true},{\"full-name\":\"networkDeviceId\",\"type\":\"string\",\"mandatory\":true},{\"full-name\":\"neId\",\"type\":\"string\",\"mandatory\":true},{\"full-name\":\"neName\",\"type\":\"string\",\"mandatory\":true},{\"full-name\":\"temperature_avg\",\"type\":\"decimal(30,4)\"}]}}},{\"name\":\"mixedOperations\",\"input-process\":[\"telemetrySource\"],\"type\":\"mixed-expression-operator\",\"mixed-expression-operator\":{\"event-time-in-property\":\"eventTime\",\"in-object-key-property\":[\"eventTime\",\"name\"],\"in-property\":[\"temperature_avg\"],\"resource-property\":\"networkDeviceId\",\"mixed-operations\":[{\"aggregation-operation\":\"avg\",\"aggregation-operation-argument\":\"temperature_avg\",\"result-property\":\"result1\"}],\"out-property\":\"resultData\"}},{\"name\":\"stream-sink-aggregation-operation\",\"input-process\":[\"mixedOperations\"],\"type\":\"stream-sink\",\"stream-sink\":{\"type\":\"kafka\",\"options\":[{\"name\":\"topic\",\"value\":\"rta.internal-pipeline-topic\"}]}}]}"
+          },
+          {
+            "@": {
+              "nsp-model:schema-nodeid": "/nsp-indicator:rta-indicator-rules/rule/act-rules",
+              "nsp-model:identifier": "/nsp-indicator:rta-indicator-rules/rule[name='AvgTempNfmp105']/act-rules[name='ind_threshold_4b8ec54d_e0b5_4729_9eb7_6937eb923897']"
+            },
+            "name": "ind_threshold_4b8ec54d_e0b5_4729_9eb7_6937eb923897",
+            "definition": "{\"name\":\"ind_threshold_4b8ec54d_e0b5_4729_9eb7_6937eb923897\",\"description\":\"Absolute Threshold Act rule\",\"owner\":\"AvgTempNfmp105\",\"keepalive\":360,\"enabled\":true,\"process\":[{\"name\":\"telemetrySource\",\"type\":\"stream-source\",\"stream-source\":{\"type\":\"kafka\",\"select-input-keys\":[\"ind_compute_output_7a55d903_e779_48b9_ac88_7ff48dc27d0f\"],\"options\":[{\"name\":\"subscribe\",\"value\":\"rta.internal-pipeline-topic\"},{\"name\":\"failOnDataLoss\",\"value\":\"false\"}],\"schema\":{\"columns\":[{\"full-name\":\"eventTime\",\"type\":\"timestamp\",\"timestamp-type-format\":\"yyyy-MM-dd'T'HH:mm:ss.SSS'Z'\",\"mandatory\":true},{\"full-name\":\"name\",\"type\":\"string\",\"mandatory\":true},{\"full-name\":\"networkDeviceId\",\"type\":\"string\",\"mandatory\":true},{\"full-name\":\"neId\",\"type\":\"string\",\"mandatory\":true},{\"full-name\":\"neName\",\"type\":\"string\",\"mandatory\":true},{\"full-name\":\"resultData\",\"type\":\"decimal(30,4)\"}]}}},{\"name\":\"AvgTempNfmp105_40_increasing\",\"input-process\":[\"telemetrySource\"],\"type\":\"absolute-thresholds\",\"absolute-thresholds\":{\"in-object-key-property\":[\"networkDeviceId\",\"name\"],\"pass-through-property\":[\"networkDeviceId\",\"eventTime\",\"neId\",\"neName\",\"name\"],\"thresholds\":[{\"name\":\"AvgTempNfmp105_40_increasing\",\"threshold-value-decimal\":\"40\",\"direction\":\"increasing\",\"in-property\":\"resultData\"}]}},{\"name\":\"act-event-adapter-1\",\"input-process\":[\"AvgTempNfmp105_40_increasing\"],\"type\":\"adapter\",\"adapter\":{\"columns\":[{\"full-name\":\"source\"},{\"full-name\":\"payload\"},{\"full-name\":\"timestamp\"},{\"full-name\":\"rule\"},{\"full-name\":\"process\"},{\"full-name\":\"type\"}]}}],\"action\":[{\"type\":\"kafka\",\"kafka\":{\"topic-name\":\"nsp-act-action-event\",\"topic-content\":\"Temperature is a rising 10.10.10.5\"},\"action-name\":\"threshold_40_increasing_kafka_action1\",\"process-name\":\"AvgTempNfmp105_40_increasing\"},{\"type\":\"alarm\",\"alarm\":{\"severity\":\"minor\",\"alarm-name\":\"IndicatorThresholdCrossingEvent\",\"alarm-type\":\"qualityOfServiceAlarm\",\"probable-cause\":\"thresholdCrossed\",\"additional-text\":\"Threshold Crossing:\",\"additional-text-props\":[{\"property\":\"payload.threshold\",\"displayed-name\":\"threshold-value\"},{\"property\":\"payload.direction\",\"displayed-name\":\"direction\"},{\"property\":\"payload.value\",\"displayed-name\":\"value\"},{\"property\":\"source.eventTime\",\"displayed-name\":\"event-time\"},{\"property\":\"source.networkDeviceId\",\"displayed-name\":\"resource\"}],\"object-fdn\":\"fdn:yang:nsp-indicator:/nsp-indicator:rta-indicator-rules/rule[name='AvgTempNfmp105']\",\"object-name\":\"AvgTempNfmp105\",\"object-type\":\"nsp-indicator:rta-indicator-rules/rule\",\"source-type\":\"nsp\",\"key-prefix\":\"fm.Alarm\",\"key-properties\":[\"$ALARM_NAME\",\"source.name\"],\"ne-name-property\":null,\"ne-id-property\":null,\"last-time-detected-property\":\"source.eventTime\",\"last-time-detected-format\":\"yyyy-MM-dd'T'HH:mm:ss'Z'\",\"key-fdn-namespace\":\"nsp-indicator\",\"implicitly-cleared\":false},\"action-name\":\"threshold_40_increasing_alarm_action2\",\"process-name\":\"AvgTempNfmp105_40_increasing\"},{\"type\":\"email\",\"email\":{\"aggregation\":true,\"period\":3,\"email-address\":\"userid@user.com\",\"email-subject\":\"Hmmmmm, It\\\"s getting hot 10.10.10.5\",\"email-content\":\"Your temperature is rising 10.10.10.5\",\"number-events\":4},\"action-name\":\"threshold_40_increasing_email_action3\",\"process-name\":\"AvgTempNfmp105_40_increasing\"}]}"
+          }
+        ]
+      },
+      {
+        "@": {
+          "nsp-model:schema-nodeid": "/nsp-indicator:rta-indicator-rules/rule",
+          "nsp-model:identifier": "/nsp-indicator:rta-indicator-rules/rule[name='SumOctets 10.10.10.4']"
+        },
+        "name": "SumOctets 10.10.10.4",
+        "description": "sum tx, rx of all ports on 10.10.10.4",
+        "units-name": "Total octets",
+        "telemetry-type": "telemetry:/base/interfaces/interface",
+        "formula": "sum({transmitted-octets-periodic_sum} + {received-octets-periodic_sum})",
+        "multiple-output": false,
+        "window-duration": "PT5M",
+        "enabled": true,
+        "collection-interval": 60,
+        "subscription-filter": "/nsp-equipment:network/network-element[ne-id='10.10.10.4']",
+        "subscription-id": "ia-5624bc33-8f5e-465d-ad8a-c7a63b815b61",
+        "counters": [
+          {
+            "@": {
+              "nsp-model:schema-nodeid": "/nsp-indicator:rta-indicator-rules/rule/counters",
+              "nsp-model:identifier": "/nsp-indicator:rta-indicator-rules/rule[name='SumOctets 10.10.10.4']/counters[name='transmitted-octets-periodic'][function='sum']"
+            },
+            "name": "transmitted-octets-periodic",
+            "function": "sum"
+          },
+          {
+            "@": {
+              "nsp-model:schema-nodeid": "/nsp-indicator:rta-indicator-rules/rule/counters",
+              "nsp-model:identifier": "/nsp-indicator:rta-indicator-rules/rule[name='SumOctets 10.10.10.4']/counters[name='received-octets-periodic'][function='sum']"
+            },
+            "name": "received-octets-periodic",
+            "function": "sum"
+          }
+        ],
+        "thresholds": [
+          {
+            "@": {
+              "nsp-model:schema-nodeid": "/nsp-indicator:rta-indicator-rules/rule/thresholds",
+              "nsp-model:identifier": "/nsp-indicator:rta-indicator-rules/rule[name='SumOctets 10.10.10.4']/thresholds[threshold-value-decimal='100000'][direction='increasing']"
+            },
+            "threshold-value-decimal": "100000",
+            "direction": "increasing",
+            "actions": [
+              {
+                "@": {
+                  "nsp-model:schema-nodeid": "/nsp-indicator:rta-indicator-rules/rule/thresholds/actions",
+                  "nsp-model:identifier": "/nsp-indicator:rta-indicator-rules/rule[name='SumOctets 10.10.10.4']/thresholds[threshold-value-decimal='100000'][direction='increasing']/actions[name='threshold_100000_increasing_kafka_action1']"
+                },
+                "name": "threshold_100000_increasing_kafka_action1",
+                "type": "kafka",
+                "kafka": {
+                  "@": {
+                    "nsp-model:schema-nodeid": "/nsp-indicator:rta-indicator-rules/rule/thresholds/actions/kafka",
+                    "nsp-model:identifier": "/nsp-indicator:rta-indicator-rules/rule[name='SumOctets 10.10.10.4']/thresholds[threshold-value-decimal='100000'][direction='increasing']/actions[name='threshold_100000_increasing_kafka_action1']/kafka"
+                  },
+                  "topic-name": "nsp-act-action-event",
+                  "topic-content": "sum(tx+rx) on 10.10.10.4 increasing"
+                }
+              }
+            ]
+          },
+          {
+            "@": {
+              "nsp-model:schema-nodeid": "/nsp-indicator:rta-indicator-rules/rule/thresholds",
+              "nsp-model:identifier": "/nsp-indicator:rta-indicator-rules/rule[name='SumOctets 10.10.10.4']/thresholds[threshold-value-decimal='1000'][direction='decreasing']"
+            },
+            "threshold-value-decimal": "1000",
+            "direction": "decreasing",
+            "actions": [
+              {
+                "@": {
+                  "nsp-model:schema-nodeid": "/nsp-indicator:rta-indicator-rules/rule/thresholds/actions",
+                  "nsp-model:identifier": "/nsp-indicator:rta-indicator-rules/rule[name='SumOctets 10.10.10.4']/thresholds[threshold-value-decimal='1000'][direction='decreasing']/actions[name='threshold_1000_decreasing_kafka_action1']"
+                },
+                "name": "threshold_1000_decreasing_kafka_action1",
+                "type": "kafka",
+                "kafka": {
+                  "@": {
+                    "nsp-model:schema-nodeid": "/nsp-indicator:rta-indicator-rules/rule/thresholds/actions/kafka",
+                    "nsp-model:identifier": "/nsp-indicator:rta-indicator-rules/rule[name='SumOctets 10.10.10.4']/thresholds[threshold-value-decimal='1000'][direction='decreasing']/actions[name='threshold_1000_decreasing_kafka_action1']/kafka"
+                  },
+                  "topic-name": "nsp-act-action-event",
+                  "topic-content": "sum(tx+rx) on 10.10.10.4 decreasing"
+                }
+              }
+            ]
+          }
+        ],
+        "act-rules": [
+          {
+            "@": {
+              "nsp-model:schema-nodeid": "/nsp-indicator:rta-indicator-rules/rule/act-rules",
+              "nsp-model:identifier": "/nsp-indicator:rta-indicator-rules/rule[name='SumOctets 10.10.10.4']/act-rules[name='ind_act_rule_e27caad4_e947_4533_a965_9cc885919d54']"
+            },
+            "name": "ind_act_rule_e27caad4_e947_4533_a965_9cc885919d54",
+            "definition": "{\"name\":\"ind_act_rule_e27caad4_e947_4533_a965_9cc885919d54\",\"description\":\"sum tx, rx of all ports on 10.10.10.4\",\"owner\":\"SumOctets 10.10.10.4\",\"keepalive\":120,\"enabled\":true,\"process\":[{\"name\":\"telemetrySource\",\"type\":\"stream-source\",\"stream-source\":{\"type\":\"kafka\",\"select-input-keys\":[\"ia-5624bc33-8f5e-465d-ad8a-c7a63b815b61\"],\"options\":[{\"name\":\"subscribe\",\"value\":\"rta-indicator-topic\"},{\"name\":\"failOnDataLoss\",\"value\":\"false\"}],\"schema\":{\"columns\":[{\"full-name\":\"data/ietf-restconf:notification/eventTime\",\"type\":\"timestamp\",\"timestamp-type-format\":\"yyyy-MM-dd'T'HH:mm:ss'Z'\",\"mandatory\":true},{\"full-name\":\"data/ietf-restconf:notification/nsp-kpi:real_time_rtindr-event/networkDeviceId\",\"type\":\"string\",\"mandatory\":true},{\"full-name\":\"data/ietf-restconf:notification/nsp-kpi:real_time_rtindr-event/neId\",\"type\":\"string\",\"mandatory\":true},{\"full-name\":\"data/ietf-restconf:notification/nsp-kpi:real_time_rtindr-event/neName\",\"type\":\"string\",\"mandatory\":true},{\"full-name\":\"data/ietf-restconf:notification/nsp-kpi:real_time_rtindr-event/subscriptionId\",\"type\":\"string\"},{\"full-name\":\"data/ietf-restconf:notification/nsp-kpi:real_time_rtindr-event/transmitted-octets-periodic\",\"type\":\"decimal(30,4)\"},{\"full-name\":\"data/ietf-restconf:notification/nsp-kpi:real_time_rtindr-event/received-octets-periodic\",\"type\":\"decimal(30,4)\"}]}}},{\"name\":\"act-event-adapter-source\",\"input-process\":[\"telemetrySource\"],\"type\":\"adapter\",\"adapter\":{\"columns\":[{\"full-name\":\"eventTime\"},{\"full-name\":\"networkDeviceId\"},{\"full-name\":\"neId\"},{\"full-name\":\"neName\"},{\"full-name\":\"name\",\"type\":\"string\",\"value\":\"SumOctets 10.10.10.4\"},{\"full-name\":\"transmitted-octets-periodic\"},{\"full-name\":\"received-octets-periodic\"}]}},{\"name\":\"timebased-tumbling-window\",\"type\":\"timebased-tumbling-window\",\"input-process\":[\"act-event-adapter-source\"],\"timebased-tumbling-window\":{\"event-time-in-property\":\"eventTime\",\"in-object-key-property\":[\"networkDeviceId\",\"name\"],\"pass-through-property\":[\"networkDeviceId\",\"neId\",\"neName\",\"name\"],\"in-property\":[\"transmitted-octets-periodic\",\"received-octets-periodic\"],\"window-period\":300,\"aggregations\":[{\"operation\":\"sum\",\"arguments\":[\"transmitted-octets-periodic\",\"received-octets-periodic\"]}]}},{\"name\":\"stream-sink-source\",\"input-process\":[\"timebased-tumbling-window\"],\"type\":\"stream-sink\",\"stream-sink\":{\"type\":\"kafka\",\"options\":[{\"name\":\"topic\",\"value\":\"rta.internal-pipeline-topic\"}]}}]}"
+          },
+          {
+            "@": {
+              "nsp-model:schema-nodeid": "/nsp-indicator:rta-indicator-rules/rule/act-rules",
+              "nsp-model:identifier": "/nsp-indicator:rta-indicator-rules/rule[name='SumOctets 10.10.10.4']/act-rules[name='ind_compute_output_75452ee1_16c9_4af4_a880_24987ffd61b7']"
+            },
+            "name": "ind_compute_output_75452ee1_16c9_4af4_a880_24987ffd61b7",
+            "definition": "{\"name\":\"ind_compute_output_75452ee1_16c9_4af4_a880_24987ffd61b7\",\"description\":\"Aggregation Operation Act Rule\",\"owner\":\"SumOctets 10.10.10.4\",\"keepalive\":120,\"enabled\":true,\"process\":[{\"name\":\"telemetrySource\",\"type\":\"stream-source\",\"stream-source\":{\"type\":\"kafka\",\"select-input-keys\":[\"ind_act_rule_e27caad4_e947_4533_a965_9cc885919d54\"],\"options\":[{\"name\":\"subscribe\",\"value\":\"rta.internal-pipeline-topic\"},{\"name\":\"failOnDataLoss\",\"value\":\"false\"}],\"schema\":{\"columns\":[{\"full-name\":\"startTime\",\"type\":\"timestamp\",\"timestamp-type-format\":\"yyyy-MM-dd'T'HH:mm:ss.SSS'Z'\",\"rename-to\":\"eventTime\",\"mandatory\":true},{\"full-name\":\"name\",\"type\":\"string\",\"mandatory\":true},{\"full-name\":\"networkDeviceId\",\"type\":\"string\",\"mandatory\":true},{\"full-name\":\"neId\",\"type\":\"string\",\"mandatory\":true},{\"full-name\":\"neName\",\"type\":\"string\",\"mandatory\":true},{\"full-name\":\"transmitted-octets-periodic_sum\",\"type\":\"decimal(30,4)\"},{\"full-name\":\"received-octets-periodic_sum\",\"type\":\"decimal(30,4)\"}]}}},{\"name\":\"mixedOperations\",\"input-process\":[\"telemetrySource\"],\"type\":\"mixed-expression-operator\",\"mixed-expression-operator\":{\"event-time-in-property\":\"eventTime\",\"in-object-key-property\":[\"eventTime\",\"name\"],\"in-property\":[\"transmitted-octets-periodic_sum\",\"received-octets-periodic_sum\"],\"resource-property\":\"networkDeviceId\",\"mixed-operations\":[{\"aggregation-operation\":\"sum\",\"aggregation-arithmetic-operations\":[{\"operation\":\"addition\",\"arguments\":[\"transmitted-octets-periodic_sum\",\"received-octets-periodic_sum\"],\"result-property\":\"result1\"}],\"result-property\":\"result2\"}],\"out-property\":\"resultData\"}},{\"name\":\"stream-sink-aggregation-operation\",\"input-process\":[\"mixedOperations\"],\"type\":\"stream-sink\",\"stream-sink\":{\"type\":\"kafka\",\"options\":[{\"name\":\"topic\",\"value\":\"rta.internal-pipeline-topic\"}]}}]}"
+          },
+          {
+            "@": {
+              "nsp-model:schema-nodeid": "/nsp-indicator:rta-indicator-rules/rule/act-rules",
+              "nsp-model:identifier": "/nsp-indicator:rta-indicator-rules/rule[name='SumOctets 10.10.10.4']/act-rules[name='ind_threshold_acdf63e4_fdc5_4241_b430_8658ddc970be']"
+            },
+            "name": "ind_threshold_acdf63e4_fdc5_4241_b430_8658ddc970be",
+            "definition": "{\"name\":\"ind_threshold_acdf63e4_fdc5_4241_b430_8658ddc970be\",\"description\":\"Absolute Threshold Act rule\",\"owner\":\"SumOctets 10.10.10.4\",\"keepalive\":120,\"enabled\":true,\"process\":[{\"name\":\"telemetrySource\",\"type\":\"stream-source\",\"stream-source\":{\"type\":\"kafka\",\"select-input-keys\":[\"ind_compute_output_75452ee1_16c9_4af4_a880_24987ffd61b7\"],\"options\":[{\"name\":\"subscribe\",\"value\":\"rta.internal-pipeline-topic\"},{\"name\":\"failOnDataLoss\",\"value\":\"false\"}],\"schema\":{\"columns\":[{\"full-name\":\"eventTime\",\"type\":\"timestamp\",\"timestamp-type-format\":\"yyyy-MM-dd'T'HH:mm:ss.SSS'Z'\",\"mandatory\":true},{\"full-name\":\"name\",\"type\":\"string\",\"mandatory\":true},{\"full-name\":\"networkDeviceId\",\"type\":\"string\",\"mandatory\":true},{\"full-name\":\"neId\",\"type\":\"string\",\"mandatory\":true},{\"full-name\":\"neName\",\"type\":\"string\",\"mandatory\":true},{\"full-name\":\"resultData\",\"type\":\"decimal(30,4)\"}]}}},{\"name\":\"SumOctets_10.10.10.4_100000_increasing\",\"input-process\":[\"telemetrySource\"],\"type\":\"absolute-thresholds\",\"absolute-thresholds\":{\"in-object-key-property\":[\"networkDeviceId\",\"name\"],\"pass-through-property\":[\"networkDeviceId\",\"eventTime\",\"neId\",\"neName\",\"name\"],\"thresholds\":[{\"name\":\"SumOctets_10.10.10.4_100000_increasing\",\"threshold-value-decimal\":\"100000\",\"direction\":\"increasing\",\"in-property\":\"resultData\"}]}},{\"name\":\"act-event-adapter-1\",\"input-process\":[\"SumOctets_10.10.10.4_100000_increasing\"],\"type\":\"adapter\",\"adapter\":{\"columns\":[{\"full-name\":\"source\"},{\"full-name\":\"payload\"},{\"full-name\":\"timestamp\"},{\"full-name\":\"rule\"},{\"full-name\":\"process\"},{\"full-name\":\"type\"}]}},{\"name\":\"SumOctets_10.10.10.4_1000_decreasing\",\"input-process\":[\"telemetrySource\"],\"type\":\"absolute-thresholds\",\"absolute-thresholds\":{\"in-object-key-property\":[\"networkDeviceId\",\"name\"],\"pass-through-property\":[\"networkDeviceId\",\"eventTime\",\"neId\",\"neName\",\"name\"],\"thresholds\":[{\"name\":\"SumOctets_10.10.10.4_1000_decreasing\",\"threshold-value-decimal\":\"1000\",\"direction\":\"decreasing\",\"in-property\":\"resultData\"}]}},{\"name\":\"act-event-adapter-2\",\"input-process\":[\"SumOctets_10.10.10.4_1000_decreasing\"],\"type\":\"adapter\",\"adapter\":{\"columns\":[{\"full-name\":\"source\"},{\"full-name\":\"payload\"},{\"full-name\":\"timestamp\"},{\"full-name\":\"rule\"},{\"full-name\":\"process\"},{\"full-name\":\"type\"}]}}],\"action\":[{\"type\":\"kafka\",\"kafka\":{\"topic-name\":\"nsp-act-action-event\",\"topic-content\":\"sum(tx+rx) on 10.10.10.4 increasing\"},\"action-name\":\"threshold_100000_increasing_kafka_action1\",\"process-name\":\"SumOctets_10.10.10.4_100000_increasing\"},{\"type\":\"kafka\",\"kafka\":{\"topic-name\":\"nsp-act-action-event\",\"topic-content\":\"sum(tx+rx) on 10.10.10.4 decreasing\"},\"action-name\":\"threshold_1000_decreasing_kafka_action1\",\"process-name\":\"SumOctets_10.10.10.4_1000_decreasing\"}]}"
+          }
+        ]
+      },
+      {
+        "@": {
+          "nsp-model:schema-nodeid": "/nsp-indicator:rta-indicator-rules/rule",
+          "nsp-model:identifier": "/nsp-indicator:rta-indicator-rules/rule[name='SumOctets 10.10.10.5 Two Ports']"
+        },
+        "name": "SumOctets 10.10.10.5 Two Ports",
+        "description": "sum tx, rx of port 1/1/1 and 1/1/2 on 10.10.10.5",
+        "units-name": "Total octets",
+        "telemetry-type": "telemetry:/base/interfaces/interface",
+        "formula": "sum({received-octets-periodic_sum}+{transmitted-octets-periodic_sum})",
+        "multiple-output": false,
+        "window-duration": "PT1M",
+        "enabled": true,
+        "collection-interval": 30,
+        "subscription-filter": "/network-device-mgr:network-devices/network-device[name='10.10.10.5']/root/nokia-state:state/port[port-id='1/1/1'] | /network-device-mgr:network-devices/network-device[name='10.10.10.5']/root/nokia-state:state/port[port-id='1/1/2']",
+        "subscription-id": "ia-d0b25515-2054-4418-8f86-191f2fc4c14c",
+        "counters": [
+          {
+            "@": {
+              "nsp-model:schema-nodeid": "/nsp-indicator:rta-indicator-rules/rule/counters",
+              "nsp-model:identifier": "/nsp-indicator:rta-indicator-rules/rule[name='SumOctets 10.10.10.5 Two Ports']/counters[name='transmitted-octets-periodic'][function='sum']"
+            },
+            "name": "transmitted-octets-periodic",
+            "function": "sum"
+          },
+          {
+            "@": {
+              "nsp-model:schema-nodeid": "/nsp-indicator:rta-indicator-rules/rule/counters",
+              "nsp-model:identifier": "/nsp-indicator:rta-indicator-rules/rule[name='SumOctets 10.10.10.5 Two Ports']/counters[name='received-octets-periodic'][function='sum']"
+            },
+            "name": "received-octets-periodic",
+            "function": "sum"
+          }
+        ],
+        "thresholds": [
+          {
+            "@": {
+              "nsp-model:schema-nodeid": "/nsp-indicator:rta-indicator-rules/rule/thresholds",
+              "nsp-model:identifier": "/nsp-indicator:rta-indicator-rules/rule[name='SumOctets 10.10.10.5 Two Ports']/thresholds[threshold-value-decimal='200000'][direction='increasing']"
+            },
+            "threshold-value-decimal": "200000",
+            "direction": "increasing",
+            "actions": [
+              {
+                "@": {
+                  "nsp-model:schema-nodeid": "/nsp-indicator:rta-indicator-rules/rule/thresholds/actions",
+                  "nsp-model:identifier": "/nsp-indicator:rta-indicator-rules/rule[name='SumOctets 10.10.10.5 Two Ports']/thresholds[threshold-value-decimal='200000'][direction='increasing']/actions[name='threshold_200000_increasing_kafka_action1']"
+                },
+                "name": "threshold_200000_increasing_kafka_action1",
+                "type": "kafka",
+                "kafka": {
+                  "@": {
+                    "nsp-model:schema-nodeid": "/nsp-indicator:rta-indicator-rules/rule/thresholds/actions/kafka",
+                    "nsp-model:identifier": "/nsp-indicator:rta-indicator-rules/rule[name='SumOctets 10.10.10.5 Two Ports']/thresholds[threshold-value-decimal='200000'][direction='increasing']/actions[name='threshold_200000_increasing_kafka_action1']/kafka"
+                  },
+                  "topic-name": "nsp-act-action-event",
+                  "topic-content": "Total octets above 200000 threshold setting 10.10.10.5 1/1/1 and 1/1/2"
+                }
+              }
+            ]
+          },
+          {
+            "@": {
+              "nsp-model:schema-nodeid": "/nsp-indicator:rta-indicator-rules/rule/thresholds",
+              "nsp-model:identifier": "/nsp-indicator:rta-indicator-rules/rule[name='SumOctets 10.10.10.5 Two Ports']/thresholds[threshold-value-decimal='20000'][direction='decreasing']"
+            },
+            "threshold-value-decimal": "20000",
+            "direction": "decreasing",
+            "actions": [
+              {
+                "@": {
+                  "nsp-model:schema-nodeid": "/nsp-indicator:rta-indicator-rules/rule/thresholds/actions",
+                  "nsp-model:identifier": "/nsp-indicator:rta-indicator-rules/rule[name='SumOctets 10.10.10.5 Two Ports']/thresholds[threshold-value-decimal='20000'][direction='decreasing']/actions[name='threshold_20000_decreasing_kafka_action1']"
+                },
+                "name": "threshold_20000_decreasing_kafka_action1",
+                "type": "kafka",
+                "kafka": {
+                  "@": {
+                    "nsp-model:schema-nodeid": "/nsp-indicator:rta-indicator-rules/rule/thresholds/actions/kafka",
+                    "nsp-model:identifier": "/nsp-indicator:rta-indicator-rules/rule[name='SumOctets 10.10.10.5 Two Ports']/thresholds[threshold-value-decimal='20000'][direction='decreasing']/actions[name='threshold_20000_decreasing_kafka_action1']/kafka"
+                  },
+                  "topic-name": "nsp-act-action-event",
+                  "topic-content": "Total octets below 20000 threshold setting 10.10.10.5 1/1/1 and 1/1/2"
+                }
+              }
+            ]
+          }
+        ],
+        "act-rules": [
+          {
+            "@": {
+              "nsp-model:schema-nodeid": "/nsp-indicator:rta-indicator-rules/rule/act-rules",
+              "nsp-model:identifier": "/nsp-indicator:rta-indicator-rules/rule[name='SumOctets 10.10.10.5 Two Ports']/act-rules[name='ind_act_rule_b78b6937_23f6_4c73_ba9a_a29c994db9ed']"
+            },
+            "name": "ind_act_rule_b78b6937_23f6_4c73_ba9a_a29c994db9ed",
+            "definition": "{\"name\":\"ind_act_rule_b78b6937_23f6_4c73_ba9a_a29c994db9ed\",\"description\":\"sum tx, rx of port 1/1/1 and 1/1/2 on 10.10.10.5\",\"owner\":\"SumOctets 10.10.10.5 Two Ports\",\"keepalive\":120,\"enabled\":true,\"process\":[{\"name\":\"telemetrySource\",\"type\":\"stream-source\",\"stream-source\":{\"type\":\"kafka\",\"select-input-keys\":[\"ia-d0b25515-2054-4418-8f86-191f2fc4c14c\"],\"options\":[{\"name\":\"subscribe\",\"value\":\"rta-indicator-topic\"},{\"name\":\"failOnDataLoss\",\"value\":\"false\"}],\"schema\":{\"columns\":[{\"full-name\":\"data/ietf-restconf:notification/eventTime\",\"type\":\"timestamp\",\"timestamp-type-format\":\"yyyy-MM-dd'T'HH:mm:ss'Z'\",\"mandatory\":true},{\"full-name\":\"data/ietf-restconf:notification/nsp-kpi:real_time_rtindr-event/networkDeviceId\",\"type\":\"string\",\"mandatory\":true},{\"full-name\":\"data/ietf-restconf:notification/nsp-kpi:real_time_rtindr-event/neId\",\"type\":\"string\",\"mandatory\":true},{\"full-name\":\"data/ietf-restconf:notification/nsp-kpi:real_time_rtindr-event/neName\",\"type\":\"string\",\"mandatory\":true},{\"full-name\":\"data/ietf-restconf:notification/nsp-kpi:real_time_rtindr-event/subscriptionId\",\"type\":\"string\"},{\"full-name\":\"data/ietf-restconf:notification/nsp-kpi:real_time_rtindr-event/transmitted-octets-periodic\",\"type\":\"decimal(30,4)\"},{\"full-name\":\"data/ietf-restconf:notification/nsp-kpi:real_time_rtindr-event/received-octets-periodic\",\"type\":\"decimal(30,4)\"}]}}},{\"name\":\"act-event-adapter-source\",\"input-process\":[\"telemetrySource\"],\"type\":\"adapter\",\"adapter\":{\"columns\":[{\"full-name\":\"eventTime\"},{\"full-name\":\"networkDeviceId\"},{\"full-name\":\"neId\"},{\"full-name\":\"neName\"},{\"full-name\":\"name\",\"type\":\"string\",\"value\":\"SumOctets 10.10.10.5 Two Ports\"},{\"full-name\":\"transmitted-octets-periodic\"},{\"full-name\":\"received-octets-periodic\"}]}},{\"name\":\"timebased-tumbling-window\",\"type\":\"timebased-tumbling-window\",\"input-process\":[\"act-event-adapter-source\"],\"timebased-tumbling-window\":{\"event-time-in-property\":\"eventTime\",\"in-object-key-property\":[\"networkDeviceId\",\"name\"],\"pass-through-property\":[\"networkDeviceId\",\"neId\",\"neName\",\"name\"],\"in-property\":[\"transmitted-octets-periodic\",\"received-octets-periodic\"],\"window-period\":60,\"aggregations\":[{\"operation\":\"sum\",\"arguments\":[\"transmitted-octets-periodic\",\"received-octets-periodic\"]}]}},{\"name\":\"stream-sink-source\",\"input-process\":[\"timebased-tumbling-window\"],\"type\":\"stream-sink\",\"stream-sink\":{\"type\":\"kafka\",\"options\":[{\"name\":\"topic\",\"value\":\"rta.internal-pipeline-topic\"}]}}]}"
+          },
+          {
+            "@": {
+              "nsp-model:schema-nodeid": "/nsp-indicator:rta-indicator-rules/rule/act-rules",
+              "nsp-model:identifier": "/nsp-indicator:rta-indicator-rules/rule[name='SumOctets 10.10.10.5 Two Ports']/act-rules[name='ind_compute_output_5202a69a_5b7a_4cc7_bc69_de163175a70b']"
+            },
+            "name": "ind_compute_output_5202a69a_5b7a_4cc7_bc69_de163175a70b",
+            "definition": "{\"name\":\"ind_compute_output_5202a69a_5b7a_4cc7_bc69_de163175a70b\",\"description\":\"Aggregation Operation Act Rule\",\"owner\":\"SumOctets 10.10.10.5 Two Ports\",\"keepalive\":120,\"enabled\":true,\"process\":[{\"name\":\"telemetrySource\",\"type\":\"stream-source\",\"stream-source\":{\"type\":\"kafka\",\"select-input-keys\":[\"ind_act_rule_b78b6937_23f6_4c73_ba9a_a29c994db9ed\"],\"options\":[{\"name\":\"subscribe\",\"value\":\"rta.internal-pipeline-topic\"},{\"name\":\"failOnDataLoss\",\"value\":\"false\"}],\"schema\":{\"columns\":[{\"full-name\":\"startTime\",\"type\":\"timestamp\",\"timestamp-type-format\":\"yyyy-MM-dd'T'HH:mm:ss.SSS'Z'\",\"rename-to\":\"eventTime\",\"mandatory\":true},{\"full-name\":\"name\",\"type\":\"string\",\"mandatory\":true},{\"full-name\":\"networkDeviceId\",\"type\":\"string\",\"mandatory\":true},{\"full-name\":\"neId\",\"type\":\"string\",\"mandatory\":true},{\"full-name\":\"neName\",\"type\":\"string\",\"mandatory\":true},{\"full-name\":\"transmitted-octets-periodic_sum\",\"type\":\"decimal(30,4)\"},{\"full-name\":\"received-octets-periodic_sum\",\"type\":\"decimal(30,4)\"}]}}},{\"name\":\"mixedOperations\",\"input-process\":[\"telemetrySource\"],\"type\":\"mixed-expression-operator\",\"mixed-expression-operator\":{\"event-time-in-property\":\"eventTime\",\"in-object-key-property\":[\"eventTime\",\"name\"],\"in-property\":[\"transmitted-octets-periodic_sum\",\"received-octets-periodic_sum\"],\"resource-property\":\"networkDeviceId\",\"mixed-operations\":[{\"aggregation-operation\":\"sum\",\"aggregation-arithmetic-operations\":[{\"operation\":\"addition\",\"arguments\":[\"received-octets-periodic_sum\",\"transmitted-octets-periodic_sum\"],\"result-property\":\"result1\"}],\"result-property\":\"result2\"}],\"out-property\":\"resultData\"}},{\"name\":\"stream-sink-aggregation-operation\",\"input-process\":[\"mixedOperations\"],\"type\":\"stream-sink\",\"stream-sink\":{\"type\":\"kafka\",\"options\":[{\"name\":\"topic\",\"value\":\"rta.internal-pipeline-topic\"}]}}]}"
+          },
+          {
+            "@": {
+              "nsp-model:schema-nodeid": "/nsp-indicator:rta-indicator-rules/rule/act-rules",
+              "nsp-model:identifier": "/nsp-indicator:rta-indicator-rules/rule[name='SumOctets 10.10.10.5 Two Ports']/act-rules[name='ind_threshold_67b61362_c933_49d2_be46_2478f939f0d6']"
+            },
+            "name": "ind_threshold_67b61362_c933_49d2_be46_2478f939f0d6",
+            "definition": "{\"name\":\"ind_threshold_67b61362_c933_49d2_be46_2478f939f0d6\",\"description\":\"Absolute Threshold Act rule\",\"owner\":\"SumOctets 10.10.10.5 Two Ports\",\"keepalive\":120,\"enabled\":true,\"process\":[{\"name\":\"telemetrySource\",\"type\":\"stream-source\",\"stream-source\":{\"type\":\"kafka\",\"select-input-keys\":[\"ind_compute_output_5202a69a_5b7a_4cc7_bc69_de163175a70b\"],\"options\":[{\"name\":\"subscribe\",\"value\":\"rta.internal-pipeline-topic\"},{\"name\":\"failOnDataLoss\",\"value\":\"false\"}],\"schema\":{\"columns\":[{\"full-name\":\"eventTime\",\"type\":\"timestamp\",\"timestamp-type-format\":\"yyyy-MM-dd'T'HH:mm:ss.SSS'Z'\",\"mandatory\":true},{\"full-name\":\"name\",\"type\":\"string\",\"mandatory\":true},{\"full-name\":\"networkDeviceId\",\"type\":\"string\",\"mandatory\":true},{\"full-name\":\"neId\",\"type\":\"string\",\"mandatory\":true},{\"full-name\":\"neName\",\"type\":\"string\",\"mandatory\":true},{\"full-name\":\"resultData\",\"type\":\"decimal(30,4)\"}]}}},{\"name\":\"SumOctets_10.10.10.5_Two_Ports_200000_increasing\",\"input-process\":[\"telemetrySource\"],\"type\":\"absolute-thresholds\",\"absolute-thresholds\":{\"in-object-key-property\":[\"networkDeviceId\",\"name\"],\"pass-through-property\":[\"networkDeviceId\",\"eventTime\",\"neId\",\"neName\",\"name\"],\"thresholds\":[{\"name\":\"SumOctets_10.10.10.5_Two_Ports_200000_increasing\",\"threshold-value-decimal\":\"200000\",\"direction\":\"increasing\",\"in-property\":\"resultData\"}]}},{\"name\":\"act-event-adapter-1\",\"input-process\":[\"SumOctets_10.10.10.5_Two_Ports_200000_increasing\"],\"type\":\"adapter\",\"adapter\":{\"columns\":[{\"full-name\":\"source\"},{\"full-name\":\"payload\"},{\"full-name\":\"timestamp\"},{\"full-name\":\"rule\"},{\"full-name\":\"process\"},{\"full-name\":\"type\"}]}},{\"name\":\"SumOctets_10.10.10.5_Two_Ports_20000_decreasing\",\"input-process\":[\"telemetrySource\"],\"type\":\"absolute-thresholds\",\"absolute-thresholds\":{\"in-object-key-property\":[\"networkDeviceId\",\"name\"],\"pass-through-property\":[\"networkDeviceId\",\"eventTime\",\"neId\",\"neName\",\"name\"],\"thresholds\":[{\"name\":\"SumOctets_10.10.10.5_Two_Ports_20000_decreasing\",\"threshold-value-decimal\":\"20000\",\"direction\":\"decreasing\",\"in-property\":\"resultData\"}]}},{\"name\":\"act-event-adapter-2\",\"input-process\":[\"SumOctets_10.10.10.5_Two_Ports_20000_decreasing\"],\"type\":\"adapter\",\"adapter\":{\"columns\":[{\"full-name\":\"source\"},{\"full-name\":\"payload\"},{\"full-name\":\"timestamp\"},{\"full-name\":\"rule\"},{\"full-name\":\"process\"},{\"full-name\":\"type\"}]}}],\"action\":[{\"type\":\"kafka\",\"kafka\":{\"topic-name\":\"nsp-act-action-event\",\"topic-content\":\"Total octets above 200000 threshold setting 10.10.10.5 1/1/1 and 1/1/2\"},\"action-name\":\"threshold_200000_increasing_kafka_action1\",\"process-name\":\"SumOctets_10.10.10.5_Two_Ports_200000_increasing\"},{\"type\":\"kafka\",\"kafka\":{\"topic-name\":\"nsp-act-action-event\",\"topic-content\":\"Total octets below 20000 threshold setting 10.10.10.5 1/1/1 and 1/1/2\"},\"action-name\":\"threshold_20000_decreasing_kafka_action1\",\"process-name\":\"SumOctets_10.10.10.5_Two_Ports_20000_decreasing\"}]}"
+          }
+        ]
+      },
+      {
+        "@": {
+          "nsp-model:schema-nodeid": "/nsp-indicator:rta-indicator-rules/rule",
+          "nsp-model:identifier": "/nsp-indicator:rta-indicator-rules/rule[name='Octets 10.10.10.5']"
+        },
+        "name": "Octets 10.10.10.5",
+        "description": "tx, rx of all ports on 10.10.10.5",
+        "units-name": "bytes",
+        "telemetry-type": "telemetry:/base/interfaces/interface",
+        "formula": "({transmitted-octets-periodic_min} + {received-octets-periodic_min})",
+        "multiple-output": true,
+        "window-duration": "PT5M",
+        "enabled": false,
+        "collection-interval": 60,
+        "subscription-filter": "/nsp-equipment:network/network-element[ne-id='10.10.10.5']",
+        "subscription-id": "ia-6eafb190-8762-42e6-b22f-c2f4125a2db8",
+        "counters": [
+          {
+            "@": {
+              "nsp-model:schema-nodeid": "/nsp-indicator:rta-indicator-rules/rule/counters",
+              "nsp-model:identifier": "/nsp-indicator:rta-indicator-rules/rule[name='Octets 10.10.10.5']/counters[name='transmitted-octets-periodic'][function='min']"
+            },
+            "name": "transmitted-octets-periodic",
+            "function": "min"
+          },
+          {
+            "@": {
+              "nsp-model:schema-nodeid": "/nsp-indicator:rta-indicator-rules/rule/counters",
+              "nsp-model:identifier": "/nsp-indicator:rta-indicator-rules/rule[name='Octets 10.10.10.5']/counters[name='received-octets-periodic'][function='min']"
+            },
+            "name": "received-octets-periodic",
+            "function": "min"
+          }
+        ],
+        "thresholds": [
+          {
+            "@": {
+              "nsp-model:schema-nodeid": "/nsp-indicator:rta-indicator-rules/rule/thresholds",
+              "nsp-model:identifier": "/nsp-indicator:rta-indicator-rules/rule[name='Octets 10.10.10.5']/thresholds[threshold-value-decimal='100000'][direction='increasing']"
+            },
+            "threshold-value-decimal": "100000",
+            "direction": "increasing",
+            "actions": [
+              {
+                "@": {
+                  "nsp-model:schema-nodeid": "/nsp-indicator:rta-indicator-rules/rule/thresholds/actions",
+                  "nsp-model:identifier": "/nsp-indicator:rta-indicator-rules/rule[name='Octets 10.10.10.5']/thresholds[threshold-value-decimal='100000'][direction='increasing']/actions[name='threshold_100000_increasing_kafka_action1']"
+                },
+                "name": "threshold_100000_increasing_kafka_action1",
+                "type": "kafka",
+                "kafka": {
+                  "@": {
+                    "nsp-model:schema-nodeid": "/nsp-indicator:rta-indicator-rules/rule/thresholds/actions/kafka",
+                    "nsp-model:identifier": "/nsp-indicator:rta-indicator-rules/rule[name='Octets 10.10.10.5']/thresholds[threshold-value-decimal='100000'][direction='increasing']/actions[name='threshold_100000_increasing_kafka_action1']/kafka"
+                  },
+                  "topic-name": "nsp-act-action-event",
+                  "topic-content": "10.10.10.5 (tx+rx) increasing"
+                }
+              }
+            ]
+          },
+          {
+            "@": {
+              "nsp-model:schema-nodeid": "/nsp-indicator:rta-indicator-rules/rule/thresholds",
+              "nsp-model:identifier": "/nsp-indicator:rta-indicator-rules/rule[name='Octets 10.10.10.5']/thresholds[threshold-value-decimal='1000'][direction='decreasing']"
+            },
+            "threshold-value-decimal": "1000",
+            "direction": "decreasing",
+            "actions": [
+              {
+                "@": {
+                  "nsp-model:schema-nodeid": "/nsp-indicator:rta-indicator-rules/rule/thresholds/actions",
+                  "nsp-model:identifier": "/nsp-indicator:rta-indicator-rules/rule[name='Octets 10.10.10.5']/thresholds[threshold-value-decimal='1000'][direction='decreasing']/actions[name='threshold_1000_decreasing_kafka_action1']"
+                },
+                "name": "threshold_1000_decreasing_kafka_action1",
+                "type": "kafka",
+                "kafka": {
+                  "@": {
+                    "nsp-model:schema-nodeid": "/nsp-indicator:rta-indicator-rules/rule/thresholds/actions/kafka",
+                    "nsp-model:identifier": "/nsp-indicator:rta-indicator-rules/rule[name='Octets 10.10.10.5']/thresholds[threshold-value-decimal='1000'][direction='decreasing']/actions[name='threshold_1000_decreasing_kafka_action1']/kafka"
+                  },
+                  "topic-name": "nsp-act-action-event",
+                  "topic-content": "10.10.10.5 (tx+rx) decreasing"
+                }
+              }
+            ]
+          }
+        ],
+        "act-rules": [
+          {
+            "@": {
+              "nsp-model:schema-nodeid": "/nsp-indicator:rta-indicator-rules/rule/act-rules",
+              "nsp-model:identifier": "/nsp-indicator:rta-indicator-rules/rule[name='Octets 10.10.10.5']/act-rules[name='ind_act_rule_1fa486f1_ec47_473a_b903_541479fbb1c3']"
+            },
+            "name": "ind_act_rule_1fa486f1_ec47_473a_b903_541479fbb1c3",
+            "definition": "{\"name\":\"ind_act_rule_1fa486f1_ec47_473a_b903_541479fbb1c3\",\"description\":\"tx, rx of all ports on 10.10.10.5\",\"owner\":\"Octets 10.10.10.5\",\"keepalive\":120,\"enabled\":false,\"process\":[{\"name\":\"telemetrySource\",\"type\":\"stream-source\",\"stream-source\":{\"type\":\"kafka\",\"select-input-keys\":[\"ia-6eafb190-8762-42e6-b22f-c2f4125a2db8\"],\"options\":[{\"name\":\"subscribe\",\"value\":\"rta-indicator-topic\"},{\"name\":\"failOnDataLoss\",\"value\":\"false\"}],\"schema\":{\"columns\":[{\"full-name\":\"data/ietf-restconf:notification/eventTime\",\"type\":\"timestamp\",\"timestamp-type-format\":\"yyyy-MM-dd'T'HH:mm:ss'Z'\",\"mandatory\":true},{\"full-name\":\"data/ietf-restconf:notification/nsp-kpi:real_time_rtindr-event/networkDeviceId\",\"type\":\"string\",\"mandatory\":true},{\"full-name\":\"data/ietf-restconf:notification/nsp-kpi:real_time_rtindr-event/neId\",\"type\":\"string\",\"mandatory\":true},{\"full-name\":\"data/ietf-restconf:notification/nsp-kpi:real_time_rtindr-event/neName\",\"type\":\"string\",\"mandatory\":true},{\"full-name\":\"data/ietf-restconf:notification/nsp-kpi:real_time_rtindr-event/subscriptionId\",\"type\":\"string\"},{\"full-name\":\"data/ietf-restconf:notification/nsp-kpi:real_time_rtindr-event/transmitted-octets-periodic\",\"type\":\"decimal(30,4)\"},{\"full-name\":\"data/ietf-restconf:notification/nsp-kpi:real_time_rtindr-event/received-octets-periodic\",\"type\":\"decimal(30,4)\"}]}}},{\"name\":\"act-event-adapter-source\",\"input-process\":[\"telemetrySource\"],\"type\":\"adapter\",\"adapter\":{\"columns\":[{\"full-name\":\"eventTime\"},{\"full-name\":\"networkDeviceId\"},{\"full-name\":\"neId\"},{\"full-name\":\"neName\"},{\"full-name\":\"name\",\"type\":\"string\",\"value\":\"Octets 10.10.10.5\"},{\"full-name\":\"transmitted-octets-periodic\"},{\"full-name\":\"received-octets-periodic\"}]}},{\"name\":\"timebased-tumbling-window\",\"type\":\"timebased-tumbling-window\",\"input-process\":[\"act-event-adapter-source\"],\"timebased-tumbling-window\":{\"event-time-in-property\":\"eventTime\",\"in-object-key-property\":[\"networkDeviceId\",\"name\"],\"pass-through-property\":[\"networkDeviceId\",\"neId\",\"neName\",\"name\"],\"in-property\":[\"transmitted-octets-periodic\",\"received-octets-periodic\"],\"window-period\":300,\"aggregations\":[{\"operation\":\"min\",\"arguments\":[\"transmitted-octets-periodic\",\"received-octets-periodic\"]}]}},{\"name\":\"stream-sink-source\",\"input-process\":[\"timebased-tumbling-window\"],\"type\":\"stream-sink\",\"stream-sink\":{\"type\":\"kafka\",\"options\":[{\"name\":\"topic\",\"value\":\"rta.internal-pipeline-topic\"}]}}]}"
+          },
+          {
+            "@": {
+              "nsp-model:schema-nodeid": "/nsp-indicator:rta-indicator-rules/rule/act-rules",
+              "nsp-model:identifier": "/nsp-indicator:rta-indicator-rules/rule[name='Octets 10.10.10.5']/act-rules[name='ind_compute_output_79d3f1c0_3497_40ac_9377_7033acb87bd4']"
+            },
+            "name": "ind_compute_output_79d3f1c0_3497_40ac_9377_7033acb87bd4",
+            "definition": "{\"name\":\"ind_compute_output_79d3f1c0_3497_40ac_9377_7033acb87bd4\",\"description\":\"Arithmetic Operation Act Rule\",\"owner\":\"Octets 10.10.10.5\",\"keepalive\":120,\"enabled\":false,\"process\":[{\"name\":\"telemetrySource\",\"type\":\"stream-source\",\"stream-source\":{\"type\":\"kafka\",\"select-input-keys\":[\"ind_act_rule_1fa486f1_ec47_473a_b903_541479fbb1c3\"],\"options\":[{\"name\":\"subscribe\",\"value\":\"rta.internal-pipeline-topic\"},{\"name\":\"failOnDataLoss\",\"value\":\"false\"}],\"schema\":{\"columns\":[{\"full-name\":\"startTime\",\"type\":\"timestamp\",\"timestamp-type-format\":\"yyyy-MM-dd'T'HH:mm:ss.SSS'Z'\",\"rename-to\":\"eventTime\",\"mandatory\":true},{\"full-name\":\"name\",\"type\":\"string\",\"mandatory\":true},{\"full-name\":\"networkDeviceId\",\"type\":\"string\",\"mandatory\":true},{\"full-name\":\"neId\",\"type\":\"string\",\"mandatory\":true},{\"full-name\":\"neName\",\"type\":\"string\",\"mandatory\":true},{\"full-name\":\"transmitted-octets-periodic_min\",\"type\":\"decimal(30,4)\"},{\"full-name\":\"received-octets-periodic_min\",\"type\":\"decimal(30,4)\"}]}}},{\"name\":\"arithmeticOperations\",\"input-process\":[\"telemetrySource\"],\"type\":\"arithmetic-operations\",\"arithmetic-operations\":{\"in-object-key-property\":[\"networkDeviceId\",\"eventTime\",\"name\"],\"pass-through-property\":[\"neId\",\"neName\"],\"in-property\":[\"transmitted-octets-periodic_min\",\"received-octets-periodic_min\"],\"operations\":[{\"operation\":\"addition\",\"arguments\":[\"transmitted-octets-periodic_min\",\"received-octets-periodic_min\"],\"result-property\":\"result1\"}],\"out-property\":\"resultData\"}},{\"name\":\"stream-sink-arithmetic-operation\",\"input-process\":[\"arithmeticOperations\"],\"type\":\"stream-sink\",\"stream-sink\":{\"type\":\"kafka\",\"options\":[{\"name\":\"topic\",\"value\":\"rta.internal-pipeline-topic\"}]}}]}"
+          },
+          {
+            "@": {
+              "nsp-model:schema-nodeid": "/nsp-indicator:rta-indicator-rules/rule/act-rules",
+              "nsp-model:identifier": "/nsp-indicator:rta-indicator-rules/rule[name='Octets 10.10.10.5']/act-rules[name='ind_threshold_0c58e098_4c62_4878_8fda_c0ab70fae2fb']"
+            },
+            "name": "ind_threshold_0c58e098_4c62_4878_8fda_c0ab70fae2fb",
+            "definition": "{\"name\":\"ind_threshold_0c58e098_4c62_4878_8fda_c0ab70fae2fb\",\"description\":\"Absolute Threshold Act rule\",\"owner\":\"Octets 10.10.10.5\",\"keepalive\":120,\"enabled\":false,\"process\":[{\"name\":\"telemetrySource\",\"type\":\"stream-source\",\"stream-source\":{\"type\":\"kafka\",\"select-input-keys\":[\"ind_compute_output_79d3f1c0_3497_40ac_9377_7033acb87bd4\"],\"options\":[{\"name\":\"subscribe\",\"value\":\"rta.internal-pipeline-topic\"},{\"name\":\"failOnDataLoss\",\"value\":\"false\"}],\"schema\":{\"columns\":[{\"full-name\":\"eventTime\",\"type\":\"timestamp\",\"timestamp-type-format\":\"yyyy-MM-dd'T'HH:mm:ss.SSS'Z'\",\"mandatory\":true},{\"full-name\":\"name\",\"type\":\"string\",\"mandatory\":true},{\"full-name\":\"networkDeviceId\",\"type\":\"string\",\"mandatory\":true},{\"full-name\":\"neId\",\"type\":\"string\",\"mandatory\":true},{\"full-name\":\"neName\",\"type\":\"string\",\"mandatory\":true},{\"full-name\":\"resultData\",\"type\":\"decimal(30,4)\"}]}}},{\"name\":\"Octets_10.10.10.5_100000_increasing\",\"input-process\":[\"telemetrySource\"],\"type\":\"absolute-thresholds\",\"absolute-thresholds\":{\"in-object-key-property\":[\"networkDeviceId\",\"name\"],\"pass-through-property\":[\"networkDeviceId\",\"eventTime\",\"neId\",\"neName\",\"name\"],\"thresholds\":[{\"name\":\"Octets_10.10.10.5_100000_increasing\",\"threshold-value-decimal\":\"100000\",\"direction\":\"increasing\",\"in-property\":\"resultData\"}]}},{\"name\":\"act-event-adapter-1\",\"input-process\":[\"Octets_10.10.10.5_100000_increasing\"],\"type\":\"adapter\",\"adapter\":{\"columns\":[{\"full-name\":\"source\"},{\"full-name\":\"payload\"},{\"full-name\":\"timestamp\"},{\"full-name\":\"rule\"},{\"full-name\":\"process\"},{\"full-name\":\"type\"}]}},{\"name\":\"Octets_10.10.10.5_1000_decreasing\",\"input-process\":[\"telemetrySource\"],\"type\":\"absolute-thresholds\",\"absolute-thresholds\":{\"in-object-key-property\":[\"networkDeviceId\",\"name\"],\"pass-through-property\":[\"networkDeviceId\",\"eventTime\",\"neId\",\"neName\",\"name\"],\"thresholds\":[{\"name\":\"Octets_10.10.10.5_1000_decreasing\",\"threshold-value-decimal\":\"1000\",\"direction\":\"decreasing\",\"in-property\":\"resultData\"}]}},{\"name\":\"act-event-adapter-2\",\"input-process\":[\"Octets_10.10.10.5_1000_decreasing\"],\"type\":\"adapter\",\"adapter\":{\"columns\":[{\"full-name\":\"source\"},{\"full-name\":\"payload\"},{\"full-name\":\"timestamp\"},{\"full-name\":\"rule\"},{\"full-name\":\"process\"},{\"full-name\":\"type\"}]}}],\"action\":[{\"type\":\"kafka\",\"kafka\":{\"topic-name\":\"nsp-act-action-event\",\"topic-content\":\"10.10.10.5 (tx+rx) increasing\"},\"action-name\":\"threshold_100000_increasing_kafka_action1\",\"process-name\":\"Octets_10.10.10.5_100000_increasing\"},{\"type\":\"kafka\",\"kafka\":{\"topic-name\":\"nsp-act-action-event\",\"topic-content\":\"10.10.10.5 (tx+rx) decreasing\"},\"action-name\":\"threshold_1000_decreasing_kafka_action1\",\"process-name\":\"Octets_10.10.10.5_1000_decreasing\"}]}"
+          }
+        ]
+      }
+    ]
+  }
+}

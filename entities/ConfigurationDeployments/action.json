@@ -1,0 +1,207 @@
+{
+  "actions": [
+    {
+      "name": "createPortGroupDirectory",
+      "protocol": "REST",
+      "method": "POST",
+      "entitypath": "{base_path}/{version}/group-manager/rest/api/v1/groupDirectories?{query}",
+      "requestSchema": "schema.json",
+      "responseSchema": "schema.json",
+      "timeout": 0,
+      "sendEmpty": false,
+      "requestDatatype": "JSON",
+      "responseDatatype": "JSON",
+      "headers": {},
+      "responseObjects": [
+        {
+          "type": "default",
+          "key": "",
+          "mockFile": "mockdatafiles/createPortGroupDirectory-default.json"
+        }
+      ]
+    },
+    {
+      "name": "createPortGroup",
+      "protocol": "REST",
+      "method": "POST",
+      "entitypath": "{base_path}/{version}/group-manager/rest/api/v1/groups?{query}",
+      "requestSchema": "schema.json",
+      "responseSchema": "schema.json",
+      "timeout": 0,
+      "sendEmpty": false,
+      "requestDatatype": "JSON",
+      "responseDatatype": "JSON",
+      "headers": {},
+      "responseObjects": [
+        {
+          "type": "default",
+          "key": "",
+          "mockFile": "mockdatafiles/createPortGroup-default.json"
+        }
+      ]
+    },
+    {
+      "name": "getPortGroupFDN",
+      "protocol": "REST",
+      "method": "GET",
+      "entitypath": "{base_path}/{version}/group-manager/rest/api/v1/groups/name/AccessPorts?{query}",
+      "requestSchema": "schema.json",
+      "responseSchema": "schema.json",
+      "timeout": 0,
+      "sendEmpty": false,
+      "sendGetBody": false,
+      "requestDatatype": "JSON",
+      "responseDatatype": "JSON",
+      "headers": {},
+      "responseObjects": [
+        {
+          "type": "default",
+          "key": "",
+          "mockFile": "mockdatafiles/getPortGroupFDN-default.json"
+        }
+      ]
+    },
+    {
+      "name": "createDeployment",
+      "protocol": "REST",
+      "method": "POST",
+      "entitypath": "{base_path}/{version}/restconf/operations/nsp-icm:create-deployments?{query}",
+      "requestSchema": "schema.json",
+      "responseSchema": "schema.json",
+      "timeout": 0,
+      "sendEmpty": false,
+      "requestDatatype": "JSON",
+      "responseDatatype": "JSON",
+      "headers": {},
+      "responseObjects": [
+        {
+          "type": "default",
+          "key": "",
+          "mockFile": "mockdatafiles/createDeployment-default.json"
+        }
+      ]
+    },
+    {
+      "name": "updateDeploymentConfiguration",
+      "protocol": "REST",
+      "method": "POST",
+      "entitypath": "{base_path}/{version}/restconf/operations/nsp-icm:update-deployments?{query}",
+      "requestSchema": "schema.json",
+      "responseSchema": "schema.json",
+      "timeout": 0,
+      "sendEmpty": false,
+      "requestDatatype": "JSON",
+      "responseDatatype": "JSON",
+      "headers": {},
+      "responseObjects": [
+        {
+          "type": "default",
+          "key": "",
+          "mockFile": "mockdatafiles/updateDeploymentConfiguration-default.json"
+        }
+      ]
+    },
+    {
+      "name": "replaceDeployment",
+      "protocol": "REST",
+      "method": "POST",
+      "entitypath": "{base_path}/{version}/restconf/operations/nsp-icm:replace-deployment?{query}",
+      "requestSchema": "schema.json",
+      "responseSchema": "schema.json",
+      "timeout": 0,
+      "sendEmpty": false,
+      "requestDatatype": "JSON",
+      "responseDatatype": "JSON",
+      "headers": {},
+      "responseObjects": [
+        {
+          "type": "default",
+          "key": "",
+          "mockFile": "mockdatafiles/replaceDeployment-default.json"
+        }
+      ]
+    },
+    {
+      "name": "getDeployments",
+      "protocol": "REST",
+      "method": "GET",
+      "entitypath": "{base_path}/{version}/restconf/data/nsp-icm:icm/deployments?{query}",
+      "requestSchema": "schema.json",
+      "responseSchema": "schema.json",
+      "timeout": 0,
+      "sendEmpty": false,
+      "sendGetBody": false,
+      "requestDatatype": "JSON",
+      "responseDatatype": "JSON",
+      "headers": {},
+      "responseObjects": [
+        {
+          "type": "default",
+          "key": "",
+          "mockFile": "mockdatafiles/getDeployments-default.json"
+        }
+      ]
+    },
+    {
+      "name": "getSpecificDeployment",
+      "protocol": "REST",
+      "method": "GET",
+      "entitypath": "{base_path}/{version}/restconf/data/nsp-icm:icm/deployments/{pathv1}?{query}",
+      "requestSchema": "schema.json",
+      "responseSchema": "schema.json",
+      "timeout": 0,
+      "sendEmpty": false,
+      "sendGetBody": false,
+      "requestDatatype": "JSON",
+      "responseDatatype": "JSON",
+      "headers": {},
+      "responseObjects": [
+        {
+          "type": "default",
+          "key": "",
+          "mockFile": "mockdatafiles/getSpecificDeployment-default.json"
+        }
+      ]
+    },
+    {
+      "name": "deleteSingleDeployment",
+      "protocol": "REST",
+      "method": "DELETE",
+      "entitypath": "{base_path}/{version}/restconf/data/nsp-icm:icm/deployments/{pathv1}?{query}",
+      "requestSchema": "schema.json",
+      "responseSchema": "schema.json",
+      "timeout": 0,
+      "sendEmpty": false,
+      "requestDatatype": "JSON",
+      "responseDatatype": "JSON",
+      "headers": {},
+      "responseObjects": [
+        {
+          "type": "default",
+          "key": "",
+          "mockFile": ""
+        }
+      ]
+    },
+    {
+      "name": "deleteDeployments",
+      "protocol": "REST",
+      "method": "POST",
+      "entitypath": "{base_path}/{version}/restconf/operations/nsp-icm:delete-deployments?{query}",
+      "requestSchema": "schema.json",
+      "responseSchema": "schema.json",
+      "timeout": 0,
+      "sendEmpty": false,
+      "requestDatatype": "JSON",
+      "responseDatatype": "JSON",
+      "headers": {},
+      "responseObjects": [
+        {
+          "type": "default",
+          "key": "",
+          "mockFile": "mockdatafiles/deleteDeployments-default.json"
+        }
+      ]
+    }
+  ]
+}

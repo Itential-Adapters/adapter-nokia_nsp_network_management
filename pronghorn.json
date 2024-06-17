@@ -1,0 +1,5141 @@
+{
+  "id": "@itentialopensource/adapter-nokia_nsp_network_management",
+  "type": "Adapter",
+  "export": "NokiaNspNetworkManagement",
+  "title": "nokia_nsp_network_management",
+  "src": "adapter.js",
+  "roles": [
+    "admin"
+  ],
+  "methods": [
+    {
+      "name": "iapUpdateAdapterConfiguration",
+      "summary": "Updates the adapter configuration",
+      "description": "Updates the adapter configuration file with the provided changes",
+      "input": [
+        {
+          "name": "configFile",
+          "type": "string",
+          "info": "The name of the file to change",
+          "required": true,
+          "schema": {
+            "title": "configFile",
+            "type": "string"
+          }
+        },
+        {
+          "name": "changes",
+          "type": "object",
+          "info": "JSON object containing the configuration changes",
+          "required": true,
+          "schema": {
+            "title": "changes",
+            "type": "object"
+          }
+        },
+        {
+          "name": "entity",
+          "type": "string",
+          "info": "The entity in which the changes are being made",
+          "required": false,
+          "schema": {
+            "title": "entity",
+            "type": "string"
+          }
+        },
+        {
+          "name": "type",
+          "type": "string",
+          "info": "The type of file to change - action, schema, or mock",
+          "required": false,
+          "schema": {
+            "title": "type",
+            "type": "string"
+          }
+        },
+        {
+          "name": "action",
+          "type": "string",
+          "info": "The action to be changed",
+          "required": false,
+          "schema": {
+            "title": "action",
+            "type": "string"
+          }
+        },
+        {
+          "name": "replace",
+          "type": "boolean",
+          "info": "True to replace entire mock data, false to merge/append",
+          "required": false,
+          "schema": {
+            "title": "replace",
+            "type": "boolean"
+          }
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/iapUpdateAdapterConfiguration"
+      },
+      "task": true
+    },
+    {
+      "name": "iapSuspendAdapter",
+      "summary": "Suspends the adapter",
+      "description": "Suspends the adapter",
+      "input": [
+        {
+          "name": "mode",
+          "type": "enum",
+          "enumerals": [
+            "pause",
+            "error"
+          ],
+          "info": "How incoming requests are handled. Defaults to 'pause'",
+          "description": "How incoming requests are handled. Defaults to 'pause'",
+          "schema": {
+            "title": "mode",
+            "type": "string"
+          },
+          "required": false
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/iapSuspendAdapter"
+      },
+      "task": true
+    },
+    {
+      "name": "iapUnsuspendAdapter",
+      "summary": "Unsuspends the adapter",
+      "description": "Unsuspends the adapter",
+      "input": [],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/iapUnsuspendAdapter"
+      },
+      "task": true
+    },
+    {
+      "name": "iapGetAdapterQueue",
+      "summary": "Return the requests that are waiting in the queue if throttling is enabled",
+      "description": "Return the requests that are waiting in the queue if throttling is enabled",
+      "input": [],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/iapGetAdapterQueue"
+      },
+      "task": true
+    },
+    {
+      "name": "iapFindAdapterPath",
+      "summary": "Provides the ability to see if a particular API path is supported by the adapter",
+      "description": "Provides the ability to see if a particular API path is supported by the adapter",
+      "input": [
+        {
+          "name": "apiPath",
+          "type": "string",
+          "info": "The API Path you want to check - make sure to not include base path and version",
+          "description": "The API Path you want to check - make sure to not include base path and version",
+          "schema": {
+            "title": "apiPath",
+            "type": "string"
+          },
+          "required": true
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/iapFindAdapterPath"
+      },
+      "task": true
+    },
+    {
+      "name": "iapTroubleshootAdapter",
+      "summary": "Runs troubleshoot script for adapter",
+      "description": "Runs troubleshoot script for adapter",
+      "input": [
+        {
+          "name": "props",
+          "type": "object",
+          "info": "Object containing configuration, healthcheck and auth properties {'connProps':{'host': 'api.service.com', 'base_path': '/', 'protocol': 'http', 'port': 443, 'version': 'v1'},'healthCheckEndpoint': '/healthcheck', 'auth': {'auth_method': 'no authentication', 'username': 'username', 'password': 'password'}}",
+          "required": true,
+          "schema": {
+            "title": "props",
+            "type": "object"
+          }
+        },
+        {
+          "name": "persistFlag",
+          "type": "boolean",
+          "info": "Whether the input properties should be saved",
+          "required": true,
+          "schema": {
+            "title": "persistFlag",
+            "type": "boolean"
+          }
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/iapTroubleshootAdapter"
+      },
+      "task": true
+    },
+    {
+      "name": "iapRunAdapterHealthcheck",
+      "summary": "Runs healthcheck script for adapter",
+      "description": "Runs healthcheck script for adapter",
+      "input": [],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/iapRunAdapterHealthcheck"
+      },
+      "task": true
+    },
+    {
+      "name": "iapRunAdapterConnectivity",
+      "summary": "Runs connectivity check script for adapter",
+      "description": "Runs connectivity check script for adapter",
+      "input": [],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/iapRunAdapterConnectivity"
+      },
+      "task": true
+    },
+    {
+      "name": "iapRunAdapterBasicGet",
+      "summary": "Runs basicGet script for adapter",
+      "description": "Runs basicGet script for adapter",
+      "input": [],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/iapRunAdapterBasicGet"
+      },
+      "task": true
+    },
+    {
+      "name": "iapMoveAdapterEntitiesToDB",
+      "summary": "Moves entities from an adapter into the IAP database",
+      "description": "Moves entities from an adapter into the IAP database",
+      "input": [],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/iapMoveAdapterEntitiesToDB"
+      },
+      "task": true
+    },
+    {
+      "name": "iapDeactivateTasks",
+      "summary": "Deactivate the inputted tasks",
+      "description": "Deactivate the inputted tasks",
+      "input": [
+        {
+          "name": "tasks",
+          "type": "array",
+          "description": "Tasks to deactivate",
+          "schema": {
+            "title": "tasks",
+            "type": "array"
+          }
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/iapDeactivateTasks"
+      },
+      "task": true
+    },
+    {
+      "name": "iapActivateTasks",
+      "summary": "Activate the inputted tasks",
+      "description": "activate the inputted tasks",
+      "input": [
+        {
+          "name": "tasks",
+          "type": "array",
+          "description": "Tasks to activate",
+          "schema": {
+            "title": "tasks",
+            "type": "array"
+          }
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/iapActivateTasks"
+      },
+      "task": true
+    },
+    {
+      "name": "iapPopulateEntityCache",
+      "summary": "Populate the cache for the given entities",
+      "description": "Populate the cache for the given entities",
+      "input": [
+        {
+          "name": "entityTypes",
+          "type": "array",
+          "info": "the entity type(s) to populate",
+          "required": true,
+          "schema": {
+            "title": "entityTypes",
+            "type": "array"
+          }
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/iapPopulateEntityCache"
+      },
+      "task": true
+    },
+    {
+      "name": "iapRetrieveEntitiesCache",
+      "summary": "Retrieves data from cache for specified entity type",
+      "description": "Retrieves data from cache for specified entity type",
+      "input": [
+        {
+          "name": "entityType",
+          "type": "string",
+          "info": "entity of which to retrieve",
+          "required": true,
+          "schema": {
+            "title": "entityType",
+            "type": "string"
+          }
+        },
+        {
+          "name": "options",
+          "type": "object",
+          "info": "settings of which data to return and how to return it",
+          "required": false,
+          "schema": {
+            "title": "options",
+            "type": "object"
+          }
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/iapRetrieveEntitiesCache"
+      },
+      "task": true
+    },
+    {
+      "name": "getDevice",
+      "summary": "Get the Appliance",
+      "description": "Get the Appliance",
+      "input": [
+        {
+          "name": "deviceName",
+          "type": "string",
+          "info": "An Appliance Device Name",
+          "required": true,
+          "schema": {
+            "title": "deviceName",
+            "type": "string"
+          }
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/getDevice"
+      },
+      "task": false
+    },
+    {
+      "name": "getDevicesFiltered",
+      "summary": "Get Appliances that match the filter",
+      "description": "Get Appliances that match the filter",
+      "input": [
+        {
+          "name": "options",
+          "type": "object",
+          "info": "options - e.g. { 'start': 1, 'limit': 20, 'filter': { 'name': 'abc123' } }",
+          "required": true,
+          "schema": {
+            "title": "options",
+            "type": "object"
+          }
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/getDevicesFiltered"
+      },
+      "task": false
+    },
+    {
+      "name": "isAlive",
+      "summary": "Checks the status for the provided Appliance",
+      "description": "Checks the status for the provided Appliance",
+      "input": [
+        {
+          "name": "deviceName",
+          "type": "string",
+          "info": "An Appliance Device Name",
+          "required": true,
+          "schema": {
+            "title": "deviceName",
+            "type": "string"
+          }
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/isAlive"
+      },
+      "task": false
+    },
+    {
+      "name": "getConfig",
+      "summary": "Gets a config for the provided Appliance",
+      "description": "Gets a config for the provided Appliance",
+      "input": [
+        {
+          "name": "deviceName",
+          "type": "string",
+          "info": "An Appliance Device Name",
+          "required": true,
+          "schema": {
+            "title": "deviceName",
+            "type": "string"
+          }
+        },
+        {
+          "name": "format",
+          "type": "string",
+          "info": "The format to be returned - this is ignored as we always return json",
+          "required": false,
+          "schema": {
+            "title": "format",
+            "type": "string"
+          }
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/getConfig"
+      },
+      "task": false
+    },
+    {
+      "name": "iapGetDeviceCount",
+      "summary": "Gets a device count from the system",
+      "description": "Gets a device count from the system",
+      "input": [],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/iapGetDeviceCount"
+      },
+      "task": false
+    },
+    {
+      "name": "iapExpandedGenericAdapterRequest",
+      "summary": "Makes the requested generic call with additional options",
+      "description": "Makes the requested generic call with additional options via metadata",
+      "input": [
+        {
+          "name": "metadata",
+          "type": "object",
+          "info": "metadata for the call (optional)",
+          "description": "metadata for the call - allows for many enhancements (optional)",
+          "schema": {
+            "title": "metadata",
+            "type": "object"
+          },
+          "required": false
+        },
+        {
+          "name": "uriPath",
+          "type": "string",
+          "info": "the path of the api call - do not include the host, port, base path or version",
+          "description": "the path of the api call",
+          "schema": {
+            "title": "uriPath",
+            "type": "string"
+          },
+          "required": false
+        },
+        {
+          "name": "restMethod",
+          "type": "string",
+          "info": "the rest method (GET, POST, PUT, PATCH, DELETE)",
+          "description": "the rest method (GET, POST, PUT, PATCH, DELETE)",
+          "schema": {
+            "title": "restMethod",
+            "type": "string"
+          },
+          "required": false
+        },
+        {
+          "name": "pathVars",
+          "type": "object",
+          "info": "the parameters to be put within the url path (optional)",
+          "description": "the parameters to be put within the url path (optional)",
+          "schema": {
+            "title": "pathVars",
+            "type": "object"
+          },
+          "required": false
+        },
+        {
+          "name": "queryData",
+          "type": "object",
+          "info": "the query parameters to be put on the url (optional)",
+          "description": "the query parameters to be put on the url (optional)",
+          "schema": {
+            "title": "queryData",
+            "type": "object"
+          },
+          "required": false
+        },
+        {
+          "name": "requestBody",
+          "type": "object",
+          "info": "the payload to be sent with the request (optional)",
+          "description": "the payload to be sent with the request (optional)",
+          "schema": {
+            "title": "requestBody",
+            "type": "object"
+          },
+          "required": false
+        },
+        {
+          "name": "addlHeaders",
+          "type": "object",
+          "info": "additional headers to be put on the call (optional)",
+          "description": "additional headers to be put on the call (optional)",
+          "schema": {
+            "title": "addlHeaders",
+            "type": "object"
+          },
+          "required": false
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/iapExpandedGenericAdapterRequest"
+      },
+      "task": true
+    },
+    {
+      "name": "genericAdapterRequest",
+      "summary": "Makes the requested generic call",
+      "description": "Makes the requested generic call",
+      "input": [
+        {
+          "name": "uriPath",
+          "type": "string",
+          "info": "the path of the api call - do not include the host, port, base path or version",
+          "description": "the path of the api call",
+          "schema": {
+            "title": "uriPath",
+            "type": "string"
+          },
+          "required": true
+        },
+        {
+          "name": "restMethod",
+          "type": "string",
+          "info": "the rest method (GET, POST, PUT, PATCH, DELETE)",
+          "description": "the rest method (GET, POST, PUT, PATCH, DELETE)",
+          "schema": {
+            "title": "restMethod",
+            "type": "string"
+          },
+          "required": true
+        },
+        {
+          "name": "queryData",
+          "type": "object",
+          "info": "the query parameters to be put on the url (optional)",
+          "description": "the query parameters to be put on the url (optional)",
+          "schema": {
+            "title": "queryData",
+            "type": "object"
+          },
+          "required": false
+        },
+        {
+          "name": "requestBody",
+          "type": "object",
+          "info": "the payload to be sent with the request (optional)",
+          "description": "the payload to be sent with the request (optional)",
+          "schema": {
+            "title": "requestBody",
+            "type": "object"
+          },
+          "required": false
+        },
+        {
+          "name": "addlHeaders",
+          "type": "object",
+          "info": "additional headers to be put on the call (optional)",
+          "description": "additional headers to be put on the call (optional)",
+          "schema": {
+            "title": "addlHeaders",
+            "type": "object"
+          },
+          "required": false
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/genericAdapterRequest"
+      },
+      "task": true
+    },
+    {
+      "name": "genericAdapterRequestNoBasePath",
+      "summary": "Makes the requested generic call",
+      "description": "Makes the requested generic call",
+      "input": [
+        {
+          "name": "uriPath",
+          "type": "string",
+          "info": "the path of the api call - do not include the host, port, base path or version",
+          "description": "the path of the api call",
+          "schema": {
+            "title": "uriPath",
+            "type": "string"
+          },
+          "required": true
+        },
+        {
+          "name": "restMethod",
+          "type": "string",
+          "info": "the rest method (GET, POST, PUT, PATCH, DELETE)",
+          "description": "the rest method (GET, POST, PUT, PATCH, DELETE)",
+          "schema": {
+            "title": "restMethod",
+            "type": "string"
+          },
+          "required": true
+        },
+        {
+          "name": "queryData",
+          "type": "object",
+          "info": "the query parameters to be put on the url (optional)",
+          "description": "the query parameters to be put on the url (optional)",
+          "schema": {
+            "title": "queryData",
+            "type": "object"
+          },
+          "required": false
+        },
+        {
+          "name": "requestBody",
+          "type": "object",
+          "info": "the payload to be sent with the request (optional)",
+          "description": "the payload to be sent with the request (optional)",
+          "schema": {
+            "title": "requestBody",
+            "type": "object"
+          },
+          "required": false
+        },
+        {
+          "name": "addlHeaders",
+          "type": "object",
+          "info": "additional headers to be put on the call (optional)",
+          "description": "additional headers to be put on the call (optional)",
+          "schema": {
+            "title": "addlHeaders",
+            "type": "object"
+          },
+          "required": false
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/genericAdapterRequestNoBasePath"
+      },
+      "task": true
+    },
+    {
+      "name": "iapRunAdapterLint",
+      "summary": "Run the adapter lint script to return the results",
+      "description": "Run the adapter lint script to return the results",
+      "input": [],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "GET",
+        "path": "/iapRunAdapterLint"
+      },
+      "task": true
+    },
+    {
+      "name": "iapRunAdapterTests",
+      "summary": "Run the adapter test scripts (baseunit and unit) to return the results",
+      "description": "Run the adapter test scripts (baseunit and unit) to return the results",
+      "input": [],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "GET",
+        "path": "/iapRunAdapterTests"
+      },
+      "task": true
+    },
+    {
+      "name": "iapGetAdapterInventory",
+      "summary": "Provide inventory information abbout the adapter",
+      "description": "Provide inventory information abbout the adapter",
+      "input": [],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "GET",
+        "path": "/iapGetAdapterInventory"
+      },
+      "task": true
+    },
+    {
+      "name": "retrieveNetworkInterfaces",
+      "summary": "retrieveNetworkInterfaces",
+      "description": "retrieveNetworkInterfaces",
+      "input": [
+        {
+          "name": "network",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "network",
+            "type": "string"
+          }
+        },
+        {
+          "name": "node",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "node",
+            "type": "string"
+          }
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/retrieveNetworkInterfaces"
+      },
+      "task": true
+    },
+    {
+      "name": "retrieveNetworkInterfacesConfig",
+      "summary": "retrieveNetworkInterfacesConfig",
+      "description": "retrieveNetworkInterfacesConfig",
+      "input": [
+        {
+          "name": "network",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "network",
+            "type": "string"
+          }
+        },
+        {
+          "name": "node",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "node",
+            "type": "string"
+          }
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/retrieveNetworkInterfacesConfig"
+      },
+      "task": true
+    },
+    {
+      "name": "retrieveNetworkSubInterfaces",
+      "summary": "retrieveNetworkSubInterfaces",
+      "description": "retrieveNetworkSubInterfaces",
+      "input": [
+        {
+          "name": "network",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "network",
+            "type": "string"
+          }
+        },
+        {
+          "name": "node",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "node",
+            "type": "string"
+          }
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/retrieveNetworkSubInterfaces"
+      },
+      "task": true
+    },
+    {
+      "name": "retrieveNetworkSubInterfacesConfig",
+      "summary": "retrieveNetworkSubInterfacesConfig",
+      "description": "retrieveNetworkSubInterfacesConfig",
+      "input": [
+        {
+          "name": "network",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "network",
+            "type": "string"
+          }
+        },
+        {
+          "name": "node",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "node",
+            "type": "string"
+          }
+        },
+        {
+          "name": "subinterface",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "subinterface",
+            "type": "string"
+          }
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/retrieveNetworkSubInterfacesConfig"
+      },
+      "task": true
+    },
+    {
+      "name": "retrieveNetworkSubInterfacesState",
+      "summary": "retrieveNetworkSubInterfacesState",
+      "description": "retrieveNetworkSubInterfacesState",
+      "input": [
+        {
+          "name": "network",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "network",
+            "type": "string"
+          }
+        },
+        {
+          "name": "node",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "node",
+            "type": "string"
+          }
+        },
+        {
+          "name": "subinterface",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "subinterface",
+            "type": "string"
+          }
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/retrieveNetworkSubInterfacesState"
+      },
+      "task": true
+    },
+    {
+      "name": "retrieveNetworkSubInterfacesIPv4Addresses",
+      "summary": "retrieveNetworkSubInterfacesIPv4Addresses",
+      "description": "retrieveNetworkSubInterfacesIPv4Addresses",
+      "input": [
+        {
+          "name": "network",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "network",
+            "type": "string"
+          }
+        },
+        {
+          "name": "node",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "node",
+            "type": "string"
+          }
+        },
+        {
+          "name": "interfaceParam",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "interfaceParam",
+            "type": "string"
+          }
+        },
+        {
+          "name": "subinterface",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "subinterface",
+            "type": "string"
+          }
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/retrieveNetworkSubInterfacesIPv4Addresses"
+      },
+      "task": true
+    },
+    {
+      "name": "retrieveNetworkSubInterfacesIPv6Addresses",
+      "summary": "retrieveNetworkSubInterfacesIPv6Addresses",
+      "description": "retrieveNetworkSubInterfacesIPv6Addresses",
+      "input": [
+        {
+          "name": "network",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "network",
+            "type": "string"
+          }
+        },
+        {
+          "name": "node",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "node",
+            "type": "string"
+          }
+        },
+        {
+          "name": "subinterface",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "subinterface",
+            "type": "string"
+          }
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/retrieveNetworkSubInterfacesIPv6Addresses"
+      },
+      "task": true
+    },
+    {
+      "name": "retrieveNetworkInterfacesUnnumbered",
+      "summary": "retrieveNetworkInterfacesUnnumbered",
+      "description": "retrieveNetworkInterfacesUnnumbered",
+      "input": [
+        {
+          "name": "network",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "network",
+            "type": "string"
+          }
+        },
+        {
+          "name": "node",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "node",
+            "type": "string"
+          }
+        },
+        {
+          "name": "subinterface",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "subinterface",
+            "type": "string"
+          }
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/retrieveNetworkInterfacesUnnumbered"
+      },
+      "task": true
+    },
+    {
+      "name": "retrieveNetworkInterfacesUnnumberedIntf",
+      "summary": "retrieveNetworkInterfacesUnnumberedIntf",
+      "description": "retrieveNetworkInterfacesUnnumberedIntf",
+      "input": [
+        {
+          "name": "network",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "network",
+            "type": "string"
+          }
+        },
+        {
+          "name": "node",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "node",
+            "type": "string"
+          }
+        },
+        {
+          "name": "subinterface",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "subinterface",
+            "type": "string"
+          }
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/retrieveNetworkInterfacesUnnumberedIntf"
+      },
+      "task": true
+    },
+    {
+      "name": "retrieveNetworkInstance",
+      "summary": "retrieveNetworkInstance",
+      "description": "retrieveNetworkInstance",
+      "input": [
+        {
+          "name": "network",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "network",
+            "type": "string"
+          }
+        },
+        {
+          "name": "node",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "node",
+            "type": "string"
+          }
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/retrieveNetworkInstance"
+      },
+      "task": true
+    },
+    {
+      "name": "retrieveResyncPolicyNodeVersionEntity",
+      "summary": "retrieveResyncPolicyNodeVersionEntity",
+      "description": "retrieveResyncPolicyNodeVersionEntity",
+      "input": [
+        {
+          "name": "resyncPolicy",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "resyncPolicy",
+            "type": "string"
+          }
+        },
+        {
+          "name": "node",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "node",
+            "type": "string"
+          }
+        },
+        {
+          "name": "version",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "version",
+            "type": "string"
+          }
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/retrieveResyncPolicyNodeVersionEntity"
+      },
+      "task": true
+    },
+    {
+      "name": "createUsingIntent",
+      "summary": "createUsingIntent",
+      "description": "createUsingIntent",
+      "input": [
+        {
+          "name": "body",
+          "type": "object",
+          "info": "the payload to be sent with the request",
+          "description": "the payload to be sent with the request",
+          "schema": {
+            "title": "body",
+            "type": "object"
+          },
+          "required": true
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/createUsingIntent"
+      },
+      "task": true
+    },
+    {
+      "name": "synchronizeIntent",
+      "summary": "synchronizeIntent",
+      "description": "synchronizeIntent",
+      "input": [
+        {
+          "name": "intent",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "intent",
+            "type": "string"
+          }
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/synchronizeIntent"
+      },
+      "task": true
+    },
+    {
+      "name": "getIntent",
+      "summary": "getIntent",
+      "description": "getIntent",
+      "input": [
+        {
+          "name": "intent",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "intent",
+            "type": "string"
+          }
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/getIntent"
+      },
+      "task": true
+    },
+    {
+      "name": "modifyIntent",
+      "summary": "modifyIntent",
+      "description": "modifyIntent",
+      "input": [
+        {
+          "name": "intent",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "intent",
+            "type": "string"
+          }
+        },
+        {
+          "name": "body",
+          "type": "object",
+          "info": "the payload to be sent with the request",
+          "description": "the payload to be sent with the request",
+          "schema": {
+            "title": "body",
+            "type": "object"
+          },
+          "required": true
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/modifyIntent"
+      },
+      "task": true
+    },
+    {
+      "name": "deleteIntent",
+      "summary": "deleteIntent",
+      "description": "deleteIntent",
+      "input": [
+        {
+          "name": "intent",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "intent",
+            "type": "string"
+          }
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/deleteIntent"
+      },
+      "task": true
+    },
+    {
+      "name": "getZTPListFromDeviceAdministrator",
+      "summary": "getZTPListFromDeviceAdministrator",
+      "description": "getZTPListFromDeviceAdministrator",
+      "input": [],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "GET",
+        "path": "/getZTPListFromDeviceAdministrator"
+      },
+      "task": true
+    },
+    {
+      "name": "devAdminCreateAutodiscoveryNe",
+      "summary": "devAdmin-CreateAutodiscoveryNe",
+      "description": "devAdmin-CreateAutodiscoveryNe",
+      "input": [
+        {
+          "name": "body",
+          "type": "object",
+          "info": "the payload to be sent with the request",
+          "description": "the payload to be sent with the request",
+          "schema": {
+            "title": "body",
+            "type": "object"
+          },
+          "required": true
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/devAdminCreateAutodiscoveryNe"
+      },
+      "task": true
+    },
+    {
+      "name": "devAdminUpdateAutodiscoveryNe",
+      "summary": "devAdmin-UpdateAutodiscovery-Ne",
+      "description": "devAdmin-UpdateAutodiscovery-Ne",
+      "input": [
+        {
+          "name": "autodiscoveryNe",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "autodiscoveryNe",
+            "type": "string"
+          }
+        },
+        {
+          "name": "body",
+          "type": "object",
+          "info": "the payload to be sent with the request",
+          "description": "the payload to be sent with the request",
+          "schema": {
+            "title": "body",
+            "type": "object"
+          },
+          "required": true
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/devAdminUpdateAutodiscoveryNe"
+      },
+      "task": true
+    },
+    {
+      "name": "devAdminDeleteAutodiscoverNe",
+      "summary": "devAdmin-DeleteAutodiscover-Ne",
+      "description": "devAdmin-DeleteAutodiscover-Ne",
+      "input": [
+        {
+          "name": "autodiscoveryNe",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "autodiscoveryNe",
+            "type": "string"
+          }
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/devAdminDeleteAutodiscoverNe"
+      },
+      "task": true
+    },
+    {
+      "name": "createIPv4AddressPool",
+      "summary": "createIPv4AddressPool",
+      "description": "createIPv4AddressPool",
+      "input": [
+        {
+          "name": "body",
+          "type": "object",
+          "info": "the payload to be sent with the request",
+          "description": "the payload to be sent with the request",
+          "schema": {
+            "title": "body",
+            "type": "object"
+          },
+          "required": true
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/createIPv4AddressPool"
+      },
+      "task": true
+    },
+    {
+      "name": "getIPv4AddressPool",
+      "summary": "getIPv4AddressPool",
+      "description": "getIPv4AddressPool",
+      "input": [
+        {
+          "name": "ipResourcePools",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "ipResourcePools",
+            "type": "string"
+          }
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/getIPv4AddressPool"
+      },
+      "task": true
+    },
+    {
+      "name": "obtainValueFromPool",
+      "summary": "obtainValueFromPool",
+      "description": "obtainValueFromPool",
+      "input": [
+        {
+          "name": "ipResourcePools",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "ipResourcePools",
+            "type": "string"
+          }
+        },
+        {
+          "name": "body",
+          "type": "object",
+          "info": "the payload to be sent with the request",
+          "description": "the payload to be sent with the request",
+          "schema": {
+            "title": "body",
+            "type": "object"
+          },
+          "required": true
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/obtainValueFromPool"
+      },
+      "task": true
+    },
+    {
+      "name": "nspInventoryFindWithFilter",
+      "summary": "nspInventoryFindWithFilter",
+      "description": "nspInventoryFindWithFilter",
+      "input": [
+        {
+          "name": "body",
+          "type": "object",
+          "info": "the payload to be sent with the request",
+          "description": "the payload to be sent with the request",
+          "schema": {
+            "title": "body",
+            "type": "object"
+          },
+          "required": true
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/nspInventoryFindWithFilter"
+      },
+      "task": true
+    },
+    {
+      "name": "retrieveResyncPolicy",
+      "summary": "retrieveResyncPolicy",
+      "description": "retrieveResyncPolicy",
+      "input": [],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "GET",
+        "path": "/retrieveResyncPolicy"
+      },
+      "task": true
+    },
+    {
+      "name": "retrieveResyncPolicyNEAndVersionSpecific",
+      "summary": "retrieveResyncPolicy-NEAndVersionSpecific",
+      "description": "retrieveResyncPolicy-NEAndVersionSpecific",
+      "input": [
+        {
+          "name": "resyncPolicy",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "resyncPolicy",
+            "type": "string"
+          }
+        },
+        {
+          "name": "node",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "node",
+            "type": "string"
+          }
+        },
+        {
+          "name": "version",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "version",
+            "type": "string"
+          }
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/retrieveResyncPolicyNEAndVersionSpecific"
+      },
+      "task": true
+    },
+    {
+      "name": "retrieveResyncPollingPolicyNESpecific",
+      "summary": "retrieveResync(Polling)Policy-NESpecific",
+      "description": "retrieveResync(Polling)Policy-NESpecific",
+      "input": [
+        {
+          "name": "resyncPolicy",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "resyncPolicy",
+            "type": "string"
+          }
+        },
+        {
+          "name": "node",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "node",
+            "type": "string"
+          }
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/retrieveResyncPollingPolicyNESpecific"
+      },
+      "task": true
+    },
+    {
+      "name": "enableResyncPollingPolicy",
+      "summary": "enableResync(Polling)Policy",
+      "description": "enableResync(Polling)Policy",
+      "input": [
+        {
+          "name": "resyncPolicy",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "resyncPolicy",
+            "type": "string"
+          }
+        },
+        {
+          "name": "node",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "node",
+            "type": "string"
+          }
+        },
+        {
+          "name": "version",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "version",
+            "type": "string"
+          }
+        },
+        {
+          "name": "entity",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "entity",
+            "type": "string"
+          }
+        },
+        {
+          "name": "body",
+          "type": "object",
+          "info": "the payload to be sent with the request",
+          "description": "the payload to be sent with the request",
+          "schema": {
+            "title": "body",
+            "type": "object"
+          },
+          "required": true
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/enableResyncPollingPolicy"
+      },
+      "task": true
+    },
+    {
+      "name": "getL2TopologyLinks",
+      "summary": "gETL2TopologyLinks",
+      "description": "gETL2TopologyLinks",
+      "input": [
+        {
+          "name": "network",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "network",
+            "type": "string"
+          }
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/getL2TopologyLinks"
+      },
+      "task": true
+    },
+    {
+      "name": "getL2TopologyAttributes",
+      "summary": "gETL2TopologyAttributes",
+      "description": "gETL2TopologyAttributes",
+      "input": [
+        {
+          "name": "network",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "network",
+            "type": "string"
+          }
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/getL2TopologyAttributes"
+      },
+      "task": true
+    },
+    {
+      "name": "getL2TopologyNodeTerminationPoints",
+      "summary": "gETL2TopologyNodeTerminationPoints",
+      "description": "gETL2TopologyNodeTerminationPoints",
+      "input": [
+        {
+          "name": "network",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "network",
+            "type": "string"
+          }
+        },
+        {
+          "name": "node",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "node",
+            "type": "string"
+          }
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/getL2TopologyNodeTerminationPoints"
+      },
+      "task": true
+    },
+    {
+      "name": "getSpecificNetwork",
+      "summary": "gETSpecificNetwork",
+      "description": "gETSpecificNetwork",
+      "input": [
+        {
+          "name": "network",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "network",
+            "type": "string"
+          }
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/getSpecificNetwork"
+      },
+      "task": true
+    },
+    {
+      "name": "getSupportingNetwork",
+      "summary": "gETSupportingNetwork",
+      "description": "gETSupportingNetwork",
+      "input": [
+        {
+          "name": "network",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "network",
+            "type": "string"
+          }
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/getSupportingNetwork"
+      },
+      "task": true
+    },
+    {
+      "name": "getNetworkType",
+      "summary": "gETNetworkType",
+      "description": "gETNetworkType",
+      "input": [
+        {
+          "name": "network",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "network",
+            "type": "string"
+          }
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/getNetworkType"
+      },
+      "task": true
+    },
+    {
+      "name": "getNetwork",
+      "summary": "gETNetwork",
+      "description": "gETNetwork",
+      "input": [],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "GET",
+        "path": "/getNetwork"
+      },
+      "task": true
+    },
+    {
+      "name": "getL3TopologyAttribute",
+      "summary": "gETL3TopologyAttribute",
+      "description": "gETL3TopologyAttribute",
+      "input": [
+        {
+          "name": "network",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "network",
+            "type": "string"
+          }
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/getL3TopologyAttribute"
+      },
+      "task": true
+    },
+    {
+      "name": "getAllNodesInANetwork",
+      "summary": "gETAllNodesInANetwork",
+      "description": "gETAllNodesInANetwork",
+      "input": [
+        {
+          "name": "network",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "network",
+            "type": "string"
+          }
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/getAllNodesInANetwork"
+      },
+      "task": true
+    },
+    {
+      "name": "getSpecificNodeInANetwork",
+      "summary": "getSpecificNodeInANetwork",
+      "description": "getSpecificNodeInANetwork",
+      "input": [
+        {
+          "name": "network",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "network",
+            "type": "string"
+          }
+        },
+        {
+          "name": "node",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "node",
+            "type": "string"
+          }
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/getSpecificNodeInANetwork"
+      },
+      "task": true
+    },
+    {
+      "name": "getSpecificLinkInANetwork",
+      "summary": "getSpecificLinkInANetwork",
+      "description": "getSpecificLinkInANetwork",
+      "input": [
+        {
+          "name": "network",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "network",
+            "type": "string"
+          }
+        },
+        {
+          "name": "link",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "link",
+            "type": "string"
+          }
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/getSpecificLinkInANetwork"
+      },
+      "task": true
+    },
+    {
+      "name": "getSupportingLink",
+      "summary": "getSupportingLink",
+      "description": "getSupportingLink",
+      "input": [
+        {
+          "name": "network",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "network",
+            "type": "string"
+          }
+        },
+        {
+          "name": "link",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "link",
+            "type": "string"
+          }
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/getSupportingLink"
+      },
+      "task": true
+    },
+    {
+      "name": "getSpecificTerminationPointsOfANode",
+      "summary": "gETSpecificTerminationPointsOfANode",
+      "description": "gETSpecificTerminationPointsOfANode",
+      "input": [
+        {
+          "name": "network",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "network",
+            "type": "string"
+          }
+        },
+        {
+          "name": "node",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "node",
+            "type": "string"
+          }
+        },
+        {
+          "name": "terminationPoint",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "terminationPoint",
+            "type": "string"
+          }
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/getSpecificTerminationPointsOfANode"
+      },
+      "task": true
+    },
+    {
+      "name": "getSupportingTerminationPoint",
+      "summary": "gETSupportingTerminationPoint",
+      "description": "gETSupportingTerminationPoint",
+      "input": [
+        {
+          "name": "network",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "network",
+            "type": "string"
+          }
+        },
+        {
+          "name": "node",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "node",
+            "type": "string"
+          }
+        },
+        {
+          "name": "terminationPoint",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "terminationPoint",
+            "type": "string"
+          }
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/getSupportingTerminationPoint"
+      },
+      "task": true
+    },
+    {
+      "name": "l3GETSRTopologyNodeAttributes",
+      "summary": "l3GETSRTopologyNodeAttributes",
+      "description": "l3GETSRTopologyNodeAttributes",
+      "input": [
+        {
+          "name": "network",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "network",
+            "type": "string"
+          }
+        },
+        {
+          "name": "node",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "node",
+            "type": "string"
+          }
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/l3GETSRTopologyNodeAttributes"
+      },
+      "task": true
+    },
+    {
+      "name": "l3GETSRTopologyLinkAttributes",
+      "summary": "l3GETSRTopologyLinkAttributes",
+      "description": "l3GETSRTopologyLinkAttributes",
+      "input": [
+        {
+          "name": "network",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "network",
+            "type": "string"
+          }
+        },
+        {
+          "name": "link",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "link",
+            "type": "string"
+          }
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/l3GETSRTopologyLinkAttributes"
+      },
+      "task": true
+    },
+    {
+      "name": "getSAPNetwork",
+      "summary": "gETSAPNetwork",
+      "description": "gETSAPNetwork",
+      "input": [],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "GET",
+        "path": "/getSAPNetwork"
+      },
+      "task": true
+    },
+    {
+      "name": "getIETFNetworkFromSpecificNode",
+      "summary": "getIETFNetworkFromSpecificNode",
+      "description": "getIETFNetworkFromSpecificNode",
+      "input": [
+        {
+          "name": "node",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "node",
+            "type": "string"
+          }
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/getIETFNetworkFromSpecificNode"
+      },
+      "task": true
+    },
+    {
+      "name": "getSAPsOnASpecificNodeOfSpecificServiceType",
+      "summary": "getSAPsOnASpecificNodeOfSpecificServiceType",
+      "description": "getSAPsOnASpecificNodeOfSpecificServiceType",
+      "input": [
+        {
+          "name": "network",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "network",
+            "type": "string"
+          }
+        },
+        {
+          "name": "node",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "node",
+            "type": "string"
+          }
+        },
+        {
+          "name": "service",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "service",
+            "type": "string"
+          }
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/getSAPsOnASpecificNodeOfSpecificServiceType"
+      },
+      "task": true
+    },
+    {
+      "name": "getIETFMappingFiles",
+      "summary": "gETIETFMappingFiles",
+      "description": "gETIETFMappingFiles",
+      "input": [],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "GET",
+        "path": "/getIETFMappingFiles"
+      },
+      "task": true
+    },
+    {
+      "name": "loadIETFMappingFiles",
+      "summary": "loadIETFMappingFiles",
+      "description": "loadIETFMappingFiles",
+      "input": [
+        {
+          "name": "nspPluginId",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "nspPluginId",
+            "type": "string"
+          }
+        },
+        {
+          "name": "file",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "file",
+            "type": "string"
+          }
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/loadIETFMappingFiles"
+      },
+      "task": true
+    },
+    {
+      "name": "createMappingPolicy",
+      "summary": "createMappingPolicy",
+      "description": "createMappingPolicy",
+      "input": [
+        {
+          "name": "body",
+          "type": "object",
+          "info": "the payload to be sent with the request",
+          "description": "the payload to be sent with the request",
+          "schema": {
+            "title": "body",
+            "type": "object"
+          },
+          "required": true
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/createMappingPolicy"
+      },
+      "task": true
+    },
+    {
+      "name": "getCorrelationPolicy",
+      "summary": "getCorrelationPolicy",
+      "description": "getCorrelationPolicy",
+      "input": [],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "GET",
+        "path": "/getCorrelationPolicy"
+      },
+      "task": true
+    },
+    {
+      "name": "updateMappingPolicy",
+      "summary": "updateMappingPolicy",
+      "description": "updateMappingPolicy",
+      "input": [
+        {
+          "name": "routerNeMapping",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "routerNeMapping",
+            "type": "string"
+          }
+        },
+        {
+          "name": "body",
+          "type": "object",
+          "info": "the payload to be sent with the request",
+          "description": "the payload to be sent with the request",
+          "schema": {
+            "title": "body",
+            "type": "object"
+          },
+          "required": true
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/updateMappingPolicy"
+      },
+      "task": true
+    },
+    {
+      "name": "getSpecificMappingPolicy",
+      "summary": "getSpecificMappingPolicy",
+      "description": "getSpecificMappingPolicy",
+      "input": [
+        {
+          "name": "routerNeMapping",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "routerNeMapping",
+            "type": "string"
+          }
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/getSpecificMappingPolicy"
+      },
+      "task": true
+    },
+    {
+      "name": "deleteAllPoliciesOnARouter",
+      "summary": "deleteAllPoliciesOnARouter",
+      "description": "deleteAllPoliciesOnARouter",
+      "input": [
+        {
+          "name": "routerNeMapping",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "routerNeMapping",
+            "type": "string"
+          }
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/deleteAllPoliciesOnARouter"
+      },
+      "task": true
+    },
+    {
+      "name": "getRouterNeMapping",
+      "summary": "getRouter-Ne-Mapping",
+      "description": "getRouter-Ne-Mapping",
+      "input": [],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "GET",
+        "path": "/getRouterNeMapping"
+      },
+      "task": true
+    },
+    {
+      "name": "deleteOnePolicyOfRouter",
+      "summary": "deleteOnePolicyOfRouter",
+      "description": "deleteOnePolicyOfRouter",
+      "input": [
+        {
+          "name": "routerNeMapping",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "routerNeMapping",
+            "type": "string"
+          }
+        },
+        {
+          "name": "routerInfos",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "routerInfos",
+            "type": "string"
+          }
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/deleteOnePolicyOfRouter"
+      },
+      "task": true
+    },
+    {
+      "name": "getIndicatorAgeoutPolicySettings",
+      "summary": "getIndicatorAgeout-PolicySettings",
+      "description": "getIndicatorAgeout-PolicySettings",
+      "input": [],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "GET",
+        "path": "/getIndicatorAgeoutPolicySettings"
+      },
+      "task": true
+    },
+    {
+      "name": "updateTheRetentionTimeForIndicators",
+      "summary": "updateTheRetentionTimeForIndicators",
+      "description": "updateTheRetentionTimeForIndicators",
+      "input": [
+        {
+          "name": "body",
+          "type": "object",
+          "info": "the payload to be sent with the request",
+          "description": "the payload to be sent with the request",
+          "schema": {
+            "title": "body",
+            "type": "object"
+          },
+          "required": true
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/updateTheRetentionTimeForIndicators"
+      },
+      "task": true
+    },
+    {
+      "name": "getBaselineAgeoutPolicySettings",
+      "summary": "getBaselineAgeout-PolicySettings",
+      "description": "getBaselineAgeout-PolicySettings",
+      "input": [],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "GET",
+        "path": "/getBaselineAgeoutPolicySettings"
+      },
+      "task": true
+    },
+    {
+      "name": "updateTheRetentionTimeForBaseline",
+      "summary": "updateTheRetentionTimeForBaseline",
+      "description": "updateTheRetentionTimeForBaseline",
+      "input": [
+        {
+          "name": "body",
+          "type": "object",
+          "info": "the payload to be sent with the request",
+          "description": "the payload to be sent with the request",
+          "schema": {
+            "title": "body",
+            "type": "object"
+          },
+          "required": true
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/updateTheRetentionTimeForBaseline"
+      },
+      "task": true
+    },
+    {
+      "name": "avgCPUAllNodesAllActions",
+      "summary": "avgCPUAllNodes-AllActions",
+      "description": "avgCPUAllNodes-AllActions",
+      "input": [
+        {
+          "name": "body",
+          "type": "object",
+          "info": "the payload to be sent with the request",
+          "description": "the payload to be sent with the request",
+          "schema": {
+            "title": "body",
+            "type": "object"
+          },
+          "required": true
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/avgCPUAllNodesAllActions"
+      },
+      "task": true
+    },
+    {
+      "name": "getAllIndicatorTemplates",
+      "summary": "getAllIndicatorTemplates",
+      "description": "getAllIndicatorTemplates",
+      "input": [],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "GET",
+        "path": "/getAllIndicatorTemplates"
+      },
+      "task": true
+    },
+    {
+      "name": "uPDATEIndicatorTemplate",
+      "summary": "uPDATEIndicatorTemplate",
+      "description": "uPDATEIndicatorTemplate",
+      "input": [
+        {
+          "name": "template",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "template",
+            "type": "string"
+          }
+        },
+        {
+          "name": "body",
+          "type": "object",
+          "info": "the payload to be sent with the request",
+          "description": "the payload to be sent with the request",
+          "schema": {
+            "title": "body",
+            "type": "object"
+          },
+          "required": true
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/uPDATEIndicatorTemplate"
+      },
+      "task": true
+    },
+    {
+      "name": "deleteIndicatorTemplate",
+      "summary": "deleteIndicatorTemplate",
+      "description": "deleteIndicatorTemplate",
+      "input": [
+        {
+          "name": "template",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "template",
+            "type": "string"
+          }
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/deleteIndicatorTemplate"
+      },
+      "task": true
+    },
+    {
+      "name": "getSpecificIndicatorTemplate",
+      "summary": "getSpecificIndicatorTemplate",
+      "description": "getSpecificIndicatorTemplate",
+      "input": [
+        {
+          "name": "template",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "template",
+            "type": "string"
+          }
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/getSpecificIndicatorTemplate"
+      },
+      "task": true
+    },
+    {
+      "name": "postavgCPUAllNodesAllActions",
+      "summary": "avgCPUAllNodes-AllActions",
+      "description": "avgCPUAllNodes-AllActions",
+      "input": [
+        {
+          "name": "body",
+          "type": "object",
+          "info": "the payload to be sent with the request",
+          "description": "the payload to be sent with the request",
+          "schema": {
+            "title": "body",
+            "type": "object"
+          },
+          "required": true
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/postavgCPUAllNodesAllActions"
+      },
+      "task": true
+    },
+    {
+      "name": "getAllIndicatorRules",
+      "summary": "getAllIndicatorRules",
+      "description": "getAllIndicatorRules",
+      "input": [],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "GET",
+        "path": "/getAllIndicatorRules"
+      },
+      "task": true
+    },
+    {
+      "name": "updateIndicatorRule",
+      "summary": "updateIndicatorRule",
+      "description": "updateIndicatorRule",
+      "input": [
+        {
+          "name": "rule",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "rule",
+            "type": "string"
+          }
+        },
+        {
+          "name": "body",
+          "type": "object",
+          "info": "the payload to be sent with the request",
+          "description": "the payload to be sent with the request",
+          "schema": {
+            "title": "body",
+            "type": "object"
+          },
+          "required": true
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/updateIndicatorRule"
+      },
+      "task": true
+    },
+    {
+      "name": "deleteIndicatorRule",
+      "summary": "deleteIndicatorRule",
+      "description": "deleteIndicatorRule",
+      "input": [
+        {
+          "name": "rule",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "rule",
+            "type": "string"
+          }
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/deleteIndicatorRule"
+      },
+      "task": true
+    },
+    {
+      "name": "getSpecificIndicatorRule",
+      "summary": "getSpecificIndicatorRule",
+      "description": "getSpecificIndicatorRule",
+      "input": [
+        {
+          "name": "rule",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "rule",
+            "type": "string"
+          }
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/getSpecificIndicatorRule"
+      },
+      "task": true
+    },
+    {
+      "name": "createSubscription",
+      "summary": "createSubscription",
+      "description": "createSubscription",
+      "input": [
+        {
+          "name": "body",
+          "type": "object",
+          "info": "the payload to be sent with the request",
+          "description": "the payload to be sent with the request",
+          "schema": {
+            "title": "body",
+            "type": "object"
+          },
+          "required": true
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/createSubscription"
+      },
+      "task": true
+    },
+    {
+      "name": "createBaseline",
+      "summary": "createBaseline",
+      "description": "createBaseline",
+      "input": [
+        {
+          "name": "body",
+          "type": "object",
+          "info": "the payload to be sent with the request",
+          "description": "the payload to be sent with the request",
+          "schema": {
+            "title": "body",
+            "type": "object"
+          },
+          "required": true
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/createBaseline"
+      },
+      "task": true
+    },
+    {
+      "name": "getBaseline",
+      "summary": "getBaseline",
+      "description": "A JavaScript expression to get the URI of a specific baseline is:\n\n`[baseline.type, baseline.resource, baseline['counter-group'], baseline.counter, baseline.period, baseline['window-duration']].map(encodeURIComponent).join(',')`",
+      "input": [
+        {
+          "name": "baseline",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "baseline",
+            "type": "string"
+          }
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/getBaseline"
+      },
+      "task": true
+    },
+    {
+      "name": "createBaselineDetector",
+      "summary": "createBaselineDetector",
+      "description": "createBaselineDetector",
+      "input": [
+        {
+          "name": "baseline",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "baseline",
+            "type": "string"
+          }
+        },
+        {
+          "name": "body",
+          "type": "object",
+          "info": "the payload to be sent with the request",
+          "description": "the payload to be sent with the request",
+          "schema": {
+            "title": "body",
+            "type": "object"
+          },
+          "required": true
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/createBaselineDetector"
+      },
+      "task": true
+    },
+    {
+      "name": "deleteBaseline",
+      "summary": "deleteBaseline",
+      "description": "deleteBaseline",
+      "input": [
+        {
+          "name": "baseline",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "baseline",
+            "type": "string"
+          }
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/deleteBaseline"
+      },
+      "task": true
+    },
+    {
+      "name": "getBaselineDetector",
+      "summary": "getBaselineDetector",
+      "description": "getBaselineDetector",
+      "input": [
+        {
+          "name": "baseline",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "baseline",
+            "type": "string"
+          }
+        },
+        {
+          "name": "baselineDetector",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "baselineDetector",
+            "type": "string"
+          }
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/getBaselineDetector"
+      },
+      "task": true
+    },
+    {
+      "name": "patchBaselineDetector",
+      "summary": "patchBaselineDetector",
+      "description": "patchBaselineDetector",
+      "input": [
+        {
+          "name": "baseline",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "baseline",
+            "type": "string"
+          }
+        },
+        {
+          "name": "baselineDetector",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "baselineDetector",
+            "type": "string"
+          }
+        },
+        {
+          "name": "body",
+          "type": "object",
+          "info": "the payload to be sent with the request",
+          "description": "the payload to be sent with the request",
+          "schema": {
+            "title": "body",
+            "type": "object"
+          },
+          "required": true
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/patchBaselineDetector"
+      },
+      "task": true
+    },
+    {
+      "name": "deleteBaselineDetector",
+      "summary": "deleteBaselineDetector",
+      "description": "deleteBaselineDetector",
+      "input": [
+        {
+          "name": "baseline",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "baseline",
+            "type": "string"
+          }
+        },
+        {
+          "name": "baselineDetector",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "baselineDetector",
+            "type": "string"
+          }
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/deleteBaselineDetector"
+      },
+      "task": true
+    },
+    {
+      "name": "deleteSubscription",
+      "summary": "deleteSubscription",
+      "description": "deleteSubscription",
+      "input": [
+        {
+          "name": "subscription",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "subscription",
+            "type": "string"
+          }
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/deleteSubscription"
+      },
+      "task": true
+    },
+    {
+      "name": "getAllBaselines",
+      "summary": "getAllBaselines",
+      "description": "getAllBaselines",
+      "input": [],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "GET",
+        "path": "/getAllBaselines"
+      },
+      "task": true
+    },
+    {
+      "name": "importIntentTypeFromIntentManager",
+      "summary": "importIntentTypeFromIntentManager",
+      "description": "importIntentTypeFromIntentManager",
+      "input": [
+        {
+          "name": "body",
+          "type": "object",
+          "info": "the payload to be sent with the request",
+          "description": "the payload to be sent with the request",
+          "schema": {
+            "title": "body",
+            "type": "object"
+          },
+          "required": true
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/importIntentTypeFromIntentManager"
+      },
+      "task": true
+    },
+    {
+      "name": "getIntentTypes",
+      "summary": "getIntentTypes",
+      "description": "getIntentTypes",
+      "input": [],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "GET",
+        "path": "/getIntentTypes"
+      },
+      "task": true
+    },
+    {
+      "name": "removeIntentType",
+      "summary": "removeIntentType",
+      "description": "removeIntentType",
+      "input": [
+        {
+          "name": "body",
+          "type": "object",
+          "info": "the payload to be sent with the request",
+          "description": "the payload to be sent with the request",
+          "schema": {
+            "title": "body",
+            "type": "object"
+          },
+          "required": true
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/removeIntentType"
+      },
+      "task": true
+    },
+    {
+      "name": "createTemplate",
+      "summary": "createTemplate",
+      "description": "createTemplate",
+      "input": [
+        {
+          "name": "body",
+          "type": "object",
+          "info": "the payload to be sent with the request",
+          "description": "the payload to be sent with the request",
+          "schema": {
+            "title": "body",
+            "type": "object"
+          },
+          "required": true
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/createTemplate"
+      },
+      "task": true
+    },
+    {
+      "name": "getTemplates",
+      "summary": "getTemplates",
+      "description": "getTemplates",
+      "input": [],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "GET",
+        "path": "/getTemplates"
+      },
+      "task": true
+    },
+    {
+      "name": "updateTemplateLifecycle",
+      "summary": "updateTemplateLifecycle",
+      "description": "updateTemplateLifecycle",
+      "input": [
+        {
+          "name": "template",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "template",
+            "type": "string"
+          }
+        },
+        {
+          "name": "body",
+          "type": "object",
+          "info": "the payload to be sent with the request",
+          "description": "the payload to be sent with the request",
+          "schema": {
+            "title": "body",
+            "type": "object"
+          },
+          "required": true
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/updateTemplateLifecycle"
+      },
+      "task": true
+    },
+    {
+      "name": "deleteTemplate",
+      "summary": "deleteTemplate",
+      "description": "deleteTemplate",
+      "input": [
+        {
+          "name": "template",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "template",
+            "type": "string"
+          }
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/deleteTemplate"
+      },
+      "task": true
+    },
+    {
+      "name": "createPortGroupDirectory",
+      "summary": "createPortGroupDirectory",
+      "description": "createPortGroupDirectory",
+      "input": [
+        {
+          "name": "category",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "category",
+            "type": "string"
+          }
+        },
+        {
+          "name": "body",
+          "type": "object",
+          "info": "the payload to be sent with the request",
+          "description": "the payload to be sent with the request",
+          "schema": {
+            "title": "body",
+            "type": "object"
+          },
+          "required": true
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/createPortGroupDirectory"
+      },
+      "task": true
+    },
+    {
+      "name": "createPortGroup",
+      "summary": "createPortGroup",
+      "description": "createPortGroup",
+      "input": [
+        {
+          "name": "category",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "category",
+            "type": "string"
+          }
+        },
+        {
+          "name": "body",
+          "type": "object",
+          "info": "the payload to be sent with the request",
+          "description": "the payload to be sent with the request",
+          "schema": {
+            "title": "body",
+            "type": "object"
+          },
+          "required": true
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/createPortGroup"
+      },
+      "task": true
+    },
+    {
+      "name": "getPortGroupFDN",
+      "summary": "getPortGroupFDN",
+      "description": "getPortGroupFDN",
+      "input": [
+        {
+          "name": "category",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "category",
+            "type": "string"
+          }
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/getPortGroupFDN"
+      },
+      "task": true
+    },
+    {
+      "name": "createDeployment",
+      "summary": "createDeployment",
+      "description": "createDeployment",
+      "input": [
+        {
+          "name": "body",
+          "type": "object",
+          "info": "the payload to be sent with the request",
+          "description": "the payload to be sent with the request",
+          "schema": {
+            "title": "body",
+            "type": "object"
+          },
+          "required": true
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/createDeployment"
+      },
+      "task": true
+    },
+    {
+      "name": "updateDeploymentConfiguration",
+      "summary": "updateDeploymentConfiguration",
+      "description": "updateDeploymentConfiguration",
+      "input": [
+        {
+          "name": "body",
+          "type": "object",
+          "info": "the payload to be sent with the request",
+          "description": "the payload to be sent with the request",
+          "schema": {
+            "title": "body",
+            "type": "object"
+          },
+          "required": true
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/updateDeploymentConfiguration"
+      },
+      "task": true
+    },
+    {
+      "name": "replaceDeployment",
+      "summary": "replaceDeployment",
+      "description": "replaceDeployment",
+      "input": [
+        {
+          "name": "body",
+          "type": "object",
+          "info": "the payload to be sent with the request",
+          "description": "the payload to be sent with the request",
+          "schema": {
+            "title": "body",
+            "type": "object"
+          },
+          "required": true
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/replaceDeployment"
+      },
+      "task": true
+    },
+    {
+      "name": "getDeployments",
+      "summary": "getDeployments",
+      "description": "getDeployments",
+      "input": [],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "GET",
+        "path": "/getDeployments"
+      },
+      "task": true
+    },
+    {
+      "name": "getSpecificDeployment",
+      "summary": "getSpecificDeployment",
+      "description": "getSpecificDeployment",
+      "input": [
+        {
+          "name": "deployment",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "deployment",
+            "type": "string"
+          }
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/getSpecificDeployment"
+      },
+      "task": true
+    },
+    {
+      "name": "deleteSingleDeployment",
+      "summary": "deleteSingleDeployment",
+      "description": "deleteSingleDeployment",
+      "input": [
+        {
+          "name": "deployment",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "deployment",
+            "type": "string"
+          }
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/deleteSingleDeployment"
+      },
+      "task": true
+    },
+    {
+      "name": "deleteDeployments",
+      "summary": "deleteDeployments",
+      "description": "deleteDeployments",
+      "input": [
+        {
+          "name": "body",
+          "type": "object",
+          "info": "the payload to be sent with the request",
+          "description": "the payload to be sent with the request",
+          "schema": {
+            "title": "body",
+            "type": "object"
+          },
+          "required": true
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/deleteDeployments"
+      },
+      "task": true
+    },
+    {
+      "name": "discoverDeployments",
+      "summary": "discoverDeployments",
+      "description": "discoverDeployments",
+      "input": [
+        {
+          "name": "body",
+          "type": "object",
+          "info": "the payload to be sent with the request",
+          "description": "the payload to be sent with the request",
+          "schema": {
+            "title": "body",
+            "type": "object"
+          },
+          "required": true
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/discoverDeployments"
+      },
+      "task": true
+    },
+    {
+      "name": "auditDeployment",
+      "summary": "auditDeployment",
+      "description": "auditDeployment",
+      "input": [
+        {
+          "name": "deployment",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "deployment",
+            "type": "string"
+          }
+        },
+        {
+          "name": "body",
+          "type": "object",
+          "info": "the payload to be sent with the request",
+          "description": "the payload to be sent with the request",
+          "schema": {
+            "title": "body",
+            "type": "object"
+          },
+          "required": true
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/auditDeployment"
+      },
+      "task": true
+    },
+    {
+      "name": "getAuditDetails",
+      "summary": "getAuditDetails",
+      "description": "getAuditDetails",
+      "input": [
+        {
+          "name": "deployment",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "deployment",
+            "type": "string"
+          }
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/getAuditDetails"
+      },
+      "task": true
+    },
+    {
+      "name": "alignConfigurationDeployment",
+      "summary": "alignConfigurationDeployment",
+      "description": "alignConfigurationDeployment",
+      "input": [
+        {
+          "name": "deployment",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "deployment",
+            "type": "string"
+          }
+        },
+        {
+          "name": "body",
+          "type": "object",
+          "info": "the payload to be sent with the request",
+          "description": "the payload to be sent with the request",
+          "schema": {
+            "title": "body",
+            "type": "object"
+          },
+          "required": true
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/alignConfigurationDeployment"
+      },
+      "task": true
+    },
+    {
+      "name": "auditTemplate",
+      "summary": "auditTemplate",
+      "description": "auditTemplate",
+      "input": [
+        {
+          "name": "template",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "template",
+            "type": "string"
+          }
+        },
+        {
+          "name": "body",
+          "type": "object",
+          "info": "the payload to be sent with the request",
+          "description": "the payload to be sent with the request",
+          "schema": {
+            "title": "body",
+            "type": "object"
+          },
+          "required": true
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/auditTemplate"
+      },
+      "task": true
+    },
+    {
+      "name": "checkAuditStatusCount",
+      "summary": "checkAuditStatusCount",
+      "description": "checkAuditStatusCount",
+      "input": [
+        {
+          "name": "template",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "template",
+            "type": "string"
+          }
+        },
+        {
+          "name": "body",
+          "type": "object",
+          "info": "the payload to be sent with the request",
+          "description": "the payload to be sent with the request",
+          "schema": {
+            "title": "body",
+            "type": "object"
+          },
+          "required": true
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/checkAuditStatusCount"
+      },
+      "task": true
+    },
+    {
+      "name": "alignConfigurationTemplateAllDeployments",
+      "summary": "alignConfigurationTemplateAllDeployments",
+      "description": "alignConfigurationTemplateAllDeployments",
+      "input": [
+        {
+          "name": "template",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "template",
+            "type": "string"
+          }
+        },
+        {
+          "name": "body",
+          "type": "object",
+          "info": "the payload to be sent with the request",
+          "description": "the payload to be sent with the request",
+          "schema": {
+            "title": "body",
+            "type": "object"
+          },
+          "required": true
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/alignConfigurationTemplateAllDeployments"
+      },
+      "task": true
+    },
+    {
+      "name": "alignConfigurationTemplateMisalignedDeployments",
+      "summary": "alignConfigurationTemplateMisalignedDeployments",
+      "description": "alignConfigurationTemplateMisalignedDeployments",
+      "input": [
+        {
+          "name": "template",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "template",
+            "type": "string"
+          }
+        },
+        {
+          "name": "body",
+          "type": "object",
+          "info": "the payload to be sent with the request",
+          "description": "the payload to be sent with the request",
+          "schema": {
+            "title": "body",
+            "type": "object"
+          },
+          "required": true
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/alignConfigurationTemplateMisalignedDeployments"
+      },
+      "task": true
+    },
+    {
+      "name": "auditNodeDeployments",
+      "summary": "auditNodeDeployments",
+      "description": "auditNodeDeployments",
+      "input": [
+        {
+          "name": "body",
+          "type": "object",
+          "info": "the payload to be sent with the request",
+          "description": "the payload to be sent with the request",
+          "schema": {
+            "title": "body",
+            "type": "object"
+          },
+          "required": true
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/auditNodeDeployments"
+      },
+      "task": true
+    },
+    {
+      "name": "cloneTemplate",
+      "summary": "cloneTemplate",
+      "description": "cloneTemplate",
+      "input": [
+        {
+          "name": "body",
+          "type": "object",
+          "info": "the payload to be sent with the request",
+          "description": "the payload to be sent with the request",
+          "schema": {
+            "title": "body",
+            "type": "object"
+          },
+          "required": true
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/cloneTemplate"
+      },
+      "task": true
+    },
+    {
+      "name": "migrateDeployments",
+      "summary": "migrateDeployments",
+      "description": "migrateDeployments",
+      "input": [
+        {
+          "name": "body",
+          "type": "object",
+          "info": "the payload to be sent with the request",
+          "description": "the payload to be sent with the request",
+          "schema": {
+            "title": "body",
+            "type": "object"
+          },
+          "required": true
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/migrateDeployments"
+      },
+      "task": true
+    }
+  ],
+  "views": []
+}

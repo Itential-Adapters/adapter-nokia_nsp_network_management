@@ -1,0 +1,797 @@
+{
+  "nsp-admin-resync:entity": [
+    {
+      "@": {
+        "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+        "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='21.5.R2']/entity[entity-type='openconfig-bfd:/bfd/interfaces/interface/peers']"
+      },
+      "period": 1440,
+      "admin-state": "disabled",
+      "entity-type": "openconfig-bfd:/bfd/interfaces/interface/peers"
+    },
+    {
+      "@": {
+        "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+        "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='21.5.R2']/entity[entity-type='openconfig-bfd:/bfd/interfaces']"
+      },
+      "period": 1440,
+      "admin-state": "disabled",
+      "entity-type": "openconfig-bfd:/bfd/interfaces"
+    },
+    {
+      "@": {
+        "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+        "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='21.5.R2']/entity[entity-type='openconfig-bfd:/bfd/interfaces/interface']"
+      },
+      "period": 1440,
+      "admin-state": "disabled",
+      "entity-type": "openconfig-bfd:/bfd/interfaces/interface"
+    },
+    {
+      "@": {
+        "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+        "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='21.5.R2']/entity[entity-type='openconfig-bfd:/bfd']"
+      },
+      "period": 1440,
+      "admin-state": "disabled",
+      "entity-type": "openconfig-bfd:/bfd"
+    },
+    {
+      "@": {
+        "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+        "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='21.5.R2']/entity[entity-type='openconfig-bfd:/bfd/interfaces/interface/peers/peer']"
+      },
+      "period": 1440,
+      "admin-state": "disabled",
+      "entity-type": "openconfig-bfd:/bfd/interfaces/interface/peers/peer"
+    },
+    {
+      "@": {
+        "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+        "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='21.5.R2']/entity[entity-type='openconfig-interfaces:/interfaces/interface/subinterfaces']"
+      },
+      "period": 1440,
+      "admin-state": "disabled",
+      "entity-type": "openconfig-interfaces:/interfaces/interface/subinterfaces"
+    },
+    {
+      "@": {
+        "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+        "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='21.5.R2']/entity[entity-type='openconfig-interfaces:/interfaces/interface/subinterfaces/subinterface/openconfig-if-ip:ipv6/addresses/address']"
+      },
+      "period": 1440,
+      "admin-state": "disabled",
+      "entity-type": "openconfig-interfaces:/interfaces/interface/subinterfaces/subinterface/openconfig-if-ip:ipv6/addresses/address"
+    },
+    {
+      "@": {
+        "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+        "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='21.5.R2']/entity[entity-type='openconfig-interfaces:/interfaces/interface/subinterfaces/subinterface/openconfig-if-ip:ipv4']"
+      },
+      "period": 1440,
+      "admin-state": "disabled",
+      "entity-type": "openconfig-interfaces:/interfaces/interface/subinterfaces/subinterface/openconfig-if-ip:ipv4"
+    },
+    {
+      "@": {
+        "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+        "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='21.5.R2']/entity[entity-type='openconfig-interfaces:/interfaces/interface/subinterfaces/subinterface/openconfig-if-ip:ipv6']"
+      },
+      "period": 1440,
+      "admin-state": "disabled",
+      "entity-type": "openconfig-interfaces:/interfaces/interface/subinterfaces/subinterface/openconfig-if-ip:ipv6"
+    },
+    {
+      "@": {
+        "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+        "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='21.5.R2']/entity[entity-type='openconfig-interfaces:/interfaces/interface']"
+      },
+      "period": 1440,
+      "admin-state": "disabled",
+      "entity-type": "openconfig-interfaces:/interfaces/interface"
+    },
+    {
+      "@": {
+        "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+        "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='21.5.R2']/entity[entity-type='openconfig-interfaces:/interfaces/interface/subinterfaces/subinterface/openconfig-if-ip:ipv4/addresses/address']"
+      },
+      "period": 1440,
+      "admin-state": "disabled",
+      "entity-type": "openconfig-interfaces:/interfaces/interface/subinterfaces/subinterface/openconfig-if-ip:ipv4/addresses/address"
+    },
+    {
+      "@": {
+        "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+        "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='21.5.R2']/entity[entity-type='openconfig-interfaces:/interfaces/interface/subinterfaces/subinterface']"
+      },
+      "period": 1440,
+      "admin-state": "disabled",
+      "entity-type": "openconfig-interfaces:/interfaces/interface/subinterfaces/subinterface"
+    },
+    {
+      "@": {
+        "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+        "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='21.5.R2']/entity[entity-type='openconfig-interfaces:/interfaces/interface/subinterfaces/subinterface/openconfig-if-ip:ipv6/addresses']"
+      },
+      "period": 1440,
+      "admin-state": "disabled",
+      "entity-type": "openconfig-interfaces:/interfaces/interface/subinterfaces/subinterface/openconfig-if-ip:ipv6/addresses"
+    },
+    {
+      "@": {
+        "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+        "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='21.5.R2']/entity[entity-type='openconfig-interfaces:/interfaces/interface/subinterfaces/subinterface/openconfig-if-ip:ipv4/addresses']"
+      },
+      "period": 1440,
+      "admin-state": "disabled",
+      "entity-type": "openconfig-interfaces:/interfaces/interface/subinterfaces/subinterface/openconfig-if-ip:ipv4/addresses"
+    },
+    {
+      "@": {
+        "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+        "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='21.5.R2']/entity[entity-type='openconfig-network-instance:/network-instances/network-instance/protocols/protocol/isis']"
+      },
+      "period": 1440,
+      "admin-state": "disabled",
+      "entity-type": "openconfig-network-instance:/network-instances/network-instance/protocols/protocol/isis"
+    },
+    {
+      "@": {
+        "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+        "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='21.5.R2']/entity[entity-type='openconfig-network-instance:/network-instances/network-instance/protocols/protocol/ospfv2/areas/area/interfaces/interface/neighbors']"
+      },
+      "period": 1440,
+      "admin-state": "disabled",
+      "entity-type": "openconfig-network-instance:/network-instances/network-instance/protocols/protocol/ospfv2/areas/area/interfaces/interface/neighbors"
+    },
+    {
+      "@": {
+        "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+        "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='21.5.R2']/entity[entity-type='openconfig-network-instance:/network-instances/network-instance/interfaces/interface']"
+      },
+      "period": 1440,
+      "admin-state": "disabled",
+      "entity-type": "openconfig-network-instance:/network-instances/network-instance/interfaces/interface"
+    },
+    {
+      "@": {
+        "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+        "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='21.5.R2']/entity[entity-type='openconfig-network-instance:/network-instances/network-instance/protocols/protocol/pim/interfaces']"
+      },
+      "period": 1440,
+      "admin-state": "disabled",
+      "entity-type": "openconfig-network-instance:/network-instances/network-instance/protocols/protocol/pim/interfaces"
+    },
+    {
+      "@": {
+        "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+        "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='21.5.R2']/entity[entity-type='openconfig-network-instance:/network-instances/network-instance/mpls/signaling-protocols/rsvp-te/neighbors']"
+      },
+      "period": 1440,
+      "admin-state": "disabled",
+      "entity-type": "openconfig-network-instance:/network-instances/network-instance/mpls/signaling-protocols/rsvp-te/neighbors"
+    },
+    {
+      "@": {
+        "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+        "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='21.5.R2']/entity[entity-type='openconfig-network-instance:/network-instances/network-instance/protocols/protocol/isis/interfaces']"
+      },
+      "period": 1440,
+      "admin-state": "disabled",
+      "entity-type": "openconfig-network-instance:/network-instances/network-instance/protocols/protocol/isis/interfaces"
+    },
+    {
+      "@": {
+        "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+        "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='21.5.R2']/entity[entity-type='openconfig-network-instance:/network-instances/network-instance/protocols/protocol/ospfv2/areas']"
+      },
+      "period": 1440,
+      "admin-state": "disabled",
+      "entity-type": "openconfig-network-instance:/network-instances/network-instance/protocols/protocol/ospfv2/areas"
+    },
+    {
+      "@": {
+        "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+        "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='21.5.R2']/entity[entity-type='openconfig-network-instance:/network-instances/network-instance/protocols/protocol/ospfv2/areas/area/interfaces']"
+      },
+      "period": 1440,
+      "admin-state": "disabled",
+      "entity-type": "openconfig-network-instance:/network-instances/network-instance/protocols/protocol/ospfv2/areas/area/interfaces"
+    },
+    {
+      "@": {
+        "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+        "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='21.5.R2']/entity[entity-type='openconfig-network-instance:/network-instances/network-instance/protocols/protocol/bgp/neighbors']"
+      },
+      "period": 1440,
+      "admin-state": "disabled",
+      "entity-type": "openconfig-network-instance:/network-instances/network-instance/protocols/protocol/bgp/neighbors"
+    },
+    {
+      "@": {
+        "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+        "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='21.5.R2']/entity[entity-type='openconfig-network-instance:/network-instances/network-instance/mpls/global/interface-attributes/interface']"
+      },
+      "period": 1440,
+      "admin-state": "disabled",
+      "entity-type": "openconfig-network-instance:/network-instances/network-instance/mpls/global/interface-attributes/interface"
+    },
+    {
+      "@": {
+        "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+        "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='21.5.R2']/entity[entity-type='openconfig-network-instance:/network-instances/network-instance/protocols/protocol/pim/global/rendezvous-points']"
+      },
+      "period": 1440,
+      "admin-state": "disabled",
+      "entity-type": "openconfig-network-instance:/network-instances/network-instance/protocols/protocol/pim/global/rendezvous-points"
+    },
+    {
+      "@": {
+        "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+        "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='21.5.R2']/entity[entity-type='openconfig-network-instance:/network-instances/network-instance/protocols/protocol/bgp/peer-groups/peer-group/afi-safis']"
+      },
+      "period": 1440,
+      "admin-state": "disabled",
+      "entity-type": "openconfig-network-instance:/network-instances/network-instance/protocols/protocol/bgp/peer-groups/peer-group/afi-safis"
+    },
+    {
+      "@": {
+        "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+        "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='21.5.R2']/entity[entity-type='openconfig-network-instance:/network-instances/network-instance/mpls/global/interface-attributes']"
+      },
+      "period": 1440,
+      "admin-state": "disabled",
+      "entity-type": "openconfig-network-instance:/network-instances/network-instance/mpls/global/interface-attributes"
+    },
+    {
+      "@": {
+        "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+        "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='21.5.R2']/entity[entity-type='openconfig-network-instance:/network-instances/network-instance/mpls/signaling-protocols/ldp/targeted/address-families']"
+      },
+      "period": 1440,
+      "admin-state": "disabled",
+      "entity-type": "openconfig-network-instance:/network-instances/network-instance/mpls/signaling-protocols/ldp/targeted/address-families"
+    },
+    {
+      "@": {
+        "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+        "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='21.5.R2']/entity[entity-type='openconfig-network-instance:/network-instances/network-instance/mpls/signaling-protocols/ldp/interface-attributes']"
+      },
+      "period": 1440,
+      "admin-state": "disabled",
+      "entity-type": "openconfig-network-instance:/network-instances/network-instance/mpls/signaling-protocols/ldp/interface-attributes"
+    },
+    {
+      "@": {
+        "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+        "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='21.5.R2']/entity[entity-type='openconfig-network-instance:/network-instances/network-instance/protocols/protocol/bgp/peer-groups/peer-group/afi-safis/afi-safi']"
+      },
+      "period": 1440,
+      "admin-state": "disabled",
+      "entity-type": "openconfig-network-instance:/network-instances/network-instance/protocols/protocol/bgp/peer-groups/peer-group/afi-safis/afi-safi"
+    },
+    {
+      "@": {
+        "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+        "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='21.5.R2']/entity[entity-type='openconfig-network-instance:/network-instances/network-instance/mpls']"
+      },
+      "period": 1440,
+      "admin-state": "disabled",
+      "entity-type": "openconfig-network-instance:/network-instances/network-instance/mpls"
+    },
+    {
+      "@": {
+        "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+        "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='21.5.R2']/entity[entity-type='openconfig-network-instance:/network-instances/network-instance/protocols/protocol/bgp/neighbors/neighbor/afi-safis']"
+      },
+      "period": 1440,
+      "admin-state": "disabled",
+      "entity-type": "openconfig-network-instance:/network-instances/network-instance/protocols/protocol/bgp/neighbors/neighbor/afi-safis"
+    },
+    {
+      "@": {
+        "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+        "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='21.5.R2']/entity[entity-type='openconfig-network-instance:/network-instances/network-instance/protocols/protocol/bgp/peer-groups']"
+      },
+      "period": 1440,
+      "admin-state": "disabled",
+      "entity-type": "openconfig-network-instance:/network-instances/network-instance/protocols/protocol/bgp/peer-groups"
+    },
+    {
+      "@": {
+        "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+        "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='21.5.R2']/entity[entity-type='openconfig-network-instance:/network-instances/network-instance/protocols/protocol']"
+      },
+      "period": 1440,
+      "admin-state": "disabled",
+      "entity-type": "openconfig-network-instance:/network-instances/network-instance/protocols/protocol"
+    },
+    {
+      "@": {
+        "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+        "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='21.5.R2']/entity[entity-type='openconfig-network-instance:/network-instances/network-instance/mpls/signaling-protocols/ldp/targeted/address-families/address-family']"
+      },
+      "period": 1440,
+      "admin-state": "disabled",
+      "entity-type": "openconfig-network-instance:/network-instances/network-instance/mpls/signaling-protocols/ldp/targeted/address-families/address-family"
+    },
+    {
+      "@": {
+        "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+        "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='21.5.R2']/entity[entity-type='openconfig-network-instance:/network-instances/network-instance']"
+      },
+      "period": 1440,
+      "admin-state": "disabled",
+      "entity-type": "openconfig-network-instance:/network-instances/network-instance"
+    },
+    {
+      "@": {
+        "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+        "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='21.5.R2']/entity[entity-type='openconfig-network-instance:/network-instances/network-instance/mpls/signaling-protocols/rsvp-te/interface-attributes/interface']"
+      },
+      "period": 1440,
+      "admin-state": "disabled",
+      "entity-type": "openconfig-network-instance:/network-instances/network-instance/mpls/signaling-protocols/rsvp-te/interface-attributes/interface"
+    },
+    {
+      "@": {
+        "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+        "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='21.5.R2']/entity[entity-type='openconfig-network-instance:/network-instances/network-instance/mpls/signaling-protocols/ldp/interface-attributes/interfaces']"
+      },
+      "period": 1440,
+      "admin-state": "disabled",
+      "entity-type": "openconfig-network-instance:/network-instances/network-instance/mpls/signaling-protocols/ldp/interface-attributes/interfaces"
+    },
+    {
+      "@": {
+        "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+        "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='21.5.R2']/entity[entity-type='openconfig-network-instance:/network-instances/network-instance/protocols/protocol/bgp/peer-groups/peer-group']"
+      },
+      "period": 1440,
+      "admin-state": "disabled",
+      "entity-type": "openconfig-network-instance:/network-instances/network-instance/protocols/protocol/bgp/peer-groups/peer-group"
+    },
+    {
+      "@": {
+        "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+        "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='21.5.R2']/entity[entity-type='openconfig-network-instance:/network-instances/network-instance/protocols/protocol/ospfv2/areas/area']"
+      },
+      "period": 1440,
+      "admin-state": "disabled",
+      "entity-type": "openconfig-network-instance:/network-instances/network-instance/protocols/protocol/ospfv2/areas/area"
+    },
+    {
+      "@": {
+        "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+        "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='21.5.R2']/entity[entity-type='openconfig-network-instance:/network-instances/network-instance/protocols/protocol/bgp/global']"
+      },
+      "period": 1440,
+      "admin-state": "disabled",
+      "entity-type": "openconfig-network-instance:/network-instances/network-instance/protocols/protocol/bgp/global"
+    },
+    {
+      "@": {
+        "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+        "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='21.5.R2']/entity[entity-type='openconfig-network-instance:/network-instances/network-instance/protocols/protocol/isis/levels/level']"
+      },
+      "period": 1440,
+      "admin-state": "disabled",
+      "entity-type": "openconfig-network-instance:/network-instances/network-instance/protocols/protocol/isis/levels/level"
+    },
+    {
+      "@": {
+        "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+        "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='21.5.R2']/entity[entity-type='openconfig-network-instance:/network-instances/network-instance/mpls/signaling-protocols/rsvp-te']"
+      },
+      "period": 1440,
+      "admin-state": "disabled",
+      "entity-type": "openconfig-network-instance:/network-instances/network-instance/mpls/signaling-protocols/rsvp-te"
+    },
+    {
+      "@": {
+        "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+        "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='21.5.R2']/entity[entity-type='openconfig-network-instance:/network-instances/network-instance/interfaces']"
+      },
+      "period": 1440,
+      "admin-state": "disabled",
+      "entity-type": "openconfig-network-instance:/network-instances/network-instance/interfaces"
+    },
+    {
+      "@": {
+        "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+        "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='21.5.R2']/entity[entity-type='openconfig-network-instance:/network-instances/network-instance/protocols']"
+      },
+      "period": 1440,
+      "admin-state": "disabled",
+      "entity-type": "openconfig-network-instance:/network-instances/network-instance/protocols"
+    },
+    {
+      "@": {
+        "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+        "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='21.5.R2']/entity[entity-type='openconfig-network-instance:/network-instances/network-instance/protocols/protocol/bgp']"
+      },
+      "period": 1440,
+      "admin-state": "disabled",
+      "entity-type": "openconfig-network-instance:/network-instances/network-instance/protocols/protocol/bgp"
+    },
+    {
+      "@": {
+        "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+        "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='21.5.R2']/entity[entity-type='openconfig-network-instance:/network-instances/network-instance/protocols/protocol/bgp/global/afi-safis/afi-safi']"
+      },
+      "period": 1440,
+      "admin-state": "disabled",
+      "entity-type": "openconfig-network-instance:/network-instances/network-instance/protocols/protocol/bgp/global/afi-safis/afi-safi"
+    },
+    {
+      "@": {
+        "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+        "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='21.5.R2']/entity[entity-type='openconfig-network-instance:/network-instances/network-instance/protocols/protocol/bgp/global/afi-safis']"
+      },
+      "period": 1440,
+      "admin-state": "disabled",
+      "entity-type": "openconfig-network-instance:/network-instances/network-instance/protocols/protocol/bgp/global/afi-safis"
+    },
+    {
+      "@": {
+        "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+        "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='21.5.R2']/entity[entity-type='openconfig-network-instance:/network-instances/network-instance/protocols/protocol/isis/interfaces/interface/levels/level']"
+      },
+      "period": 1440,
+      "admin-state": "disabled",
+      "entity-type": "openconfig-network-instance:/network-instances/network-instance/protocols/protocol/isis/interfaces/interface/levels/level"
+    },
+    {
+      "@": {
+        "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+        "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='21.5.R2']/entity[entity-type='openconfig-network-instance:/network-instances/network-instance/mpls/signaling-protocols/ldp/interface-attributes/interfaces/interface/address-families/address-family']"
+      },
+      "period": 1440,
+      "admin-state": "disabled",
+      "entity-type": "openconfig-network-instance:/network-instances/network-instance/mpls/signaling-protocols/ldp/interface-attributes/interfaces/interface/address-families/address-family"
+    },
+    {
+      "@": {
+        "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+        "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='21.5.R2']/entity[entity-type='openconfig-network-instance:/network-instances/network-instance/mpls/signaling-protocols/rsvp-te/interface-attributes']"
+      },
+      "period": 1440,
+      "admin-state": "disabled",
+      "entity-type": "openconfig-network-instance:/network-instances/network-instance/mpls/signaling-protocols/rsvp-te/interface-attributes"
+    },
+    {
+      "@": {
+        "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+        "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='21.5.R2']/entity[entity-type='openconfig-network-instance:/network-instances/network-instance/protocols/protocol/pim/global']"
+      },
+      "period": 1440,
+      "admin-state": "disabled",
+      "entity-type": "openconfig-network-instance:/network-instances/network-instance/protocols/protocol/pim/global"
+    },
+    {
+      "@": {
+        "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+        "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='21.5.R2']/entity[entity-type='openconfig-network-instance:/network-instances/network-instance/protocols/protocol/isis/interfaces/interface']"
+      },
+      "period": 1440,
+      "admin-state": "disabled",
+      "entity-type": "openconfig-network-instance:/network-instances/network-instance/protocols/protocol/isis/interfaces/interface"
+    },
+    {
+      "@": {
+        "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+        "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='21.5.R2']/entity[entity-type='openconfig-network-instance:/network-instances/network-instance/mpls/signaling-protocols/ldp/interface-attributes/interfaces/interface']"
+      },
+      "period": 1440,
+      "admin-state": "disabled",
+      "entity-type": "openconfig-network-instance:/network-instances/network-instance/mpls/signaling-protocols/ldp/interface-attributes/interfaces/interface"
+    },
+    {
+      "@": {
+        "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+        "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='21.5.R2']/entity[entity-type='openconfig-network-instance:/network-instances/network-instance/protocols/protocol/ospfv2']"
+      },
+      "period": 1440,
+      "admin-state": "disabled",
+      "entity-type": "openconfig-network-instance:/network-instances/network-instance/protocols/protocol/ospfv2"
+    },
+    {
+      "@": {
+        "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+        "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='21.5.R2']/entity[entity-type='openconfig-network-instance:/network-instances/network-instance/mpls/signaling-protocols/ldp/interface-attributes/interfaces/interface/address-families']"
+      },
+      "period": 1440,
+      "admin-state": "disabled",
+      "entity-type": "openconfig-network-instance:/network-instances/network-instance/mpls/signaling-protocols/ldp/interface-attributes/interfaces/interface/address-families"
+    },
+    {
+      "@": {
+        "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+        "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='21.5.R2']/entity[entity-type='openconfig-network-instance:/network-instances/network-instance/mpls/signaling-protocols/ldp/targeted']"
+      },
+      "period": 1440,
+      "admin-state": "disabled",
+      "entity-type": "openconfig-network-instance:/network-instances/network-instance/mpls/signaling-protocols/ldp/targeted"
+    },
+    {
+      "@": {
+        "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+        "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='21.5.R2']/entity[entity-type='openconfig-network-instance:/network-instances/network-instance/protocols/protocol/isis/levels']"
+      },
+      "period": 1440,
+      "admin-state": "disabled",
+      "entity-type": "openconfig-network-instance:/network-instances/network-instance/protocols/protocol/isis/levels"
+    },
+    {
+      "@": {
+        "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+        "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='21.5.R2']/entity[entity-type='openconfig-network-instance:/network-instances/network-instance/protocols/protocol/ospfv2/areas/area/interfaces/interface/neighbors/neighbor']"
+      },
+      "period": 1440,
+      "admin-state": "disabled",
+      "entity-type": "openconfig-network-instance:/network-instances/network-instance/protocols/protocol/ospfv2/areas/area/interfaces/interface/neighbors/neighbor"
+    },
+    {
+      "@": {
+        "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+        "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='21.5.R2']/entity[entity-type='openconfig-network-instance:/network-instances/network-instance/mpls/signaling-protocols/rsvp-te/neighbors/neighbor']"
+      },
+      "period": 1440,
+      "admin-state": "disabled",
+      "entity-type": "openconfig-network-instance:/network-instances/network-instance/mpls/signaling-protocols/rsvp-te/neighbors/neighbor"
+    },
+    {
+      "@": {
+        "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+        "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='21.5.R2']/entity[entity-type='openconfig-network-instance:/network-instances/network-instance/mpls/signaling-protocols']"
+      },
+      "period": 1440,
+      "admin-state": "disabled",
+      "entity-type": "openconfig-network-instance:/network-instances/network-instance/mpls/signaling-protocols"
+    },
+    {
+      "@": {
+        "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+        "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='21.5.R2']/entity[entity-type='openconfig-network-instance:/network-instances/network-instance/protocols/protocol/bgp/neighbors/neighbor/afi-safis/afi-safi']"
+      },
+      "period": 1440,
+      "admin-state": "disabled",
+      "entity-type": "openconfig-network-instance:/network-instances/network-instance/protocols/protocol/bgp/neighbors/neighbor/afi-safis/afi-safi"
+    },
+    {
+      "@": {
+        "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+        "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='21.5.R2']/entity[entity-type='openconfig-network-instance:/network-instances/network-instance/protocols/protocol/ospfv2/areas/area/interfaces/interface']"
+      },
+      "period": 1440,
+      "admin-state": "disabled",
+      "entity-type": "openconfig-network-instance:/network-instances/network-instance/protocols/protocol/ospfv2/areas/area/interfaces/interface"
+    },
+    {
+      "@": {
+        "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+        "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='21.5.R2']/entity[entity-type='openconfig-network-instance:/network-instances/network-instance/mpls/signaling-protocols/ldp/neighbors']"
+      },
+      "period": 1440,
+      "admin-state": "disabled",
+      "entity-type": "openconfig-network-instance:/network-instances/network-instance/mpls/signaling-protocols/ldp/neighbors"
+    },
+    {
+      "@": {
+        "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+        "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='21.5.R2']/entity[entity-type='openconfig-network-instance:/network-instances/network-instance/protocols/protocol/pim']"
+      },
+      "period": 1440,
+      "admin-state": "disabled",
+      "entity-type": "openconfig-network-instance:/network-instances/network-instance/protocols/protocol/pim"
+    },
+    {
+      "@": {
+        "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+        "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='21.5.R2']/entity[entity-type='openconfig-network-instance:/network-instances/network-instance/protocols/protocol/isis/interfaces/interface/levels']"
+      },
+      "period": 1440,
+      "admin-state": "disabled",
+      "entity-type": "openconfig-network-instance:/network-instances/network-instance/protocols/protocol/isis/interfaces/interface/levels"
+    },
+    {
+      "@": {
+        "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+        "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='21.5.R2']/entity[entity-type='openconfig-network-instance:/network-instances/network-instance/mpls/signaling-protocols/ldp/neighbors/neighbor']"
+      },
+      "period": 1440,
+      "admin-state": "disabled",
+      "entity-type": "openconfig-network-instance:/network-instances/network-instance/mpls/signaling-protocols/ldp/neighbors/neighbor"
+    },
+    {
+      "@": {
+        "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+        "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='21.5.R2']/entity[entity-type='openconfig-network-instance:/network-instances/network-instance/protocols/protocol/pim/global/rendezvous-points/rendezvous-point']"
+      },
+      "period": 1440,
+      "admin-state": "disabled",
+      "entity-type": "openconfig-network-instance:/network-instances/network-instance/protocols/protocol/pim/global/rendezvous-points/rendezvous-point"
+    },
+    {
+      "@": {
+        "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+        "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='21.5.R2']/entity[entity-type='openconfig-network-instance:/network-instances/network-instance/mpls/signaling-protocols/ldp']"
+      },
+      "period": 1440,
+      "admin-state": "disabled",
+      "entity-type": "openconfig-network-instance:/network-instances/network-instance/mpls/signaling-protocols/ldp"
+    },
+    {
+      "@": {
+        "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+        "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='21.5.R2']/entity[entity-type='openconfig-network-instance:/network-instances/network-instance/mpls/global']"
+      },
+      "period": 1440,
+      "admin-state": "disabled",
+      "entity-type": "openconfig-network-instance:/network-instances/network-instance/mpls/global"
+    },
+    {
+      "@": {
+        "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+        "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='21.5.R2']/entity[entity-type='openconfig-network-instance:/network-instances/network-instance/protocols/protocol/pim/interfaces/interface']"
+      },
+      "period": 1440,
+      "admin-state": "disabled",
+      "entity-type": "openconfig-network-instance:/network-instances/network-instance/protocols/protocol/pim/interfaces/interface"
+    },
+    {
+      "@": {
+        "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+        "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='21.5.R2']/entity[entity-type='openconfig-network-instance:/network-instances/network-instance/protocols/protocol/bgp/neighbors/neighbor']"
+      },
+      "period": 1440,
+      "admin-state": "disabled",
+      "entity-type": "openconfig-network-instance:/network-instances/network-instance/protocols/protocol/bgp/neighbors/neighbor"
+    },
+    {
+      "@": {
+        "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+        "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='21.5.R2']/entity[entity-type='openconfig-bfd:/bfd/nsp-openconfig-bfd-augments:seamless-bfds/seamless-bfd']"
+      },
+      "period": 1440,
+      "admin-state": "disabled",
+      "entity-type": "openconfig-bfd:/bfd/nsp-openconfig-bfd-augments:seamless-bfds/seamless-bfd"
+    },
+    {
+      "@": {
+        "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+        "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='21.5.R2']/entity[entity-type='openconfig-network-instance:/network-instances/network-instance/protocols/protocol/nsp-openconfig-ospfv3-augments:ospfv3/areas/area/interfaces/interface/neighbors']"
+      },
+      "period": 1440,
+      "admin-state": "disabled",
+      "entity-type": "openconfig-network-instance:/network-instances/network-instance/protocols/protocol/nsp-openconfig-ospfv3-augments:ospfv3/areas/area/interfaces/interface/neighbors"
+    },
+    {
+      "@": {
+        "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+        "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='21.5.R2']/entity[entity-type='openconfig-bfd:/bfd/nsp-openconfig-bfd-augments:bfd-templates/bfd-template']"
+      },
+      "period": 1440,
+      "admin-state": "disabled",
+      "entity-type": "openconfig-bfd:/bfd/nsp-openconfig-bfd-augments:bfd-templates/bfd-template"
+    },
+    {
+      "@": {
+        "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+        "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='21.5.R2']/entity[entity-type='openconfig-network-instance:/network-instances/network-instance/protocols/protocol/nsp-openconfig-ospfv3-augments:ospfv3']"
+      },
+      "period": 1440,
+      "admin-state": "disabled",
+      "entity-type": "openconfig-network-instance:/network-instances/network-instance/protocols/protocol/nsp-openconfig-ospfv3-augments:ospfv3"
+    },
+    {
+      "@": {
+        "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+        "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='21.5.R2']/entity[entity-type='openconfig-bfd:/bfd/nsp-openconfig-bfd-augments:seamless-bfds']"
+      },
+      "period": 1440,
+      "admin-state": "disabled",
+      "entity-type": "openconfig-bfd:/bfd/nsp-openconfig-bfd-augments:seamless-bfds"
+    },
+    {
+      "@": {
+        "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+        "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='21.5.R2']/entity[entity-type='openconfig-bfd:/bfd/nsp-openconfig-bfd-augments:seamless-bfds/seamless-bfd/reflectors/reflector']"
+      },
+      "description": "BFD Seamless BFDs Policy",
+      "period": 10,
+      "admin-state": "enabled",
+      "entity-type": "openconfig-bfd:/bfd/nsp-openconfig-bfd-augments:seamless-bfds/seamless-bfd/reflectors/reflector"
+    },
+    {
+      "@": {
+        "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+        "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='21.5.R2']/entity[entity-type='openconfig-network-instance:/network-instances/network-instance/protocols/protocol/nsp-openconfig-ospfv3-augments:ospfv3/areas/area/interfaces/interface/neighbors/neighbor']"
+      },
+      "period": 1440,
+      "admin-state": "disabled",
+      "entity-type": "openconfig-network-instance:/network-instances/network-instance/protocols/protocol/nsp-openconfig-ospfv3-augments:ospfv3/areas/area/interfaces/interface/neighbors/neighbor"
+    },
+    {
+      "@": {
+        "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+        "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='21.5.R2']/entity[entity-type='openconfig-network-instance:/network-instances/network-instance/protocols/protocol/nsp-openconfig-ospfv3-augments:ospfv3/areas']"
+      },
+      "period": 1440,
+      "admin-state": "disabled",
+      "entity-type": "openconfig-network-instance:/network-instances/network-instance/protocols/protocol/nsp-openconfig-ospfv3-augments:ospfv3/areas"
+    },
+    {
+      "@": {
+        "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+        "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='21.5.R2']/entity[entity-type='openconfig-bfd:/bfd/nsp-openconfig-bfd-augments:seamless-bfds/seamless-bfd/reflectors']"
+      },
+      "period": 1440,
+      "admin-state": "disabled",
+      "entity-type": "openconfig-bfd:/bfd/nsp-openconfig-bfd-augments:seamless-bfds/seamless-bfd/reflectors"
+    },
+    {
+      "@": {
+        "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+        "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='21.5.R2']/entity[entity-type='openconfig-acl:/acl/acl-sets/acl-set/acl-entries']"
+      },
+      "period": 1440,
+      "admin-state": "disabled",
+      "entity-type": "openconfig-acl:/acl/acl-sets/acl-set/acl-entries"
+    },
+    {
+      "@": {
+        "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+        "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='21.5.R2']/entity[entity-type='openconfig-bfd:/bfd/nsp-openconfig-bfd-augments:bfd-templates']"
+      },
+      "period": 1440,
+      "admin-state": "disabled",
+      "entity-type": "openconfig-bfd:/bfd/nsp-openconfig-bfd-augments:bfd-templates"
+    },
+    {
+      "@": {
+        "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+        "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='21.5.R2']/entity[entity-type='openconfig-acl:/acl/acl-sets/acl-set/acl-entries/acl-entry']"
+      },
+      "period": 1440,
+      "admin-state": "disabled",
+      "entity-type": "openconfig-acl:/acl/acl-sets/acl-set/acl-entries/acl-entry"
+    },
+    {
+      "@": {
+        "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+        "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='21.5.R2']/entity[entity-type='openconfig-network-instance:/network-instances/network-instance/protocols/protocol/nsp-openconfig-ospfv3-augments:ospfv3/areas/area']"
+      },
+      "period": 1440,
+      "admin-state": "disabled",
+      "entity-type": "openconfig-network-instance:/network-instances/network-instance/protocols/protocol/nsp-openconfig-ospfv3-augments:ospfv3/areas/area"
+    },
+    {
+      "@": {
+        "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+        "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='21.5.R2']/entity[entity-type='openconfig-network-instance:/network-instances/network-instance/protocols/protocol/nsp-openconfig-ospfv3-augments:ospfv3/areas/area/interfaces/interface']"
+      },
+      "period": 1440,
+      "admin-state": "disabled",
+      "entity-type": "openconfig-network-instance:/network-instances/network-instance/protocols/protocol/nsp-openconfig-ospfv3-augments:ospfv3/areas/area/interfaces/interface"
+    },
+    {
+      "@": {
+        "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+        "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='21.5.R2']/entity[entity-type='openconfig-network-instance:/network-instances/network-instance/protocols/protocol/nsp-openconfig-ospfv3-augments:ospfv3/areas/area/interfaces']"
+      },
+      "period": 1440,
+      "admin-state": "disabled",
+      "entity-type": "openconfig-network-instance:/network-instances/network-instance/protocols/protocol/nsp-openconfig-ospfv3-augments:ospfv3/areas/area/interfaces"
+    },
+    {
+      "@": {
+        "nsp-model:schema-nodeid": "/nsp-admin-resync:resync-policies/mdm/resync-policy/node/version/entity",
+        "nsp-model:identifier": "/nsp-admin-resync:resync-policies/mdm/resync-policy[name='default policy']/node[node-type='SR-7750']/version[node-version='21.5.R2']/entity[entity-type='openconfig-acl:/acl/acl-sets/acl-set']"
+      },
+      "period": 1440,
+      "admin-state": "disabled",
+      "entity-type": "openconfig-acl:/acl/acl-sets/acl-set"
+    }
+  ]
+}

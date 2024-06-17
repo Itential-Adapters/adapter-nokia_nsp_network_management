@@ -1,0 +1,67 @@
+{
+  "actions": [
+    {
+      "name": "getSAPNetwork",
+      "protocol": "REST",
+      "method": "GET",
+      "entitypath": "{base_path}/{version}/restconf/data/ietf-network:networks/network/network-types/ietf-sap-ntw:sap-network?{query}",
+      "requestSchema": "schema.json",
+      "responseSchema": "schema.json",
+      "timeout": 0,
+      "sendEmpty": false,
+      "sendGetBody": false,
+      "requestDatatype": "JSON",
+      "responseDatatype": "JSON",
+      "headers": {},
+      "responseObjects": [
+        {
+          "type": "default",
+          "key": "",
+          "mockFile": "mockdatafiles/getSAPNetwork-default.json"
+        }
+      ]
+    },
+    {
+      "name": "getIETFNetworkFromSpecificNode",
+      "protocol": "REST",
+      "method": "GET",
+      "entitypath": "{base_path}/{version}/restconf/data/ietf-network:networks/network/{pathv1}?{query}",
+      "requestSchema": "schema.json",
+      "responseSchema": "schema.json",
+      "timeout": 0,
+      "sendEmpty": false,
+      "sendGetBody": false,
+      "requestDatatype": "JSON",
+      "responseDatatype": "JSON",
+      "headers": {},
+      "responseObjects": [
+        {
+          "type": "default",
+          "key": "",
+          "mockFile": "mockdatafiles/getIETFNetworkFromSpecificNode-default.json"
+        }
+      ]
+    },
+    {
+      "name": "getSAPsOnASpecificNodeOfSpecificServiceType",
+      "protocol": "REST",
+      "method": "GET",
+      "entitypath": "{base_path}/{version}/restconf/data/ietf-network:networks/{pathv1}/{pathv2}/{pathv3}?{query}",
+      "requestSchema": "schema.json",
+      "responseSchema": "schema.json",
+      "timeout": 0,
+      "sendEmpty": false,
+      "sendGetBody": false,
+      "requestDatatype": "JSON",
+      "responseDatatype": "JSON",
+      "headers": {},
+      "responseObjects": [
+        {
+          "type": "default",
+          "key": "",
+          "mockFile": "mockdatafiles/getSAPsOnASpecificNodeOfSpecificServiceType-default.json"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "actions": [
+    {
+      "name": "createUsingIntent",
+      "protocol": "REST",
+      "method": "POST",
+      "entitypath": "{base_path}/{version}/restconf/data/ibn:ibn?{query}",
+      "requestSchema": "schema.json",
+      "responseSchema": "schema.json",
+      "timeout": 0,
+      "sendEmpty": false,
+      "requestDatatype": "JSON",
+      "responseDatatype": "JSON",
+      "headers": {},
+      "responseObjects": [
+        {
+          "type": "default",
+          "key": "",
+          "mockFile": ""
+        }
+      ]
+    },
+    {
+      "name": "synchronizeIntent",
+      "protocol": "REST",
+      "method": "POST",
+      "entitypath": "{base_path}/{version}/restconf/data/ibn:ibn/{pathv1}/synchronize?{query}",
+      "requestSchema": "schema.json",
+      "responseSchema": "schema.json",
+      "timeout": 0,
+      "sendEmpty": false,
+      "requestDatatype": "JSON",
+      "responseDatatype": "JSON",
+      "headers": {},
+      "responseObjects": [
+        {
+          "type": "default",
+          "key": "",
+          "mockFile": "mockdatafiles/synchronizeIntent-default.json"
+        }
+      ]
+    },
+    {
+      "name": "getIntent",
+      "protocol": "REST",
+      "method": "GET",
+      "entitypath": "{base_path}/{version}/restconf/data/ibn:ibn/{pathv1}?{query}",
+      "requestSchema": "schema.json",
+      "responseSchema": "schema.json",
+      "timeout": 0,
+      "sendEmpty": false,
+      "sendGetBody": false,
+      "requestDatatype": "JSON",
+      "responseDatatype": "JSON",
+      "headers": {},
+      "responseObjects": [
+        {
+          "type": "default",
+          "key": "",
+          "mockFile": "mockdatafiles/getIntent-default.json"
+        }
+      ]
+    },
+    {
+      "name": "modifyIntent",
+      "protocol": "REST",
+      "method": "PUT",
+      "entitypath": "{base_path}/{version}/restconf/data/ibn:ibn/{pathv1}?{query}",
+      "requestSchema": "schema.json",
+      "responseSchema": "schema.json",
+      "timeout": 0,
+      "sendEmpty": false,
+      "requestDatatype": "JSON",
+      "responseDatatype": "JSON",
+      "headers": {},
+      "responseObjects": [
+        {
+          "type": "default",
+          "key": "",
+          "mockFile": ""
+        }
+      ]
+    },
+    {
+      "name": "deleteIntent",
+      "protocol": "REST",
+      "method": "DELETE",
+      "entitypath": "{base_path}/{version}/restconf/data/ibn:ibn/{pathv1}?{query}",
+      "requestSchema": "schema.json",
+      "responseSchema": "schema.json",
+      "timeout": 0,
+      "sendEmpty": false,
+      "requestDatatype": "JSON",
+      "responseDatatype": "JSON",
+      "headers": {},
+      "responseObjects": [
+        {
+          "type": "default",
+          "key": "",
+          "mockFile": ""
+        }
+      ]
+    }
+  ]
+}

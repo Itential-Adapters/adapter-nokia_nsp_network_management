@@ -1,0 +1,16 @@
+{
+  "ageout-policy": [
+    {
+      "max-retention": 403,
+      "min-retention": 1,
+      "name": "indicators:/base/indicator/data",
+      "retention": 90
+    },
+    {
+      "max-retention": 403,
+      "min-retention": 1,
+      "name": "indicators:/base/threshold/event",
+      "retention": 90
+    }
+  ]
+}

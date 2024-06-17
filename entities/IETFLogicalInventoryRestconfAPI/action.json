@@ -1,0 +1,235 @@
+{
+  "actions": [
+    {
+      "name": "retrieveNetworkInterfaces",
+      "protocol": "REST",
+      "method": "GET",
+      "entitypath": "{base_path}/{version}/restconf/data/ietf-network:networks/{pathv1}/{pathv2}/ne-management-nm:commissioning-configs/ne-interfaces/logical-interfaces/interfaces-root/openconfig-interfaces:interfaces/interface?{query}",
+      "requestSchema": "schema.json",
+      "responseSchema": "schema.json",
+      "timeout": 0,
+      "sendEmpty": false,
+      "sendGetBody": false,
+      "requestDatatype": "JSON",
+      "responseDatatype": "JSON",
+      "headers": {},
+      "responseObjects": [
+        {
+          "type": "default",
+          "key": "",
+          "mockFile": ""
+        }
+      ]
+    },
+    {
+      "name": "retrieveNetworkInterfacesConfig",
+      "protocol": "REST",
+      "method": "GET",
+      "entitypath": "{base_path}/{version}/restconf/data/ietf-network:networks/{pathv1}/{pathv2}/ne-management-nm:commissioning-configs/ne-interfaces/logical-interfaces/interfaces-root/openconfig-interfaces:interfaces/interface/config?{query}",
+      "requestSchema": "schema.json",
+      "responseSchema": "schema.json",
+      "timeout": 0,
+      "sendEmpty": false,
+      "sendGetBody": false,
+      "requestDatatype": "JSON",
+      "responseDatatype": "JSON",
+      "headers": {},
+      "responseObjects": [
+        {
+          "type": "default",
+          "key": "",
+          "mockFile": "mockdatafiles/retrieveNetworkInterfacesConfig-default.json"
+        }
+      ]
+    },
+    {
+      "name": "retrieveNetworkSubInterfaces",
+      "protocol": "REST",
+      "method": "GET",
+      "entitypath": "{base_path}/{version}/restconf/data/ietf-network:networks/{pathv1}/{pathv2}/ne-management-nm:commissioning-configs/ne-interfaces/logical-interfaces/interfaces-root/openconfig-interfaces:interfaces/interface/subinterfaces/subinterface?{query}",
+      "requestSchema": "schema.json",
+      "responseSchema": "schema.json",
+      "timeout": 0,
+      "sendEmpty": false,
+      "sendGetBody": false,
+      "requestDatatype": "JSON",
+      "responseDatatype": "JSON",
+      "headers": {},
+      "responseObjects": [
+        {
+          "type": "default",
+          "key": "",
+          "mockFile": ""
+        }
+      ]
+    },
+    {
+      "name": "retrieveNetworkSubInterfacesConfig",
+      "protocol": "REST",
+      "method": "GET",
+      "entitypath": "{base_path}/{version}/restconf/data/ietf-network:networks/{pathv1}/{pathv2}/ne-management-nm:commissioning-configs/ne-interfaces/logical-interfaces/interfaces-root/openconfig-interfaces:interfaces/interface/subinterfaces/{pathv3}/config?{query}",
+      "requestSchema": "schema.json",
+      "responseSchema": "schema.json",
+      "timeout": 0,
+      "sendEmpty": false,
+      "sendGetBody": false,
+      "requestDatatype": "JSON",
+      "responseDatatype": "JSON",
+      "headers": {},
+      "responseObjects": [
+        {
+          "type": "default",
+          "key": "",
+          "mockFile": "mockdatafiles/retrieveNetworkSubInterfacesConfig-default.json"
+        }
+      ]
+    },
+    {
+      "name": "retrieveNetworkSubInterfacesState",
+      "protocol": "REST",
+      "method": "GET",
+      "entitypath": "{base_path}/{version}/restconf/data/ietf-network:networks/{pathv1}/{pathv2}/ne-management-nm:commissioning-configs/ne-interfaces/logical-interfaces/interfaces-root/openconfig-interfaces:interfaces/interface/subinterfaces/{pathv3}/state?{query}",
+      "requestSchema": "schema.json",
+      "responseSchema": "schema.json",
+      "timeout": 0,
+      "sendEmpty": false,
+      "sendGetBody": false,
+      "requestDatatype": "JSON",
+      "responseDatatype": "JSON",
+      "headers": {},
+      "responseObjects": [
+        {
+          "type": "default",
+          "key": "",
+          "mockFile": "mockdatafiles/retrieveNetworkSubInterfacesState-default.json"
+        }
+      ]
+    },
+    {
+      "name": "retrieveNetworkSubInterfacesIPv4Addresses",
+      "protocol": "REST",
+      "method": "GET",
+      "entitypath": "{base_path}/{version}/restconf/data/ietf-network:networks/{pathv1}/{pathv2}/ne-management-nm:commissioning-configs/ne-interfaces/logical-interfaces/interfaces-root/openconfig-interfaces:interfaces/{pathv3}/subinterfaces/{pathv4}/openconfig-if-ip:ipv4/addresses/address?{query}",
+      "requestSchema": "schema.json",
+      "responseSchema": "schema.json",
+      "timeout": 0,
+      "sendEmpty": false,
+      "sendGetBody": false,
+      "requestDatatype": "JSON",
+      "responseDatatype": "JSON",
+      "headers": {},
+      "responseObjects": [
+        {
+          "type": "default",
+          "key": "",
+          "mockFile": "mockdatafiles/retrieveNetworkSubInterfacesIPv4Addresses-default.json"
+        }
+      ]
+    },
+    {
+      "name": "retrieveNetworkSubInterfacesIPv6Addresses",
+      "protocol": "REST",
+      "method": "GET",
+      "entitypath": "{base_path}/{version}/restconf/data/ietf-network:networks/{pathv1}/{pathv2}/ne-management-nm:commissioning-configs/ne-interfaces/logical-interfaces/interfaces-root/openconfig-interfaces:interfaces/interface/subinterfaces/{pathv3}/openconfig-if-ip:ipv6/addresses/address?{query}",
+      "requestSchema": "schema.json",
+      "responseSchema": "schema.json",
+      "timeout": 0,
+      "sendEmpty": false,
+      "sendGetBody": false,
+      "requestDatatype": "JSON",
+      "responseDatatype": "JSON",
+      "headers": {},
+      "responseObjects": [
+        {
+          "type": "default",
+          "key": "",
+          "mockFile": "mockdatafiles/retrieveNetworkSubInterfacesIPv6Addresses-default.json"
+        }
+      ]
+    },
+    {
+      "name": "retrieveNetworkInterfacesUnnumbered",
+      "protocol": "REST",
+      "method": "GET",
+      "entitypath": "{base_path}/{version}/restconf/data/ietf-network:networks/{pathv1}/{pathv2}/ne-management-nm:commissioning-configs/ne-interfaces/logical-interfaces/interfaces-root/openconfig-interfaces:interfaces/interface/subinterfaces/{pathv3}/openconfig-if-ip:ipv4/unnumbered?{query}",
+      "requestSchema": "schema.json",
+      "responseSchema": "schema.json",
+      "timeout": 0,
+      "sendEmpty": false,
+      "sendGetBody": false,
+      "requestDatatype": "JSON",
+      "responseDatatype": "JSON",
+      "headers": {},
+      "responseObjects": [
+        {
+          "type": "default",
+          "key": "",
+          "mockFile": "mockdatafiles/retrieveNetworkInterfacesUnnumbered-default.json"
+        }
+      ]
+    },
+    {
+      "name": "retrieveNetworkInterfacesUnnumberedIntf",
+      "protocol": "REST",
+      "method": "GET",
+      "entitypath": "{base_path}/{version}/restconf/data/ietf-network:networks/{pathv1}/{pathv2}/ne-management-nm:commissioning-configs/ne-interfaces/logical-interfaces/interfaces-root/openconfig-interfaces:interfaces/interface/subinterfaces/{pathv3}/openconfig-if-ip:ipv4/unnumbered/interface-ref?{query}",
+      "requestSchema": "schema.json",
+      "responseSchema": "schema.json",
+      "timeout": 0,
+      "sendEmpty": false,
+      "sendGetBody": false,
+      "requestDatatype": "JSON",
+      "responseDatatype": "JSON",
+      "headers": {},
+      "responseObjects": [
+        {
+          "type": "default",
+          "key": "",
+          "mockFile": "mockdatafiles/retrieveNetworkInterfacesUnnumberedIntf-default.json"
+        }
+      ]
+    },
+    {
+      "name": "retrieveNetworkInstance",
+      "protocol": "REST",
+      "method": "GET",
+      "entitypath": "{base_path}/{version}/restconf/data/ietf-network:networks/{pathv1}/{pathv2}/ne-management-nm:commissioning-configs/protocols-config/protocol-root/openconfig-network-instance:network-instances/network-instance?{query}",
+      "requestSchema": "schema.json",
+      "responseSchema": "schema.json",
+      "timeout": 0,
+      "sendEmpty": false,
+      "sendGetBody": false,
+      "requestDatatype": "JSON",
+      "responseDatatype": "JSON",
+      "headers": {},
+      "responseObjects": [
+        {
+          "type": "default",
+          "key": "",
+          "mockFile": ""
+        }
+      ]
+    },
+    {
+      "name": "retrieveResyncPolicyNodeVersionEntity",
+      "protocol": "REST",
+      "method": "GET",
+      "entitypath": "{base_path}/{version}/restconf/data/nsp-admin-resync:resync-policies/mdm/{pathv1}/{pathv2}/{pathv3}/entity?{query}",
+      "requestSchema": "schema.json",
+      "responseSchema": "schema.json",
+      "timeout": 0,
+      "sendEmpty": false,
+      "sendGetBody": false,
+      "requestDatatype": "JSON",
+      "responseDatatype": "JSON",
+      "headers": {},
+      "responseObjects": [
+        {
+          "type": "default",
+          "key": "",
+          "mockFile": "mockdatafiles/retrieveResyncPolicyNodeVersionEntity-default.json"
+        }
+      ]
+    }
+  ]
+}

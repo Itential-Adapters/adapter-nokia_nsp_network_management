@@ -1,0 +1,119 @@
+{
+  "nsp-indicator:rule": [
+    {
+      "@": {
+        "nsp-model:schema-nodeid": "/nsp-indicator:rta-indicator-rules/rule",
+        "nsp-model:identifier": "/nsp-indicator:rta-indicator-rules/rule[name='AvgCpuAllNodesAllActions']"
+      },
+      "name": "AvgCpuAllNodesAllActions",
+      "description": "avg cpu from all nodes",
+      "units-name": "%",
+      "telemetry-type": "telemetry:/base/system-info/system",
+      "formula": "avg({cpu-usage_avg})",
+      "multiple-output": false,
+      "window-duration": "PT1M",
+      "enabled": true,
+      "collection-interval": 30,
+      "subscription-id": "ia-f95ea845-3569-4251-9c2b-2221c26b00cb",
+      "counters": [
+        {
+          "@": {
+            "nsp-model:schema-nodeid": "/nsp-indicator:rta-indicator-rules/rule/counters",
+            "nsp-model:identifier": "/nsp-indicator:rta-indicator-rules/rule[name='AvgCpuAllNodesAllActions']/counters[name='cpu-usage'][function='avg']"
+          },
+          "name": "cpu-usage",
+          "function": "avg"
+        }
+      ],
+      "thresholds": [
+        {
+          "@": {
+            "nsp-model:schema-nodeid": "/nsp-indicator:rta-indicator-rules/rule/thresholds",
+            "nsp-model:identifier": "/nsp-indicator:rta-indicator-rules/rule[name='AvgCpuAllNodesAllActions']/thresholds[threshold-value-decimal='20'][direction='increasing']"
+          },
+          "threshold-value-decimal": "20",
+          "direction": "increasing",
+          "actions": [
+            {
+              "@": {
+                "nsp-model:schema-nodeid": "/nsp-indicator:rta-indicator-rules/rule/thresholds/actions",
+                "nsp-model:identifier": "/nsp-indicator:rta-indicator-rules/rule[name='AvgCpuAllNodesAllActions']/thresholds[threshold-value-decimal='20'][direction='increasing']/actions[name='threshold_20_increasing_kafka_action1']"
+              },
+              "name": "threshold_20_increasing_kafka_action1",
+              "type": "kafka",
+              "kafka": {
+                "@": {
+                  "nsp-model:schema-nodeid": "/nsp-indicator:rta-indicator-rules/rule/thresholds/actions/kafka",
+                  "nsp-model:identifier": "/nsp-indicator:rta-indicator-rules/rule[name='AvgCpuAllNodesAllActions']/thresholds[threshold-value-decimal='20'][direction='increasing']/actions[name='threshold_20_increasing_kafka_action1']/kafka"
+                },
+                "topic-name": "nsp-act-action-event",
+                "topic-content": "CPU is a rising"
+              }
+            },
+            {
+              "@": {
+                "nsp-model:schema-nodeid": "/nsp-indicator:rta-indicator-rules/rule/thresholds/actions",
+                "nsp-model:identifier": "/nsp-indicator:rta-indicator-rules/rule[name='AvgCpuAllNodesAllActions']/thresholds[threshold-value-decimal='20'][direction='increasing']/actions[name='threshold_20_increasing_alarm_action2']"
+              },
+              "name": "threshold_20_increasing_alarm_action2",
+              "type": "alarm",
+              "alarm": {
+                "@": {
+                  "nsp-model:schema-nodeid": "/nsp-indicator:rta-indicator-rules/rule/thresholds/actions/alarm",
+                  "nsp-model:identifier": "/nsp-indicator:rta-indicator-rules/rule[name='AvgCpuAllNodesAllActions']/thresholds[threshold-value-decimal='20'][direction='increasing']/actions[name='threshold_20_increasing_alarm_action2']/alarm"
+                },
+                "severity": "major"
+              }
+            },
+            {
+              "@": {
+                "nsp-model:schema-nodeid": "/nsp-indicator:rta-indicator-rules/rule/thresholds/actions",
+                "nsp-model:identifier": "/nsp-indicator:rta-indicator-rules/rule[name='AvgCpuAllNodesAllActions']/thresholds[threshold-value-decimal='20'][direction='increasing']/actions[name='threshold_20_increasing_email_action3']"
+              },
+              "name": "threshold_20_increasing_email_action3",
+              "type": "email",
+              "email": {
+                "@": {
+                  "nsp-model:schema-nodeid": "/nsp-indicator:rta-indicator-rules/rule/thresholds/actions/email",
+                  "nsp-model:identifier": "/nsp-indicator:rta-indicator-rules/rule[name='AvgCpuAllNodesAllActions']/thresholds[threshold-value-decimal='20'][direction='increasing']/actions[name='threshold_20_increasing_email_action3']/email"
+                },
+                "email-address": "userid@user.com",
+                "email-subject": "Hmmmmm, It's getting hot",
+                "email-content": "Your temperature is rising.",
+                "aggregation": false,
+                "period": 5,
+                "number-events": 5
+              }
+            }
+          ]
+        }
+      ],
+      "act-rules": [
+        {
+          "@": {
+            "nsp-model:schema-nodeid": "/nsp-indicator:rta-indicator-rules/rule/act-rules",
+            "nsp-model:identifier": "/nsp-indicator:rta-indicator-rules/rule[name='AvgCpuAllNodesAllActions']/act-rules[name='ind_act_rule_ae697e27_9eb7_46c6_9d30_8c668fd0ee9d']"
+          },
+          "name": "ind_act_rule_ae697e27_9eb7_46c6_9d30_8c668fd0ee9d",
+          "definition": "{\"name\":\"ind_act_rule_ae697e27_9eb7_46c6_9d30_8c668fd0ee9d\",\"description\":\"avg cpu from all nodes\",\"owner\":\"AvgCpuAllNodesAllActions\",\"keepalive\":120,\"enabled\":true,\"process\":[{\"name\":\"telemetrySource\",\"type\":\"stream-source\",\"stream-source\":{\"type\":\"kafka\",\"select-input-keys\":[\"ia-f95ea845-3569-4251-9c2b-2221c26b00cb\"],\"options\":[{\"name\":\"subscribe\",\"value\":\"rta-indicator-topic\"},{\"name\":\"failOnDataLoss\",\"value\":\"false\"}],\"schema\":{\"columns\":[{\"full-name\":\"data/ietf-restconf:notification/eventTime\",\"type\":\"timestamp\",\"timestamp-type-format\":\"yyyy-MM-dd'T'HH:mm:ss'Z'\",\"mandatory\":true},{\"full-name\":\"data/ietf-restconf:notification/nsp-kpi:real_time_rtindr-event/networkDeviceId\",\"type\":\"string\",\"mandatory\":true},{\"full-name\":\"data/ietf-restconf:notification/nsp-kpi:real_time_rtindr-event/neId\",\"type\":\"string\",\"mandatory\":true},{\"full-name\":\"data/ietf-restconf:notification/nsp-kpi:real_time_rtindr-event/neName\",\"type\":\"string\",\"mandatory\":true},{\"full-name\":\"data/ietf-restconf:notification/nsp-kpi:real_time_rtindr-event/subscriptionId\",\"type\":\"string\"},{\"full-name\":\"data/ietf-restconf:notification/nsp-kpi:real_time_rtindr-event/cpu-usage\",\"type\":\"decimal(30,4)\"}]}}},{\"name\":\"act-event-adapter-source\",\"input-process\":[\"telemetrySource\"],\"type\":\"adapter\",\"adapter\":{\"columns\":[{\"full-name\":\"eventTime\"},{\"full-name\":\"networkDeviceId\"},{\"full-name\":\"neId\"},{\"full-name\":\"neName\"},{\"full-name\":\"name\",\"type\":\"string\",\"value\":\"AvgCpuAllNodesAllActions\"},{\"full-name\":\"cpu-usage\"}]}},{\"name\":\"timebased-tumbling-window\",\"type\":\"timebased-tumbling-window\",\"input-process\":[\"act-event-adapter-source\"],\"timebased-tumbling-window\":{\"event-time-in-property\":\"eventTime\",\"in-object-key-property\":[\"networkDeviceId\",\"name\"],\"pass-through-property\":[\"networkDeviceId\",\"neId\",\"neName\",\"name\"],\"in-property\":[\"cpu-usage\"],\"window-period\":60,\"aggregations\":[{\"operation\":\"avg\",\"arguments\":[\"cpu-usage\"]}]}},{\"name\":\"stream-sink-source\",\"input-process\":[\"timebased-tumbling-window\"],\"type\":\"stream-sink\",\"stream-sink\":{\"type\":\"kafka\",\"options\":[{\"name\":\"topic\",\"value\":\"rta.internal-pipeline-topic\"}]}}]}"
+        },
+        {
+          "@": {
+            "nsp-model:schema-nodeid": "/nsp-indicator:rta-indicator-rules/rule/act-rules",
+            "nsp-model:identifier": "/nsp-indicator:rta-indicator-rules/rule[name='AvgCpuAllNodesAllActions']/act-rules[name='ind_compute_output_3d052cd9_944a_439f_a871_a653ec297107']"
+          },
+          "name": "ind_compute_output_3d052cd9_944a_439f_a871_a653ec297107",
+          "definition": "{\"name\":\"ind_compute_output_3d052cd9_944a_439f_a871_a653ec297107\",\"description\":\"Aggregation Operation Act Rule\",\"owner\":\"AvgCpuAllNodesAllActions\",\"keepalive\":120,\"enabled\":true,\"process\":[{\"name\":\"telemetrySource\",\"type\":\"stream-source\",\"stream-source\":{\"type\":\"kafka\",\"select-input-keys\":[\"ind_act_rule_ae697e27_9eb7_46c6_9d30_8c668fd0ee9d\"],\"options\":[{\"name\":\"subscribe\",\"value\":\"rta.internal-pipeline-topic\"},{\"name\":\"failOnDataLoss\",\"value\":\"false\"}],\"schema\":{\"columns\":[{\"full-name\":\"startTime\",\"type\":\"timestamp\",\"timestamp-type-format\":\"yyyy-MM-dd'T'HH:mm:ss.SSS'Z'\",\"rename-to\":\"eventTime\",\"mandatory\":true},{\"full-name\":\"name\",\"type\":\"string\",\"mandatory\":true},{\"full-name\":\"networkDeviceId\",\"type\":\"string\",\"mandatory\":true},{\"full-name\":\"neId\",\"type\":\"string\",\"mandatory\":true},{\"full-name\":\"neName\",\"type\":\"string\",\"mandatory\":true},{\"full-name\":\"cpu-usage_avg\",\"type\":\"decimal(30,4)\"}]}}},{\"name\":\"mixedOperations\",\"input-process\":[\"telemetrySource\"],\"type\":\"mixed-expression-operator\",\"mixed-expression-operator\":{\"event-time-in-property\":\"eventTime\",\"in-object-key-property\":[\"eventTime\",\"name\"],\"in-property\":[\"cpu-usage_avg\"],\"resource-property\":\"networkDeviceId\",\"mixed-operations\":[{\"aggregation-operation\":\"avg\",\"aggregation-operation-argument\":\"cpu-usage_avg\",\"result-property\":\"result1\"}],\"out-property\":\"resultData\"}},{\"name\":\"stream-sink-aggregation-operation\",\"input-process\":[\"mixedOperations\"],\"type\":\"stream-sink\",\"stream-sink\":{\"type\":\"kafka\",\"options\":[{\"name\":\"topic\",\"value\":\"rta.internal-pipeline-topic\"}]}}]}"
+        },
+        {
+          "@": {
+            "nsp-model:schema-nodeid": "/nsp-indicator:rta-indicator-rules/rule/act-rules",
+            "nsp-model:identifier": "/nsp-indicator:rta-indicator-rules/rule[name='AvgCpuAllNodesAllActions']/act-rules[name='ind_threshold_42d013e0_f4a0_4851_acd8_cb2e91a1c192']"
+          },
+          "name": "ind_threshold_42d013e0_f4a0_4851_acd8_cb2e91a1c192",
+          "definition": "{\"name\":\"ind_threshold_42d013e0_f4a0_4851_acd8_cb2e91a1c192\",\"description\":\"Absolute Threshold Act rule\",\"owner\":\"AvgCpuAllNodesAllActions\",\"keepalive\":120,\"enabled\":true,\"process\":[{\"name\":\"telemetrySource\",\"type\":\"stream-source\",\"stream-source\":{\"type\":\"kafka\",\"select-input-keys\":[\"ind_compute_output_3d052cd9_944a_439f_a871_a653ec297107\"],\"options\":[{\"name\":\"subscribe\",\"value\":\"rta.internal-pipeline-topic\"},{\"name\":\"failOnDataLoss\",\"value\":\"false\"}],\"schema\":{\"columns\":[{\"full-name\":\"eventTime\",\"type\":\"timestamp\",\"timestamp-type-format\":\"yyyy-MM-dd'T'HH:mm:ss.SSS'Z'\",\"mandatory\":true},{\"full-name\":\"name\",\"type\":\"string\",\"mandatory\":true},{\"full-name\":\"networkDeviceId\",\"type\":\"string\",\"mandatory\":true},{\"full-name\":\"neId\",\"type\":\"string\",\"mandatory\":true},{\"full-name\":\"neName\",\"type\":\"string\",\"mandatory\":true},{\"full-name\":\"resultData\",\"type\":\"decimal(30,4)\"}]}}},{\"name\":\"AvgCpuAllNodesAllActions_20_increasing\",\"input-process\":[\"telemetrySource\"],\"type\":\"absolute-thresholds\",\"absolute-thresholds\":{\"in-object-key-property\":[\"networkDeviceId\",\"name\"],\"pass-through-property\":[\"networkDeviceId\",\"eventTime\",\"neId\",\"neName\",\"name\"],\"thresholds\":[{\"name\":\"AvgCpuAllNodesAllActions_20_increasing\",\"threshold-value-decimal\":\"20\",\"direction\":\"increasing\",\"in-property\":\"resultData\"}]}},{\"name\":\"act-event-adapter-1\",\"input-process\":[\"AvgCpuAllNodesAllActions_20_increasing\"],\"type\":\"adapter\",\"adapter\":{\"columns\":[{\"full-name\":\"source\"},{\"full-name\":\"payload\"},{\"full-name\":\"timestamp\"},{\"full-name\":\"rule\"},{\"full-name\":\"process\"},{\"full-name\":\"type\"}]}}],\"action\":[{\"type\":\"kafka\",\"kafka\":{\"topic-name\":\"nsp-act-action-event\",\"topic-content\":\"CPU is a rising\"},\"action-name\":\"threshold_20_increasing_kafka_action1\",\"process-name\":\"AvgCpuAllNodesAllActions_20_increasing\"},{\"type\":\"alarm\",\"alarm\":{\"severity\":\"major\",\"alarm-name\":\"IndicatorThresholdCrossingEvent\",\"alarm-type\":\"qualityOfServiceAlarm\",\"probable-cause\":\"thresholdCrossed\",\"additional-text\":\"Threshold Crossing:\",\"additional-text-props\":[{\"property\":\"payload.threshold\",\"displayed-name\":\"threshold-value\"},{\"property\":\"payload.direction\",\"displayed-name\":\"direction\"},{\"property\":\"payload.value\",\"displayed-name\":\"value\"},{\"property\":\"source.eventTime\",\"displayed-name\":\"event-time\"},{\"property\":\"source.networkDeviceId\",\"displayed-name\":\"resource\"}],\"object-fdn\":\"fdn:yang:nsp-indicator:/nsp-indicator:rta-indicator-rules/rule[name='AvgCpuAllNodesAllActions']\",\"object-name\":\"AvgCpuAllNodesAllActions\",\"object-type\":\"nsp-indicator:rta-indicator-rules/rule\",\"source-type\":\"nsp\",\"key-prefix\":\"fm.Alarm\",\"key-properties\":[\"$ALARM_NAME\",\"source.name\"],\"ne-name-property\":null,\"ne-id-property\":null,\"last-time-detected-property\":\"source.eventTime\",\"last-time-detected-format\":\"yyyy-MM-dd'T'HH:mm:ss'Z'\",\"key-fdn-namespace\":\"nsp-indicator\",\"implicitly-cleared\":false},\"action-name\":\"threshold_20_increasing_alarm_action2\",\"process-name\":\"AvgCpuAllNodesAllActions_20_increasing\"},{\"type\":\"email\",\"email\":{\"aggregation\":false,\"period\":5,\"email-address\":\"userid@user.com\",\"email-subject\":\"Hmmmmm, It's getting hot\",\"email-content\":\"Your temperature is rising.\",\"number-events\":5},\"action-name\":\"threshold_20_increasing_email_action3\",\"process-name\":\"AvgCpuAllNodesAllActions_20_increasing\"}]}"
+        }
+      ]
+    }
+  ]
+}

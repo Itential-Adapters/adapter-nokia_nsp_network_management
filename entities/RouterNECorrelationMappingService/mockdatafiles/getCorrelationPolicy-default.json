@@ -1,0 +1,38 @@
+{
+  "nsp-equipment-templates:correlation-policy": {
+    "@": {
+      "nsp-model:schema-nodeid": "/nsp-equipment-templates:correlation-policy",
+      "nsp-model:identifier": "/nsp-equipment-templates:correlation-policy"
+    },
+    "router-ne-mapping": [
+      {
+        "@": {
+          "nsp-model:schema-nodeid": "/nsp-equipment-templates:correlation-policy/router-ne-mapping",
+          "nsp-model:identifier": "/nsp-equipment-templates:correlation-policy/router-ne-mapping[system-id='35.121.100.176']",
+          "nsp-model:creation-time": "2023-12-08T03:36:05.115Z",
+          "nsp-model:last-modified-time": "2023-12-08T03:36:05.115Z"
+        },
+        "system-id": "35.121.100.176",
+        "id": "",
+        "app-id": "",
+        "name": "cisco ios mapping",
+        "object-description": "",
+        "router-infos": [
+          {
+            "@": {
+              "nsp-model:schema-nodeid": "/nsp-equipment-templates:correlation-policy/router-ne-mapping/router-infos",
+              "nsp-model:identifier": "/nsp-equipment-templates:correlation-policy/router-ne-mapping[system-id='35.121.100.176']/router-infos[router-id='35.121.100.177'][network-identifier='0'][bgp-ls-id='0'][as-number='100']",
+              "nsp-model:creation-time": "2023-12-08T03:36:05.115Z",
+              "nsp-model:last-modified-time": "2023-12-08T03:36:05.115Z"
+            },
+            "network-identifier": 0,
+            "bgp-ls-id": 0,
+            "as-number": 100,
+            "router-id": "35.121.100.177",
+            "protocol": "OSPFv2"
+          }
+        ]
+      }
+    ]
+  }
+}

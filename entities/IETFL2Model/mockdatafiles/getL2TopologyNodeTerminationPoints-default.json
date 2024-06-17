@@ -1,0 +1,69 @@
+{
+  "ietf-network-topology:termination-point": [
+    {
+      "tp-id": "1/1/3",
+      "ietf-l2-topology:l2-termination-point-attributes": {
+        "interface-name": "1/1/3",
+        "mac-address": "c2:12:01:01:00:03",
+        "encapsulation-type": "ietf-l2-topology:ethernet",
+        "lag": false,
+        "unnumbered-id": [
+          11
+        ],
+        "member-link-tp": [],
+        "nsp-ietf-network-topology:nsp-attributes": []
+      },
+      "ietf-l3-unicast-topology:l3-termination-point-attributes": {}
+    },
+    {
+      "tp-id": "1/1/6",
+      "ietf-l2-topology:l2-termination-point-attributes": {
+        "interface-name": "1/1/6",
+        "mac-address": "c2:12:01:01:00:06",
+        "encapsulation-type": "ietf-l2-topology:ethernet",
+        "lag": false,
+        "unnumbered-id": [
+          11
+        ],
+        "member-link-tp": [],
+        "nsp-ietf-network-topology:nsp-attributes": []
+      },
+      "ietf-l3-unicast-topology:l3-termination-point-attributes": {}
+    },
+    {
+      "tp-id": "LAG-1",
+      "ietf-l2-topology:l2-termination-point-attributes": {
+        "interface-name": "LAG-1",
+        "mac-address": "c0:ab:ff:00:01:41",
+        "encapsulation-type": "ietf-l2-topology:ethernet",
+        "lag": true,
+        "unnumbered-id": [
+          1342177281
+        ],
+        "member-link-tp": [
+          "/ietf-network:networks/network[network-id='L2Topology']/node[node-id='92.168.96.50']/ietf-network-topology:termination-point[tp-id='1/1/6']",
+          "/ietf-network:networks/network[network-id='L2Topology']/node[node-id='92.168.96.50']/ietf-network-topology:termination-point[tp-id='1/1/2']"
+        ],
+        "nsp-ietf-network-topology:nsp-attributes": [
+          "92.168.96.32:LAG-1--92.168.96.50:LAG-1"
+        ]
+      },
+      "ietf-l3-unicast-topology:l3-termination-point-attributes": {}
+    },
+    {
+      "tp-id": "1/1/2",
+      "ietf-l2-topology:l2-termination-point-attributes": {
+        "interface-name": "1/1/2",
+        "mac-address": "c2:12:01:01:00:02",
+        "encapsulation-type": "ietf-l2-topology:ethernet",
+        "lag": false,
+        "unnumbered-id": [
+          11
+        ],
+        "member-link-tp": [],
+        "nsp-ietf-network-topology:nsp-attributes": []
+      },
+      "ietf-l3-unicast-topology:l3-termination-point-attributes": {}
+    }
+  ]
+}

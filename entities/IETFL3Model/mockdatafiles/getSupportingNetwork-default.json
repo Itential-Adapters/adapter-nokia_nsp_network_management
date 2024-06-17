@@ -1,0 +1,7 @@
+{
+  "ietf-network:supporting-network": [
+    {
+      "network-ref": "/ietf-network:networks/network[network-id='L2Topology']"
+    }
+  ]
+}

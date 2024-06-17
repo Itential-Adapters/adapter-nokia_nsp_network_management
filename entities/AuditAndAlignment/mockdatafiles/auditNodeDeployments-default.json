@@ -1,0 +1,6 @@
+{
+  "nsp-icm:output": {
+    "message": "Started audit operation on Deployments present on the list of NEs"
+  },
+  "statusCode": "OK"
+}

@@ -1,0 +1,7 @@
+{
+  "nsp-icm:output": {
+    "status-code": 200,
+    "message": "Template Audit Started."
+  },
+  "statusCode": "OK"
+}

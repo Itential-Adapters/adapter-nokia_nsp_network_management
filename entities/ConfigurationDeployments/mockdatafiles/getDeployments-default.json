@@ -1,0 +1,322 @@
+{
+  "nsp-icm:deployments": {
+    "@": {
+      "nsp-model:schema-nodeid": "/nsp-icm:icm/deployments",
+      "nsp-model:identifier": "/nsp-icm:icm/deployments"
+    },
+    "deployment": [
+      {
+        "@": {
+          "nsp-model:schema-nodeid": "/nsp-icm:icm/deployments/deployment",
+          "nsp-model:identifier": "/nsp-icm:icm/deployments/deployment[template-name='Configure Port'][target='/nsp-equipment:network/network-element[ne-id='72.20.20.2']/hardware-component/port[component-id='shelf=1/cardSlot=1/card=1/mdaSlot=2/mda=2/port=1/2/7']'][target-identifier-value='1/2/7']",
+          "nsp-model:creation-time": "2024-04-23T17:00:47.349Z",
+          "nsp-model:last-modified-time": "2024-04-23T17:00:48.936Z"
+        },
+        "template-name": "Configure Port",
+        "target-identifier-value": "1/2/7",
+        "merge": true,
+        "deployment-action": "deploy",
+        "ne-id": "72.20.20.2",
+        "ne-name": "sr2",
+        "status": "intent-aligned",
+        "message": "Alignment Successful",
+        "detailed-message": "Alignment Successful",
+        "target": "/nsp-equipment:network/network-element[ne-id='72.20.20.2']/hardware-component/port[component-id='shelf=1/cardSlot=1/card=1/mdaSlot=2/mda=2/port=1/2/7']",
+        "target-data": "{\"port\":{\"description\":null,\"ethernet\":{\"dot1q-etype\":null,\"pbb-etype\":null,\"qinq-etype\":null,\"hold-time\":{},\"down-when-looped\":{},\"lldp\":{\"dest-mac\":[]},\"encap-type\":\"qinq\",\"mtu\":1600,\"mode\":\"access\"},\"admin-state\":\"enable\"}}",
+        "deployed-target-data": "{\"icm-equipment-port-ethernet:icm-equipment-port-ethernet\" : {\"port\":{\"admin-state\":\"enable\",\"description\":null,\"ethernet\":{\"dot1q-etype\":null,\"pbb-etype\":null,\"qinq-etype\":null,\"hold-time\":{},\"down-when-looped\":{},\"lldp\":{\"dest-mac\":[]},\"encap-type\":\"qinq\",\"mtu\":1600,\"mode\":\"access\"}}}}",
+        "deployment-status": "deployed-aligned",
+        "deployment-status-message": "Alignment Successful",
+        "config-status": "modified",
+        "is-discovering": false,
+        "role": "physical",
+        "category": "port",
+        "create-start-time": "2024-04-23T17:00:47.345730Z",
+        "create-end-time": "2024-04-23T17:00:47.345752Z",
+        "last-modified-time": "2024-04-23T17:00:48.920467Z",
+        "created-by": "admin",
+        "last-aligned-by": "admin",
+        "last-audited-by": "admin",
+        "align-end-time": "2024-04-23T17:00:48.920482Z",
+        "audit-details": {
+          "@": {
+            "nsp-model:schema-nodeid": "/nsp-icm:icm/deployments/deployment/audit-details",
+            "nsp-model:identifier": "/nsp-icm:icm/deployments/deployment[template-name='Configure Port'][target='/nsp-equipment:network/network-element[ne-id='72.20.20.2']/hardware-component/port[component-id='shelf=1/cardSlot=1/card=1/mdaSlot=2/mda=2/port=1/2/7']'][target-identifier-value='1/2/7']/audit-details"
+          }
+        }
+      },
+      {
+        "@": {
+          "nsp-model:schema-nodeid": "/nsp-icm:icm/deployments/deployment",
+          "nsp-model:identifier": "/nsp-icm:icm/deployments/deployment[template-name='Configure Port'][target='/nsp-equipment:network/network-element[ne-id='72.20.20.2']/hardware-component/port[component-id='shelf=1/cardSlot=1/card=1/mdaSlot=2/mda=2/port=1/2/10']'][target-identifier-value='1/2/10']",
+          "nsp-model:creation-time": "2024-04-23T16:59:55.136Z",
+          "nsp-model:last-modified-time": "2024-04-23T16:59:57.808Z"
+        },
+        "template-name": "Configure Port",
+        "target-identifier-value": "1/2/10",
+        "merge": true,
+        "deployment-action": "deploy",
+        "ne-id": "72.20.20.2",
+        "ne-name": "sr2",
+        "status": "intent-aligned",
+        "message": "Alignment Successful",
+        "detailed-message": "Alignment Successful",
+        "target": "/nsp-equipment:network/network-element[ne-id='72.20.20.2']/hardware-component/port[component-id='shelf=1/cardSlot=1/card=1/mdaSlot=2/mda=2/port=1/2/10']",
+        "target-data": "{\"port\":{\"description\":null,\"ethernet\":{\"dot1q-etype\":null,\"pbb-etype\":null,\"qinq-etype\":null,\"hold-time\":{},\"down-when-looped\":{},\"lldp\":{\"dest-mac\":[]},\"encap-type\":\"qinq\",\"mtu\":1492,\"mode\":\"access\"},\"admin-state\":\"enable\"}}",
+        "deployed-target-data": "{\"icm-equipment-port-ethernet:icm-equipment-port-ethernet\" : {\"port\":{\"admin-state\":\"enable\",\"description\":null,\"ethernet\":{\"dot1q-etype\":null,\"pbb-etype\":null,\"qinq-etype\":null,\"hold-time\":{},\"down-when-looped\":{},\"lldp\":{\"dest-mac\":[]},\"encap-type\":\"qinq\",\"mtu\":1492,\"mode\":\"access\"}}}}",
+        "deployment-status": "deployed-aligned",
+        "deployment-status-message": "Alignment Successful",
+        "config-status": "modified",
+        "is-discovering": false,
+        "role": "physical",
+        "category": "port",
+        "create-start-time": "2024-04-23T16:59:55.062190Z",
+        "create-end-time": "2024-04-23T16:59:55.062203Z",
+        "last-modified-time": "2024-04-23T16:59:57.805819Z",
+        "created-by": "admin",
+        "last-aligned-by": "admin",
+        "last-audited-by": "admin",
+        "align-end-time": "2024-04-23T16:59:57.805825Z",
+        "audit-details": {
+          "@": {
+            "nsp-model:schema-nodeid": "/nsp-icm:icm/deployments/deployment/audit-details",
+            "nsp-model:identifier": "/nsp-icm:icm/deployments/deployment[template-name='Configure Port'][target='/nsp-equipment:network/network-element[ne-id='72.20.20.2']/hardware-component/port[component-id='shelf=1/cardSlot=1/card=1/mdaSlot=2/mda=2/port=1/2/10']'][target-identifier-value='1/2/10']/audit-details"
+          }
+        }
+      },
+      {
+        "@": {
+          "nsp-model:schema-nodeid": "/nsp-icm:icm/deployments/deployment",
+          "nsp-model:identifier": "/nsp-icm:icm/deployments/deployment[template-name='Configure Port'][target='/nsp-equipment:network/network-element[ne-id='72.20.20.2']/hardware-component/port[component-id='shelf=1/cardSlot=1/card=1/mdaSlot=2/mda=2/port=1/2/9']'][target-identifier-value='1/2/9']",
+          "nsp-model:creation-time": "2024-04-23T16:59:54.869Z",
+          "nsp-model:last-modified-time": "2024-04-23T16:59:56.737Z"
+        },
+        "template-name": "Configure Port",
+        "target-identifier-value": "1/2/9",
+        "merge": true,
+        "deployment-action": "deploy",
+        "ne-id": "72.20.20.2",
+        "ne-name": "sr2",
+        "status": "intent-aligned",
+        "message": "Alignment Successful",
+        "detailed-message": "Alignment Successful",
+        "target": "/nsp-equipment:network/network-element[ne-id='72.20.20.2']/hardware-component/port[component-id='shelf=1/cardSlot=1/card=1/mdaSlot=2/mda=2/port=1/2/9']",
+        "target-data": "{\"port\":{\"description\":null,\"ethernet\":{\"dot1q-etype\":null,\"pbb-etype\":null,\"qinq-etype\":null,\"hold-time\":{},\"down-when-looped\":{},\"lldp\":{\"dest-mac\":[]},\"encap-type\":\"qinq\",\"mtu\":1492,\"mode\":\"access\"},\"admin-state\":\"enable\"}}",
+        "deployed-target-data": "{\"icm-equipment-port-ethernet:icm-equipment-port-ethernet\" : {\"port\":{\"admin-state\":\"enable\",\"description\":null,\"ethernet\":{\"dot1q-etype\":null,\"pbb-etype\":null,\"qinq-etype\":null,\"hold-time\":{},\"down-when-looped\":{},\"lldp\":{\"dest-mac\":[]},\"encap-type\":\"qinq\",\"mtu\":1492,\"mode\":\"access\"}}}}",
+        "deployment-status": "deployed-aligned",
+        "deployment-status-message": "Alignment Successful",
+        "config-status": "modified",
+        "is-discovering": false,
+        "role": "physical",
+        "category": "port",
+        "create-start-time": "2024-04-23T16:59:54.866034Z",
+        "create-end-time": "2024-04-23T16:59:54.866062Z",
+        "last-modified-time": "2024-04-23T16:59:56.734480Z",
+        "created-by": "admin",
+        "last-aligned-by": "admin",
+        "last-audited-by": "admin",
+        "align-end-time": "2024-04-23T16:59:56.734487Z",
+        "audit-details": {
+          "@": {
+            "nsp-model:schema-nodeid": "/nsp-icm:icm/deployments/deployment/audit-details",
+            "nsp-model:identifier": "/nsp-icm:icm/deployments/deployment[template-name='Configure Port'][target='/nsp-equipment:network/network-element[ne-id='72.20.20.2']/hardware-component/port[component-id='shelf=1/cardSlot=1/card=1/mdaSlot=2/mda=2/port=1/2/9']'][target-identifier-value='1/2/9']/audit-details"
+          }
+        }
+      },
+      {
+        "@": {
+          "nsp-model:schema-nodeid": "/nsp-icm:icm/deployments/deployment",
+          "nsp-model:identifier": "/nsp-icm:icm/deployments/deployment[template-name='Configure Port'][target='/nsp-equipment:network/network-element[ne-id='72.20.20.2']/hardware-component/port[component-id='shelf=1/cardSlot=1/card=1/mdaSlot=2/mda=2/port=1/2/8']'][target-identifier-value='1/2/8']",
+          "nsp-model:creation-time": "2024-04-23T17:00:50.792Z",
+          "nsp-model:last-modified-time": "2024-04-23T17:00:51.666Z"
+        },
+        "template-name": "Configure Port",
+        "target-identifier-value": "1/2/8",
+        "merge": true,
+        "deployment-action": "deploy",
+        "ne-id": "72.20.20.2",
+        "ne-name": "sr2",
+        "status": "intent-aligned",
+        "message": "Alignment Successful",
+        "detailed-message": "Alignment Successful",
+        "target": "/nsp-equipment:network/network-element[ne-id='72.20.20.2']/hardware-component/port[component-id='shelf=1/cardSlot=1/card=1/mdaSlot=2/mda=2/port=1/2/8']",
+        "target-data": "{\"port\":{\"description\":null,\"ethernet\":{\"dot1q-etype\":null,\"pbb-etype\":null,\"qinq-etype\":null,\"hold-time\":{},\"down-when-looped\":{},\"lldp\":{\"dest-mac\":[]},\"encap-type\":\"qinq\",\"mtu\":1600,\"mode\":\"access\"},\"admin-state\":\"enable\"}}",
+        "deployed-target-data": "{\"icm-equipment-port-ethernet:icm-equipment-port-ethernet\" : {\"port\":{\"admin-state\":\"enable\",\"description\":null,\"ethernet\":{\"dot1q-etype\":null,\"pbb-etype\":null,\"qinq-etype\":null,\"hold-time\":{},\"down-when-looped\":{},\"lldp\":{\"dest-mac\":[]},\"encap-type\":\"qinq\",\"mtu\":1600,\"mode\":\"access\"}}}}",
+        "deployment-status": "deployed-aligned",
+        "deployment-status-message": "Alignment Successful",
+        "config-status": "modified",
+        "is-discovering": false,
+        "role": "physical",
+        "category": "port",
+        "create-start-time": "2024-04-23T17:00:50.789758Z",
+        "create-end-time": "2024-04-23T17:00:50.789778Z",
+        "last-modified-time": "2024-04-23T17:00:51.663647Z",
+        "created-by": "admin",
+        "last-aligned-by": "admin",
+        "last-audited-by": "admin",
+        "align-end-time": "2024-04-23T17:00:51.663658Z",
+        "audit-details": {
+          "@": {
+            "nsp-model:schema-nodeid": "/nsp-icm:icm/deployments/deployment/audit-details",
+            "nsp-model:identifier": "/nsp-icm:icm/deployments/deployment[template-name='Configure Port'][target='/nsp-equipment:network/network-element[ne-id='72.20.20.2']/hardware-component/port[component-id='shelf=1/cardSlot=1/card=1/mdaSlot=2/mda=2/port=1/2/8']'][target-identifier-value='1/2/8']/audit-details"
+          }
+        }
+      },
+      {
+        "@": {
+          "nsp-model:schema-nodeid": "/nsp-icm:icm/deployments/deployment",
+          "nsp-model:identifier": "/nsp-icm:icm/deployments/deployment[template-name='Configure Port'][target='/nsp-equipment:network/network-element[ne-id='72.20.20.3']/hardware-component/port[component-id='shelf=1/cardSlot=1/card=1/mdaSlot=2/mda=2/port=1/2/9']'][target-identifier-value='1/2/9']",
+          "nsp-model:creation-time": "2024-04-23T16:59:55.394Z",
+          "nsp-model:last-modified-time": "2024-04-23T17:00:26.505Z"
+        },
+        "template-name": "Configure Port",
+        "target-identifier-value": "1/2/9",
+        "merge": true,
+        "deployment-action": "deploy",
+        "ne-id": "72.20.20.3",
+        "ne-name": "sr3",
+        "status": "intent-aligned",
+        "message": "Alignment Successful",
+        "detailed-message": "Alignment Successful",
+        "target": "/nsp-equipment:network/network-element[ne-id='72.20.20.3']/hardware-component/port[component-id='shelf=1/cardSlot=1/card=1/mdaSlot=2/mda=2/port=1/2/9']",
+        "target-data": "{\"port\":{\"description\":null,\"ethernet\":{\"dot1q-etype\":null,\"pbb-etype\":null,\"qinq-etype\":null,\"hold-time\":{},\"down-when-looped\":{},\"lldp\":{\"dest-mac\":[]},\"encap-type\":\"qinq\",\"mtu\":1600,\"mode\":\"access\"},\"admin-state\":\"enable\"}}",
+        "deployed-target-data": "{\"icm-equipment-port-ethernet:icm-equipment-port-ethernet\" : {\"port\":{\"admin-state\":\"enable\",\"description\":null,\"ethernet\":{\"dot1q-etype\":null,\"pbb-etype\":null,\"qinq-etype\":null,\"hold-time\":{},\"down-when-looped\":{},\"lldp\":{\"dest-mac\":[]},\"encap-type\":\"qinq\",\"mtu\":1600,\"mode\":\"access\"}}}}",
+        "deployment-status": "deployed-aligned",
+        "deployment-status-message": "Alignment Successful",
+        "config-status": "modified",
+        "is-discovering": false,
+        "role": "physical",
+        "category": "port",
+        "create-start-time": "2024-04-23T16:59:55.392231Z",
+        "create-end-time": "2024-04-23T16:59:55.392247Z",
+        "last-modified-time": "2024-04-23T17:00:26.502858Z",
+        "created-by": "admin",
+        "last-aligned-by": "admin",
+        "last-audited-by": "admin",
+        "align-end-time": "2024-04-23T17:00:26.502869Z",
+        "audit-details": {
+          "@": {
+            "nsp-model:schema-nodeid": "/nsp-icm:icm/deployments/deployment/audit-details",
+            "nsp-model:identifier": "/nsp-icm:icm/deployments/deployment[template-name='Configure Port'][target='/nsp-equipment:network/network-element[ne-id='72.20.20.3']/hardware-component/port[component-id='shelf=1/cardSlot=1/card=1/mdaSlot=2/mda=2/port=1/2/9']'][target-identifier-value='1/2/9']/audit-details"
+          }
+        }
+      },
+      {
+        "@": {
+          "nsp-model:schema-nodeid": "/nsp-icm:icm/deployments/deployment",
+          "nsp-model:identifier": "/nsp-icm:icm/deployments/deployment[template-name='Configure Port'][target='/nsp-equipment:network/network-element[ne-id='72.20.20.3']/hardware-component/port[component-id='shelf=1/cardSlot=1/card=1/mdaSlot=2/mda=2/port=1/2/10']'][target-identifier-value='1/2/10']",
+          "nsp-model:creation-time": "2024-04-23T16:59:55.451Z",
+          "nsp-model:last-modified-time": "2024-04-23T17:00:27.471Z"
+        },
+        "template-name": "Configure Port",
+        "target-identifier-value": "1/2/10",
+        "merge": true,
+        "deployment-action": "deploy",
+        "ne-id": "72.20.20.3",
+        "ne-name": "sr3",
+        "status": "intent-aligned",
+        "message": "Alignment Successful",
+        "detailed-message": "Alignment Successful",
+        "target": "/nsp-equipment:network/network-element[ne-id='72.20.20.3']/hardware-component/port[component-id='shelf=1/cardSlot=1/card=1/mdaSlot=2/mda=2/port=1/2/10']",
+        "target-data": "{\"port\":{\"description\":null,\"ethernet\":{\"dot1q-etype\":null,\"pbb-etype\":null,\"qinq-etype\":null,\"hold-time\":{},\"down-when-looped\":{},\"lldp\":{\"dest-mac\":[]},\"encap-type\":\"qinq\",\"mtu\":1600,\"mode\":\"access\"},\"admin-state\":\"enable\"}}",
+        "deployed-target-data": "{\"icm-equipment-port-ethernet:icm-equipment-port-ethernet\" : {\"port\":{\"admin-state\":\"enable\",\"description\":null,\"ethernet\":{\"dot1q-etype\":null,\"pbb-etype\":null,\"qinq-etype\":null,\"hold-time\":{},\"down-when-looped\":{},\"lldp\":{\"dest-mac\":[]},\"encap-type\":\"qinq\",\"mtu\":1600,\"mode\":\"access\"}}}}",
+        "deployment-status": "deployed-aligned",
+        "deployment-status-message": "Alignment Successful",
+        "config-status": "modified",
+        "is-discovering": false,
+        "role": "physical",
+        "category": "port",
+        "create-start-time": "2024-04-23T16:59:55.448840Z",
+        "create-end-time": "2024-04-23T16:59:55.448851Z",
+        "last-modified-time": "2024-04-23T17:00:27.469069Z",
+        "created-by": "admin",
+        "last-aligned-by": "admin",
+        "last-audited-by": "admin",
+        "align-end-time": "2024-04-23T17:00:27.469080Z",
+        "audit-details": {
+          "@": {
+            "nsp-model:schema-nodeid": "/nsp-icm:icm/deployments/deployment/audit-details",
+            "nsp-model:identifier": "/nsp-icm:icm/deployments/deployment[template-name='Configure Port'][target='/nsp-equipment:network/network-element[ne-id='72.20.20.3']/hardware-component/port[component-id='shelf=1/cardSlot=1/card=1/mdaSlot=2/mda=2/port=1/2/10']'][target-identifier-value='1/2/10']/audit-details"
+          }
+        }
+      },
+      {
+        "@": {
+          "nsp-model:schema-nodeid": "/nsp-icm:icm/deployments/deployment",
+          "nsp-model:identifier": "/nsp-icm:icm/deployments/deployment[template-name='Configure EQoS'][target='/nsp-equipment:network/network-element[ne-id='72.20.20.2']'][target-identifier-value='Egress100#100']",
+          "nsp-model:creation-time": "2024-04-23T17:00:14.983Z",
+          "nsp-model:last-modified-time": "2024-04-23T17:00:17.739Z"
+        },
+        "template-name": "Configure EQoS",
+        "target-identifier-value": "Egress100#100",
+        "merge": true,
+        "deployment-action": "deploy",
+        "ne-id": "72.20.20.2",
+        "ne-name": "sr2",
+        "status": "intent-aligned",
+        "message": "Alignment Successful",
+        "detailed-message": "Alignment Successful",
+        "target": "/nsp-equipment:network/network-element[ne-id='72.20.20.2']",
+        "target-data": "{\"sap-egress\": {\"description\": \"Egress QoS 1\",\"fc\": [{\"fc-name\": \"be\",\"queue\": \"1\"},{\"fc-name\": \"l2\",\"queue\": \"2\"},{\"fc-name\": \"af\",\"queue\": \"3\"},{\"fc-name\": \"l1\",\"queue\": \"4\"},{\"fc-name\": \"h2\",\"queue\": \"5\"},{\"fc-name\": \"ef\",\"queue\": \"6\"},{\"fc-name\": \"h1\",\"queue\": \"7\"},{\"fc-name\": \"nc\",\"queue\": \"8\"}],\"queue\": [{\"adaptation-rule\": {\"cir\": \"min\",\"pir\": \"max\"},\"queue-id\": 1,\"queue-type\": \"auto-expedited\",\"rate\": {\"cir\": 100,\"pir\": 1000}},{\"adaptation-rule\": {\"cir\": \"min\",\"pir\": \"max\"},\"queue-id\": 2,\"queue-type\": \"expedited\",\"rate\": {\"cir\": 100,\"pir\": 1000}},{\"adaptation-rule\": {\"cir\": \"min\",\"pir\": \"max\"},\"queue-id\": 3,\"queue-type\": \"expedited\",\"rate\": {\"cir\": 100,\"pir\": 1000}},{\"adaptation-rule\": {\"cir\": \"min\",\"pir\": \"max\"},\"queue-id\": 4,\"queue-type\": \"expedited\",\"rate\": {\"cir\": 100,\"pir\": 1000}},{\"adaptation-rule\": {\"cir\": \"min\",\"pir\": \"max\"},\"queue-id\": 5,\"queue-type\": \"expedited\",\"rate\": {\"cir\": 100,\"pir\": 1000}},{\"adaptation-rule\": {\"cir\": \"min\",\"pir\": \"max\"},\"queue-id\": 6,\"queue-type\": \"expedited\",\"rate\": {\"cir\": 100,\"pir\": 1000}},{\"adaptation-rule\": {\"cir\": \"min\",\"pir\": \"max\"},\"queue-id\": 7,\"queue-type\": \"expedited\",\"rate\": {\"cir\": 100,\"pir\": 1000}},{\"adaptation-rule\": {\"cir\": \"min\",\"pir\": \"max\"},\"queue-id\": 8,\"queue-type\": \"expedited\",\"rate\": {\"cir\": 100,\"pir\": 1000}}]}}",
+        "deployed-target-data": "{\"icm-qos-sapegress-srqos:icm-qos-sapegress-srqos\" : {\"sap-egress\":{\"description\":\"Egress QoS 1\",\"fc\":[{\"fc-name\":\"be\",\"queue\":\"1\"},{\"fc-name\":\"l2\",\"queue\":\"2\"},{\"fc-name\":\"af\",\"queue\":\"3\"},{\"fc-name\":\"l1\",\"queue\":\"4\"},{\"fc-name\":\"h2\",\"queue\":\"5\"},{\"fc-name\":\"ef\",\"queue\":\"6\"},{\"fc-name\":\"h1\",\"queue\":\"7\"},{\"fc-name\":\"nc\",\"queue\":\"8\"}],\"queue\":[{\"adaptation-rule\":{\"cir\":\"min\",\"pir\":\"max\"},\"queue-id\":1,\"queue-type\":\"auto-expedited\",\"rate\":{\"cir\":100,\"pir\":1000}},{\"adaptation-rule\":{\"cir\":\"min\",\"pir\":\"max\"},\"queue-id\":2,\"queue-type\":\"expedited\",\"rate\":{\"cir\":100,\"pir\":1000}},{\"adaptation-rule\":{\"cir\":\"min\",\"pir\":\"max\"},\"queue-id\":3,\"queue-type\":\"expedited\",\"rate\":{\"cir\":100,\"pir\":1000}},{\"adaptation-rule\":{\"cir\":\"min\",\"pir\":\"max\"},\"queue-id\":4,\"queue-type\":\"expedited\",\"rate\":{\"cir\":100,\"pir\":1000}},{\"adaptation-rule\":{\"cir\":\"min\",\"pir\":\"max\"},\"queue-id\":5,\"queue-type\":\"expedited\",\"rate\":{\"cir\":100,\"pir\":1000}},{\"adaptation-rule\":{\"cir\":\"min\",\"pir\":\"max\"},\"queue-id\":6,\"queue-type\":\"expedited\",\"rate\":{\"cir\":100,\"pir\":1000}},{\"adaptation-rule\":{\"cir\":\"min\",\"pir\":\"max\"},\"queue-id\":7,\"queue-type\":\"expedited\",\"rate\":{\"cir\":100,\"pir\":1000}},{\"adaptation-rule\":{\"cir\":\"min\",\"pir\":\"max\"},\"queue-id\":8,\"queue-type\":\"expedited\",\"rate\":{\"cir\":100,\"pir\":1000}}]}}}",
+        "deployment-status": "deployed-aligned",
+        "deployment-status-message": "Alignment Successful",
+        "config-status": "modified",
+        "is-discovering": false,
+        "role": "logical",
+        "category": "QoS",
+        "create-start-time": "2024-04-23T17:00:14.979897Z",
+        "create-end-time": "2024-04-23T17:00:14.979934Z",
+        "last-modified-time": "2024-04-23T17:00:17.736513Z",
+        "created-by": "admin",
+        "last-aligned-by": "admin",
+        "last-audited-by": "admin",
+        "align-end-time": "2024-04-23T17:00:17.736523Z",
+        "audit-details": {
+          "@": {
+            "nsp-model:schema-nodeid": "/nsp-icm:icm/deployments/deployment/audit-details",
+            "nsp-model:identifier": "/nsp-icm:icm/deployments/deployment[template-name='Configure EQoS'][target='/nsp-equipment:network/network-element[ne-id='72.20.20.2']'][target-identifier-value='Egress100#100']/audit-details"
+          }
+        }
+      },
+      {
+        "@": {
+          "nsp-model:schema-nodeid": "/nsp-icm:icm/deployments/deployment",
+          "nsp-model:identifier": "/nsp-icm:icm/deployments/deployment[template-name='Configure LAG'][target='/nsp-equipment:network/network-element[ne-id='72.20.20.2']'][target-identifier-value='lag-100#100']",
+          "nsp-model:creation-time": "2024-04-23T17:00:35.104Z",
+          "nsp-model:last-modified-time": "2024-04-23T17:00:37.875Z"
+        },
+        "template-name": "Configure LAG",
+        "target-identifier-value": "lag-100#100",
+        "merge": true,
+        "deployment-action": "deploy",
+        "ne-id": "72.20.20.2",
+        "ne-name": "sr2",
+        "status": "intent-aligned",
+        "message": "Alignment Successful",
+        "detailed-message": "Alignment Successful",
+        "target": "/nsp-equipment:network/network-element[ne-id='72.20.20.2']",
+        "target-data": "{\"lag\":{\"mode\":\"access\",\"lacp\":{\"enableLacp\":false},\"per-link-hash\":{\"enablePerLinkHash\":false,\"weighted\":{\"enableWeighted\":false}},\"admin-state\":\"enable\",\"encap-type\":\"qinq\",\"port-type\":\"hs\",\"port-threshold\":{\"value\":1,\"action\":\"down\"},\"port\":[{\"port-id\":\"1/2/9\"},{\"port-id\":\"1/2/10\"}]}}",
+        "deployed-target-data": "{\"icm-logical-lag-access:icm-logical-lag-access\" : {\"lag\":{\"admin-state\":\"enable\",\"mode\":\"access\",\"lacp\":{\"enableLacp\":false},\"per-link-hash\":{\"enablePerLinkHash\":false,\"weighted\":{\"enableWeighted\":false}},\"encap-type\":\"qinq\",\"port-type\":\"hs\",\"port-threshold\":{\"value\":1,\"action\":\"down\"},\"port\":[{\"port-id\":\"1/2/9\"},{\"port-id\":\"1/2/10\"}]}}}",
+        "deployment-status": "deployed-aligned",
+        "deployment-status-message": "Alignment Successful",
+        "config-status": "modified",
+        "is-discovering": false,
+        "role": "logical",
+        "category": "LAG",
+        "create-start-time": "2024-04-23T17:00:35.101582Z",
+        "create-end-time": "2024-04-23T17:00:35.101599Z",
+        "last-modified-time": "2024-04-23T17:00:37.873310Z",
+        "created-by": "admin",
+        "last-aligned-by": "admin",
+        "last-audited-by": "admin",
+        "align-end-time": "2024-04-23T17:00:37.873321Z",
+        "audit-details": {
+          "@": {
+            "nsp-model:schema-nodeid": "/nsp-icm:icm/deployments/deployment/audit-details",
+            "nsp-model:identifier": "/nsp-icm:icm/deployments/deployment[template-name='Configure LAG'][target='/nsp-equipment:network/network-element[ne-id='72.20.20.2']'][target-identifier-value='lag-100#100']/audit-details"
+          }
+        }
+      }
+    ]
+  }
+}

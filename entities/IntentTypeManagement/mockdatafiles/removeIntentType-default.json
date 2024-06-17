@@ -1,0 +1,7 @@
+{
+  "nsp-icm:output": {
+    "imported-intent-type": "/nsp-icm:icm/imported-intent-types/imported-intent-type[name='icm-system-ptp'][version='2']",
+    "message": "Successfully Removed"
+  },
+  "statusCode": "OK"
+}

@@ -1,0 +1,38 @@
+{
+  "openconfig-interfaces:address": [
+    {
+      "@": {
+        "nsp-model:schema-nodeid": "/ietf-network:networks/network/node/ne-management-nm:commissioning-configs/ne-interfaces/logical-interfaces/interfaces-root/openconfig-interfaces:interfaces/interface/subinterfaces/subinterface/openconfig-if-ip:ipv6/addresses/address",
+        "nsp-model:identifier": "/ietf-network:networks/network[network-id='1']/node[node-id='92.168.96.58']/ne-management-nm:commissioning-configs/ne-interfaces/logical-interfaces/interfaces-root/openconfig-interfaces:interfaces/interface[name='network-interface']/subinterfaces/subinterface[index='18']/openconfig-if-ip:ipv6/addresses/address[ip='2023:db8:3333:4444:5555:6666:7777:8888']",
+        "nsp-model:network-id": "92.168.96.58",
+        "nsp-model:sources": [
+          "fdn:app:mdm-ami:{\"_NE_\":\"92.168.96.58\",\"classId\":\"openconfig-interfaces:/interfaces/interface/subinterfaces/subinterface/openconfig-if-ip:ipv6/addresses/address\",\"interface_name\":\"network-interface\",\"subinterface_index\":\"LogiInv_Intf_TipMust\",\"address_ip\":\"2023:db8:3333:4444:5555:6666:7777:8888\"}"
+        ]
+      },
+      "ip": "2023:db8:3333:4444:5555:6666:7777:8888",
+      "config": {
+        "@": {
+          "nsp-model:schema-nodeid": "/ietf-network:networks/network/node/ne-management-nm:commissioning-configs/ne-interfaces/logical-interfaces/interfaces-root/openconfig-interfaces:interfaces/interface/subinterfaces/subinterface/openconfig-if-ip:ipv6/addresses/address/config",
+          "nsp-model:identifier": "/ietf-network:networks/network[network-id='1']/node[node-id='92.168.96.58']/ne-management-nm:commissioning-configs/ne-interfaces/logical-interfaces/interfaces-root/openconfig-interfaces:interfaces/interface[name='network-interface']/subinterfaces/subinterface[index='18']/openconfig-if-ip:ipv6/addresses/address[ip='2023:db8:3333:4444:5555:6666:7777:8888']/config",
+          "nsp-model:network-id": "92.168.96.58",
+          "nsp-model:sources": [
+            "fdn:app:mdm-ami:{\"_NE_\":\"92.168.96.58\",\"classId\":\"openconfig-interfaces:/interfaces/interface/subinterfaces/subinterface/openconfig-if-ip:ipv6/addresses/address/config\",\"interface_name\":\"network-interface\",\"subinterface_index\":\"LogiInv_Intf_TipMust\",\"address_ip\":\"2023:db8:3333:4444:5555:6666:7777:8888\"}"
+          ]
+        },
+        "ip": "2023:db8:3333:4444:5555:6666:7777:8888",
+        "prefix-length": 64
+      },
+      "state": {
+        "@": {
+          "nsp-model:schema-nodeid": "/ietf-network:networks/network/node/ne-management-nm:commissioning-configs/ne-interfaces/logical-interfaces/interfaces-root/openconfig-interfaces:interfaces/interface/subinterfaces/subinterface/openconfig-if-ip:ipv6/addresses/address/state",
+          "nsp-model:identifier": "/ietf-network:networks/network[network-id='1']/node[node-id='92.168.96.58']/ne-management-nm:commissioning-configs/ne-interfaces/logical-interfaces/interfaces-root/openconfig-interfaces:interfaces/interface[name='network-interface']/subinterfaces/subinterface[index='18']/openconfig-if-ip:ipv6/addresses/address[ip='2023:db8:3333:4444:5555:6666:7777:8888']/state",
+          "nsp-model:network-id": "92.168.96.58",
+          "nsp-model:sources": [
+            "fdn:app:mdm-ami:{\"_NE_\":\"92.168.96.58\",\"classId\":\"openconfig-interfaces:/interfaces/interface/subinterfaces/subinterface/openconfig-if-ip:ipv6/addresses/address/state\",\"interface_name\":\"network-interface\",\"subinterface_index\":\"LogiInv_Intf_TipMust\",\"address_ip\":\"2023:db8:3333:4444:5555:6666:7777:8888\"}"
+          ]
+        },
+        "ip": "2023:db8:3333:4444:5555:6666:7777:8888"
+      }
+    }
+  ]
+}

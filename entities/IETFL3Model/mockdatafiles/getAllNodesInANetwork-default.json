@@ -1,0 +1,207 @@
+{
+  "ietf-network:node": [
+    {
+      "node-id": "11.50.150.39",
+      "ietf-network-topology:termination-point": [
+        {
+          "tp-id": "11.30.39.6",
+          "ietf-l3-unicast-topology:l3-termination-point-attributes": {
+            "ip-address": [
+              "11.30.39.6"
+            ],
+            "ietf-l3-te-topology:l3-te-tp-attributes": {
+              "tp-ref": "/ietf-network:networks/network[network-id='TE-TopologyId-200:100:0-isis']/node[node-id='11.50.150.39']/ietf-network-topology:termination-point[tp-id='11.30.39.6']",
+              "node-ref": "/ietf-network:networks/network[network-id='TE-TopologyId-200:100:0-isis']/node[node-id='11.50.150.39']",
+              "network-ref": "/ietf-network:networks/network[network-id='TE-TopologyId-200:100:0-isis']"
+            }
+          }
+        },
+        {
+          "tp-id": "11.30.39.2",
+          "ietf-l3-unicast-topology:l3-termination-point-attributes": {
+            "ip-address": [
+              "11.30.39.2"
+            ],
+            "ietf-l3-te-topology:l3-te-tp-attributes": {
+              "tp-ref": "/ietf-network:networks/network[network-id='TE-TopologyId-200:100:0-isis']/node[node-id='11.50.150.39']/ietf-network-topology:termination-point[tp-id='11.30.39.2']",
+              "node-ref": "/ietf-network:networks/network[network-id='TE-TopologyId-200:100:0-isis']/node[node-id='11.50.150.39']",
+              "network-ref": "/ietf-network:networks/network[network-id='TE-TopologyId-200:100:0-isis']"
+            }
+          }
+        }
+      ],
+      "ietf-l3-unicast-topology:l3-node-attributes": {
+        "name": "11.50.150.39",
+        "flag": [
+          "nsp-ietf-network-topology:routing-instance"
+        ],
+        "router-id": [
+          "11.50.150.39"
+        ],
+        "nsp-ietf-network-topology:nsp-attributes": [],
+        "prefix": [
+          {
+            "prefix": "11.50.150.39/32",
+            "metric": 0
+          },
+          {
+            "prefix": "11.50.150.30/32",
+            "metric": 10
+          }
+        ],
+        "ietf-l3-te-topology:l3-te-node-attributes": {
+          "node-ref": "/ietf-network:networks/network[network-id='TE-TopologyId-200:100:0-isis']/node[node-id='11.50.150.39']",
+          "network-ref": "/ietf-network:networks/network[network-id='TE-TopologyId-200:100:0-isis']"
+        },
+        "ietf-sr-mpls-topology:sr-mpls": {
+          "msds": {
+            "node-msd": [
+              {
+                "msd-type": "ietf-sr-mpls-topology:msd-mpls",
+                "msd-value": 12
+              },
+              {
+                "msd-type": "ietf-sr-mpls-topology:msd-erld",
+                "msd-value": 15
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "node-id": "11.50.150.31",
+      "ietf-network-topology:termination-point": [
+        {
+          "tp-id": "11.30.1.2",
+          "ietf-l3-unicast-topology:l3-termination-point-attributes": {
+            "ip-address": [
+              "11.30.1.2"
+            ],
+            "ietf-l3-te-topology:l3-te-tp-attributes": {
+              "tp-ref": "/ietf-network:networks/network[network-id='TE-TopologyId-200:100:0-isis']/node[node-id='11.50.150.31']/ietf-network-topology:termination-point[tp-id='11.30.1.2']",
+              "node-ref": "/ietf-network:networks/network[network-id='TE-TopologyId-200:100:0-isis']/node[node-id='11.50.150.31']",
+              "network-ref": "/ietf-network:networks/network[network-id='TE-TopologyId-200:100:0-isis']"
+            }
+          }
+        }
+      ],
+      "ietf-l3-unicast-topology:l3-node-attributes": {
+        "name": "11.50.150.31",
+        "flag": [
+          "nsp-ietf-network-topology:routing-instance"
+        ],
+        "router-id": [
+          "11.50.150.31"
+        ],
+        "nsp-ietf-network-topology:nsp-attributes": [],
+        "prefix": [
+          {
+            "prefix": "11.50.150.31/32",
+            "metric": 0
+          }
+        ],
+        "ietf-l3-te-topology:l3-te-node-attributes": {
+          "node-ref": "/ietf-network:networks/network[network-id='TE-TopologyId-200:100:0-isis']/node[node-id='11.50.150.31']",
+          "network-ref": "/ietf-network:networks/network[network-id='TE-TopologyId-200:100:0-isis']"
+        },
+        "ietf-sr-mpls-topology:sr-mpls": {
+          "msds": {
+            "node-msd": [
+              {
+                "msd-type": "ietf-sr-mpls-topology:msd-mpls",
+                "msd-value": 3
+              },
+              {
+                "msd-type": "ietf-sr-mpls-topology:msd-erld",
+                "msd-value": 3
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "node-id": "11.50.150.30",
+      "ietf-network-topology:termination-point": [
+        {
+          "tp-id": "11.30.1.1",
+          "ietf-l3-unicast-topology:l3-termination-point-attributes": {
+            "ip-address": [
+              "11.30.1.1"
+            ],
+            "ietf-l3-te-topology:l3-te-tp-attributes": {
+              "tp-ref": "/ietf-network:networks/network[network-id='TE-TopologyId-200:100:0-isis']/node[node-id='11.50.150.30']/ietf-network-topology:termination-point[tp-id='11.30.1.1']",
+              "node-ref": "/ietf-network:networks/network[network-id='TE-TopologyId-200:100:0-isis']/node[node-id='11.50.150.30']",
+              "network-ref": "/ietf-network:networks/network[network-id='TE-TopologyId-200:100:0-isis']"
+            }
+          }
+        },
+        {
+          "tp-id": "11.30.39.5",
+          "ietf-l3-unicast-topology:l3-termination-point-attributes": {
+            "ip-address": [
+              "11.30.39.5"
+            ],
+            "ietf-l3-te-topology:l3-te-tp-attributes": {
+              "tp-ref": "/ietf-network:networks/network[network-id='TE-TopologyId-200:100:0-isis']/node[node-id='11.50.150.30']/ietf-network-topology:termination-point[tp-id='11.30.39.5']",
+              "node-ref": "/ietf-network:networks/network[network-id='TE-TopologyId-200:100:0-isis']/node[node-id='11.50.150.30']",
+              "network-ref": "/ietf-network:networks/network[network-id='TE-TopologyId-200:100:0-isis']"
+            }
+          }
+        },
+        {
+          "tp-id": "11.30.39.1",
+          "ietf-l3-unicast-topology:l3-termination-point-attributes": {
+            "ip-address": [
+              "11.30.39.1"
+            ],
+            "ietf-l3-te-topology:l3-te-tp-attributes": {
+              "tp-ref": "/ietf-network:networks/network[network-id='TE-TopologyId-200:100:0-isis']/node[node-id='11.50.150.30']/ietf-network-topology:termination-point[tp-id='11.30.39.1']",
+              "node-ref": "/ietf-network:networks/network[network-id='TE-TopologyId-200:100:0-isis']/node[node-id='11.50.150.30']",
+              "network-ref": "/ietf-network:networks/network[network-id='TE-TopologyId-200:100:0-isis']"
+            }
+          }
+        }
+      ],
+      "ietf-l3-unicast-topology:l3-node-attributes": {
+        "name": "11.50.150.30",
+        "flag": [
+          "nsp-ietf-network-topology:routing-instance"
+        ],
+        "router-id": [
+          "11.50.150.30"
+        ],
+        "nsp-ietf-network-topology:nsp-attributes": [],
+        "prefix": [
+          {
+            "prefix": "11.50.150.30/32",
+            "metric": 0
+          },
+          {
+            "prefix": "11.50.150.39/32",
+            "metric": 10
+          }
+        ],
+        "ietf-l3-te-topology:l3-te-node-attributes": {
+          "node-ref": "/ietf-network:networks/network[network-id='TE-TopologyId-200:100:0-isis']/node[node-id='11.50.150.30']",
+          "network-ref": "/ietf-network:networks/network[network-id='TE-TopologyId-200:100:0-isis']"
+        },
+        "ietf-sr-mpls-topology:sr-mpls": {
+          "msds": {
+            "node-msd": [
+              {
+                "msd-type": "ietf-sr-mpls-topology:msd-mpls",
+                "msd-value": 12
+              },
+              {
+                "msd-type": "ietf-sr-mpls-topology:msd-erld",
+                "msd-value": 15
+              }
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

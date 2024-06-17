@@ -1,0 +1,16 @@
+{
+  "ietf-sr-mpls-topology:sr-mpls": {
+    "msds": {
+      "node-msd": [
+        {
+          "msd-type": "ietf-sr-mpls-topology:msd-mpls",
+          "msd-value": 3
+        },
+        {
+          "msd-type": "ietf-sr-mpls-topology:msd-erld",
+          "msd-value": 3
+        }
+      ]
+    }
+  }
+}

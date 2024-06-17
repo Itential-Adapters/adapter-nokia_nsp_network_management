@@ -1,0 +1,88 @@
+{
+  "nsp-indicator:template": [
+    {
+      "@": {
+        "nsp-model:schema-nodeid": "/nsp-indicator:rta-indicator-templates/template",
+        "nsp-model:identifier": "/nsp-indicator:rta-indicator-templates/template[name='AvgCpuAllNodesAllActionsTemplate']"
+      },
+      "name": "AvgCpuAllNodesAllActionsTemplate",
+      "description": "avg cpu from all nodes template",
+      "units-name": "%",
+      "telemetry-type": "telemetry:/base/system-info/system",
+      "formula": "avg({cpu-usage_avg})",
+      "counters": [
+        {
+          "@": {
+            "nsp-model:schema-nodeid": "/nsp-indicator:rta-indicator-templates/template/counters",
+            "nsp-model:identifier": "/nsp-indicator:rta-indicator-templates/template[name='AvgCpuAllNodesAllActionsTemplate']/counters[name='cpu-usage'][function='avg']"
+          },
+          "name": "cpu-usage",
+          "function": "avg"
+        }
+      ],
+      "thresholds": [
+        {
+          "@": {
+            "nsp-model:schema-nodeid": "/nsp-indicator:rta-indicator-templates/template/thresholds",
+            "nsp-model:identifier": "/nsp-indicator:rta-indicator-templates/template[name='AvgCpuAllNodesAllActionsTemplate']/thresholds[threshold-value-decimal='20'][direction='increasing']"
+          },
+          "threshold-value-decimal": "20",
+          "direction": "increasing",
+          "actions": [
+            {
+              "@": {
+                "nsp-model:schema-nodeid": "/nsp-indicator:rta-indicator-templates/template/thresholds/actions",
+                "nsp-model:identifier": "/nsp-indicator:rta-indicator-templates/template[name='AvgCpuAllNodesAllActionsTemplate']/thresholds[threshold-value-decimal='20'][direction='increasing']/actions[name='template_threshold_20_increasing_kafka_action']"
+              },
+              "name": "template_threshold_20_increasing_kafka_action",
+              "type": "kafka",
+              "kafka": {
+                "@": {
+                  "nsp-model:schema-nodeid": "/nsp-indicator:rta-indicator-templates/template/thresholds/actions/kafka",
+                  "nsp-model:identifier": "/nsp-indicator:rta-indicator-templates/template[name='AvgCpuAllNodesAllActionsTemplate']/thresholds[threshold-value-decimal='20'][direction='increasing']/actions[name='template_threshold_20_increasing_kafka_action']/kafka"
+                },
+                "topic-name": "nsp-act-action-event",
+                "topic-content": "CPU is a rising"
+              }
+            },
+            {
+              "@": {
+                "nsp-model:schema-nodeid": "/nsp-indicator:rta-indicator-templates/template/thresholds/actions",
+                "nsp-model:identifier": "/nsp-indicator:rta-indicator-templates/template[name='AvgCpuAllNodesAllActionsTemplate']/thresholds[threshold-value-decimal='20'][direction='increasing']/actions[name='template_threshold_20_increasing_alarm_action']"
+              },
+              "name": "template_threshold_20_increasing_alarm_action",
+              "type": "alarm",
+              "alarm": {
+                "@": {
+                  "nsp-model:schema-nodeid": "/nsp-indicator:rta-indicator-templates/template/thresholds/actions/alarm",
+                  "nsp-model:identifier": "/nsp-indicator:rta-indicator-templates/template[name='AvgCpuAllNodesAllActionsTemplate']/thresholds[threshold-value-decimal='20'][direction='increasing']/actions[name='template_threshold_20_increasing_alarm_action']/alarm"
+                },
+                "severity": "major"
+              }
+            },
+            {
+              "@": {
+                "nsp-model:schema-nodeid": "/nsp-indicator:rta-indicator-templates/template/thresholds/actions",
+                "nsp-model:identifier": "/nsp-indicator:rta-indicator-templates/template[name='AvgCpuAllNodesAllActionsTemplate']/thresholds[threshold-value-decimal='20'][direction='increasing']/actions[name='template_threshold_20_increasing_email_action']"
+              },
+              "name": "template_threshold_20_increasing_email_action",
+              "type": "email",
+              "email": {
+                "@": {
+                  "nsp-model:schema-nodeid": "/nsp-indicator:rta-indicator-templates/template/thresholds/actions/email",
+                  "nsp-model:identifier": "/nsp-indicator:rta-indicator-templates/template[name='AvgCpuAllNodesAllActionsTemplate']/thresholds[threshold-value-decimal='20'][direction='increasing']/actions[name='template_threshold_20_increasing_email_action']/email"
+                },
+                "email-address": "userid@user.com",
+                "email-subject": "Hmmmmm, It's getting hot",
+                "email-content": "Your temperature is rising.",
+                "aggregation": false,
+                "period": 5,
+                "number-events": 5
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

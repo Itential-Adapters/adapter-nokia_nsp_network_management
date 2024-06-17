@@ -1,0 +1,81 @@
+{
+  "name": "@itentialopensource/adapter-nokia_nsp_network_management",
+  "version": "0.1.0",
+  "description": "This adapter integrates with system described as: NSP Network Infrastructure Management",
+  "main": "adapter.js",
+  "systemName": "nokia_nsp_network_management",
+  "wizardVersion": "2.44.7",
+  "engineVersion": "1.67.20",
+  "adapterType": "http",
+  "scripts": {
+    "artifactize": "npm i && node utils/packModificationScript.js",
+    "preinstall": "node utils/setup.js",
+    "deinstall": "node utils/removeHooks.js",
+    "lint": "node --max_old_space_size=4096 ./node_modules/eslint/bin/eslint.js . --ext .json --ext .js",
+    "lint:errors": "node --max_old_space_size=4096 ./node_modules/eslint/bin/eslint.js . --ext .json --ext .js --quiet",
+    "test:baseunit": "mocha test/unit/adapterBaseTestUnit.js --LOG=error",
+    "test:unit": "mocha test/unit/adapterTestUnit.js --LOG=error",
+    "test:integration": "mocha test/integration/adapterTestIntegration.js --LOG=error",
+    "test": "npm run test:baseunit && npm run test:unit && npm run test:integration",
+    "adapter:install": "npm i && node utils/tbScript.js install",
+    "adapter:checkMigrate": "node utils/checkMigrate.js",
+    "adapter:findPath": "node utils/findPath.js",
+    "adapter:migrate": "node utils/modify.js -m",
+    "adapter:update": "node utils/modify.js -u",
+    "adapter:revert": "node utils/modify.js -r",
+    "troubleshoot": "node utils/tbScript.js troubleshoot",
+    "healthcheck": "node utils/tbScript.js healthcheck",
+    "basicget": "node utils/tbScript.js basicget",
+    "connectivity": "node utils/tbScript.js connectivity",
+    "deploy": "npm publish --registry=https://registry.npmjs.org --access=public",
+    "build": "npm run deploy"
+  },
+  "keywords": [
+    "Itential",
+    "IAP",
+    "Automation",
+    "Integration",
+    "App-Artifacts",
+    "Adapter",
+    "nokia_nsp_network_management",
+    "Pre-Release"
+  ],
+  "license": "Apache-2.0",
+  "engines": {
+    "node": ">= 14.0.0",
+    "npm": ">= 6.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.com:itentialopensource/adapters/adapter-nokia_nsp_network_management.git"
+  },
+  "author": "Itential",
+  "homepage": "https://gitlab.com/itentialopensource/adapters/adapter-nokia_nsp_network_management#readme",
+  "dependencies": {
+    "@itentialopensource/adapter-utils": "^5.5.0",
+    "acorn": "^8.10.0",
+    "ajv": "^8.12.0",
+    "axios": "^1.6.8",
+    "commander": "^11.0.0",
+    "dns-lookup-promise": "^1.0.4",
+    "fs-extra": "^11.1.1",
+    "json-query": "^2.2.2",
+    "mocha": "^10.3.0",
+    "mocha-param": "^2.0.1",
+    "mongodb": "^4.16.0",
+    "ping": "^0.4.4",
+    "prompts": "^2.4.2",
+    "readline-sync": "^1.4.10",
+    "semver": "^7.5.3",
+    "winston": "^3.9.0"
+  },
+  "devDependencies": {
+    "chai": "^4.3.7",
+    "eslint": "^8.44.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-json": "^3.1.0",
+    "testdouble": "^3.18.0"
+  },
+  "private": false
+}

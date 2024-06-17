@@ -1,0 +1,9 @@
+{
+  "ietf-network:supporting-termination-point": [
+    {
+      "network-ref": "/ietf-network:networks/network[network-id='L2Topology']",
+      "node-ref": "/ietf-network:networks/network[network-id='L2Topology']/node[node-id='11.50.150.33']",
+      "tp-ref": "/ietf-network:networks/network[network-id='L2Topology']/node[node-id='11.50.150.33']/ietf-network-topology:termination-point[tp-id='1/1/6']"
+    }
+  ]
+}

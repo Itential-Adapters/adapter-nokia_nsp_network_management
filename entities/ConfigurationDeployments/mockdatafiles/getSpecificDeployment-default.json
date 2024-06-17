@@ -1,0 +1,43 @@
+{
+  "nsp-icm:deployment": [
+    {
+      "@": {
+        "nsp-model:schema-nodeid": "/nsp-icm:icm/deployments/deployment",
+        "nsp-model:identifier": "/nsp-icm:icm/deployments/deployment[template-name='Configure Port'][target='/nsp-equipment:network/network-element[ne-id='72.20.20.2']/hardware-component/port[component-id='shelf=1/cardSlot=1/card=1/mdaSlot=2/mda=2/port=1/2/7']'][target-identifier-value='1/2/7']",
+        "nsp-model:creation-time": "2024-04-23T17:00:47.349Z",
+        "nsp-model:last-modified-time": "2024-04-23T17:00:48.936Z"
+      },
+      "template-name": "Configure Port",
+      "target-identifier-value": "1/2/7",
+      "merge": true,
+      "deployment-action": "deploy",
+      "ne-id": "72.20.20.2",
+      "ne-name": "sr2",
+      "status": "intent-aligned",
+      "message": "Alignment Successful",
+      "detailed-message": "Alignment Successful",
+      "target": "/nsp-equipment:network/network-element[ne-id='72.20.20.2']/hardware-component/port[component-id='shelf=1/cardSlot=1/card=1/mdaSlot=2/mda=2/port=1/2/7']",
+      "target-data": "{\"port\":{\"description\":null,\"ethernet\":{\"dot1q-etype\":null,\"pbb-etype\":null,\"qinq-etype\":null,\"hold-time\":{},\"down-when-looped\":{},\"lldp\":{\"dest-mac\":[]},\"encap-type\":\"qinq\",\"mtu\":1600,\"mode\":\"access\"},\"admin-state\":\"enable\"}}",
+      "deployed-target-data": "{\"icm-equipment-port-ethernet:icm-equipment-port-ethernet\" : {\"port\":{\"admin-state\":\"enable\",\"description\":null,\"ethernet\":{\"dot1q-etype\":null,\"pbb-etype\":null,\"qinq-etype\":null,\"hold-time\":{},\"down-when-looped\":{},\"lldp\":{\"dest-mac\":[]},\"encap-type\":\"qinq\",\"mtu\":1600,\"mode\":\"access\"}}}}",
+      "deployment-status": "deployed-aligned",
+      "deployment-status-message": "Alignment Successful",
+      "config-status": "modified",
+      "is-discovering": false,
+      "role": "physical",
+      "category": "port",
+      "create-start-time": "2024-04-23T17:00:47.345730Z",
+      "create-end-time": "2024-04-23T17:00:47.345752Z",
+      "last-modified-time": "2024-04-23T17:00:48.920467Z",
+      "created-by": "admin",
+      "last-aligned-by": "admin",
+      "last-audited-by": "admin",
+      "align-end-time": "2024-04-23T17:00:48.920482Z",
+      "audit-details": {
+        "@": {
+          "nsp-model:schema-nodeid": "/nsp-icm:icm/deployments/deployment/audit-details",
+          "nsp-model:identifier": "/nsp-icm:icm/deployments/deployment[template-name='Configure Port'][target='/nsp-equipment:network/network-element[ne-id='72.20.20.2']/hardware-component/port[component-id='shelf=1/cardSlot=1/card=1/mdaSlot=2/mda=2/port=1/2/7']'][target-identifier-value='1/2/7']/audit-details"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,528 @@
+{
+  "nsp-inventory:output": {
+    "data": [
+      {
+        "@": {
+          "nsp-model:schema-nodeid": "/nsp-network:network/node/node-root/openconfig-acl:acl/acl-sets/acl-set",
+          "nsp-model:identifier": "/nsp-network:network/node[node-id='92.168.98.156']/node-root/openconfig-acl:acl/acl-sets/acl-set[name='2'][type='openconfig-acl:ACL_IPV6']",
+          "nsp-model:network-id": "92.168.98.156",
+          "nsp-model:creation-time": "2023-11-13T12:42:58.838Z",
+          "nsp-model:last-modified-time": "2023-11-13T12:42:58.838Z",
+          "nsp-model:sources": [
+            "fdn:realm:sam:network:92.168.98.156:IPv6 Filter:2"
+          ]
+        },
+        "name": "2",
+        "type": "openconfig-acl:ACL_IPV6",
+        "config": {
+          "@": {
+            "nsp-model:schema-nodeid": "/nsp-network:network/node/node-root/openconfig-acl:acl/acl-sets/acl-set/config",
+            "nsp-model:identifier": "/nsp-network:network/node[node-id='92.168.98.156']/node-root/openconfig-acl:acl/acl-sets/acl-set[name='2'][type='openconfig-acl:ACL_IPV6']/config",
+            "nsp-model:network-id": "92.168.98.156",
+            "nsp-model:creation-time": "2023-11-13T12:42:58.838Z",
+            "nsp-model:last-modified-time": "2023-11-13T12:42:58.838Z",
+            "nsp-model:sources": [
+              "fdn:realm:sam:network:92.168.98.156:IPv6 Filter:2"
+            ]
+          },
+          "name": "2",
+          "type": "openconfig-acl:ACL_IPV6",
+          "description": "IPv6Filter"
+        },
+        "state": {
+          "@": {
+            "nsp-model:schema-nodeid": "/nsp-network:network/node/node-root/openconfig-acl:acl/acl-sets/acl-set/state",
+            "nsp-model:identifier": "/nsp-network:network/node[node-id='92.168.98.156']/node-root/openconfig-acl:acl/acl-sets/acl-set[name='2'][type='openconfig-acl:ACL_IPV6']/state",
+            "nsp-model:network-id": "92.168.98.156",
+            "nsp-model:creation-time": "2023-11-13T12:42:58.838Z",
+            "nsp-model:last-modified-time": "2023-11-13T12:42:58.838Z",
+            "nsp-model:sources": [
+              "fdn:realm:sam:network:92.168.98.156:IPv6 Filter:2"
+            ]
+          },
+          "name": "2",
+          "type": "openconfig-acl:ACL_IPV6",
+          "description": "IPv6Filter"
+        },
+        "acl-entries": {
+          "@": {
+            "nsp-model:schema-nodeid": "/nsp-network:network/node/node-root/openconfig-acl:acl/acl-sets/acl-set/acl-entries",
+            "nsp-model:identifier": "/nsp-network:network/node[node-id='92.168.98.156']/node-root/openconfig-acl:acl/acl-sets/acl-set[name='2'][type='openconfig-acl:ACL_IPV6']/acl-entries",
+            "nsp-model:network-id": "92.168.98.156"
+          },
+          "acl-entry": [
+            {
+              "@": {
+                "nsp-model:schema-nodeid": "/nsp-network:network/node/node-root/openconfig-acl:acl/acl-sets/acl-set/acl-entries/acl-entry",
+                "nsp-model:identifier": "/nsp-network:network/node[node-id='92.168.98.156']/node-root/openconfig-acl:acl/acl-sets/acl-set[name='2'][type='openconfig-acl:ACL_IPV6']/acl-entries/acl-entry[sequence-id='2']",
+                "nsp-model:network-id": "92.168.98.156",
+                "nsp-model:creation-time": "2023-11-13T12:44:30.822Z",
+                "nsp-model:last-modified-time": "2023-11-13T12:44:30.822Z",
+                "nsp-model:sources": [
+                  "fdn:realm:sam:network:92.168.98.156:IPv6 Filter:2:entry-2"
+                ]
+              },
+              "sequence-id": 2,
+              "config": {
+                "@": {
+                  "nsp-model:schema-nodeid": "/nsp-network:network/node/node-root/openconfig-acl:acl/acl-sets/acl-set/acl-entries/acl-entry/config",
+                  "nsp-model:identifier": "/nsp-network:network/node[node-id='92.168.98.156']/node-root/openconfig-acl:acl/acl-sets/acl-set[name='2'][type='openconfig-acl:ACL_IPV6']/acl-entries/acl-entry[sequence-id='2']/config",
+                  "nsp-model:network-id": "92.168.98.156",
+                  "nsp-model:creation-time": "2023-11-13T12:44:30.822Z",
+                  "nsp-model:last-modified-time": "2023-11-13T12:44:30.822Z",
+                  "nsp-model:sources": [
+                    "fdn:realm:sam:network:92.168.98.156:IPv6 Filter:2:entry-2"
+                  ]
+                },
+                "sequence-id": 2,
+                "description": "IPv6Entry"
+              },
+              "state": {
+                "@": {
+                  "nsp-model:schema-nodeid": "/nsp-network:network/node/node-root/openconfig-acl:acl/acl-sets/acl-set/acl-entries/acl-entry/state",
+                  "nsp-model:identifier": "/nsp-network:network/node[node-id='92.168.98.156']/node-root/openconfig-acl:acl/acl-sets/acl-set[name='2'][type='openconfig-acl:ACL_IPV6']/acl-entries/acl-entry[sequence-id='2']/state",
+                  "nsp-model:network-id": "92.168.98.156",
+                  "nsp-model:creation-time": "2023-11-13T12:44:30.822Z",
+                  "nsp-model:last-modified-time": "2023-11-13T12:44:30.822Z",
+                  "nsp-model:sources": [
+                    "fdn:realm:sam:network:92.168.98.156:IPv6 Filter:2:entry-2"
+                  ]
+                },
+                "sequence-id": 2,
+                "description": "IPv6Entry"
+              },
+              "actions": {
+                "@": {
+                  "nsp-model:schema-nodeid": "/nsp-network:network/node/node-root/openconfig-acl:acl/acl-sets/acl-set/acl-entries/acl-entry/actions",
+                  "nsp-model:identifier": "/nsp-network:network/node[node-id='92.168.98.156']/node-root/openconfig-acl:acl/acl-sets/acl-set[name='2'][type='openconfig-acl:ACL_IPV6']/acl-entries/acl-entry[sequence-id='2']/actions",
+                  "nsp-model:network-id": "92.168.98.156",
+                  "nsp-model:sources": [
+                    "fdn:realm:sam:network:92.168.98.156:IPv6 Filter:2:entry-2"
+                  ]
+                },
+                "state": {
+                  "@": {
+                    "nsp-model:schema-nodeid": "/nsp-network:network/node/node-root/openconfig-acl:acl/acl-sets/acl-set/acl-entries/acl-entry/actions/state",
+                    "nsp-model:identifier": "/nsp-network:network/node[node-id='92.168.98.156']/node-root/openconfig-acl:acl/acl-sets/acl-set[name='2'][type='openconfig-acl:ACL_IPV6']/acl-entries/acl-entry[sequence-id='2']/actions/state",
+                    "nsp-model:network-id": "92.168.98.156",
+                    "nsp-model:creation-time": "2023-11-13T12:44:30.822Z",
+                    "nsp-model:last-modified-time": "2023-11-13T12:44:30.822Z",
+                    "nsp-model:sources": [
+                      "fdn:realm:sam:network:92.168.98.156:IPv6 Filter:2:entry-2"
+                    ]
+                  },
+                  "forwarding-action": "openconfig-acl:DROP"
+                },
+                "config": {
+                  "@": {
+                    "nsp-model:schema-nodeid": "/nsp-network:network/node/node-root/openconfig-acl:acl/acl-sets/acl-set/acl-entries/acl-entry/actions/config",
+                    "nsp-model:identifier": "/nsp-network:network/node[node-id='92.168.98.156']/node-root/openconfig-acl:acl/acl-sets/acl-set[name='2'][type='openconfig-acl:ACL_IPV6']/acl-entries/acl-entry[sequence-id='2']/actions/config",
+                    "nsp-model:network-id": "92.168.98.156",
+                    "nsp-model:creation-time": "2023-11-13T12:44:30.822Z",
+                    "nsp-model:last-modified-time": "2023-11-13T12:44:30.822Z",
+                    "nsp-model:sources": [
+                      "fdn:realm:sam:network:92.168.98.156:IPv6 Filter:2:entry-2"
+                    ]
+                  },
+                  "forwarding-action": "openconfig-acl:DROP"
+                }
+              },
+              "ipv6": {
+                "@": {
+                  "nsp-model:schema-nodeid": "/nsp-network:network/node/node-root/openconfig-acl:acl/acl-sets/acl-set/acl-entries/acl-entry/ipv6",
+                  "nsp-model:identifier": "/nsp-network:network/node[node-id='92.168.98.156']/node-root/openconfig-acl:acl/acl-sets/acl-set[name='2'][type='openconfig-acl:ACL_IPV6']/acl-entries/acl-entry[sequence-id='2']/ipv6",
+                  "nsp-model:network-id": "92.168.98.156",
+                  "nsp-model:sources": [
+                    "fdn:realm:sam:network:92.168.98.156:IPv6 Filter:2:entry-2"
+                  ]
+                },
+                "state": {
+                  "@": {
+                    "nsp-model:schema-nodeid": "/nsp-network:network/node/node-root/openconfig-acl:acl/acl-sets/acl-set/acl-entries/acl-entry/ipv6/state",
+                    "nsp-model:identifier": "/nsp-network:network/node[node-id='92.168.98.156']/node-root/openconfig-acl:acl/acl-sets/acl-set[name='2'][type='openconfig-acl:ACL_IPV6']/acl-entries/acl-entry[sequence-id='2']/ipv6/state",
+                    "nsp-model:network-id": "92.168.98.156",
+                    "nsp-model:creation-time": "2023-11-13T12:44:30.822Z",
+                    "nsp-model:last-modified-time": "2023-11-13T12:44:30.822Z",
+                    "nsp-model:sources": [
+                      "fdn:realm:sam:network:92.168.98.156:IPv6 Filter:2:entry-2"
+                    ]
+                  },
+                  "source-address": "1:0:0:0:0:0:0:1/64",
+                  "destination-address": "2:0:0:0:0:0:0:2/64",
+                  "dscp": 0,
+                  "protocol": 41
+                },
+                "config": {
+                  "@": {
+                    "nsp-model:schema-nodeid": "/nsp-network:network/node/node-root/openconfig-acl:acl/acl-sets/acl-set/acl-entries/acl-entry/ipv6/config",
+                    "nsp-model:identifier": "/nsp-network:network/node[node-id='92.168.98.156']/node-root/openconfig-acl:acl/acl-sets/acl-set[name='2'][type='openconfig-acl:ACL_IPV6']/acl-entries/acl-entry[sequence-id='2']/ipv6/config",
+                    "nsp-model:network-id": "92.168.98.156",
+                    "nsp-model:creation-time": "2023-11-13T12:44:30.822Z",
+                    "nsp-model:last-modified-time": "2023-11-13T12:44:30.822Z",
+                    "nsp-model:sources": [
+                      "fdn:realm:sam:network:92.168.98.156:IPv6 Filter:2:entry-2"
+                    ]
+                  },
+                  "source-address": "1:0:0:0:0:0:0:1/64",
+                  "destination-address": "2:0:0:0:0:0:0:2/64",
+                  "dscp": 0,
+                  "protocol": 41
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "@": {
+          "nsp-model:schema-nodeid": "/nsp-network:network/node/node-root/openconfig-acl:acl/acl-sets/acl-set",
+          "nsp-model:identifier": "/nsp-network:network/node[node-id='92.168.98.156']/node-root/openconfig-acl:acl/acl-sets/acl-set[name='1'][type='openconfig-acl:ACL_IPV4']",
+          "nsp-model:network-id": "92.168.98.156",
+          "nsp-model:creation-time": "2023-11-13T12:43:00.783Z",
+          "nsp-model:last-modified-time": "2023-11-13T12:43:00.783Z",
+          "nsp-model:sources": [
+            "fdn:realm:sam:network:92.168.98.156:IP Filter:1"
+          ]
+        },
+        "name": "1",
+        "type": "openconfig-acl:ACL_IPV4",
+        "config": {
+          "@": {
+            "nsp-model:schema-nodeid": "/nsp-network:network/node/node-root/openconfig-acl:acl/acl-sets/acl-set/config",
+            "nsp-model:identifier": "/nsp-network:network/node[node-id='92.168.98.156']/node-root/openconfig-acl:acl/acl-sets/acl-set[name='1'][type='openconfig-acl:ACL_IPV4']/config",
+            "nsp-model:network-id": "92.168.98.156",
+            "nsp-model:creation-time": "2023-11-13T12:43:00.783Z",
+            "nsp-model:last-modified-time": "2023-11-13T12:43:00.783Z",
+            "nsp-model:sources": [
+              "fdn:realm:sam:network:92.168.98.156:IP Filter:1"
+            ]
+          },
+          "name": "1",
+          "type": "openconfig-acl:ACL_IPV4",
+          "description": "IPv4Filter"
+        },
+        "state": {
+          "@": {
+            "nsp-model:schema-nodeid": "/nsp-network:network/node/node-root/openconfig-acl:acl/acl-sets/acl-set/state",
+            "nsp-model:identifier": "/nsp-network:network/node[node-id='92.168.98.156']/node-root/openconfig-acl:acl/acl-sets/acl-set[name='1'][type='openconfig-acl:ACL_IPV4']/state",
+            "nsp-model:network-id": "92.168.98.156",
+            "nsp-model:creation-time": "2023-11-13T12:43:00.783Z",
+            "nsp-model:last-modified-time": "2023-11-13T12:43:00.783Z",
+            "nsp-model:sources": [
+              "fdn:realm:sam:network:92.168.98.156:IP Filter:1"
+            ]
+          },
+          "name": "1",
+          "type": "openconfig-acl:ACL_IPV4",
+          "description": "IPv4Filter"
+        },
+        "acl-entries": {
+          "@": {
+            "nsp-model:schema-nodeid": "/nsp-network:network/node/node-root/openconfig-acl:acl/acl-sets/acl-set/acl-entries",
+            "nsp-model:identifier": "/nsp-network:network/node[node-id='92.168.98.156']/node-root/openconfig-acl:acl/acl-sets/acl-set[name='1'][type='openconfig-acl:ACL_IPV4']/acl-entries",
+            "nsp-model:network-id": "92.168.98.156"
+          },
+          "acl-entry": [
+            {
+              "@": {
+                "nsp-model:schema-nodeid": "/nsp-network:network/node/node-root/openconfig-acl:acl/acl-sets/acl-set/acl-entries/acl-entry",
+                "nsp-model:identifier": "/nsp-network:network/node[node-id='92.168.98.156']/node-root/openconfig-acl:acl/acl-sets/acl-set[name='1'][type='openconfig-acl:ACL_IPV4']/acl-entries/acl-entry[sequence-id='1']",
+                "nsp-model:network-id": "92.168.98.156",
+                "nsp-model:creation-time": "2023-11-13T12:44:30.822Z",
+                "nsp-model:last-modified-time": "2023-11-13T12:44:30.822Z",
+                "nsp-model:sources": [
+                  "fdn:realm:sam:network:92.168.98.156:IP Filter:1:entry-1"
+                ]
+              },
+              "sequence-id": 1,
+              "config": {
+                "@": {
+                  "nsp-model:schema-nodeid": "/nsp-network:network/node/node-root/openconfig-acl:acl/acl-sets/acl-set/acl-entries/acl-entry/config",
+                  "nsp-model:identifier": "/nsp-network:network/node[node-id='92.168.98.156']/node-root/openconfig-acl:acl/acl-sets/acl-set[name='1'][type='openconfig-acl:ACL_IPV4']/acl-entries/acl-entry[sequence-id='1']/config",
+                  "nsp-model:network-id": "92.168.98.156",
+                  "nsp-model:creation-time": "2023-11-13T12:44:30.822Z",
+                  "nsp-model:last-modified-time": "2023-11-13T12:44:30.822Z",
+                  "nsp-model:sources": [
+                    "fdn:realm:sam:network:92.168.98.156:IP Filter:1:entry-1"
+                  ]
+                },
+                "sequence-id": 1,
+                "description": "IPv4Entry"
+              },
+              "state": {
+                "@": {
+                  "nsp-model:schema-nodeid": "/nsp-network:network/node/node-root/openconfig-acl:acl/acl-sets/acl-set/acl-entries/acl-entry/state",
+                  "nsp-model:identifier": "/nsp-network:network/node[node-id='92.168.98.156']/node-root/openconfig-acl:acl/acl-sets/acl-set[name='1'][type='openconfig-acl:ACL_IPV4']/acl-entries/acl-entry[sequence-id='1']/state",
+                  "nsp-model:network-id": "92.168.98.156",
+                  "nsp-model:creation-time": "2023-11-13T12:44:30.822Z",
+                  "nsp-model:last-modified-time": "2023-11-13T12:44:30.822Z",
+                  "nsp-model:sources": [
+                    "fdn:realm:sam:network:92.168.98.156:IP Filter:1:entry-1"
+                  ]
+                },
+                "sequence-id": 1,
+                "description": "IPv4Entry"
+              },
+              "actions": {
+                "@": {
+                  "nsp-model:schema-nodeid": "/nsp-network:network/node/node-root/openconfig-acl:acl/acl-sets/acl-set/acl-entries/acl-entry/actions",
+                  "nsp-model:identifier": "/nsp-network:network/node[node-id='92.168.98.156']/node-root/openconfig-acl:acl/acl-sets/acl-set[name='1'][type='openconfig-acl:ACL_IPV4']/acl-entries/acl-entry[sequence-id='1']/actions",
+                  "nsp-model:network-id": "92.168.98.156",
+                  "nsp-model:sources": [
+                    "fdn:realm:sam:network:92.168.98.156:IP Filter:1:entry-1"
+                  ]
+                },
+                "state": {
+                  "@": {
+                    "nsp-model:schema-nodeid": "/nsp-network:network/node/node-root/openconfig-acl:acl/acl-sets/acl-set/acl-entries/acl-entry/actions/state",
+                    "nsp-model:identifier": "/nsp-network:network/node[node-id='92.168.98.156']/node-root/openconfig-acl:acl/acl-sets/acl-set[name='1'][type='openconfig-acl:ACL_IPV4']/acl-entries/acl-entry[sequence-id='1']/actions/state",
+                    "nsp-model:network-id": "92.168.98.156",
+                    "nsp-model:creation-time": "2023-11-13T12:44:30.822Z",
+                    "nsp-model:last-modified-time": "2023-11-13T12:44:30.822Z",
+                    "nsp-model:sources": [
+                      "fdn:realm:sam:network:92.168.98.156:IP Filter:1:entry-1"
+                    ]
+                  },
+                  "forwarding-action": "nsp-openconfig-acl-augments:FORWARD"
+                },
+                "config": {
+                  "@": {
+                    "nsp-model:schema-nodeid": "/nsp-network:network/node/node-root/openconfig-acl:acl/acl-sets/acl-set/acl-entries/acl-entry/actions/config",
+                    "nsp-model:identifier": "/nsp-network:network/node[node-id='92.168.98.156']/node-root/openconfig-acl:acl/acl-sets/acl-set[name='1'][type='openconfig-acl:ACL_IPV4']/acl-entries/acl-entry[sequence-id='1']/actions/config",
+                    "nsp-model:network-id": "92.168.98.156",
+                    "nsp-model:creation-time": "2023-11-13T12:44:30.822Z",
+                    "nsp-model:last-modified-time": "2023-11-13T12:44:30.822Z",
+                    "nsp-model:sources": [
+                      "fdn:realm:sam:network:92.168.98.156:IP Filter:1:entry-1"
+                    ]
+                  },
+                  "forwarding-action": "nsp-openconfig-acl-augments:FORWARD"
+                }
+              },
+              "ipv4": {
+                "@": {
+                  "nsp-model:schema-nodeid": "/nsp-network:network/node/node-root/openconfig-acl:acl/acl-sets/acl-set/acl-entries/acl-entry/ipv4",
+                  "nsp-model:identifier": "/nsp-network:network/node[node-id='92.168.98.156']/node-root/openconfig-acl:acl/acl-sets/acl-set[name='1'][type='openconfig-acl:ACL_IPV4']/acl-entries/acl-entry[sequence-id='1']/ipv4",
+                  "nsp-model:network-id": "92.168.98.156",
+                  "nsp-model:sources": [
+                    "fdn:realm:sam:network:92.168.98.156:IP Filter:1:entry-1"
+                  ]
+                },
+                "state": {
+                  "@": {
+                    "nsp-model:schema-nodeid": "/nsp-network:network/node/node-root/openconfig-acl:acl/acl-sets/acl-set/acl-entries/acl-entry/ipv4/state",
+                    "nsp-model:identifier": "/nsp-network:network/node[node-id='92.168.98.156']/node-root/openconfig-acl:acl/acl-sets/acl-set[name='1'][type='openconfig-acl:ACL_IPV4']/acl-entries/acl-entry[sequence-id='1']/ipv4/state",
+                    "nsp-model:network-id": "92.168.98.156",
+                    "nsp-model:creation-time": "2023-11-13T12:44:30.822Z",
+                    "nsp-model:last-modified-time": "2023-11-13T12:44:30.822Z",
+                    "nsp-model:sources": [
+                      "fdn:realm:sam:network:92.168.98.156:IP Filter:1:entry-1"
+                    ]
+                  },
+                  "source-address": "1.1.1.1/32",
+                  "destination-address": "2.2.2.2/32",
+                  "dscp": 0,
+                  "protocol": 4
+                },
+                "config": {
+                  "@": {
+                    "nsp-model:schema-nodeid": "/nsp-network:network/node/node-root/openconfig-acl:acl/acl-sets/acl-set/acl-entries/acl-entry/ipv4/config",
+                    "nsp-model:identifier": "/nsp-network:network/node[node-id='92.168.98.156']/node-root/openconfig-acl:acl/acl-sets/acl-set[name='1'][type='openconfig-acl:ACL_IPV4']/acl-entries/acl-entry[sequence-id='1']/ipv4/config",
+                    "nsp-model:network-id": "92.168.98.156",
+                    "nsp-model:creation-time": "2023-11-13T12:44:30.822Z",
+                    "nsp-model:last-modified-time": "2023-11-13T12:44:30.822Z",
+                    "nsp-model:sources": [
+                      "fdn:realm:sam:network:92.168.98.156:IP Filter:1:entry-1"
+                    ]
+                  },
+                  "source-address": "1.1.1.1/32",
+                  "destination-address": "2.2.2.2/32",
+                  "dscp": 0,
+                  "protocol": 4
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "@": {
+          "nsp-model:schema-nodeid": "/nsp-network:network/node/node-root/openconfig-acl:acl/acl-sets/acl-set",
+          "nsp-model:identifier": "/nsp-network:network/node[node-id='92.168.98.156']/node-root/openconfig-acl:acl/acl-sets/acl-set[name='3'][type='openconfig-acl:ACL_L2']",
+          "nsp-model:network-id": "92.168.98.156",
+          "nsp-model:creation-time": "2023-11-13T12:43:00.783Z",
+          "nsp-model:last-modified-time": "2023-11-13T12:43:00.783Z",
+          "nsp-model:sources": [
+            "fdn:realm:sam:network:92.168.98.156:MAC Filter:3"
+          ]
+        },
+        "name": "3",
+        "type": "openconfig-acl:ACL_L2",
+        "config": {
+          "@": {
+            "nsp-model:schema-nodeid": "/nsp-network:network/node/node-root/openconfig-acl:acl/acl-sets/acl-set/config",
+            "nsp-model:identifier": "/nsp-network:network/node[node-id='92.168.98.156']/node-root/openconfig-acl:acl/acl-sets/acl-set[name='3'][type='openconfig-acl:ACL_L2']/config",
+            "nsp-model:network-id": "92.168.98.156",
+            "nsp-model:creation-time": "2023-11-13T12:43:00.783Z",
+            "nsp-model:last-modified-time": "2023-11-13T12:43:00.783Z",
+            "nsp-model:sources": [
+              "fdn:realm:sam:network:92.168.98.156:MAC Filter:3"
+            ]
+          },
+          "name": "3",
+          "type": "openconfig-acl:ACL_L2",
+          "description": "MacFilter"
+        },
+        "state": {
+          "@": {
+            "nsp-model:schema-nodeid": "/nsp-network:network/node/node-root/openconfig-acl:acl/acl-sets/acl-set/state",
+            "nsp-model:identifier": "/nsp-network:network/node[node-id='92.168.98.156']/node-root/openconfig-acl:acl/acl-sets/acl-set[name='3'][type='openconfig-acl:ACL_L2']/state",
+            "nsp-model:network-id": "92.168.98.156",
+            "nsp-model:creation-time": "2023-11-13T12:43:00.783Z",
+            "nsp-model:last-modified-time": "2023-11-13T12:43:00.783Z",
+            "nsp-model:sources": [
+              "fdn:realm:sam:network:92.168.98.156:MAC Filter:3"
+            ]
+          },
+          "name": "3",
+          "type": "openconfig-acl:ACL_L2",
+          "description": "MacFilter"
+        },
+        "acl-entries": {
+          "@": {
+            "nsp-model:schema-nodeid": "/nsp-network:network/node/node-root/openconfig-acl:acl/acl-sets/acl-set/acl-entries",
+            "nsp-model:identifier": "/nsp-network:network/node[node-id='92.168.98.156']/node-root/openconfig-acl:acl/acl-sets/acl-set[name='3'][type='openconfig-acl:ACL_L2']/acl-entries",
+            "nsp-model:network-id": "92.168.98.156"
+          },
+          "acl-entry": [
+            {
+              "@": {
+                "nsp-model:schema-nodeid": "/nsp-network:network/node/node-root/openconfig-acl:acl/acl-sets/acl-set/acl-entries/acl-entry",
+                "nsp-model:identifier": "/nsp-network:network/node[node-id='92.168.98.156']/node-root/openconfig-acl:acl/acl-sets/acl-set[name='3'][type='openconfig-acl:ACL_L2']/acl-entries/acl-entry[sequence-id='3']",
+                "nsp-model:network-id": "92.168.98.156",
+                "nsp-model:creation-time": "2023-11-13T12:43:54.390Z",
+                "nsp-model:last-modified-time": "2023-11-13T12:43:54.390Z",
+                "nsp-model:sources": [
+                  "fdn:realm:sam:network:92.168.98.156:MAC Filter:3:entry-3"
+                ]
+              },
+              "sequence-id": 3,
+              "config": {
+                "@": {
+                  "nsp-model:schema-nodeid": "/nsp-network:network/node/node-root/openconfig-acl:acl/acl-sets/acl-set/acl-entries/acl-entry/config",
+                  "nsp-model:identifier": "/nsp-network:network/node[node-id='92.168.98.156']/node-root/openconfig-acl:acl/acl-sets/acl-set[name='3'][type='openconfig-acl:ACL_L2']/acl-entries/acl-entry[sequence-id='3']/config",
+                  "nsp-model:network-id": "92.168.98.156",
+                  "nsp-model:creation-time": "2023-11-13T12:43:54.390Z",
+                  "nsp-model:last-modified-time": "2023-11-13T12:43:54.390Z",
+                  "nsp-model:sources": [
+                    "fdn:realm:sam:network:92.168.98.156:MAC Filter:3:entry-3"
+                  ]
+                },
+                "sequence-id": 3,
+                "description": "MacEntry"
+              },
+              "state": {
+                "@": {
+                  "nsp-model:schema-nodeid": "/nsp-network:network/node/node-root/openconfig-acl:acl/acl-sets/acl-set/acl-entries/acl-entry/state",
+                  "nsp-model:identifier": "/nsp-network:network/node[node-id='92.168.98.156']/node-root/openconfig-acl:acl/acl-sets/acl-set[name='3'][type='openconfig-acl:ACL_L2']/acl-entries/acl-entry[sequence-id='3']/state",
+                  "nsp-model:network-id": "92.168.98.156",
+                  "nsp-model:creation-time": "2023-11-13T12:43:54.390Z",
+                  "nsp-model:last-modified-time": "2023-11-13T12:43:54.390Z",
+                  "nsp-model:sources": [
+                    "fdn:realm:sam:network:92.168.98.156:MAC Filter:3:entry-3"
+                  ]
+                },
+                "sequence-id": 3,
+                "description": "MacEntry"
+              },
+              "actions": {
+                "@": {
+                  "nsp-model:schema-nodeid": "/nsp-network:network/node/node-root/openconfig-acl:acl/acl-sets/acl-set/acl-entries/acl-entry/actions",
+                  "nsp-model:identifier": "/nsp-network:network/node[node-id='92.168.98.156']/node-root/openconfig-acl:acl/acl-sets/acl-set[name='3'][type='openconfig-acl:ACL_L2']/acl-entries/acl-entry[sequence-id='3']/actions",
+                  "nsp-model:network-id": "92.168.98.156",
+                  "nsp-model:sources": [
+                    "fdn:realm:sam:network:92.168.98.156:MAC Filter:3:entry-3"
+                  ]
+                },
+                "state": {
+                  "@": {
+                    "nsp-model:schema-nodeid": "/nsp-network:network/node/node-root/openconfig-acl:acl/acl-sets/acl-set/acl-entries/acl-entry/actions/state",
+                    "nsp-model:identifier": "/nsp-network:network/node[node-id='92.168.98.156']/node-root/openconfig-acl:acl/acl-sets/acl-set[name='3'][type='openconfig-acl:ACL_L2']/acl-entries/acl-entry[sequence-id='3']/actions/state",
+                    "nsp-model:network-id": "92.168.98.156",
+                    "nsp-model:creation-time": "2023-11-13T12:43:54.390Z",
+                    "nsp-model:last-modified-time": "2023-11-13T12:44:30.922Z",
+                    "nsp-model:sources": [
+                      "fdn:realm:sam:network:92.168.98.156:MAC Filter:3:entry-3"
+                    ]
+                  },
+                  "forwarding-action": "nsp-openconfig-acl-augments:RATE_LIMIT"
+                },
+                "config": {
+                  "@": {
+                    "nsp-model:schema-nodeid": "/nsp-network:network/node/node-root/openconfig-acl:acl/acl-sets/acl-set/acl-entries/acl-entry/actions/config",
+                    "nsp-model:identifier": "/nsp-network:network/node[node-id='92.168.98.156']/node-root/openconfig-acl:acl/acl-sets/acl-set[name='3'][type='openconfig-acl:ACL_L2']/acl-entries/acl-entry[sequence-id='3']/actions/config",
+                    "nsp-model:network-id": "92.168.98.156",
+                    "nsp-model:creation-time": "2023-11-13T12:43:54.390Z",
+                    "nsp-model:last-modified-time": "2023-11-13T12:44:30.915Z",
+                    "nsp-model:sources": [
+                      "fdn:realm:sam:network:92.168.98.156:MAC Filter:3:entry-3"
+                    ]
+                  },
+                  "forwarding-action": "nsp-openconfig-acl-augments:RATE_LIMIT"
+                }
+              },
+              "l2": {
+                "@": {
+                  "nsp-model:schema-nodeid": "/nsp-network:network/node/node-root/openconfig-acl:acl/acl-sets/acl-set/acl-entries/acl-entry/l2",
+                  "nsp-model:identifier": "/nsp-network:network/node[node-id='92.168.98.156']/node-root/openconfig-acl:acl/acl-sets/acl-set[name='3'][type='openconfig-acl:ACL_L2']/acl-entries/acl-entry[sequence-id='3']/l2",
+                  "nsp-model:network-id": "92.168.98.156",
+                  "nsp-model:sources": [
+                    "fdn:realm:sam:network:92.168.98.156:MAC Filter:3:entry-3"
+                  ]
+                },
+                "state": {
+                  "@": {
+                    "nsp-model:schema-nodeid": "/nsp-network:network/node/node-root/openconfig-acl:acl/acl-sets/acl-set/acl-entries/acl-entry/l2/state",
+                    "nsp-model:identifier": "/nsp-network:network/node[node-id='92.168.98.156']/node-root/openconfig-acl:acl/acl-sets/acl-set[name='3'][type='openconfig-acl:ACL_L2']/acl-entries/acl-entry[sequence-id='3']/l2/state",
+                    "nsp-model:network-id": "92.168.98.156",
+                    "nsp-model:creation-time": "2023-11-13T12:43:54.390Z",
+                    "nsp-model:last-modified-time": "2023-11-13T12:43:54.390Z",
+                    "nsp-model:sources": [
+                      "fdn:realm:sam:network:92.168.98.156:MAC Filter:3:entry-3"
+                    ]
+                  },
+                  "source-mac": "10:10:10:10:10:10",
+                  "source-mac-mask": "FF:FF:FF:FF:FF:FF",
+                  "destination-mac": "20:20:20:20:20:20",
+                  "destination-mac-mask": "FF:FF:FF:FF:FF:FF",
+                  "ethertype": 2000
+                },
+                "config": {
+                  "@": {
+                    "nsp-model:schema-nodeid": "/nsp-network:network/node/node-root/openconfig-acl:acl/acl-sets/acl-set/acl-entries/acl-entry/l2/config",
+                    "nsp-model:identifier": "/nsp-network:network/node[node-id='92.168.98.156']/node-root/openconfig-acl:acl/acl-sets/acl-set[name='3'][type='openconfig-acl:ACL_L2']/acl-entries/acl-entry[sequence-id='3']/l2/config",
+                    "nsp-model:network-id": "92.168.98.156",
+                    "nsp-model:creation-time": "2023-11-13T12:43:54.390Z",
+                    "nsp-model:last-modified-time": "2023-11-13T12:43:54.390Z",
+                    "nsp-model:sources": [
+                      "fdn:realm:sam:network:92.168.98.156:MAC Filter:3:entry-3"
+                    ]
+                  },
+                  "source-mac": "10:10:10:10:10:10",
+                  "source-mac-mask": "FF:FF:FF:FF:FF:FF",
+                  "destination-mac": "20:20:20:20:20:20",
+                  "destination-mac-mask": "FF:FF:FF:FF:FF:FF",
+                  "ethertype": 2000
+                }
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "end-index": 2,
+    "start-index": 0,
+    "total-count": 3
+  },
+  "statusCode": "OK"
+}

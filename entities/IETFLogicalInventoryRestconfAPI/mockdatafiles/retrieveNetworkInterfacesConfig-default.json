@@ -1,0 +1,14 @@
+{
+  "openconfig-interfaces:config": {
+    "@": {
+      "nsp-model:schema-nodeid": "/ietf-network:networks/network/node/ne-management-nm:commissioning-configs/ne-interfaces/logical-interfaces/interfaces-root/openconfig-interfaces:interfaces/interface/config",
+      "nsp-model:identifier": "/ietf-network:networks/network[network-id='1']/node[node-id='92.168.96.58']/ne-management-nm:commissioning-configs/ne-interfaces/logical-interfaces/interfaces-root/openconfig-interfaces:interfaces/interface[name='network-interface']/config",
+      "nsp-model:network-id": "92.168.96.58",
+      "nsp-model:sources": [
+        "fdn:app:mdm-ami:{\"_NE_\":\"92.168.96.58\",\"classId\":\"openconfig-interfaces:/interfaces/interface/config\",\"interface_name\":\"network-interface\"}"
+      ]
+    },
+    "name": "network-interface",
+    "type": "iana-if-type:propVirtual"
+  }
+}

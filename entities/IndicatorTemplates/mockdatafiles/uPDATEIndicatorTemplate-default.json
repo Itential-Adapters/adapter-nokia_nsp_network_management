@@ -1,0 +1,48 @@
+{
+  "result": "updated",
+  "replaced": {
+    "thresholds": [
+      {
+        "threshold-value-decimal": "60",
+        "direction": "increasing",
+        "actions": [
+          {
+            "name": "template_threshold_60_increasing_kafka_action",
+            "type": "kafka",
+            "kafka": {
+              "topic-name": "nsp-act-action-event",
+              "topic-content": "Temperature is a rising on 10.10.10.4"
+            }
+          },
+          {
+            "name": "template_threshold_60_increasing_alarm_action",
+            "type": "alarm",
+            "alarm": {
+              "severity": "critical"
+            }
+          },
+          {
+            "name": "template_threshold_60_increasing_email_action",
+            "type": "email",
+            "email": {
+              "email-address": "userid@user.com",
+              "email-subject": "Hmmmmm, It's getting hot 10.10.10.4",
+              "email-content": "Your temperature is rising 10.10.10.4."
+            }
+          }
+        ]
+      }
+    ],
+    "counters": [
+      {
+        "name": "temperature",
+        "function": "avg"
+      }
+    ],
+    "telemetry-type": "telemetry:/base/hardware/temperature",
+    "name": "MaxTempNfmp10.10.10.4Template",
+    "units-name": "deg C",
+    "description": "Update Indicator template using PUT \"max\" temp on '10.10.10.4' template",
+    "formula": "max({temperature_avg})"
+  }
+}

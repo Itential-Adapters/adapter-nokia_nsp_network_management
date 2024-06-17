@@ -1,0 +1,9 @@
+{
+  "ietf-sap-ntw:sap-network": {
+    "service-type": [
+      "ietf-vpn-common:vpws",
+      "ietf-vpn-common:vpls",
+      "ietf-vpn-common:l3vpn"
+    ]
+  }
+}

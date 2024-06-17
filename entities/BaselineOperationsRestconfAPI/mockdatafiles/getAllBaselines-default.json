@@ -1,0 +1,44 @@
+{
+  "nsp-rt-analytics:baseline": [
+    {
+      "@": {
+        "nsp-model:schema-nodeid": "/nsp-rt-analytics:baselines/baseline",
+        "nsp-model:identifier": "/nsp-rt-analytics:baselines/baseline[type='gauge'][resource='/network-device-mgr:network-devices/network-device[name='1.1.1.1']/root/nokia-nsp-source:fdn[id='fdn:realm:sam:network:1.1.1.1:shelf-1:systemStatsHolder']'][counter-group='telemetry:/base/system-info/system'][counter='cpu-usage'][period='pt5m'][window-duration='pt1m']"
+      },
+      "period": "pt5m",
+      "resource": "/network-device-mgr:network-devices/network-device[name='1.1.1.1']/root/nokia-nsp-source:fdn[id='fdn:realm:sam:network:1.1.1.1:shelf-1:systemStatsHolder']",
+      "description": "restconf_baseline_nodeA",
+      "counter": "cpu-usage",
+      "admin-state": "up",
+      "type": "gauge",
+      "window-duration": "pt1m",
+      "update-status": "active",
+      "use-bit-rate": false,
+      "name": "1.1.1.1, system",
+      "units-name": "",
+      "subscriptionid": "test-sub-baseline-nfmp",
+      "collection-interval": 60,
+      "counter-group": "telemetry:/base/system-info/system"
+    },
+    {
+      "@": {
+        "nsp-model:schema-nodeid": "/nsp-rt-analytics:baselines/baseline",
+        "nsp-model:identifier": "/nsp-rt-analytics:baselines/baseline[type='counter'][resource='/network-device-mgr:network-devices/network-device[name='2.2.2.2']/root/nokia-state:state/port[port-id='1/1/1']'][counter-group='telemetry:/base/interfaces/interface'][counter='received-octets'][period='pt5m'][window-duration='pt1m']"
+      },
+      "period": "pt5m",
+      "resource": "/network-device-mgr:network-devices/network-device[name='2.2.2.2']/root/nokia-state:state/port[port-id='1/1/1']",
+      "description": "restconf_baseline_nodeB",
+      "counter": "received-octets",
+      "admin-state": "up",
+      "type": "counter",
+      "window-duration": "pt1m",
+      "update-status": "active",
+      "use-bit-rate": false,
+      "name": "2.2.2.2, 1/1/1",
+      "units-name": "octets",
+      "subscriptionid": "test-sub-baseline-mdm",
+      "collection-interval": 60,
+      "counter-group": "telemetry:/base/interfaces/interface"
+    }
+  ]
+}

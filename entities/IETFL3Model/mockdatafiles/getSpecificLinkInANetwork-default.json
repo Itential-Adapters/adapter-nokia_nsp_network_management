@@ -1,0 +1,67 @@
+{
+  "ietf-network-topology:link": [
+    {
+      "link-id": "11.50.150.31:11.30.1.2--11.50.150.30:11.30.1.1--l2",
+      "source": {
+        "source-node": "/ietf-network:networks/network[network-id='TopologyId-200:100:0-isis']/node[node-id='11.50.150.31']",
+        "source-tp": "/ietf-network:networks/network[network-id='TopologyId-200:100:0-isis']/node[node-id='11.50.150.31']/ietf-network-topology:termination-point[tp-id='11.30.1.2']"
+      },
+      "destination": {
+        "dest-node": "/ietf-network:networks/network[network-id='TopologyId-200:100:0-isis']/node[node-id='11.50.150.30']",
+        "dest-tp": "/ietf-network:networks/network[network-id='TopologyId-200:100:0-isis']/node[node-id='11.50.150.30']/ietf-network-topology:termination-point[tp-id='11.30.1.1']"
+      },
+      "ietf-l3-unicast-topology:l3-link-attributes": {
+        "name": "0110.5015.0031::0110.5015.0030=>11.30.1.2-ISIS_L2-PointToPoint-Original",
+        "metric1": 10,
+        "metric2": 10,
+        "flag": [
+          "nsp-ietf-network-topology:igp"
+        ],
+        "nsp-ietf-network-topology:nsp-attributes": [],
+        "ietf-l3-te-topology:l3-te-link-attributes": {
+          "link-ref": "/ietf-network:networks/network[network-id='TE-TopologyId-200:100:0-isis']/ietf-network-topology:link[link-id='11.50.150.31:11.30.1.2--11.50.150.30:11.30.1.1--l2']",
+          "network-ref": "/ietf-network:networks/network[network-id='TE-TopologyId-200:100:0-isis']"
+        },
+        "ietf-sr-mpls-topology:sr-mpls": {
+          "sids": {
+            "sid": [
+              {
+                "sid": 524287,
+                "address-family": "ipv4",
+                "is-eligible-for-protection": false,
+                "is-local": true,
+                "is-part-of-set": false,
+                "is-persistent": false,
+                "is-on-lan": false,
+                "weight": 0,
+                "value-type": "absolute"
+              },
+              {
+                "sid": 500002,
+                "address-family": "ipv4",
+                "is-eligible-for-protection": false,
+                "is-local": true,
+                "is-part-of-set": true,
+                "is-persistent": true,
+                "is-on-lan": false,
+                "weight": 0,
+                "value-type": "absolute"
+              },
+              {
+                "sid": 500004,
+                "address-family": "ipv4",
+                "is-eligible-for-protection": false,
+                "is-local": true,
+                "is-part-of-set": true,
+                "is-persistent": true,
+                "is-on-lan": false,
+                "weight": 0,
+                "value-type": "absolute"
+              }
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

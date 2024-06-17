@@ -1,0 +1,47 @@
+{
+  "nsp-resource-pool:ip-resource-pools": [
+    {
+      "@": {
+        "nsp-model:schema-nodeid": "/nsp-resource-pool:resource-pools/ip-resource-pools",
+        "nsp-model:identifier": "/nsp-resource-pool:resource-pools/ip-resource-pools[name='ip-2'][scope='net-1']",
+        "nsp-model:creation-time": "2023-11-28T16:23:07.535Z",
+        "nsp-model:last-modified-time": "2023-11-28T16:23:07.535Z"
+      },
+      "name": "ip-2",
+      "scope": "net-1",
+      "type": "nsp-resource-pool-utils:ip-address-prefix",
+      "description": "this is a Hosts IP pool",
+      "delete-when-empty": false,
+      "ip-pool-spec": {
+        "@": {
+          "nsp-model:schema-nodeid": "/nsp-resource-pool:resource-pools/ip-resource-pools/ip-pool-spec",
+          "nsp-model:identifier": "/nsp-resource-pool:resource-pools/ip-resource-pools[name='ip-2'][scope='net-1']/ip-pool-spec"
+        },
+        "ip-masks": [
+          {
+            "@": {
+              "nsp-model:schema-nodeid": "/nsp-resource-pool:resource-pools/ip-resource-pools/ip-pool-spec/ip-masks",
+              "nsp-model:identifier": "/nsp-resource-pool:resource-pools/ip-resource-pools[name='ip-2'][scope='net-1']/ip-pool-spec/ip-masks[ip-mask='10.0.0.28/31']",
+              "nsp-model:creation-time": "2023-11-28T16:23:07.535Z",
+              "nsp-model:last-modified-time": "2023-11-28T16:23:07.535Z"
+            },
+            "ip-mask": "10.0.0.28/31",
+            "purposes": [
+              "default"
+            ]
+          }
+        ]
+      },
+      "statistics": {
+        "@": {
+          "nsp-model:schema-nodeid": "/nsp-resource-pool:resource-pools/ip-resource-pools/statistics",
+          "nsp-model:identifier": "/nsp-resource-pool:resource-pools/ip-resource-pools[name='ip-2'][scope='net-1']/statistics",
+          "nsp-model:creation-time": "2023-11-28T16:23:30.982Z",
+          "nsp-model:last-modified-time": "2023-11-28T16:23:30.982Z"
+        },
+        "capacity": "2",
+        "usage": "0.00 %"
+      }
+    }
+  ]
+}

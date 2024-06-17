@@ -1,0 +1,9 @@
+{
+  "nsp-icm:audit-details": {
+    "@": {
+      "nsp-model:schema-nodeid": "/nsp-network:network/node/node-root/nsp-icm:icm/deployments/deployment/audit-details",
+      "nsp-model:identifier": "/nsp-network:network/node[node-id='72.20.20.2']/node-root/nsp-icm:icm/deployments/deployment[template-name='Gold Port'][target='/nsp-equipment:network/network-element[ne-id='72.20.20.2']/hardware-component/port[component-id='shelf=1/cardSlot=1/card=1/mdaSlot=2/mda=2/port=1/2/3']'][target-identifier-value='1/2/3']/audit-details",
+      "nsp-model:network-id": "72.20.20.2"
+    }
+  }
+}

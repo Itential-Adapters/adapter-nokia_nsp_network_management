@@ -1,0 +1,41 @@
+{
+  "ietf-sr-mpls-topology:sr-mpls": {
+    "sids": {
+      "sid": [
+        {
+          "sid": 524287,
+          "address-family": "ipv4",
+          "is-eligible-for-protection": false,
+          "is-local": true,
+          "is-part-of-set": false,
+          "is-persistent": false,
+          "is-on-lan": false,
+          "weight": 0,
+          "value-type": "absolute"
+        },
+        {
+          "sid": 500002,
+          "address-family": "ipv4",
+          "is-eligible-for-protection": false,
+          "is-local": true,
+          "is-part-of-set": true,
+          "is-persistent": true,
+          "is-on-lan": false,
+          "weight": 0,
+          "value-type": "absolute"
+        },
+        {
+          "sid": 500004,
+          "address-family": "ipv4",
+          "is-eligible-for-protection": false,
+          "is-local": true,
+          "is-part-of-set": true,
+          "is-persistent": true,
+          "is-on-lan": false,
+          "weight": 0,
+          "value-type": "absolute"
+        }
+      ]
+    }
+  }
+}

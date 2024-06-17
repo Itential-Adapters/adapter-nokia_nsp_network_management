@@ -1,0 +1,15 @@
+{
+  "nsp-icm:output": {
+    "auditing-count": 0,
+    "misaligned-count": 1,
+    "associate-failed-count": 0,
+    "aligned-count": 4,
+    "migrating-count": 0,
+    "total-count": 15,
+    "aligning-count": 0,
+    "deployment-failed-count": 0,
+    "saved-count": 10,
+    "not-started-count": 0
+  },
+  "statusCode": "OK"
+}

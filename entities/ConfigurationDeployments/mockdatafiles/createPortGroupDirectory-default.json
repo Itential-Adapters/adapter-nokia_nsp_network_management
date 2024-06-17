@@ -1,0 +1,16 @@
+{
+  "response": {
+    "status": 0,
+    "startRow": 0,
+    "endRow": 0,
+    "totalRows": 1,
+    "data": {
+      "fdn": "fdn:model:group:EquipmentView:718392",
+      "name": "GroupDir1",
+      "description": "GroupDir1",
+      "category": "port",
+      "creationType": "manual",
+      "groups": []
+    }
+  }
+}

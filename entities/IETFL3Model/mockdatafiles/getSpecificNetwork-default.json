@@ -1,0 +1,498 @@
+{
+  "ietf-network:network": [
+    {
+      "network-id": "TopologyId-200:100:0-isis",
+      "network-types": {
+        "ietf-l3-unicast-topology:l3-unicast-topology": {
+          "ietf-sr-mpls-topology:sr-mpls": {}
+        }
+      },
+      "supporting-network": [
+        {
+          "network-ref": "/ietf-network:networks/network[network-id='L2Topology']"
+        }
+      ],
+      "node": [
+        {
+          "node-id": "11.50.150.31",
+          "ietf-network-topology:termination-point": [
+            {
+              "tp-id": "11.30.1.2",
+              "ietf-l3-unicast-topology:l3-termination-point-attributes": {
+                "ip-address": [
+                  "11.30.1.2"
+                ],
+                "ietf-l3-te-topology:l3-te-tp-attributes": {
+                  "tp-ref": "/ietf-network:networks/network[network-id='TE-TopologyId-200:100:0-isis']/node[node-id='11.50.150.31']/ietf-network-topology:termination-point[tp-id='11.30.1.2']",
+                  "node-ref": "/ietf-network:networks/network[network-id='TE-TopologyId-200:100:0-isis']/node[node-id='11.50.150.31']",
+                  "network-ref": "/ietf-network:networks/network[network-id='TE-TopologyId-200:100:0-isis']"
+                }
+              }
+            }
+          ],
+          "ietf-l3-unicast-topology:l3-node-attributes": {
+            "name": "11.50.150.31",
+            "flag": [
+              "nsp-ietf-network-topology:routing-instance"
+            ],
+            "router-id": [
+              "11.50.150.31"
+            ],
+            "nsp-ietf-network-topology:nsp-attributes": [],
+            "prefix": [
+              {
+                "prefix": "11.50.150.31/32",
+                "metric": 0
+              }
+            ],
+            "ietf-l3-te-topology:l3-te-node-attributes": {
+              "node-ref": "/ietf-network:networks/network[network-id='TE-TopologyId-200:100:0-isis']/node[node-id='11.50.150.31']",
+              "network-ref": "/ietf-network:networks/network[network-id='TE-TopologyId-200:100:0-isis']"
+            },
+            "ietf-sr-mpls-topology:sr-mpls": {
+              "msds": {
+                "node-msd": [
+                  {
+                    "msd-type": "ietf-sr-mpls-topology:msd-mpls",
+                    "msd-value": 3
+                  },
+                  {
+                    "msd-type": "ietf-sr-mpls-topology:msd-erld",
+                    "msd-value": 3
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "node-id": "11.50.150.30",
+          "ietf-network-topology:termination-point": [
+            {
+              "tp-id": "11.30.1.1",
+              "ietf-l3-unicast-topology:l3-termination-point-attributes": {
+                "ip-address": [
+                  "11.30.1.1"
+                ],
+                "ietf-l3-te-topology:l3-te-tp-attributes": {
+                  "tp-ref": "/ietf-network:networks/network[network-id='TE-TopologyId-200:100:0-isis']/node[node-id='11.50.150.30']/ietf-network-topology:termination-point[tp-id='11.30.1.1']",
+                  "node-ref": "/ietf-network:networks/network[network-id='TE-TopologyId-200:100:0-isis']/node[node-id='11.50.150.30']",
+                  "network-ref": "/ietf-network:networks/network[network-id='TE-TopologyId-200:100:0-isis']"
+                }
+              }
+            },
+            {
+              "tp-id": "11.30.39.5",
+              "ietf-l3-unicast-topology:l3-termination-point-attributes": {
+                "ip-address": [
+                  "11.30.39.5"
+                ],
+                "ietf-l3-te-topology:l3-te-tp-attributes": {
+                  "tp-ref": "/ietf-network:networks/network[network-id='TE-TopologyId-200:100:0-isis']/node[node-id='11.50.150.30']/ietf-network-topology:termination-point[tp-id='11.30.39.5']",
+                  "node-ref": "/ietf-network:networks/network[network-id='TE-TopologyId-200:100:0-isis']/node[node-id='11.50.150.30']",
+                  "network-ref": "/ietf-network:networks/network[network-id='TE-TopologyId-200:100:0-isis']"
+                }
+              }
+            },
+            {
+              "tp-id": "11.30.39.1",
+              "ietf-l3-unicast-topology:l3-termination-point-attributes": {
+                "ip-address": [
+                  "11.30.39.1"
+                ],
+                "ietf-l3-te-topology:l3-te-tp-attributes": {
+                  "tp-ref": "/ietf-network:networks/network[network-id='TE-TopologyId-200:100:0-isis']/node[node-id='11.50.150.30']/ietf-network-topology:termination-point[tp-id='11.30.39.1']",
+                  "node-ref": "/ietf-network:networks/network[network-id='TE-TopologyId-200:100:0-isis']/node[node-id='11.50.150.30']",
+                  "network-ref": "/ietf-network:networks/network[network-id='TE-TopologyId-200:100:0-isis']"
+                }
+              }
+            }
+          ],
+          "ietf-l3-unicast-topology:l3-node-attributes": {
+            "name": "11.50.150.30",
+            "flag": [
+              "nsp-ietf-network-topology:routing-instance"
+            ],
+            "router-id": [
+              "11.50.150.30"
+            ],
+            "nsp-ietf-network-topology:nsp-attributes": [],
+            "prefix": [
+              {
+                "prefix": "11.50.150.30/32",
+                "metric": 0
+              },
+              {
+                "prefix": "11.50.150.39/32",
+                "metric": 10
+              }
+            ],
+            "ietf-l3-te-topology:l3-te-node-attributes": {
+              "node-ref": "/ietf-network:networks/network[network-id='TE-TopologyId-200:100:0-isis']/node[node-id='11.50.150.30']",
+              "network-ref": "/ietf-network:networks/network[network-id='TE-TopologyId-200:100:0-isis']"
+            },
+            "ietf-sr-mpls-topology:sr-mpls": {
+              "msds": {
+                "node-msd": [
+                  {
+                    "msd-type": "ietf-sr-mpls-topology:msd-mpls",
+                    "msd-value": 12
+                  },
+                  {
+                    "msd-type": "ietf-sr-mpls-topology:msd-erld",
+                    "msd-value": 15
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "node-id": "11.50.150.39",
+          "ietf-network-topology:termination-point": [
+            {
+              "tp-id": "11.30.39.6",
+              "ietf-l3-unicast-topology:l3-termination-point-attributes": {
+                "ip-address": [
+                  "11.30.39.6"
+                ],
+                "ietf-l3-te-topology:l3-te-tp-attributes": {
+                  "tp-ref": "/ietf-network:networks/network[network-id='TE-TopologyId-200:100:0-isis']/node[node-id='11.50.150.39']/ietf-network-topology:termination-point[tp-id='11.30.39.6']",
+                  "node-ref": "/ietf-network:networks/network[network-id='TE-TopologyId-200:100:0-isis']/node[node-id='11.50.150.39']",
+                  "network-ref": "/ietf-network:networks/network[network-id='TE-TopologyId-200:100:0-isis']"
+                }
+              }
+            },
+            {
+              "tp-id": "11.30.39.2",
+              "ietf-l3-unicast-topology:l3-termination-point-attributes": {
+                "ip-address": [
+                  "11.30.39.2"
+                ],
+                "ietf-l3-te-topology:l3-te-tp-attributes": {
+                  "tp-ref": "/ietf-network:networks/network[network-id='TE-TopologyId-200:100:0-isis']/node[node-id='11.50.150.39']/ietf-network-topology:termination-point[tp-id='11.30.39.2']",
+                  "node-ref": "/ietf-network:networks/network[network-id='TE-TopologyId-200:100:0-isis']/node[node-id='11.50.150.39']",
+                  "network-ref": "/ietf-network:networks/network[network-id='TE-TopologyId-200:100:0-isis']"
+                }
+              }
+            }
+          ],
+          "ietf-l3-unicast-topology:l3-node-attributes": {
+            "name": "11.50.150.39",
+            "flag": [
+              "nsp-ietf-network-topology:routing-instance"
+            ],
+            "router-id": [
+              "11.50.150.39"
+            ],
+            "nsp-ietf-network-topology:nsp-attributes": [],
+            "prefix": [
+              {
+                "prefix": "11.50.150.39/32",
+                "metric": 0
+              },
+              {
+                "prefix": "11.50.150.30/32",
+                "metric": 10
+              }
+            ],
+            "ietf-l3-te-topology:l3-te-node-attributes": {
+              "node-ref": "/ietf-network:networks/network[network-id='TE-TopologyId-200:100:0-isis']/node[node-id='11.50.150.39']",
+              "network-ref": "/ietf-network:networks/network[network-id='TE-TopologyId-200:100:0-isis']"
+            },
+            "ietf-sr-mpls-topology:sr-mpls": {
+              "msds": {
+                "node-msd": [
+                  {
+                    "msd-type": "ietf-sr-mpls-topology:msd-mpls",
+                    "msd-value": 12
+                  },
+                  {
+                    "msd-type": "ietf-sr-mpls-topology:msd-erld",
+                    "msd-value": 15
+                  }
+                ]
+              }
+            }
+          }
+        }
+      ],
+      "ietf-network-topology:link": [
+        {
+          "link-id": "11.50.150.31:11.30.1.2--11.50.150.30:11.30.1.1--l2",
+          "source": {
+            "source-node": "/ietf-network:networks/network[network-id='TopologyId-200:100:0-isis']/node[node-id='11.50.150.31']",
+            "source-tp": "/ietf-network:networks/network[network-id='TopologyId-200:100:0-isis']/node[node-id='11.50.150.31']/ietf-network-topology:termination-point[tp-id='11.30.1.2']"
+          },
+          "destination": {
+            "dest-node": "/ietf-network:networks/network[network-id='TopologyId-200:100:0-isis']/node[node-id='11.50.150.30']",
+            "dest-tp": "/ietf-network:networks/network[network-id='TopologyId-200:100:0-isis']/node[node-id='11.50.150.30']/ietf-network-topology:termination-point[tp-id='11.30.1.1']"
+          },
+          "ietf-l3-unicast-topology:l3-link-attributes": {
+            "name": "0110.5015.0031::0110.5015.0030=>11.30.1.2-ISIS_L2-PointToPoint-Original",
+            "metric1": 10,
+            "metric2": 10,
+            "flag": [
+              "nsp-ietf-network-topology:igp"
+            ],
+            "nsp-ietf-network-topology:nsp-attributes": [],
+            "ietf-l3-te-topology:l3-te-link-attributes": {
+              "link-ref": "/ietf-network:networks/network[network-id='TE-TopologyId-200:100:0-isis']/ietf-network-topology:link[link-id='11.50.150.31:11.30.1.2--11.50.150.30:11.30.1.1--l2']",
+              "network-ref": "/ietf-network:networks/network[network-id='TE-TopologyId-200:100:0-isis']"
+            },
+            "ietf-sr-mpls-topology:sr-mpls": {
+              "sids": {
+                "sid": [
+                  {
+                    "sid": 524287,
+                    "address-family": "ipv4",
+                    "is-eligible-for-protection": false,
+                    "is-local": true,
+                    "is-part-of-set": false,
+                    "is-persistent": false,
+                    "is-on-lan": false,
+                    "weight": 0,
+                    "value-type": "absolute"
+                  },
+                  {
+                    "sid": 500002,
+                    "address-family": "ipv4",
+                    "is-eligible-for-protection": false,
+                    "is-local": true,
+                    "is-part-of-set": true,
+                    "is-persistent": true,
+                    "is-on-lan": false,
+                    "weight": 0,
+                    "value-type": "absolute"
+                  },
+                  {
+                    "sid": 500004,
+                    "address-family": "ipv4",
+                    "is-eligible-for-protection": false,
+                    "is-local": true,
+                    "is-part-of-set": true,
+                    "is-persistent": true,
+                    "is-on-lan": false,
+                    "weight": 0,
+                    "value-type": "absolute"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "link-id": "11.50.150.39:11.30.39.6--11.50.150.30:11.30.39.5--l1",
+          "source": {
+            "source-node": "/ietf-network:networks/network[network-id='TopologyId-200:100:0-isis']/node[node-id='11.50.150.39']",
+            "source-tp": "/ietf-network:networks/network[network-id='TopologyId-200:100:0-isis']/node[node-id='11.50.150.39']/ietf-network-topology:termination-point[tp-id='11.30.39.6']"
+          },
+          "destination": {
+            "dest-node": "/ietf-network:networks/network[network-id='TopologyId-200:100:0-isis']/node[node-id='11.50.150.30']",
+            "dest-tp": "/ietf-network:networks/network[network-id='TopologyId-200:100:0-isis']/node[node-id='11.50.150.30']/ietf-network-topology:termination-point[tp-id='11.30.39.5']"
+          },
+          "ietf-l3-unicast-topology:l3-link-attributes": {
+            "name": "0110.5015.0039::0110.5015.0030=>11.30.39.6-ISIS_L1-PointToPoint-Original",
+            "metric1": 10,
+            "metric2": 10,
+            "flag": [
+              "nsp-ietf-network-topology:igp"
+            ],
+            "nsp-ietf-network-topology:nsp-attributes": [],
+            "ietf-l3-te-topology:l3-te-link-attributes": {
+              "link-ref": "/ietf-network:networks/network[network-id='TE-TopologyId-200:100:0-isis']/ietf-network-topology:link[link-id='11.50.150.39:11.30.39.6--11.50.150.30:11.30.39.5--l1']",
+              "network-ref": "/ietf-network:networks/network[network-id='TE-TopologyId-200:100:0-isis']"
+            },
+            "ietf-sr-mpls-topology:sr-mpls": {
+              "sids": {
+                "sid": [
+                  {
+                    "sid": 524286,
+                    "address-family": "ipv4",
+                    "is-eligible-for-protection": true,
+                    "is-local": true,
+                    "is-part-of-set": false,
+                    "is-persistent": false,
+                    "is-on-lan": false,
+                    "weight": 0,
+                    "value-type": "absolute"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "link-id": "11.50.150.39:11.30.39.2--11.50.150.30:11.30.39.1--l2",
+          "source": {
+            "source-node": "/ietf-network:networks/network[network-id='TopologyId-200:100:0-isis']/node[node-id='11.50.150.39']",
+            "source-tp": "/ietf-network:networks/network[network-id='TopologyId-200:100:0-isis']/node[node-id='11.50.150.39']/ietf-network-topology:termination-point[tp-id='11.30.39.2']"
+          },
+          "destination": {
+            "dest-node": "/ietf-network:networks/network[network-id='TopologyId-200:100:0-isis']/node[node-id='11.50.150.30']",
+            "dest-tp": "/ietf-network:networks/network[network-id='TopologyId-200:100:0-isis']/node[node-id='11.50.150.30']/ietf-network-topology:termination-point[tp-id='11.30.39.1']"
+          },
+          "ietf-l3-unicast-topology:l3-link-attributes": {
+            "name": "0110.5015.0039::0110.5015.0030=>11.30.39.2-ISIS_L2-PointToPoint-Original",
+            "metric1": 10,
+            "metric2": 10,
+            "flag": [
+              "nsp-ietf-network-topology:igp"
+            ],
+            "nsp-ietf-network-topology:nsp-attributes": [],
+            "ietf-l3-te-topology:l3-te-link-attributes": {
+              "link-ref": "/ietf-network:networks/network[network-id='TE-TopologyId-200:100:0-isis']/ietf-network-topology:link[link-id='11.50.150.39:11.30.39.2--11.50.150.30:11.30.39.1--l2']",
+              "network-ref": "/ietf-network:networks/network[network-id='TE-TopologyId-200:100:0-isis']"
+            },
+            "ietf-sr-mpls-topology:sr-mpls": {
+              "sids": {
+                "sid": [
+                  {
+                    "sid": 524287,
+                    "address-family": "ipv4",
+                    "is-eligible-for-protection": true,
+                    "is-local": true,
+                    "is-part-of-set": false,
+                    "is-persistent": false,
+                    "is-on-lan": false,
+                    "weight": 0,
+                    "value-type": "absolute"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "link-id": "11.50.150.30:11.30.1.1--11.50.150.31:11.30.1.2--l2",
+          "source": {
+            "source-node": "/ietf-network:networks/network[network-id='TopologyId-200:100:0-isis']/node[node-id='11.50.150.30']",
+            "source-tp": "/ietf-network:networks/network[network-id='TopologyId-200:100:0-isis']/node[node-id='11.50.150.30']/ietf-network-topology:termination-point[tp-id='11.30.1.1']"
+          },
+          "destination": {
+            "dest-node": "/ietf-network:networks/network[network-id='TopologyId-200:100:0-isis']/node[node-id='11.50.150.31']",
+            "dest-tp": "/ietf-network:networks/network[network-id='TopologyId-200:100:0-isis']/node[node-id='11.50.150.31']/ietf-network-topology:termination-point[tp-id='11.30.1.2']"
+          },
+          "ietf-l3-unicast-topology:l3-link-attributes": {
+            "name": "0110.5015.0030::0110.5015.0031=>11.30.1.1-ISIS_L2-PointToPoint-Original",
+            "metric1": 10,
+            "metric2": 10,
+            "flag": [
+              "nsp-ietf-network-topology:igp"
+            ],
+            "nsp-ietf-network-topology:nsp-attributes": [],
+            "ietf-l3-te-topology:l3-te-link-attributes": {
+              "link-ref": "/ietf-network:networks/network[network-id='TE-TopologyId-200:100:0-isis']/ietf-network-topology:link[link-id='11.50.150.30:11.30.1.1--11.50.150.31:11.30.1.2--l2']",
+              "network-ref": "/ietf-network:networks/network[network-id='TE-TopologyId-200:100:0-isis']"
+            },
+            "ietf-sr-mpls-topology:sr-mpls": {
+              "sids": {
+                "sid": [
+                  {
+                    "sid": 524286,
+                    "address-family": "ipv4",
+                    "is-eligible-for-protection": false,
+                    "is-local": true,
+                    "is-part-of-set": false,
+                    "is-persistent": false,
+                    "is-on-lan": false,
+                    "weight": 0,
+                    "value-type": "absolute"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "link-id": "11.50.150.30:11.30.39.5--11.50.150.39:11.30.39.6--l1",
+          "source": {
+            "source-node": "/ietf-network:networks/network[network-id='TopologyId-200:100:0-isis']/node[node-id='11.50.150.30']",
+            "source-tp": "/ietf-network:networks/network[network-id='TopologyId-200:100:0-isis']/node[node-id='11.50.150.30']/ietf-network-topology:termination-point[tp-id='11.30.39.5']"
+          },
+          "destination": {
+            "dest-node": "/ietf-network:networks/network[network-id='TopologyId-200:100:0-isis']/node[node-id='11.50.150.39']",
+            "dest-tp": "/ietf-network:networks/network[network-id='TopologyId-200:100:0-isis']/node[node-id='11.50.150.39']/ietf-network-topology:termination-point[tp-id='11.30.39.6']"
+          },
+          "ietf-l3-unicast-topology:l3-link-attributes": {
+            "name": "0110.5015.0030::0110.5015.0039=>11.30.39.5-ISIS_L1-PointToPoint-Original",
+            "metric1": 10,
+            "metric2": 10,
+            "flag": [
+              "nsp-ietf-network-topology:igp"
+            ],
+            "nsp-ietf-network-topology:nsp-attributes": [],
+            "ietf-l3-te-topology:l3-te-link-attributes": {
+              "link-ref": "/ietf-network:networks/network[network-id='TE-TopologyId-200:100:0-isis']/ietf-network-topology:link[link-id='11.50.150.30:11.30.39.5--11.50.150.39:11.30.39.6--l1']",
+              "network-ref": "/ietf-network:networks/network[network-id='TE-TopologyId-200:100:0-isis']"
+            },
+            "ietf-sr-mpls-topology:sr-mpls": {
+              "sids": {
+                "sid": [
+                  {
+                    "sid": 524285,
+                    "address-family": "ipv4",
+                    "is-eligible-for-protection": false,
+                    "is-local": true,
+                    "is-part-of-set": false,
+                    "is-persistent": false,
+                    "is-on-lan": false,
+                    "weight": 0,
+                    "value-type": "absolute"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "link-id": "11.50.150.30:11.30.39.1--11.50.150.39:11.30.39.2--l2",
+          "source": {
+            "source-node": "/ietf-network:networks/network[network-id='TopologyId-200:100:0-isis']/node[node-id='11.50.150.30']",
+            "source-tp": "/ietf-network:networks/network[network-id='TopologyId-200:100:0-isis']/node[node-id='11.50.150.30']/ietf-network-topology:termination-point[tp-id='11.30.39.1']"
+          },
+          "destination": {
+            "dest-node": "/ietf-network:networks/network[network-id='TopologyId-200:100:0-isis']/node[node-id='11.50.150.39']",
+            "dest-tp": "/ietf-network:networks/network[network-id='TopologyId-200:100:0-isis']/node[node-id='11.50.150.39']/ietf-network-topology:termination-point[tp-id='11.30.39.2']"
+          },
+          "ietf-l3-unicast-topology:l3-link-attributes": {
+            "name": "0110.5015.0030::0110.5015.0039=>11.30.39.1-ISIS_L2-PointToPoint-Original",
+            "metric1": 10,
+            "metric2": 10,
+            "flag": [
+              "nsp-ietf-network-topology:igp"
+            ],
+            "nsp-ietf-network-topology:nsp-attributes": [],
+            "ietf-l3-te-topology:l3-te-link-attributes": {
+              "link-ref": "/ietf-network:networks/network[network-id='TE-TopologyId-200:100:0-isis']/ietf-network-topology:link[link-id='11.50.150.30:11.30.39.1--11.50.150.39:11.30.39.2--l2']",
+              "network-ref": "/ietf-network:networks/network[network-id='TE-TopologyId-200:100:0-isis']"
+            },
+            "ietf-sr-mpls-topology:sr-mpls": {
+              "sids": {
+                "sid": [
+                  {
+                    "sid": 524286,
+                    "address-family": "ipv4",
+                    "is-eligible-for-protection": false,
+                    "is-local": true,
+                    "is-part-of-set": false,
+                    "is-persistent": false,
+                    "is-on-lan": false,
+                    "weight": 0,
+                    "value-type": "absolute"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      ],
+      "ietf-l3-unicast-topology:l3-topology-attributes": {
+        "name": "TopologyId-200:100:0",
+        "ietf-l3-te-topology:l3-te-topology-attributes": {
+          "network-ref": "/ietf-network:networks/network[network-id='TE-TopologyId-200:100:0-isis']"
+        }
+      }
+    }
+  ]
+}

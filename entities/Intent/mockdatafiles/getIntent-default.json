@@ -1,0 +1,161 @@
+{
+  "ibn:intent": {
+    "sync-timestamp": "2023-11-28T16:04:59+00:00",
+    "actual-intent-type-version": 1,
+    "intent-specific-data": {
+      "ztp-profile:ztp-profile": {
+        "dns-primary-address": "172.16.182.55",
+        "md-management-connection": "out-of-band",
+        "dns-domain": "nokia",
+        "node-type": "7250_IXR",
+        "mdm-discovery-rule-profile": "inband",
+        "ip-static-route": [
+          {
+            "ip-static-route-next-hop": "138.120.182.1",
+            "ip-static-route-mask": 24,
+            "ip-static-route-destination": "138.120.182.0"
+          }
+        ]
+      },
+      "ietf-yang-library:yang-library": {
+        "schema": [
+          {
+            "module-set": [
+              "running"
+            ],
+            "name": "running"
+          }
+        ],
+        "module-set": [
+          {
+            "import-only-module": [
+              {
+                "name": "ietf-inet-types",
+                "namespace": "urn:ietf:params:xml:ns:yang:ietf-inet-types",
+                "revision": "2013-07-15"
+              },
+              {
+                "name": "anv-types",
+                "namespace": "http://www.nokia.com/management-solutions/anv-types",
+                "revision": "2015-08-13"
+              },
+              {
+                "name": "anv-yang-extensions",
+                "namespace": "http://www.nokia.com/management-solutions/anv-yang-extensions",
+                "revision": "2016-01-07"
+              },
+              {
+                "name": "ibn-extensions",
+                "namespace": "http://www.nokia.com/management-solutions/ibn-extensions",
+                "revision": "2020-10-13"
+              },
+              {
+                "name": "webfwk-ui-metadata",
+                "namespace": "http://www.nokia.com/management-solutions/webfwk/ui-metadata",
+                "revision": "2021-10-07"
+              },
+              {
+                "name": "ietf-yang-types",
+                "namespace": "urn:ietf:params:xml:ns:yang:ietf-yang-types",
+                "revision": "2013-07-15"
+              },
+              {
+                "name": "ietf-datastores",
+                "namespace": "urn:ietf:params:xml:ns:yang:ietf-datastores",
+                "revision": "2018-02-14"
+              },
+              {
+                "name": "ietf-yang-revisions",
+                "namespace": "urn:ietf:params:xml:ns:yang:ietf-yang-revisions",
+                "revision": "2021-06-30"
+              },
+              {
+                "name": "ietf-yang-semver",
+                "namespace": "urn:ietf:params:xml:ns:yang:ietf-yang-semver",
+                "revision": "2020-06-30"
+              }
+            ],
+            "module": [
+              {
+                "name": "ietf-inet-types",
+                "namespace": "urn:ietf:params:xml:ns:yang:ietf-inet-types",
+                "revision": "2013-07-15"
+              },
+              {
+                "name": "ietf-yang-library",
+                "namespace": "urn:ietf:params:xml:ns:yang:ietf-yang-library",
+                "revision": "2019-01-04"
+              },
+              {
+                "name": "anv-types",
+                "namespace": "http://www.nokia.com/management-solutions/anv-types",
+                "revision": "2015-08-13"
+              },
+              {
+                "name": "anv-yang-extensions",
+                "namespace": "http://www.nokia.com/management-solutions/anv-yang-extensions",
+                "revision": "2016-01-07"
+              },
+              {
+                "name": "ibn-extensions",
+                "namespace": "http://www.nokia.com/management-solutions/ibn-extensions",
+                "revision": "2020-10-13"
+              },
+              {
+                "name": "webfwk-ui-metadata",
+                "namespace": "http://www.nokia.com/management-solutions/webfwk/ui-metadata",
+                "revision": "2021-10-07"
+              },
+              {
+                "name": "ietf-yang-types",
+                "namespace": "urn:ietf:params:xml:ns:yang:ietf-yang-types",
+                "revision": "2013-07-15"
+              },
+              {
+                "name": "ztp-profile",
+                "namespace": "http://www.nokia.com/management-solutions/ztp-profile",
+                "revision": "2020-11-01"
+              },
+              {
+                "name": "ietf-datastores",
+                "namespace": "urn:ietf:params:xml:ns:yang:ietf-datastores",
+                "revision": "2018-02-14"
+              },
+              {
+                "name": "ietf-yang-revisions",
+                "namespace": "urn:ietf:params:xml:ns:yang:ietf-yang-revisions",
+                "revision": "2021-06-30"
+              },
+              {
+                "name": "ietf-yang-semver",
+                "namespace": "urn:ietf:params:xml:ns:yang:ietf-yang-semver",
+                "revision": "2020-06-30"
+              }
+            ],
+            "name": "running"
+          }
+        ],
+        "datastore": [
+          {
+            "schema": "running",
+            "name": "ietf-yang-library:running"
+          }
+        ],
+        "content-id": "786176111eccc0aef54d5824e48fafe8e65df7742bbc06c11ef9248246a18985"
+      }
+    },
+    "supports-health": true,
+    "error": false,
+    "intent-type": "ztp-profile",
+    "target": "TestProfile2",
+    "required-network-state": "active",
+    "blocked": false,
+    "intent-type-label": [
+      "ztp",
+      "nsp"
+    ],
+    "sync-to-ES-failed": false,
+    "aligned": true,
+    "intent-type-version": 1
+  }
+}

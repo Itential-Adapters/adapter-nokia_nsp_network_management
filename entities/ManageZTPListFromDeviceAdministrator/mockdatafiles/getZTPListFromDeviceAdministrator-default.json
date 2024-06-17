@@ -1,0 +1,114 @@
+{
+  "nsp-ne-control:autodiscovery-ne": [
+    {
+      "@": {
+        "nsp-model:schema-nodeid": "/nsp-ne-control:ne-control/autodiscovery-ne",
+        "nsp-model:identifier": "/nsp-ne-control:ne-control/autodiscovery-ne[mgmt-ip='135.6.6.6']",
+        "nsp-model:creation-time": "2023-11-20T21:06:12.735Z",
+        "nsp-model:last-modified-time": "2023-11-23T17:48:41.914Z"
+      },
+      "serial-number": "34as234",
+      "ne-type": "7250_IXR",
+      "discovery-timestamp": 1700761715130,
+      "system-ip": "35.6.6.6",
+      "ztp-profile-name": "mdm1",
+      "status-details": "",
+      "mgmt-ip": "135.6.6.6",
+      "mgmt-mode": "model-driven",
+      "discovery-status": "failure",
+      "ztp-primary-file": "/ztp/Nokia/7250_IXR/test5_provisioning.cfg",
+      "ne-name": "test5",
+      "disc-rule-name": "ztp",
+      "ztp-files": "/ztp/Nokia/7250_IXR/test5_provisioning.cfg;/ztp/Nokia/7250_IXR/test5_config.cfg;",
+      "ne-version": ""
+    },
+    {
+      "@": {
+        "nsp-model:schema-nodeid": "/nsp-ne-control:ne-control/autodiscovery-ne",
+        "nsp-model:identifier": "/nsp-ne-control:ne-control/autodiscovery-ne[mgmt-ip='136.1.1.1']",
+        "nsp-model:creation-time": "2023-11-20T21:06:16.067Z",
+        "nsp-model:last-modified-time": "2023-11-23T17:48:41.914Z"
+      },
+      "serial-number": "test22",
+      "ne-type": "7250_IXR",
+      "discovery-timestamp": 1700761715331,
+      "system-ip": "136.1.1.1",
+      "ztp-profile-name": "mdm1",
+      "status-details": "",
+      "mgmt-ip": "136.1.1.1",
+      "mgmt-mode": "model-driven",
+      "discovery-status": "failure",
+      "ztp-primary-file": "/ztp/Nokia/7250_IXR/test22_provisioning.cfg",
+      "ne-name": "test22",
+      "disc-rule-name": "ztp",
+      "ztp-files": "/ztp/Nokia/7250_IXR/test22_provisioning.cfg;/ztp/Nokia/7250_IXR/test22_config.cfg;",
+      "ne-version": ""
+    },
+    {
+      "@": {
+        "nsp-model:schema-nodeid": "/nsp-ne-control:ne-control/autodiscovery-ne",
+        "nsp-model:identifier": "/nsp-ne-control:ne-control/autodiscovery-ne[mgmt-ip='4.4.4.4']",
+        "nsp-model:creation-time": "2023-11-20T21:06:20.288Z",
+        "nsp-model:last-modified-time": "2023-11-23T17:48:41.917Z"
+      },
+      "serial-number": "test323",
+      "ne-type": "7250_IXR",
+      "discovery-timestamp": 1700761715501,
+      "system-ip": "4.4.4.4",
+      "ztp-profile-name": "mdm1",
+      "status-details": "",
+      "mgmt-ip": "4.4.4.4",
+      "mgmt-mode": "model-driven",
+      "discovery-status": "failure",
+      "ztp-primary-file": "/ztp/Nokia/7250_IXR/test2323_provisioning.cfg",
+      "ne-name": "test2323",
+      "disc-rule-name": "ztp",
+      "ztp-files": "/ztp/Nokia/7250_IXR/test2323_provisioning.cfg;/ztp/Nokia/7250_IXR/test2323_config.cfg;",
+      "ne-version": ""
+    },
+    {
+      "@": {
+        "nsp-model:schema-nodeid": "/nsp-ne-control:ne-control/autodiscovery-ne",
+        "nsp-model:identifier": "/nsp-ne-control:ne-control/autodiscovery-ne[mgmt-ip='135.121.156.67']",
+        "nsp-model:creation-time": "2023-11-20T21:11:06.491Z",
+        "nsp-model:last-modified-time": "2023-11-20T21:12:04.343Z"
+      },
+      "serial-number": "teste",
+      "ne-type": "7250_IXR",
+      "discovery-timestamp": 1700514717320,
+      "system-ip": "35.121.156.67",
+      "ztp-profile-name": "mdm1",
+      "status-details": "",
+      "mgmt-ip": "135.121.156.67",
+      "mgmt-mode": "model-driven",
+      "discovery-status": "success",
+      "ztp-primary-file": "/ztp/Nokia/7250_IXR/teste_provisioning.cfg",
+      "ne-name": "teste",
+      "disc-rule-name": "ztp",
+      "ztp-files": "/ztp/Nokia/7250_IXR/teste_provisioning.cfg;/ztp/Nokia/7250_IXR/teste_config.cfg;",
+      "ne-version": ""
+    },
+    {
+      "@": {
+        "nsp-model:schema-nodeid": "/nsp-ne-control:ne-control/autodiscovery-ne",
+        "nsp-model:identifier": "/nsp-ne-control:ne-control/autodiscovery-ne[mgmt-ip='88.88.8.1']",
+        "nsp-model:creation-time": "2023-11-24T14:42:09.020Z",
+        "nsp-model:last-modified-time": "2023-11-24T14:42:09.048Z"
+      },
+      "serial-number": "yyyy",
+      "ne-type": "7250_IXR",
+      "discovery-timestamp": 0,
+      "system-ip": "8.88.8.1",
+      "ztp-profile-name": "mdm1",
+      "status-details": "",
+      "mgmt-ip": "88.88.8.1",
+      "mgmt-mode": "model-driven",
+      "discovery-status": "pending",
+      "ztp-primary-file": "/ztp/Nokia/7250_IXR/yyyy_provisioning.cfg",
+      "ne-name": "yyyy",
+      "disc-rule-name": "ztp",
+      "ztp-files": "/ztp/Nokia/7250_IXR/yyyy_provisioning.cfg;/ztp/Nokia/7250_IXR/yyyy_config.cfg;",
+      "ne-version": ""
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "nsp-icm:output": {
+    "status-code": 200,
+    "message": "Deployment Audit Started."
+  },
+  "statusCode": "OK"
+}

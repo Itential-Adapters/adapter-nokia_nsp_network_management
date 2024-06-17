@@ -1,0 +1,18 @@
+{
+  "response": {
+    "status": 0,
+    "startRow": 0,
+    "endRow": 0,
+    "totalRows": 1,
+    "data": {
+      "fdn": "fdn:model:group:EquipmentGroup:718393",
+      "name": "AccessPorts",
+      "description": "N/A",
+      "category": "port",
+      "creationType": "manual",
+      "advancedFilterExpression": "( name EQUAL '1/2/3' OR  name EQUAL '1/2/4' OR  name EQUAL '1/2/5')",
+      "groupMemberCount": 12,
+      "usePhysicalMapLayout": false
+    }
+  }
+}

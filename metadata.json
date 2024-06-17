@@ -1,0 +1,62 @@
+{
+  "name": "adapter-nokia_nsp_network_management",
+  "webName": "nokia_nsp_network_management",
+  "vendor": "Nokia",
+  "product": "NSP Network Infrastructure Management",
+  "osVersions": [],
+  "apiVersions": [
+    "24.4"
+  ],
+  "iapVersions": [],
+  "method": "REST",
+  "type": "Adapter",
+  "domains": [],
+  "tags": [],
+  "useCases": [],
+  "deprecated": {
+    "isDeprecated": false
+  },
+  "brokerSince": "",
+  "authMethods": [
+    {
+      "type": "OAuth",
+      "subtypes": [],
+      "primary": true
+    }
+  ],
+  "documentation": {
+    "storeLink": "",
+    "npmLink": "https://www.npmjs.com/package/@itentialopensource/adapter-nokia_nsp_network_management",
+    "repoLink": "https://gitlab.com/@itentialopensource/adapters/adapter-nokia_nsp_network_management",
+    "docLink": "https://docs.itential.com/opensource/docs/nokia_nsp_network_management",
+    "demoLinks": [],
+    "trainingLinks": [
+      {
+        "title": "Itential Academy",
+        "link": "https://www.itential.com/itential-academy/"
+      }
+    ],
+    "faqLink": "https://docs.itential.com/opensource/docs/troubleshooting-an-adapter",
+    "contributeLink": "https://gitlab.com/itentialopensource/adapters/contributing-guide",
+    "issueLink": "https://itential.atlassian.net/servicedesk/customer/portals",
+    "webLink": "https://www.itential.com/adapters/nsp-network",
+    "vendorLink": "https://www.nokia.com",
+    "productLink": "https://www.nokia.com/networks/ip-networks/network-services-platform/",
+    "apiLinks": [
+      {
+        "title": "Nokia Network Devloper Portal",
+        "link": "https://network.developer.nokia.com/",
+        "public": true
+      }
+    ]
+  },
+  "assets": [],
+  "relatedItems": {
+    "adapters": [],
+    "integrations": [],
+    "ecosystemApplications": [],
+    "workflowProjects": [],
+    "transformationProjects": [],
+    "exampleProjects": []
+  }
+}

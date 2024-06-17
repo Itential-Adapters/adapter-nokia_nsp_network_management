@@ -1,0 +1,21 @@
+{
+  "openconfig-interfaces:interface-ref": {
+    "@": {
+      "nsp-model:schema-nodeid": "/ietf-network:networks/network/node/ne-management-nm:commissioning-configs/ne-interfaces/logical-interfaces/interfaces-root/openconfig-interfaces:interfaces/interface/subinterfaces/subinterface/openconfig-if-ip:ipv4/unnumbered/interface-ref",
+      "nsp-model:identifier": "/ietf-network:networks/network[network-id='1']/node[node-id='92.168.96.58']/ne-management-nm:commissioning-configs/ne-interfaces/logical-interfaces/interfaces-root/openconfig-interfaces:interfaces/interface/subinterfaces/subinterface[index='2']/openconfig-if-ip:ipv4/unnumbered/interface-ref",
+      "nsp-model:network-id": "92.168.96.58"
+    },
+    "config": {
+      "@": {
+        "nsp-model:schema-nodeid": "/ietf-network:networks/network/node/ne-management-nm:commissioning-configs/ne-interfaces/logical-interfaces/interfaces-root/openconfig-interfaces:interfaces/interface/subinterfaces/subinterface/openconfig-if-ip:ipv4/unnumbered/interface-ref/config",
+        "nsp-model:identifier": "/ietf-network:networks/network[network-id='1']/node[node-id='92.168.96.58']/ne-management-nm:commissioning-configs/ne-interfaces/logical-interfaces/interfaces-root/openconfig-interfaces:interfaces/interface[name='network-interface']/subinterfaces/subinterface[index='2']/openconfig-if-ip:ipv4/unnumbered/interface-ref/config",
+        "nsp-model:network-id": "92.168.96.58",
+        "nsp-model:sources": [
+          "fdn:app:mdm-ami:{\"_NE_\":\"92.168.96.58\",\"classId\":\"openconfig-interfaces:/interfaces/interface/subinterfaces/subinterface/openconfig-if-ip:ipv4/unnumbered/interface-ref/config\",\"interface_name\":\"network-interface\",\"subinterface_index\":\"toNodeB\"}"
+        ]
+      },
+      "interface": "network-interface",
+      "subinterface": 0
+    }
+  }
+}

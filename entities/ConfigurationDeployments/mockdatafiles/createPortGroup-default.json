@@ -1,0 +1,18 @@
+{
+  "response": {
+    "status": 0,
+    "startRow": 0,
+    "endRow": 0,
+    "totalRows": 1,
+    "data": {
+      "status": "Group creation process has been started. The process may take some time depending on the number of members added+ to the group. Use the href to see if a Group  with the given name has been created.",
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://135.121.153.120/group-manager/rest/api/v1/groups/name/AccessPorts?category=port"
+        }
+      ]
+    },
+    "errors": []
+  }
+}

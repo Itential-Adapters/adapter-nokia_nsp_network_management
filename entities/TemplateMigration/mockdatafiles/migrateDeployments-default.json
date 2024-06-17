@@ -1,0 +1,7 @@
+{
+  "nsp-icm:output": {
+    "status-code": 200,
+    "message": "Migration of Deployments started. Deployments with Not-Started, Auditing, Aligning, Migrating and Saved status will be ignored."
+  },
+  "statusCode": "OK"
+}

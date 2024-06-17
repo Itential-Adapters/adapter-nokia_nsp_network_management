@@ -1,0 +1,51 @@
+{
+  "$id": "schema.json",
+  "type": "object",
+  "schema": "http://json-schema.org/draft-07/schema#",
+  "translate": true,
+  "dynamicfields": true,
+  "properties": {
+    "ph_request_type": {
+      "type": "string",
+      "description": "type of request (internal to adapter)",
+      "default": "retrieveNetworkInterfaces",
+      "enum": [
+        "retrieveNetworkInterfaces",
+        "retrieveNetworkInterfacesConfig",
+        "retrieveNetworkSubInterfaces",
+        "retrieveNetworkSubInterfacesConfig",
+        "retrieveNetworkSubInterfacesState",
+        "retrieveNetworkSubInterfacesIPv4Addresses",
+        "retrieveNetworkSubInterfacesIPv6Addresses",
+        "retrieveNetworkInterfacesUnnumbered",
+        "retrieveNetworkInterfacesUnnumberedIntf",
+        "retrieveNetworkInstance",
+        "retrieveResyncPolicyNodeVersionEntity"
+      ],
+      "external_name": "ph_request_type"
+    },
+    "interfaceParam": {
+      "type": "string",
+      "description": "",
+      "parse": false,
+      "encode": false,
+      "encrypt": {
+        "type": "AES",
+        "key": ""
+      },
+      "external_name": "interface"
+    },
+    "resyncPolicy": {
+      "type": "string",
+      "description": "",
+      "parse": false,
+      "encode": false,
+      "encrypt": {
+        "type": "AES",
+        "key": ""
+      },
+      "external_name": "resync-policy"
+    }
+  },
+  "definitions": {}
+}
