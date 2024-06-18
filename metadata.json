@@ -20,7 +20,6 @@
   "authMethods": [
     {
       "type": "OAuth",
-      "subtypes": [],
       "primary": true
     }
   ],
