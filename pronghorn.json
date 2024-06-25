@@ -5135,6 +5135,473 @@
         "path": "/migrateDeployments"
       },
       "task": true
+    },
+    {
+      "name": "getNE",
+      "summary": "getNE",
+      "description": "getNE",
+      "input": [
+        {
+          "name": "depth",
+          "type": "number",
+          "info": "Optional depth query parameter: 123",
+          "required": false,
+          "schema": {
+            "title": "depth",
+            "type": "number"
+          }
+        },
+        {
+          "name": "fields",
+          "type": "string",
+          "info": ": string",
+          "required": false,
+          "schema": {
+            "title": "fields",
+            "type": "string"
+          }
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/getNE"
+      },
+      "task": true
+    },
+    {
+      "name": "getSpecificNE",
+      "summary": "getSpecificNE",
+      "description": "getSpecificNE",
+      "input": [
+        {
+          "name": "networkElement",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "networkElement",
+            "type": "string"
+          }
+        },
+        {
+          "name": "depth",
+          "type": "number",
+          "info": "Optional depth query parameter: 123",
+          "required": false,
+          "schema": {
+            "title": "depth",
+            "type": "number"
+          }
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/getSpecificNE"
+      },
+      "task": true
+    },
+    {
+      "name": "getShelf",
+      "summary": "getShelf",
+      "description": "getShelf",
+      "input": [],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "GET",
+        "path": "/getShelf"
+      },
+      "task": true
+    },
+    {
+      "name": "getSpecificShelf",
+      "summary": "getSpecificShelf",
+      "description": "getSpecificShelf",
+      "input": [
+        {
+          "name": "networkElement",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "networkElement",
+            "type": "string"
+          }
+        },
+        {
+          "name": "shelf",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "shelf",
+            "type": "string"
+          }
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/getSpecificShelf"
+      },
+      "task": true
+    },
+    {
+      "name": "getCard",
+      "summary": "getCard",
+      "description": "getCard",
+      "input": [],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "GET",
+        "path": "/getCard"
+      },
+      "task": true
+    },
+    {
+      "name": "getSpecificNECards",
+      "summary": "getSpecificNECards",
+      "description": "getSpecificNECards",
+      "input": [
+        {
+          "name": "networkElement",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "networkElement",
+            "type": "string"
+          }
+        },
+        {
+          "name": "card",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "card",
+            "type": "string"
+          }
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/getSpecificNECards"
+      },
+      "task": true
+    },
+    {
+      "name": "getPort",
+      "summary": "getPort",
+      "description": "getPort",
+      "input": [],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "GET",
+        "path": "/getPort"
+      },
+      "task": true
+    },
+    {
+      "name": "getPortFromSpecificNE",
+      "summary": "getPortFromSpecificNE",
+      "description": "getPortFromSpecificNE",
+      "input": [
+        {
+          "name": "networkElement",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "networkElement",
+            "type": "string"
+          }
+        },
+        {
+          "name": "port",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "port",
+            "type": "string"
+          }
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/getPortFromSpecificNE"
+      },
+      "task": true
+    },
+    {
+      "name": "getPortFromSpecificNETransceiverDetails",
+      "summary": "getPortFromSpecificNETransceiverDetails",
+      "description": "getPortFromSpecificNETransceiverDetails",
+      "input": [
+        {
+          "name": "networkElement",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "networkElement",
+            "type": "string"
+          }
+        },
+        {
+          "name": "port",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "port",
+            "type": "string"
+          }
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/getPortFromSpecificNETransceiverDetails"
+      },
+      "task": true
+    },
+    {
+      "name": "getLags",
+      "summary": "getLags",
+      "description": "getLags",
+      "input": [],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "GET",
+        "path": "/getLags"
+      },
+      "task": true
+    },
+    {
+      "name": "getSpecificNELag",
+      "summary": "getSpecificNELag",
+      "description": "getSpecificNELag",
+      "input": [
+        {
+          "name": "networkElement",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "networkElement",
+            "type": "string"
+          }
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/getSpecificNELag"
+      },
+      "task": true
+    },
+    {
+      "name": "getSpecificNELagWithFields",
+      "summary": "getSpecificNELagWithFields",
+      "description": "getSpecificNELagWithFields",
+      "input": [
+        {
+          "name": "fields",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "fields",
+            "type": "string"
+          }
+        },
+        {
+          "name": "networkElement",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "networkElement",
+            "type": "string"
+          }
+        },
+        {
+          "name": "lag",
+          "type": "string",
+          "info": ": string",
+          "required": true,
+          "schema": {
+            "title": "lag",
+            "type": "string"
+          }
+        }
+      ],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "POST",
+        "path": "/getSpecificNELagWithFields"
+      },
+      "task": true
+    },
+    {
+      "name": "getRadio",
+      "summary": "getRadio",
+      "description": "getRadio",
+      "input": [],
+      "output": {
+        "name": "result",
+        "type": "object",
+        "description": "A JSON Object containing status, code and the result",
+        "schema": {
+          "title": "result",
+          "type": "object"
+        }
+      },
+      "roles": [
+        "admin"
+      ],
+      "route": {
+        "verb": "GET",
+        "path": "/getRadio"
+      },
+      "task": true
     }
   ],
   "views": []
