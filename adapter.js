@@ -11105,6 +11105,1075 @@ class NokiaNspNetworkManagement extends AdapterBaseCl {
       return callback(null, errorObj);
     }
   }
+
+  /**
+   * @function getNE
+   * @pronghornType method
+   * @name getNE
+   * @summary getNE
+   *
+   * @param {number} [depth] - Optional depth query parameter
+   * @param {string} [fields] - Optional fields param
+   * @param {getCallback} callback - a callback function to return the result
+   * @return {object} results - An object containing the response of the action
+   *
+   * @route {POST} /getNE
+   * @roles admin
+   * @task true
+   */
+  /* YOU CAN CHANGE THE PARAMETERS YOU TAKE IN HERE AND IN THE pronghorn.json FILE */
+  getNE(depth, fields, callback) {
+    const meth = 'adapter-getNE';
+    const origin = `${this.id}-${meth}`;
+    log.trace(origin);
+
+    if (this.suspended && this.suspendMode === 'error') {
+      const errorObj = this.requestHandlerInst.formatErrorObject(this.id, meth, 'AD.600', [], null, null, null);
+      log.error(`${origin}: ${errorObj.IAPerror.displayString}`);
+      return callback(null, errorObj);
+    }
+
+    /* HERE IS WHERE YOU VALIDATE DATA */
+
+    /* HERE IS WHERE YOU SET THE DATA TO PASS INTO REQUEST */
+    const queryParamsAvailable = { depth, fields };
+    const queryParams = {};
+    const pathVars = [];
+    const bodyVars = {};
+
+    // loop in template. long callback arg name to avoid identifier conflicts
+    Object.keys(queryParamsAvailable).forEach((thisKeyInQueryParamsAvailable) => {
+      if (queryParamsAvailable[thisKeyInQueryParamsAvailable] !== undefined && queryParamsAvailable[thisKeyInQueryParamsAvailable] !== null
+          && queryParamsAvailable[thisKeyInQueryParamsAvailable] !== '') {
+        queryParams[thisKeyInQueryParamsAvailable] = queryParamsAvailable[thisKeyInQueryParamsAvailable];
+      }
+    });
+
+    // set up the request object - payload, uriPathVars, uriQuery, uriOptions, addlHeaders, authData, callProperties, filter, priority, event
+    // see adapter code documentation for more information on the request object's fields
+    const reqObj = {
+      payload: bodyVars,
+      uriPathVars: pathVars,
+      uriQuery: queryParams
+    };
+
+    try {
+      // Make the call -
+      // identifyRequest(entity, action, requestObj, returnDataFlag, callback)
+      return this.requestHandlerInst.identifyRequest('NetworkInventoryRestconfAPI', 'getNE', reqObj, true, (irReturnData, irReturnError) => {
+        // if we received an error or their is no response on the results
+        // return an error
+        if (irReturnError) {
+          /* HERE IS WHERE YOU CAN ALTER THE ERROR MESSAGE */
+          return callback(null, irReturnError);
+        }
+        if (!Object.hasOwnProperty.call(irReturnData, 'response')) {
+          const errorObj = this.requestHandlerInst.formatErrorObject(this.id, meth, 'Invalid Response', ['getNE'], null, null, null);
+          log.error(`${origin}: ${errorObj.IAPerror.displayString}`);
+          return callback(null, errorObj);
+        }
+
+        /* HERE IS WHERE YOU CAN ALTER THE RETURN DATA */
+        // return the response
+        return callback(irReturnData, null);
+      });
+    } catch (ex) {
+      const errorObj = this.requestHandlerInst.formatErrorObject(this.id, meth, 'Caught Exception', null, null, null, ex);
+      log.error(`${origin}: ${errorObj.IAPerror.displayString}`);
+      return callback(null, errorObj);
+    }
+  }
+
+  /**
+   * @function getSpecificNE
+   * @pronghornType method
+   * @name getSpecificNE
+   * @summary getSpecificNE
+   *
+   * @param {string} networkElement - networkElement param
+   * @param {number} [depth] - Optional depth query parameter
+   * @param {getCallback} callback - a callback function to return the result
+   * @return {object} results - An object containing the response of the action
+   *
+   * @route {POST} /getSpecificNE
+   * @roles admin
+   * @task true
+   */
+  /* YOU CAN CHANGE THE PARAMETERS YOU TAKE IN HERE AND IN THE pronghorn.json FILE */
+  getSpecificNE(networkElement, depth, callback) {
+    const meth = 'adapter-getSpecificNE';
+    const origin = `${this.id}-${meth}`;
+    log.trace(origin);
+
+    if (this.suspended && this.suspendMode === 'error') {
+      const errorObj = this.requestHandlerInst.formatErrorObject(this.id, meth, 'AD.600', [], null, null, null);
+      log.error(`${origin}: ${errorObj.IAPerror.displayString}`);
+      return callback(null, errorObj);
+    }
+
+    /* HERE IS WHERE YOU VALIDATE DATA */
+    if (networkElement === undefined || networkElement === null || networkElement === '') {
+      const errorObj = this.requestHandlerInst.formatErrorObject(this.id, meth, 'Missing Data', ['networkElement'], null, null, null);
+      log.error(`${origin}: ${errorObj.IAPerror.displayString}`);
+      return callback(null, errorObj);
+    }
+
+    /* HERE IS WHERE YOU SET THE DATA TO PASS INTO REQUEST */
+    const queryParamsAvailable = { depth };
+    const queryParams = {};
+    const pathVars = [`network-element=${networkElement}`];
+    const bodyVars = {};
+
+    // loop in template. long callback arg name to avoid identifier conflicts
+    Object.keys(queryParamsAvailable).forEach((thisKeyInQueryParamsAvailable) => {
+      if (queryParamsAvailable[thisKeyInQueryParamsAvailable] !== undefined && queryParamsAvailable[thisKeyInQueryParamsAvailable] !== null
+          && queryParamsAvailable[thisKeyInQueryParamsAvailable] !== '') {
+        queryParams[thisKeyInQueryParamsAvailable] = queryParamsAvailable[thisKeyInQueryParamsAvailable];
+      }
+    });
+
+    // set up the request object - payload, uriPathVars, uriQuery, uriOptions, addlHeaders, authData, callProperties, filter, priority, event
+    // see adapter code documentation for more information on the request object's fields
+    const reqObj = {
+      payload: bodyVars,
+      uriPathVars: pathVars,
+      uriQuery: queryParams
+    };
+
+    try {
+      // Make the call -
+      // identifyRequest(entity, action, requestObj, returnDataFlag, callback)
+      return this.requestHandlerInst.identifyRequest('NetworkInventoryRestconfAPI', 'getSpecificNE', reqObj, true, (irReturnData, irReturnError) => {
+        // if we received an error or their is no response on the results
+        // return an error
+        if (irReturnError) {
+          /* HERE IS WHERE YOU CAN ALTER THE ERROR MESSAGE */
+          return callback(null, irReturnError);
+        }
+        if (!Object.hasOwnProperty.call(irReturnData, 'response')) {
+          const errorObj = this.requestHandlerInst.formatErrorObject(this.id, meth, 'Invalid Response', ['getSpecificNE'], null, null, null);
+          log.error(`${origin}: ${errorObj.IAPerror.displayString}`);
+          return callback(null, errorObj);
+        }
+
+        /* HERE IS WHERE YOU CAN ALTER THE RETURN DATA */
+        // return the response
+        return callback(irReturnData, null);
+      });
+    } catch (ex) {
+      const errorObj = this.requestHandlerInst.formatErrorObject(this.id, meth, 'Caught Exception', null, null, null, ex);
+      log.error(`${origin}: ${errorObj.IAPerror.displayString}`);
+      return callback(null, errorObj);
+    }
+  }
+
+  /**
+   * @function getShelf
+   * @pronghornType method
+   * @name getShelf
+   * @summary getShelf
+   *
+   * @param {getCallback} callback - a callback function to return the result
+   * @return {object} results - An object containing the response of the action
+   *
+   * @route {GET} /getShelf
+   * @roles admin
+   * @task true
+   */
+  /* YOU CAN CHANGE THE PARAMETERS YOU TAKE IN HERE AND IN THE pronghorn.json FILE */
+  getShelf(callback) {
+    const meth = 'adapter-getShelf';
+    const origin = `${this.id}-${meth}`;
+    log.trace(origin);
+
+    if (this.suspended && this.suspendMode === 'error') {
+      const errorObj = this.requestHandlerInst.formatErrorObject(this.id, meth, 'AD.600', [], null, null, null);
+      log.error(`${origin}: ${errorObj.IAPerror.displayString}`);
+      return callback(null, errorObj);
+    }
+
+    /* HERE IS WHERE YOU VALIDATE DATA */
+
+    /* HERE IS WHERE YOU SET THE DATA TO PASS INTO REQUEST */
+    const queryParamsAvailable = {};
+    const queryParams = {};
+    const pathVars = [];
+    const bodyVars = {};
+
+    // loop in template. long callback arg name to avoid identifier conflicts
+    Object.keys(queryParamsAvailable).forEach((thisKeyInQueryParamsAvailable) => {
+      if (queryParamsAvailable[thisKeyInQueryParamsAvailable] !== undefined && queryParamsAvailable[thisKeyInQueryParamsAvailable] !== null
+          && queryParamsAvailable[thisKeyInQueryParamsAvailable] !== '') {
+        queryParams[thisKeyInQueryParamsAvailable] = queryParamsAvailable[thisKeyInQueryParamsAvailable];
+      }
+    });
+
+    // set up the request object - payload, uriPathVars, uriQuery, uriOptions, addlHeaders, authData, callProperties, filter, priority, event
+    // see adapter code documentation for more information on the request object's fields
+    const reqObj = {
+      payload: bodyVars,
+      uriPathVars: pathVars,
+      uriQuery: queryParams
+    };
+
+    try {
+      // Make the call -
+      // identifyRequest(entity, action, requestObj, returnDataFlag, callback)
+      return this.requestHandlerInst.identifyRequest('NetworkInventoryRestconfAPI', 'getShelf', reqObj, true, (irReturnData, irReturnError) => {
+        // if we received an error or their is no response on the results
+        // return an error
+        if (irReturnError) {
+          /* HERE IS WHERE YOU CAN ALTER THE ERROR MESSAGE */
+          return callback(null, irReturnError);
+        }
+        if (!Object.hasOwnProperty.call(irReturnData, 'response')) {
+          const errorObj = this.requestHandlerInst.formatErrorObject(this.id, meth, 'Invalid Response', ['getShelf'], null, null, null);
+          log.error(`${origin}: ${errorObj.IAPerror.displayString}`);
+          return callback(null, errorObj);
+        }
+
+        /* HERE IS WHERE YOU CAN ALTER THE RETURN DATA */
+        // return the response
+        return callback(irReturnData, null);
+      });
+    } catch (ex) {
+      const errorObj = this.requestHandlerInst.formatErrorObject(this.id, meth, 'Caught Exception', null, null, null, ex);
+      log.error(`${origin}: ${errorObj.IAPerror.displayString}`);
+      return callback(null, errorObj);
+    }
+  }
+
+  /**
+   * @function getSpecificShelf
+   * @pronghornType method
+   * @name getSpecificShelf
+   * @summary getSpecificShelf
+   *
+   * @param {string} networkElement - networkElement param
+   * @param {string} shelf - shelf param
+   * @param {getCallback} callback - a callback function to return the result
+   * @return {object} results - An object containing the response of the action
+   *
+   * @route {POST} /getSpecificShelf
+   * @roles admin
+   * @task true
+   */
+  /* YOU CAN CHANGE THE PARAMETERS YOU TAKE IN HERE AND IN THE pronghorn.json FILE */
+  getSpecificShelf(networkElement, shelf, callback) {
+    const meth = 'adapter-getSpecificShelf';
+    const origin = `${this.id}-${meth}`;
+    log.trace(origin);
+
+    if (this.suspended && this.suspendMode === 'error') {
+      const errorObj = this.requestHandlerInst.formatErrorObject(this.id, meth, 'AD.600', [], null, null, null);
+      log.error(`${origin}: ${errorObj.IAPerror.displayString}`);
+      return callback(null, errorObj);
+    }
+
+    /* HERE IS WHERE YOU VALIDATE DATA */
+    if (networkElement === undefined || networkElement === null || networkElement === '') {
+      const errorObj = this.requestHandlerInst.formatErrorObject(this.id, meth, 'Missing Data', ['networkElement'], null, null, null);
+      log.error(`${origin}: ${errorObj.IAPerror.displayString}`);
+      return callback(null, errorObj);
+    }
+    if (shelf === undefined || shelf === null || shelf === '') {
+      const errorObj = this.requestHandlerInst.formatErrorObject(this.id, meth, 'Missing Data', ['shelf'], null, null, null);
+      log.error(`${origin}: ${errorObj.IAPerror.displayString}`);
+      return callback(null, errorObj);
+    }
+
+    /* HERE IS WHERE YOU SET THE DATA TO PASS INTO REQUEST */
+    const queryParamsAvailable = {};
+    const queryParams = {};
+    const pathVars = [`network-element=${networkElement}`, `shelf=${shelf}`];
+    const bodyVars = {};
+
+    // loop in template. long callback arg name to avoid identifier conflicts
+    Object.keys(queryParamsAvailable).forEach((thisKeyInQueryParamsAvailable) => {
+      if (queryParamsAvailable[thisKeyInQueryParamsAvailable] !== undefined && queryParamsAvailable[thisKeyInQueryParamsAvailable] !== null
+          && queryParamsAvailable[thisKeyInQueryParamsAvailable] !== '') {
+        queryParams[thisKeyInQueryParamsAvailable] = queryParamsAvailable[thisKeyInQueryParamsAvailable];
+      }
+    });
+
+    // set up the request object - payload, uriPathVars, uriQuery, uriOptions, addlHeaders, authData, callProperties, filter, priority, event
+    // see adapter code documentation for more information on the request object's fields
+    const reqObj = {
+      payload: bodyVars,
+      uriPathVars: pathVars,
+      uriQuery: queryParams
+    };
+
+    try {
+      // Make the call -
+      // identifyRequest(entity, action, requestObj, returnDataFlag, callback)
+      return this.requestHandlerInst.identifyRequest('NetworkInventoryRestconfAPI', 'getSpecificShelf', reqObj, true, (irReturnData, irReturnError) => {
+        // if we received an error or their is no response on the results
+        // return an error
+        if (irReturnError) {
+          /* HERE IS WHERE YOU CAN ALTER THE ERROR MESSAGE */
+          return callback(null, irReturnError);
+        }
+        if (!Object.hasOwnProperty.call(irReturnData, 'response')) {
+          const errorObj = this.requestHandlerInst.formatErrorObject(this.id, meth, 'Invalid Response', ['getSpecificShelf'], null, null, null);
+          log.error(`${origin}: ${errorObj.IAPerror.displayString}`);
+          return callback(null, errorObj);
+        }
+
+        /* HERE IS WHERE YOU CAN ALTER THE RETURN DATA */
+        // return the response
+        return callback(irReturnData, null);
+      });
+    } catch (ex) {
+      const errorObj = this.requestHandlerInst.formatErrorObject(this.id, meth, 'Caught Exception', null, null, null, ex);
+      log.error(`${origin}: ${errorObj.IAPerror.displayString}`);
+      return callback(null, errorObj);
+    }
+  }
+
+  /**
+   * @function getCard
+   * @pronghornType method
+   * @name getCard
+   * @summary getCard
+   *
+   * @param {getCallback} callback - a callback function to return the result
+   * @return {object} results - An object containing the response of the action
+   *
+   * @route {GET} /getCard
+   * @roles admin
+   * @task true
+   */
+  /* YOU CAN CHANGE THE PARAMETERS YOU TAKE IN HERE AND IN THE pronghorn.json FILE */
+  getCard(callback) {
+    const meth = 'adapter-getCard';
+    const origin = `${this.id}-${meth}`;
+    log.trace(origin);
+
+    if (this.suspended && this.suspendMode === 'error') {
+      const errorObj = this.requestHandlerInst.formatErrorObject(this.id, meth, 'AD.600', [], null, null, null);
+      log.error(`${origin}: ${errorObj.IAPerror.displayString}`);
+      return callback(null, errorObj);
+    }
+
+    /* HERE IS WHERE YOU VALIDATE DATA */
+
+    /* HERE IS WHERE YOU SET THE DATA TO PASS INTO REQUEST */
+    const queryParamsAvailable = {};
+    const queryParams = {};
+    const pathVars = [];
+    const bodyVars = {};
+
+    // loop in template. long callback arg name to avoid identifier conflicts
+    Object.keys(queryParamsAvailable).forEach((thisKeyInQueryParamsAvailable) => {
+      if (queryParamsAvailable[thisKeyInQueryParamsAvailable] !== undefined && queryParamsAvailable[thisKeyInQueryParamsAvailable] !== null
+          && queryParamsAvailable[thisKeyInQueryParamsAvailable] !== '') {
+        queryParams[thisKeyInQueryParamsAvailable] = queryParamsAvailable[thisKeyInQueryParamsAvailable];
+      }
+    });
+
+    // set up the request object - payload, uriPathVars, uriQuery, uriOptions, addlHeaders, authData, callProperties, filter, priority, event
+    // see adapter code documentation for more information on the request object's fields
+    const reqObj = {
+      payload: bodyVars,
+      uriPathVars: pathVars,
+      uriQuery: queryParams
+    };
+
+    try {
+      // Make the call -
+      // identifyRequest(entity, action, requestObj, returnDataFlag, callback)
+      return this.requestHandlerInst.identifyRequest('NetworkInventoryRestconfAPI', 'getCard', reqObj, true, (irReturnData, irReturnError) => {
+        // if we received an error or their is no response on the results
+        // return an error
+        if (irReturnError) {
+          /* HERE IS WHERE YOU CAN ALTER THE ERROR MESSAGE */
+          return callback(null, irReturnError);
+        }
+        if (!Object.hasOwnProperty.call(irReturnData, 'response')) {
+          const errorObj = this.requestHandlerInst.formatErrorObject(this.id, meth, 'Invalid Response', ['getCard'], null, null, null);
+          log.error(`${origin}: ${errorObj.IAPerror.displayString}`);
+          return callback(null, errorObj);
+        }
+
+        /* HERE IS WHERE YOU CAN ALTER THE RETURN DATA */
+        // return the response
+        return callback(irReturnData, null);
+      });
+    } catch (ex) {
+      const errorObj = this.requestHandlerInst.formatErrorObject(this.id, meth, 'Caught Exception', null, null, null, ex);
+      log.error(`${origin}: ${errorObj.IAPerror.displayString}`);
+      return callback(null, errorObj);
+    }
+  }
+
+  /**
+   * @function getSpecificNECards
+   * @pronghornType method
+   * @name getSpecificNECards
+   * @summary getSpecificNECards
+   *
+   * @param {string} networkElement - networkElement param
+   * @param {string} card - card param
+   * @param {getCallback} callback - a callback function to return the result
+   * @return {object} results - An object containing the response of the action
+   *
+   * @route {POST} /getSpecificNECards
+   * @roles admin
+   * @task true
+   */
+  /* YOU CAN CHANGE THE PARAMETERS YOU TAKE IN HERE AND IN THE pronghorn.json FILE */
+  getSpecificNECards(networkElement, card, callback) {
+    const meth = 'adapter-getSpecificNECards';
+    const origin = `${this.id}-${meth}`;
+    log.trace(origin);
+
+    if (this.suspended && this.suspendMode === 'error') {
+      const errorObj = this.requestHandlerInst.formatErrorObject(this.id, meth, 'AD.600', [], null, null, null);
+      log.error(`${origin}: ${errorObj.IAPerror.displayString}`);
+      return callback(null, errorObj);
+    }
+
+    /* HERE IS WHERE YOU VALIDATE DATA */
+    if (networkElement === undefined || networkElement === null || networkElement === '') {
+      const errorObj = this.requestHandlerInst.formatErrorObject(this.id, meth, 'Missing Data', ['networkElement'], null, null, null);
+      log.error(`${origin}: ${errorObj.IAPerror.displayString}`);
+      return callback(null, errorObj);
+    }
+    if (card === undefined || card === null || card === '') {
+      const errorObj = this.requestHandlerInst.formatErrorObject(this.id, meth, 'Missing Data', ['card'], null, null, null);
+      log.error(`${origin}: ${errorObj.IAPerror.displayString}`);
+      return callback(null, errorObj);
+    }
+
+    /* HERE IS WHERE YOU SET THE DATA TO PASS INTO REQUEST */
+    const queryParamsAvailable = {};
+    const queryParams = {};
+    const pathVars = [`network-element=${networkElement}`, `card=${card}`];
+    const bodyVars = {};
+
+    // loop in template. long callback arg name to avoid identifier conflicts
+    Object.keys(queryParamsAvailable).forEach((thisKeyInQueryParamsAvailable) => {
+      if (queryParamsAvailable[thisKeyInQueryParamsAvailable] !== undefined && queryParamsAvailable[thisKeyInQueryParamsAvailable] !== null
+          && queryParamsAvailable[thisKeyInQueryParamsAvailable] !== '') {
+        queryParams[thisKeyInQueryParamsAvailable] = queryParamsAvailable[thisKeyInQueryParamsAvailable];
+      }
+    });
+
+    // set up the request object - payload, uriPathVars, uriQuery, uriOptions, addlHeaders, authData, callProperties, filter, priority, event
+    // see adapter code documentation for more information on the request object's fields
+    const reqObj = {
+      payload: bodyVars,
+      uriPathVars: pathVars,
+      uriQuery: queryParams
+    };
+
+    try {
+      // Make the call -
+      // identifyRequest(entity, action, requestObj, returnDataFlag, callback)
+      return this.requestHandlerInst.identifyRequest('NetworkInventoryRestconfAPI', 'getSpecificNECards', reqObj, true, (irReturnData, irReturnError) => {
+        // if we received an error or their is no response on the results
+        // return an error
+        if (irReturnError) {
+          /* HERE IS WHERE YOU CAN ALTER THE ERROR MESSAGE */
+          return callback(null, irReturnError);
+        }
+        if (!Object.hasOwnProperty.call(irReturnData, 'response')) {
+          const errorObj = this.requestHandlerInst.formatErrorObject(this.id, meth, 'Invalid Response', ['getSpecificNECards'], null, null, null);
+          log.error(`${origin}: ${errorObj.IAPerror.displayString}`);
+          return callback(null, errorObj);
+        }
+
+        /* HERE IS WHERE YOU CAN ALTER THE RETURN DATA */
+        // return the response
+        return callback(irReturnData, null);
+      });
+    } catch (ex) {
+      const errorObj = this.requestHandlerInst.formatErrorObject(this.id, meth, 'Caught Exception', null, null, null, ex);
+      log.error(`${origin}: ${errorObj.IAPerror.displayString}`);
+      return callback(null, errorObj);
+    }
+  }
+
+  /**
+   * @function getPort
+   * @pronghornType method
+   * @name getPort
+   * @summary getPort
+   *
+   * @param {getCallback} callback - a callback function to return the result
+   * @return {object} results - An object containing the response of the action
+   *
+   * @route {GET} /getPort
+   * @roles admin
+   * @task true
+   */
+  /* YOU CAN CHANGE THE PARAMETERS YOU TAKE IN HERE AND IN THE pronghorn.json FILE */
+  getPort(callback) {
+    const meth = 'adapter-getPort';
+    const origin = `${this.id}-${meth}`;
+    log.trace(origin);
+
+    if (this.suspended && this.suspendMode === 'error') {
+      const errorObj = this.requestHandlerInst.formatErrorObject(this.id, meth, 'AD.600', [], null, null, null);
+      log.error(`${origin}: ${errorObj.IAPerror.displayString}`);
+      return callback(null, errorObj);
+    }
+
+    /* HERE IS WHERE YOU VALIDATE DATA */
+
+    /* HERE IS WHERE YOU SET THE DATA TO PASS INTO REQUEST */
+    const queryParamsAvailable = {};
+    const queryParams = {};
+    const pathVars = [];
+    const bodyVars = {};
+
+    // loop in template. long callback arg name to avoid identifier conflicts
+    Object.keys(queryParamsAvailable).forEach((thisKeyInQueryParamsAvailable) => {
+      if (queryParamsAvailable[thisKeyInQueryParamsAvailable] !== undefined && queryParamsAvailable[thisKeyInQueryParamsAvailable] !== null
+          && queryParamsAvailable[thisKeyInQueryParamsAvailable] !== '') {
+        queryParams[thisKeyInQueryParamsAvailable] = queryParamsAvailable[thisKeyInQueryParamsAvailable];
+      }
+    });
+
+    // set up the request object - payload, uriPathVars, uriQuery, uriOptions, addlHeaders, authData, callProperties, filter, priority, event
+    // see adapter code documentation for more information on the request object's fields
+    const reqObj = {
+      payload: bodyVars,
+      uriPathVars: pathVars,
+      uriQuery: queryParams
+    };
+
+    try {
+      // Make the call -
+      // identifyRequest(entity, action, requestObj, returnDataFlag, callback)
+      return this.requestHandlerInst.identifyRequest('NetworkInventoryRestconfAPI', 'getPort', reqObj, true, (irReturnData, irReturnError) => {
+        // if we received an error or their is no response on the results
+        // return an error
+        if (irReturnError) {
+          /* HERE IS WHERE YOU CAN ALTER THE ERROR MESSAGE */
+          return callback(null, irReturnError);
+        }
+        if (!Object.hasOwnProperty.call(irReturnData, 'response')) {
+          const errorObj = this.requestHandlerInst.formatErrorObject(this.id, meth, 'Invalid Response', ['getPort'], null, null, null);
+          log.error(`${origin}: ${errorObj.IAPerror.displayString}`);
+          return callback(null, errorObj);
+        }
+
+        /* HERE IS WHERE YOU CAN ALTER THE RETURN DATA */
+        // return the response
+        return callback(irReturnData, null);
+      });
+    } catch (ex) {
+      const errorObj = this.requestHandlerInst.formatErrorObject(this.id, meth, 'Caught Exception', null, null, null, ex);
+      log.error(`${origin}: ${errorObj.IAPerror.displayString}`);
+      return callback(null, errorObj);
+    }
+  }
+
+  /**
+   * @function getPortFromSpecificNE
+   * @pronghornType method
+   * @name getPortFromSpecificNE
+   * @summary getPortFromSpecificNE
+   *
+   * @param {string} networkElement - networkElement param
+   * @param {string} port - port param
+   * @param {getCallback} callback - a callback function to return the result
+   * @return {object} results - An object containing the response of the action
+   *
+   * @route {POST} /getPortFromSpecificNE
+   * @roles admin
+   * @task true
+   */
+  /* YOU CAN CHANGE THE PARAMETERS YOU TAKE IN HERE AND IN THE pronghorn.json FILE */
+  getPortFromSpecificNE(networkElement, port, callback) {
+    const meth = 'adapter-getPortFromSpecificNE';
+    const origin = `${this.id}-${meth}`;
+    log.trace(origin);
+
+    if (this.suspended && this.suspendMode === 'error') {
+      const errorObj = this.requestHandlerInst.formatErrorObject(this.id, meth, 'AD.600', [], null, null, null);
+      log.error(`${origin}: ${errorObj.IAPerror.displayString}`);
+      return callback(null, errorObj);
+    }
+
+    /* HERE IS WHERE YOU VALIDATE DATA */
+    if (networkElement === undefined || networkElement === null || networkElement === '') {
+      const errorObj = this.requestHandlerInst.formatErrorObject(this.id, meth, 'Missing Data', ['networkElement'], null, null, null);
+      log.error(`${origin}: ${errorObj.IAPerror.displayString}`);
+      return callback(null, errorObj);
+    }
+    if (port === undefined || port === null || port === '') {
+      const errorObj = this.requestHandlerInst.formatErrorObject(this.id, meth, 'Missing Data', ['port'], null, null, null);
+      log.error(`${origin}: ${errorObj.IAPerror.displayString}`);
+      return callback(null, errorObj);
+    }
+
+    /* HERE IS WHERE YOU SET THE DATA TO PASS INTO REQUEST */
+    const queryParamsAvailable = {};
+    const queryParams = {};
+    const pathVars = [`network-element=${networkElement}`, `port=${port}`];
+    const bodyVars = {};
+
+    // loop in template. long callback arg name to avoid identifier conflicts
+    Object.keys(queryParamsAvailable).forEach((thisKeyInQueryParamsAvailable) => {
+      if (queryParamsAvailable[thisKeyInQueryParamsAvailable] !== undefined && queryParamsAvailable[thisKeyInQueryParamsAvailable] !== null
+          && queryParamsAvailable[thisKeyInQueryParamsAvailable] !== '') {
+        queryParams[thisKeyInQueryParamsAvailable] = queryParamsAvailable[thisKeyInQueryParamsAvailable];
+      }
+    });
+
+    // set up the request object - payload, uriPathVars, uriQuery, uriOptions, addlHeaders, authData, callProperties, filter, priority, event
+    // see adapter code documentation for more information on the request object's fields
+    const reqObj = {
+      payload: bodyVars,
+      uriPathVars: pathVars,
+      uriQuery: queryParams
+    };
+
+    try {
+      // Make the call -
+      // identifyRequest(entity, action, requestObj, returnDataFlag, callback)
+      return this.requestHandlerInst.identifyRequest('NetworkInventoryRestconfAPI', 'getPortFromSpecificNE', reqObj, true, (irReturnData, irReturnError) => {
+        // if we received an error or their is no response on the results
+        // return an error
+        if (irReturnError) {
+          /* HERE IS WHERE YOU CAN ALTER THE ERROR MESSAGE */
+          return callback(null, irReturnError);
+        }
+        if (!Object.hasOwnProperty.call(irReturnData, 'response')) {
+          const errorObj = this.requestHandlerInst.formatErrorObject(this.id, meth, 'Invalid Response', ['getPortFromSpecificNE'], null, null, null);
+          log.error(`${origin}: ${errorObj.IAPerror.displayString}`);
+          return callback(null, errorObj);
+        }
+
+        /* HERE IS WHERE YOU CAN ALTER THE RETURN DATA */
+        // return the response
+        return callback(irReturnData, null);
+      });
+    } catch (ex) {
+      const errorObj = this.requestHandlerInst.formatErrorObject(this.id, meth, 'Caught Exception', null, null, null, ex);
+      log.error(`${origin}: ${errorObj.IAPerror.displayString}`);
+      return callback(null, errorObj);
+    }
+  }
+
+  /**
+   * @function getPortFromSpecificNETransceiverDetails
+   * @pronghornType method
+   * @name getPortFromSpecificNETransceiverDetails
+   * @summary getPortFromSpecificNETransceiverDetails
+   *
+   * @param {string} networkElement - networkElement param
+   * @param {string} port - port param
+   * @param {getCallback} callback - a callback function to return the result
+   * @return {object} results - An object containing the response of the action
+   *
+   * @route {POST} /getPortFromSpecificNETransceiverDetails
+   * @roles admin
+   * @task true
+   */
+  /* YOU CAN CHANGE THE PARAMETERS YOU TAKE IN HERE AND IN THE pronghorn.json FILE */
+  getPortFromSpecificNETransceiverDetails(networkElement, port, callback) {
+    const meth = 'adapter-getPortFromSpecificNETransceiverDetails';
+    const origin = `${this.id}-${meth}`;
+    log.trace(origin);
+
+    if (this.suspended && this.suspendMode === 'error') {
+      const errorObj = this.requestHandlerInst.formatErrorObject(this.id, meth, 'AD.600', [], null, null, null);
+      log.error(`${origin}: ${errorObj.IAPerror.displayString}`);
+      return callback(null, errorObj);
+    }
+
+    /* HERE IS WHERE YOU VALIDATE DATA */
+    if (networkElement === undefined || networkElement === null || networkElement === '') {
+      const errorObj = this.requestHandlerInst.formatErrorObject(this.id, meth, 'Missing Data', ['networkElement'], null, null, null);
+      log.error(`${origin}: ${errorObj.IAPerror.displayString}`);
+      return callback(null, errorObj);
+    }
+    if (port === undefined || port === null || port === '') {
+      const errorObj = this.requestHandlerInst.formatErrorObject(this.id, meth, 'Missing Data', ['port'], null, null, null);
+      log.error(`${origin}: ${errorObj.IAPerror.displayString}`);
+      return callback(null, errorObj);
+    }
+
+    /* HERE IS WHERE YOU SET THE DATA TO PASS INTO REQUEST */
+    const queryParamsAvailable = {};
+    const queryParams = {};
+    const pathVars = [`network-element=${networkElement}`, `port=${port}`];
+    const bodyVars = {};
+
+    // loop in template. long callback arg name to avoid identifier conflicts
+    Object.keys(queryParamsAvailable).forEach((thisKeyInQueryParamsAvailable) => {
+      if (queryParamsAvailable[thisKeyInQueryParamsAvailable] !== undefined && queryParamsAvailable[thisKeyInQueryParamsAvailable] !== null
+          && queryParamsAvailable[thisKeyInQueryParamsAvailable] !== '') {
+        queryParams[thisKeyInQueryParamsAvailable] = queryParamsAvailable[thisKeyInQueryParamsAvailable];
+      }
+    });
+
+    // set up the request object - payload, uriPathVars, uriQuery, uriOptions, addlHeaders, authData, callProperties, filter, priority, event
+    // see adapter code documentation for more information on the request object's fields
+    const reqObj = {
+      payload: bodyVars,
+      uriPathVars: pathVars,
+      uriQuery: queryParams
+    };
+
+    try {
+      // Make the call -
+      // identifyRequest(entity, action, requestObj, returnDataFlag, callback)
+      return this.requestHandlerInst.identifyRequest('NetworkInventoryRestconfAPI', 'getPortFromSpecificNETransceiverDetails', reqObj, true, (irReturnData, irReturnError) => {
+        // if we received an error or their is no response on the results
+        // return an error
+        if (irReturnError) {
+          /* HERE IS WHERE YOU CAN ALTER THE ERROR MESSAGE */
+          return callback(null, irReturnError);
+        }
+        if (!Object.hasOwnProperty.call(irReturnData, 'response')) {
+          const errorObj = this.requestHandlerInst.formatErrorObject(this.id, meth, 'Invalid Response', ['getPortFromSpecificNETransceiverDetails'], null, null, null);
+          log.error(`${origin}: ${errorObj.IAPerror.displayString}`);
+          return callback(null, errorObj);
+        }
+
+        /* HERE IS WHERE YOU CAN ALTER THE RETURN DATA */
+        // return the response
+        return callback(irReturnData, null);
+      });
+    } catch (ex) {
+      const errorObj = this.requestHandlerInst.formatErrorObject(this.id, meth, 'Caught Exception', null, null, null, ex);
+      log.error(`${origin}: ${errorObj.IAPerror.displayString}`);
+      return callback(null, errorObj);
+    }
+  }
+
+  /**
+   * @function getLags
+   * @pronghornType method
+   * @name getLags
+   * @summary getLags
+   *
+   * @param {getCallback} callback - a callback function to return the result
+   * @return {object} results - An object containing the response of the action
+   *
+   * @route {GET} /getLags
+   * @roles admin
+   * @task true
+   */
+  /* YOU CAN CHANGE THE PARAMETERS YOU TAKE IN HERE AND IN THE pronghorn.json FILE */
+  getLags(callback) {
+    const meth = 'adapter-getLags';
+    const origin = `${this.id}-${meth}`;
+    log.trace(origin);
+
+    if (this.suspended && this.suspendMode === 'error') {
+      const errorObj = this.requestHandlerInst.formatErrorObject(this.id, meth, 'AD.600', [], null, null, null);
+      log.error(`${origin}: ${errorObj.IAPerror.displayString}`);
+      return callback(null, errorObj);
+    }
+
+    /* HERE IS WHERE YOU VALIDATE DATA */
+
+    /* HERE IS WHERE YOU SET THE DATA TO PASS INTO REQUEST */
+    const queryParamsAvailable = {};
+    const queryParams = {};
+    const pathVars = [];
+    const bodyVars = {};
+
+    // loop in template. long callback arg name to avoid identifier conflicts
+    Object.keys(queryParamsAvailable).forEach((thisKeyInQueryParamsAvailable) => {
+      if (queryParamsAvailable[thisKeyInQueryParamsAvailable] !== undefined && queryParamsAvailable[thisKeyInQueryParamsAvailable] !== null
+          && queryParamsAvailable[thisKeyInQueryParamsAvailable] !== '') {
+        queryParams[thisKeyInQueryParamsAvailable] = queryParamsAvailable[thisKeyInQueryParamsAvailable];
+      }
+    });
+
+    // set up the request object - payload, uriPathVars, uriQuery, uriOptions, addlHeaders, authData, callProperties, filter, priority, event
+    // see adapter code documentation for more information on the request object's fields
+    const reqObj = {
+      payload: bodyVars,
+      uriPathVars: pathVars,
+      uriQuery: queryParams
+    };
+
+    try {
+      // Make the call -
+      // identifyRequest(entity, action, requestObj, returnDataFlag, callback)
+      return this.requestHandlerInst.identifyRequest('NetworkInventoryRestconfAPI', 'getLags', reqObj, true, (irReturnData, irReturnError) => {
+        // if we received an error or their is no response on the results
+        // return an error
+        if (irReturnError) {
+          /* HERE IS WHERE YOU CAN ALTER THE ERROR MESSAGE */
+          return callback(null, irReturnError);
+        }
+        if (!Object.hasOwnProperty.call(irReturnData, 'response')) {
+          const errorObj = this.requestHandlerInst.formatErrorObject(this.id, meth, 'Invalid Response', ['getLags'], null, null, null);
+          log.error(`${origin}: ${errorObj.IAPerror.displayString}`);
+          return callback(null, errorObj);
+        }
+
+        /* HERE IS WHERE YOU CAN ALTER THE RETURN DATA */
+        // return the response
+        return callback(irReturnData, null);
+      });
+    } catch (ex) {
+      const errorObj = this.requestHandlerInst.formatErrorObject(this.id, meth, 'Caught Exception', null, null, null, ex);
+      log.error(`${origin}: ${errorObj.IAPerror.displayString}`);
+      return callback(null, errorObj);
+    }
+  }
+
+  /**
+   * @function getSpecificNELag
+   * @pronghornType method
+   * @name getSpecificNELag
+   * @summary getSpecificNELag
+   *
+   * @param {string} networkElement - networkElement param
+   * @param {getCallback} callback - a callback function to return the result
+   * @return {object} results - An object containing the response of the action
+   *
+   * @route {POST} /getSpecificNELag
+   * @roles admin
+   * @task true
+   */
+  /* YOU CAN CHANGE THE PARAMETERS YOU TAKE IN HERE AND IN THE pronghorn.json FILE */
+  getSpecificNELag(networkElement, callback) {
+    const meth = 'adapter-getSpecificNELag';
+    const origin = `${this.id}-${meth}`;
+    log.trace(origin);
+
+    if (this.suspended && this.suspendMode === 'error') {
+      const errorObj = this.requestHandlerInst.formatErrorObject(this.id, meth, 'AD.600', [], null, null, null);
+      log.error(`${origin}: ${errorObj.IAPerror.displayString}`);
+      return callback(null, errorObj);
+    }
+
+    /* HERE IS WHERE YOU VALIDATE DATA */
+    if (networkElement === undefined || networkElement === null || networkElement === '') {
+      const errorObj = this.requestHandlerInst.formatErrorObject(this.id, meth, 'Missing Data', ['networkElement'], null, null, null);
+      log.error(`${origin}: ${errorObj.IAPerror.displayString}`);
+      return callback(null, errorObj);
+    }
+
+    /* HERE IS WHERE YOU SET THE DATA TO PASS INTO REQUEST */
+    const queryParamsAvailable = {};
+    const queryParams = {};
+    const pathVars = [`network-element=${networkElement}`];
+    const bodyVars = {};
+
+    // loop in template. long callback arg name to avoid identifier conflicts
+    Object.keys(queryParamsAvailable).forEach((thisKeyInQueryParamsAvailable) => {
+      if (queryParamsAvailable[thisKeyInQueryParamsAvailable] !== undefined && queryParamsAvailable[thisKeyInQueryParamsAvailable] !== null
+          && queryParamsAvailable[thisKeyInQueryParamsAvailable] !== '') {
+        queryParams[thisKeyInQueryParamsAvailable] = queryParamsAvailable[thisKeyInQueryParamsAvailable];
+      }
+    });
+
+    // set up the request object - payload, uriPathVars, uriQuery, uriOptions, addlHeaders, authData, callProperties, filter, priority, event
+    // see adapter code documentation for more information on the request object's fields
+    const reqObj = {
+      payload: bodyVars,
+      uriPathVars: pathVars,
+      uriQuery: queryParams
+    };
+
+    try {
+      // Make the call -
+      // identifyRequest(entity, action, requestObj, returnDataFlag, callback)
+      return this.requestHandlerInst.identifyRequest('NetworkInventoryRestconfAPI', 'getSpecificNELag', reqObj, true, (irReturnData, irReturnError) => {
+        // if we received an error or their is no response on the results
+        // return an error
+        if (irReturnError) {
+          /* HERE IS WHERE YOU CAN ALTER THE ERROR MESSAGE */
+          return callback(null, irReturnError);
+        }
+        if (!Object.hasOwnProperty.call(irReturnData, 'response')) {
+          const errorObj = this.requestHandlerInst.formatErrorObject(this.id, meth, 'Invalid Response', ['getSpecificNELag'], null, null, null);
+          log.error(`${origin}: ${errorObj.IAPerror.displayString}`);
+          return callback(null, errorObj);
+        }
+
+        /* HERE IS WHERE YOU CAN ALTER THE RETURN DATA */
+        // return the response
+        return callback(irReturnData, null);
+      });
+    } catch (ex) {
+      const errorObj = this.requestHandlerInst.formatErrorObject(this.id, meth, 'Caught Exception', null, null, null, ex);
+      log.error(`${origin}: ${errorObj.IAPerror.displayString}`);
+      return callback(null, errorObj);
+    }
+  }
+
+  /**
+   * @function getSpecificNELagWithFields
+   * @pronghornType method
+   * @name getSpecificNELagWithFields
+   * @summary getSpecificNELagWithFields
+   *
+   * @param {string} fields - fields param
+   * @param {string} networkElement - networkElement param
+   * @param {string} lag - lag param
+   * @param {getCallback} callback - a callback function to return the result
+   * @return {object} results - An object containing the response of the action
+   *
+   * @route {POST} /getSpecificNELagWithFields
+   * @roles admin
+   * @task true
+   */
+  /* YOU CAN CHANGE THE PARAMETERS YOU TAKE IN HERE AND IN THE pronghorn.json FILE */
+  getSpecificNELagWithFields(fields, networkElement, lag, callback) {
+    const meth = 'adapter-getSpecificNELagWithFields';
+    const origin = `${this.id}-${meth}`;
+    log.trace(origin);
+
+    if (this.suspended && this.suspendMode === 'error') {
+      const errorObj = this.requestHandlerInst.formatErrorObject(this.id, meth, 'AD.600', [], null, null, null);
+      log.error(`${origin}: ${errorObj.IAPerror.displayString}`);
+      return callback(null, errorObj);
+    }
+
+    /* HERE IS WHERE YOU VALIDATE DATA */
+    if (fields === undefined || fields === null || fields === '') {
+      const errorObj = this.requestHandlerInst.formatErrorObject(this.id, meth, 'Missing Data', ['fields'], null, null, null);
+      log.error(`${origin}: ${errorObj.IAPerror.displayString}`);
+      return callback(null, errorObj);
+    }
+    if (networkElement === undefined || networkElement === null || networkElement === '') {
+      const errorObj = this.requestHandlerInst.formatErrorObject(this.id, meth, 'Missing Data', ['networkElement'], null, null, null);
+      log.error(`${origin}: ${errorObj.IAPerror.displayString}`);
+      return callback(null, errorObj);
+    }
+    if (lag === undefined || lag === null || lag === '') {
+      const errorObj = this.requestHandlerInst.formatErrorObject(this.id, meth, 'Missing Data', ['lag'], null, null, null);
+      log.error(`${origin}: ${errorObj.IAPerror.displayString}`);
+      return callback(null, errorObj);
+    }
+
+    /* HERE IS WHERE YOU SET THE DATA TO PASS INTO REQUEST */
+    const queryParamsAvailable = { fields };
+    const queryParams = {};
+    const pathVars = [`network-element=${networkElement}`, `lag=${lag}`];
+    const bodyVars = {};
+
+    // loop in template. long callback arg name to avoid identifier conflicts
+    Object.keys(queryParamsAvailable).forEach((thisKeyInQueryParamsAvailable) => {
+      if (queryParamsAvailable[thisKeyInQueryParamsAvailable] !== undefined && queryParamsAvailable[thisKeyInQueryParamsAvailable] !== null
+          && queryParamsAvailable[thisKeyInQueryParamsAvailable] !== '') {
+        queryParams[thisKeyInQueryParamsAvailable] = queryParamsAvailable[thisKeyInQueryParamsAvailable];
+      }
+    });
+
+    // set up the request object - payload, uriPathVars, uriQuery, uriOptions, addlHeaders, authData, callProperties, filter, priority, event
+    // see adapter code documentation for more information on the request object's fields
+    const reqObj = {
+      payload: bodyVars,
+      uriPathVars: pathVars,
+      uriQuery: queryParams
+    };
+
+    try {
+      // Make the call -
+      // identifyRequest(entity, action, requestObj, returnDataFlag, callback)
+      return this.requestHandlerInst.identifyRequest('NetworkInventoryRestconfAPI', 'getSpecificNELagWithFields', reqObj, true, (irReturnData, irReturnError) => {
+        // if we received an error or their is no response on the results
+        // return an error
+        if (irReturnError) {
+          /* HERE IS WHERE YOU CAN ALTER THE ERROR MESSAGE */
+          return callback(null, irReturnError);
+        }
+        if (!Object.hasOwnProperty.call(irReturnData, 'response')) {
+          const errorObj = this.requestHandlerInst.formatErrorObject(this.id, meth, 'Invalid Response', ['getSpecificNELagWithFields'], null, null, null);
+          log.error(`${origin}: ${errorObj.IAPerror.displayString}`);
+          return callback(null, errorObj);
+        }
+
+        /* HERE IS WHERE YOU CAN ALTER THE RETURN DATA */
+        // return the response
+        return callback(irReturnData, null);
+      });
+    } catch (ex) {
+      const errorObj = this.requestHandlerInst.formatErrorObject(this.id, meth, 'Caught Exception', null, null, null, ex);
+      log.error(`${origin}: ${errorObj.IAPerror.displayString}`);
+      return callback(null, errorObj);
+    }
+  }
+
+  /**
+   * @function getRadio
+   * @pronghornType method
+   * @name getRadio
+   * @summary getRadio
+   *
+   * @param {getCallback} callback - a callback function to return the result
+   * @return {object} results - An object containing the response of the action
+   *
+   * @route {GET} /getRadio
+   * @roles admin
+   * @task true
+   */
+  /* YOU CAN CHANGE THE PARAMETERS YOU TAKE IN HERE AND IN THE pronghorn.json FILE */
+  getRadio(callback) {
+    const meth = 'adapter-getRadio';
+    const origin = `${this.id}-${meth}`;
+    log.trace(origin);
+
+    if (this.suspended && this.suspendMode === 'error') {
+      const errorObj = this.requestHandlerInst.formatErrorObject(this.id, meth, 'AD.600', [], null, null, null);
+      log.error(`${origin}: ${errorObj.IAPerror.displayString}`);
+      return callback(null, errorObj);
+    }
+
+    /* HERE IS WHERE YOU VALIDATE DATA */
+
+    /* HERE IS WHERE YOU SET THE DATA TO PASS INTO REQUEST */
+    const queryParamsAvailable = {};
+    const queryParams = {};
+    const pathVars = [];
+    const bodyVars = {};
+
+    // loop in template. long callback arg name to avoid identifier conflicts
+    Object.keys(queryParamsAvailable).forEach((thisKeyInQueryParamsAvailable) => {
+      if (queryParamsAvailable[thisKeyInQueryParamsAvailable] !== undefined && queryParamsAvailable[thisKeyInQueryParamsAvailable] !== null
+          && queryParamsAvailable[thisKeyInQueryParamsAvailable] !== '') {
+        queryParams[thisKeyInQueryParamsAvailable] = queryParamsAvailable[thisKeyInQueryParamsAvailable];
+      }
+    });
+
+    // set up the request object - payload, uriPathVars, uriQuery, uriOptions, addlHeaders, authData, callProperties, filter, priority, event
+    // see adapter code documentation for more information on the request object's fields
+    const reqObj = {
+      payload: bodyVars,
+      uriPathVars: pathVars,
+      uriQuery: queryParams
+    };
+
+    try {
+      // Make the call -
+      // identifyRequest(entity, action, requestObj, returnDataFlag, callback)
+      return this.requestHandlerInst.identifyRequest('NetworkInventoryRestconfAPI', 'getRadio', reqObj, true, (irReturnData, irReturnError) => {
+        // if we received an error or their is no response on the results
+        // return an error
+        if (irReturnError) {
+          /* HERE IS WHERE YOU CAN ALTER THE ERROR MESSAGE */
+          return callback(null, irReturnError);
+        }
+        if (!Object.hasOwnProperty.call(irReturnData, 'response')) {
+          const errorObj = this.requestHandlerInst.formatErrorObject(this.id, meth, 'Invalid Response', ['getRadio'], null, null, null);
+          log.error(`${origin}: ${errorObj.IAPerror.displayString}`);
+          return callback(null, errorObj);
+        }
+
+        /* HERE IS WHERE YOU CAN ALTER THE RETURN DATA */
+        // return the response
+        return callback(irReturnData, null);
+      });
+    } catch (ex) {
+      const errorObj = this.requestHandlerInst.formatErrorObject(this.id, meth, 'Caught Exception', null, null, null, ex);
+      log.error(`${origin}: ${errorObj.IAPerror.displayString}`);
+      return callback(null, errorObj);
+    }
+  }
 }
 
 module.exports = NokiaNspNetworkManagement;

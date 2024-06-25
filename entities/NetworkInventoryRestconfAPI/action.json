@@ -1,0 +1,277 @@
+{
+  "actions": [
+    {
+      "name": "getNE",
+      "protocol": "REST",
+      "method": "GET",
+      "entitypath": "{base_path}/{version}/restconf/data/nsp-equipment:network/network-element?{query}",
+      "requestSchema": "schema.json",
+      "responseSchema": "schema.json",
+      "timeout": 0,
+      "sendEmpty": false,
+      "sendGetBody": false,
+      "requestDatatype": "JSON",
+      "responseDatatype": "JSON",
+      "headers": {},
+      "responseObjects": [
+        {
+          "type": "default",
+          "key": "",
+          "mockFile": ""
+        }
+      ]
+    },
+    {
+      "name": "getSpecificNE",
+      "protocol": "REST",
+      "method": "GET",
+      "entitypath": "{base_path}/{version}/restconf/data/nsp-equipment:network/{pathv1}?{query}",
+      "requestSchema": "schema.json",
+      "responseSchema": "schema.json",
+      "timeout": 0,
+      "sendEmpty": false,
+      "sendGetBody": false,
+      "requestDatatype": "JSON",
+      "responseDatatype": "JSON",
+      "headers": {},
+      "responseObjects": [
+        {
+          "type": "default",
+          "key": "",
+          "mockFile": ""
+        }
+      ]
+    },
+    {
+      "name": "getShelf",
+      "protocol": "REST",
+      "method": "GET",
+      "entitypath": "{base_path}/{version}/restconf/data/nsp-equipment:network/network-element/hardware-component/shelf?{query}",
+      "requestSchema": "schema.json",
+      "responseSchema": "schema.json",
+      "timeout": 0,
+      "sendEmpty": false,
+      "sendGetBody": false,
+      "requestDatatype": "JSON",
+      "responseDatatype": "JSON",
+      "headers": {},
+      "responseObjects": [
+        {
+          "type": "default",
+          "key": "",
+          "mockFile": ""
+        }
+      ]
+    },
+    {
+      "name": "getSpecificShelf",
+      "protocol": "REST",
+      "method": "GET",
+      "entitypath": "{base_path}/{version}/restconf/data/nsp-equipment:network/{pathv1}/hardware-component/{pathv2}?{query}",
+      "requestSchema": "schema.json",
+      "responseSchema": "schema.json",
+      "timeout": 0,
+      "sendEmpty": false,
+      "sendGetBody": false,
+      "requestDatatype": "JSON",
+      "responseDatatype": "JSON",
+      "headers": {},
+      "responseObjects": [
+        {
+          "type": "default",
+          "key": "",
+          "mockFile": ""
+        }
+      ]
+    },
+    {
+      "name": "getCard",
+      "protocol": "REST",
+      "method": "GET",
+      "entitypath": "{base_path}/{version}/restconf/data/nsp-equipment:network/network-element/hardware-component/card?{query}",
+      "requestSchema": "schema.json",
+      "responseSchema": "schema.json",
+      "timeout": 0,
+      "sendEmpty": false,
+      "sendGetBody": false,
+      "requestDatatype": "JSON",
+      "responseDatatype": "JSON",
+      "headers": {},
+      "responseObjects": [
+        {
+          "type": "default",
+          "key": "",
+          "mockFile": ""
+        }
+      ]
+    },
+    {
+      "name": "getSpecificNECards",
+      "protocol": "REST",
+      "method": "GET",
+      "entitypath": "{base_path}/{version}/restconf/data/nsp-equipment:network/{pathv1}/hardware-component/{pathv2}?{query}",
+      "requestSchema": "schema.json",
+      "responseSchema": "schema.json",
+      "timeout": 0,
+      "sendEmpty": false,
+      "sendGetBody": false,
+      "requestDatatype": "JSON",
+      "responseDatatype": "JSON",
+      "headers": {},
+      "responseObjects": [
+        {
+          "type": "default",
+          "key": "",
+          "mockFile": ""
+        }
+      ]
+    },
+    {
+      "name": "getPort",
+      "protocol": "REST",
+      "method": "GET",
+      "entitypath": "{base_path}/{version}/restconf/data/nsp-equipment:network/network-element/hardware-component/port?{query}",
+      "requestSchema": "schema.json",
+      "responseSchema": "schema.json",
+      "timeout": 0,
+      "sendEmpty": false,
+      "sendGetBody": false,
+      "requestDatatype": "JSON",
+      "responseDatatype": "JSON",
+      "headers": {},
+      "responseObjects": [
+        {
+          "type": "default",
+          "key": "",
+          "mockFile": ""
+        }
+      ]
+    },
+    {
+      "name": "getPortFromSpecificNE",
+      "protocol": "REST",
+      "method": "GET",
+      "entitypath": "{base_path}/{version}/restconf/data/nsp-equipment:network/{pathv1}/hardware-component/{pathv2}?{query}",
+      "requestSchema": "schema.json",
+      "responseSchema": "schema.json",
+      "timeout": 0,
+      "sendEmpty": false,
+      "sendGetBody": false,
+      "requestDatatype": "JSON",
+      "responseDatatype": "JSON",
+      "headers": {},
+      "responseObjects": [
+        {
+          "type": "default",
+          "key": "",
+          "mockFile": ""
+        }
+      ]
+    },
+    {
+      "name": "getPortFromSpecificNETransceiverDetails",
+      "protocol": "REST",
+      "method": "GET",
+      "entitypath": "{base_path}/{version}/restconf/data/nsp-equipment:network/{pathv1}/hardware-component/{pathv2}/transceiver-details?{query}",
+      "requestSchema": "schema.json",
+      "responseSchema": "schema.json",
+      "timeout": 0,
+      "sendEmpty": false,
+      "sendGetBody": false,
+      "requestDatatype": "JSON",
+      "responseDatatype": "JSON",
+      "headers": {},
+      "responseObjects": [
+        {
+          "type": "default",
+          "key": "",
+          "mockFile": ""
+        }
+      ]
+    },
+    {
+      "name": "getLags",
+      "protocol": "REST",
+      "method": "GET",
+      "entitypath": "{base_path}/{version}/restconf/data/nsp-equipment:/network/network-element/lag?{query}",
+      "requestSchema": "schema.json",
+      "responseSchema": "schema.json",
+      "timeout": 0,
+      "sendEmpty": false,
+      "sendGetBody": false,
+      "requestDatatype": "JSON",
+      "responseDatatype": "JSON",
+      "headers": {},
+      "responseObjects": [
+        {
+          "type": "default",
+          "key": "",
+          "mockFile": ""
+        }
+      ]
+    },
+    {
+      "name": "getSpecificNELag",
+      "protocol": "REST",
+      "method": "GET",
+      "entitypath": "{base_path}/{version}/restconf/data/nsp-equipment:network/{pathv1}/lag?{query}",
+      "requestSchema": "schema.json",
+      "responseSchema": "schema.json",
+      "timeout": 0,
+      "sendEmpty": false,
+      "sendGetBody": false,
+      "requestDatatype": "JSON",
+      "responseDatatype": "JSON",
+      "headers": {},
+      "responseObjects": [
+        {
+          "type": "default",
+          "key": "",
+          "mockFile": ""
+        }
+      ]
+    },
+    {
+      "name": "getSpecificNELagWithFields",
+      "protocol": "REST",
+      "method": "GET",
+      "entitypath": "{base_path}/{version}/restconf/data/nsp-equipment:network/{pathv1}/{pathv2}?{query}",
+      "requestSchema": "schema.json",
+      "responseSchema": "schema.json",
+      "timeout": 0,
+      "sendEmpty": false,
+      "sendGetBody": false,
+      "requestDatatype": "JSON",
+      "responseDatatype": "JSON",
+      "headers": {},
+      "responseObjects": [
+        {
+          "type": "default",
+          "key": "",
+          "mockFile": ""
+        }
+      ]
+    },
+    {
+      "name": "getRadio",
+      "protocol": "REST",
+      "method": "GET",
+      "entitypath": "{base_path}/{version}/restconf/data/nsp-equipment:/network/network-element/hardware-component/radio?{query}",
+      "requestSchema": "schema.json",
+      "responseSchema": "schema.json",
+      "timeout": 0,
+      "sendEmpty": false,
+      "sendGetBody": false,
+      "requestDatatype": "JSON",
+      "responseDatatype": "JSON",
+      "headers": {},
+      "responseObjects": [
+        {
+          "type": "default",
+          "key": "",
+          "mockFile": "mockdatafiles/getRadio-default.json"
+        }
+      ]
+    }
+  ]
+}

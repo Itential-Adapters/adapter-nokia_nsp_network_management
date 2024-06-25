@@ -5399,5 +5399,382 @@ describe('[unit] nokia_nsp_network_management Adapter Test', () => {
         }
       }).timeout(attemptTimeout);
     });
+
+    describe('#getNE - errors', () => {
+      it('should have a getNE function', (done) => {
+        try {
+          assert.equal(true, typeof a.getNE === 'function');
+          done();
+        } catch (error) {
+          log.error(`Test Failure: ${error}`);
+          done(error);
+        }
+      }).timeout(attemptTimeout);
+    });
+
+    describe('#getSpecificNE - errors', () => {
+      it('should have a getSpecificNE function', (done) => {
+        try {
+          assert.equal(true, typeof a.getSpecificNE === 'function');
+          done();
+        } catch (error) {
+          log.error(`Test Failure: ${error}`);
+          done(error);
+        }
+      }).timeout(attemptTimeout);
+      it('should error if - missing networkElement', (done) => {
+        try {
+          a.getSpecificNE(null, null, (data, error) => {
+            try {
+              const displayE = 'networkElement is required';
+              runErrorAsserts(data, error, 'AD.300', 'Test-nokia_nsp_network_management-adapter-getSpecificNE', displayE);
+              done();
+            } catch (err) {
+              log.error(`Test Failure: ${err}`);
+              done(err);
+            }
+          });
+        } catch (error) {
+          log.error(`Adapter Exception: ${error}`);
+          done(error);
+        }
+      }).timeout(attemptTimeout);
+    });
+
+    describe('#getShelf - errors', () => {
+      it('should have a getShelf function', (done) => {
+        try {
+          assert.equal(true, typeof a.getShelf === 'function');
+          done();
+        } catch (error) {
+          log.error(`Test Failure: ${error}`);
+          done(error);
+        }
+      }).timeout(attemptTimeout);
+    });
+
+    describe('#getSpecificShelf - errors', () => {
+      it('should have a getSpecificShelf function', (done) => {
+        try {
+          assert.equal(true, typeof a.getSpecificShelf === 'function');
+          done();
+        } catch (error) {
+          log.error(`Test Failure: ${error}`);
+          done(error);
+        }
+      }).timeout(attemptTimeout);
+      it('should error if - missing networkElement', (done) => {
+        try {
+          a.getSpecificShelf(null, null, (data, error) => {
+            try {
+              const displayE = 'networkElement is required';
+              runErrorAsserts(data, error, 'AD.300', 'Test-nokia_nsp_network_management-adapter-getSpecificShelf', displayE);
+              done();
+            } catch (err) {
+              log.error(`Test Failure: ${err}`);
+              done(err);
+            }
+          });
+        } catch (error) {
+          log.error(`Adapter Exception: ${error}`);
+          done(error);
+        }
+      }).timeout(attemptTimeout);
+      it('should error if - missing shelf', (done) => {
+        try {
+          a.getSpecificShelf('fakeparam', null, (data, error) => {
+            try {
+              const displayE = 'shelf is required';
+              runErrorAsserts(data, error, 'AD.300', 'Test-nokia_nsp_network_management-adapter-getSpecificShelf', displayE);
+              done();
+            } catch (err) {
+              log.error(`Test Failure: ${err}`);
+              done(err);
+            }
+          });
+        } catch (error) {
+          log.error(`Adapter Exception: ${error}`);
+          done(error);
+        }
+      }).timeout(attemptTimeout);
+    });
+
+    describe('#getCard - errors', () => {
+      it('should have a getCard function', (done) => {
+        try {
+          assert.equal(true, typeof a.getCard === 'function');
+          done();
+        } catch (error) {
+          log.error(`Test Failure: ${error}`);
+          done(error);
+        }
+      }).timeout(attemptTimeout);
+    });
+
+    describe('#getSpecificNECards - errors', () => {
+      it('should have a getSpecificNECards function', (done) => {
+        try {
+          assert.equal(true, typeof a.getSpecificNECards === 'function');
+          done();
+        } catch (error) {
+          log.error(`Test Failure: ${error}`);
+          done(error);
+        }
+      }).timeout(attemptTimeout);
+      it('should error if - missing networkElement', (done) => {
+        try {
+          a.getSpecificNECards(null, null, (data, error) => {
+            try {
+              const displayE = 'networkElement is required';
+              runErrorAsserts(data, error, 'AD.300', 'Test-nokia_nsp_network_management-adapter-getSpecificNECards', displayE);
+              done();
+            } catch (err) {
+              log.error(`Test Failure: ${err}`);
+              done(err);
+            }
+          });
+        } catch (error) {
+          log.error(`Adapter Exception: ${error}`);
+          done(error);
+        }
+      }).timeout(attemptTimeout);
+      it('should error if - missing card', (done) => {
+        try {
+          a.getSpecificNECards('fakeparam', null, (data, error) => {
+            try {
+              const displayE = 'card is required';
+              runErrorAsserts(data, error, 'AD.300', 'Test-nokia_nsp_network_management-adapter-getSpecificNECards', displayE);
+              done();
+            } catch (err) {
+              log.error(`Test Failure: ${err}`);
+              done(err);
+            }
+          });
+        } catch (error) {
+          log.error(`Adapter Exception: ${error}`);
+          done(error);
+        }
+      }).timeout(attemptTimeout);
+    });
+
+    describe('#getPort - errors', () => {
+      it('should have a getPort function', (done) => {
+        try {
+          assert.equal(true, typeof a.getPort === 'function');
+          done();
+        } catch (error) {
+          log.error(`Test Failure: ${error}`);
+          done(error);
+        }
+      }).timeout(attemptTimeout);
+    });
+
+    describe('#getPortFromSpecificNE - errors', () => {
+      it('should have a getPortFromSpecificNE function', (done) => {
+        try {
+          assert.equal(true, typeof a.getPortFromSpecificNE === 'function');
+          done();
+        } catch (error) {
+          log.error(`Test Failure: ${error}`);
+          done(error);
+        }
+      }).timeout(attemptTimeout);
+      it('should error if - missing networkElement', (done) => {
+        try {
+          a.getPortFromSpecificNE(null, null, (data, error) => {
+            try {
+              const displayE = 'networkElement is required';
+              runErrorAsserts(data, error, 'AD.300', 'Test-nokia_nsp_network_management-adapter-getPortFromSpecificNE', displayE);
+              done();
+            } catch (err) {
+              log.error(`Test Failure: ${err}`);
+              done(err);
+            }
+          });
+        } catch (error) {
+          log.error(`Adapter Exception: ${error}`);
+          done(error);
+        }
+      }).timeout(attemptTimeout);
+      it('should error if - missing port', (done) => {
+        try {
+          a.getPortFromSpecificNE('fakeparam', null, (data, error) => {
+            try {
+              const displayE = 'port is required';
+              runErrorAsserts(data, error, 'AD.300', 'Test-nokia_nsp_network_management-adapter-getPortFromSpecificNE', displayE);
+              done();
+            } catch (err) {
+              log.error(`Test Failure: ${err}`);
+              done(err);
+            }
+          });
+        } catch (error) {
+          log.error(`Adapter Exception: ${error}`);
+          done(error);
+        }
+      }).timeout(attemptTimeout);
+    });
+
+    describe('#getPortFromSpecificNETransceiverDetails - errors', () => {
+      it('should have a getPortFromSpecificNETransceiverDetails function', (done) => {
+        try {
+          assert.equal(true, typeof a.getPortFromSpecificNETransceiverDetails === 'function');
+          done();
+        } catch (error) {
+          log.error(`Test Failure: ${error}`);
+          done(error);
+        }
+      }).timeout(attemptTimeout);
+      it('should error if - missing networkElement', (done) => {
+        try {
+          a.getPortFromSpecificNETransceiverDetails(null, null, (data, error) => {
+            try {
+              const displayE = 'networkElement is required';
+              runErrorAsserts(data, error, 'AD.300', 'Test-nokia_nsp_network_management-adapter-getPortFromSpecificNETransceiverDetails', displayE);
+              done();
+            } catch (err) {
+              log.error(`Test Failure: ${err}`);
+              done(err);
+            }
+          });
+        } catch (error) {
+          log.error(`Adapter Exception: ${error}`);
+          done(error);
+        }
+      }).timeout(attemptTimeout);
+      it('should error if - missing port', (done) => {
+        try {
+          a.getPortFromSpecificNETransceiverDetails('fakeparam', null, (data, error) => {
+            try {
+              const displayE = 'port is required';
+              runErrorAsserts(data, error, 'AD.300', 'Test-nokia_nsp_network_management-adapter-getPortFromSpecificNETransceiverDetails', displayE);
+              done();
+            } catch (err) {
+              log.error(`Test Failure: ${err}`);
+              done(err);
+            }
+          });
+        } catch (error) {
+          log.error(`Adapter Exception: ${error}`);
+          done(error);
+        }
+      }).timeout(attemptTimeout);
+    });
+
+    describe('#getLags - errors', () => {
+      it('should have a getLags function', (done) => {
+        try {
+          assert.equal(true, typeof a.getLags === 'function');
+          done();
+        } catch (error) {
+          log.error(`Test Failure: ${error}`);
+          done(error);
+        }
+      }).timeout(attemptTimeout);
+    });
+
+    describe('#getSpecificNELag - errors', () => {
+      it('should have a getSpecificNELag function', (done) => {
+        try {
+          assert.equal(true, typeof a.getSpecificNELag === 'function');
+          done();
+        } catch (error) {
+          log.error(`Test Failure: ${error}`);
+          done(error);
+        }
+      }).timeout(attemptTimeout);
+      it('should error if - missing networkElement', (done) => {
+        try {
+          a.getSpecificNELag(null, (data, error) => {
+            try {
+              const displayE = 'networkElement is required';
+              runErrorAsserts(data, error, 'AD.300', 'Test-nokia_nsp_network_management-adapter-getSpecificNELag', displayE);
+              done();
+            } catch (err) {
+              log.error(`Test Failure: ${err}`);
+              done(err);
+            }
+          });
+        } catch (error) {
+          log.error(`Adapter Exception: ${error}`);
+          done(error);
+        }
+      }).timeout(attemptTimeout);
+    });
+
+    describe('#getSpecificNELagWithFields - errors', () => {
+      it('should have a getSpecificNELagWithFields function', (done) => {
+        try {
+          assert.equal(true, typeof a.getSpecificNELagWithFields === 'function');
+          done();
+        } catch (error) {
+          log.error(`Test Failure: ${error}`);
+          done(error);
+        }
+      }).timeout(attemptTimeout);
+      it('should error if - missing fields', (done) => {
+        try {
+          a.getSpecificNELagWithFields(null, null, null, (data, error) => {
+            try {
+              const displayE = 'fields is required';
+              runErrorAsserts(data, error, 'AD.300', 'Test-nokia_nsp_network_management-adapter-getSpecificNELagWithFields', displayE);
+              done();
+            } catch (err) {
+              log.error(`Test Failure: ${err}`);
+              done(err);
+            }
+          });
+        } catch (error) {
+          log.error(`Adapter Exception: ${error}`);
+          done(error);
+        }
+      }).timeout(attemptTimeout);
+      it('should error if - missing networkElement', (done) => {
+        try {
+          a.getSpecificNELagWithFields('fakeparam', null, null, (data, error) => {
+            try {
+              const displayE = 'networkElement is required';
+              runErrorAsserts(data, error, 'AD.300', 'Test-nokia_nsp_network_management-adapter-getSpecificNELagWithFields', displayE);
+              done();
+            } catch (err) {
+              log.error(`Test Failure: ${err}`);
+              done(err);
+            }
+          });
+        } catch (error) {
+          log.error(`Adapter Exception: ${error}`);
+          done(error);
+        }
+      }).timeout(attemptTimeout);
+      it('should error if - missing lag', (done) => {
+        try {
+          a.getSpecificNELagWithFields('fakeparam', 'fakeparam', null, (data, error) => {
+            try {
+              const displayE = 'lag is required';
+              runErrorAsserts(data, error, 'AD.300', 'Test-nokia_nsp_network_management-adapter-getSpecificNELagWithFields', displayE);
+              done();
+            } catch (err) {
+              log.error(`Test Failure: ${err}`);
+              done(err);
+            }
+          });
+        } catch (error) {
+          log.error(`Adapter Exception: ${error}`);
+          done(error);
+        }
+      }).timeout(attemptTimeout);
+    });
+
+    describe('#getRadio - errors', () => {
+      it('should have a getRadio function', (done) => {
+        try {
+          assert.equal(true, typeof a.getRadio === 'function');
+          done();
+        } catch (error) {
+          log.error(`Test Failure: ${error}`);
+          done(error);
+        }
+      }).timeout(attemptTimeout);
+    });
   });
 });

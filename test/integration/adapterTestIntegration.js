@@ -3832,5 +3832,330 @@ describe('[integration] nokia_nsp_network_management Adapter Test', () => {
         }
       }).timeout(attemptTimeout);
     });
+
+    describe('#getNE - errors', () => {
+      it('should work if integrated but since no mockdata should error when run standalone', (done) => {
+        try {
+          a.getNE(null, null, (data, error) => {
+            try {
+              if (stub) {
+                const displayE = 'Error 400 received on request';
+                runErrorAsserts(data, error, 'AD.500', 'Test-nokia_nsp_network_management-connectorRest-handleEndResponse', displayE);
+              } else {
+                runCommonAsserts(data, error);
+              }
+              saveMockData('NetworkInventoryRestconfAPI', 'getNE', 'default', data);
+              done();
+            } catch (err) {
+              log.error(`Test Failure: ${err}`);
+              done(err);
+            }
+          });
+        } catch (error) {
+          log.error(`Adapter Exception: ${error}`);
+          done(error);
+        }
+      }).timeout(attemptTimeout);
+    });
+
+    describe('#getSpecificNE - errors', () => {
+      it('should work if integrated but since no mockdata should error when run standalone', (done) => {
+        try {
+          a.getSpecificNE('fakedata', null, (data, error) => {
+            try {
+              if (stub) {
+                const displayE = 'Error 400 received on request';
+                runErrorAsserts(data, error, 'AD.500', 'Test-nokia_nsp_network_management-connectorRest-handleEndResponse', displayE);
+              } else {
+                runCommonAsserts(data, error);
+              }
+              saveMockData('NetworkInventoryRestconfAPI', 'getSpecificNE', 'default', data);
+              done();
+            } catch (err) {
+              log.error(`Test Failure: ${err}`);
+              done(err);
+            }
+          });
+        } catch (error) {
+          log.error(`Adapter Exception: ${error}`);
+          done(error);
+        }
+      }).timeout(attemptTimeout);
+    });
+
+    describe('#getShelf - errors', () => {
+      it('should work if integrated but since no mockdata should error when run standalone', (done) => {
+        try {
+          a.getShelf((data, error) => {
+            try {
+              if (stub) {
+                const displayE = 'Error 400 received on request';
+                runErrorAsserts(data, error, 'AD.500', 'Test-nokia_nsp_network_management-connectorRest-handleEndResponse', displayE);
+              } else {
+                runCommonAsserts(data, error);
+              }
+              saveMockData('NetworkInventoryRestconfAPI', 'getShelf', 'default', data);
+              done();
+            } catch (err) {
+              log.error(`Test Failure: ${err}`);
+              done(err);
+            }
+          });
+        } catch (error) {
+          log.error(`Adapter Exception: ${error}`);
+          done(error);
+        }
+      }).timeout(attemptTimeout);
+    });
+
+    describe('#getSpecificShelf - errors', () => {
+      it('should work if integrated but since no mockdata should error when run standalone', (done) => {
+        try {
+          a.getSpecificShelf('fakedata', 'fakedata', (data, error) => {
+            try {
+              if (stub) {
+                const displayE = 'Error 400 received on request';
+                runErrorAsserts(data, error, 'AD.500', 'Test-nokia_nsp_network_management-connectorRest-handleEndResponse', displayE);
+              } else {
+                runCommonAsserts(data, error);
+              }
+              saveMockData('NetworkInventoryRestconfAPI', 'getSpecificShelf', 'default', data);
+              done();
+            } catch (err) {
+              log.error(`Test Failure: ${err}`);
+              done(err);
+            }
+          });
+        } catch (error) {
+          log.error(`Adapter Exception: ${error}`);
+          done(error);
+        }
+      }).timeout(attemptTimeout);
+    });
+
+    describe('#getCard - errors', () => {
+      it('should work if integrated but since no mockdata should error when run standalone', (done) => {
+        try {
+          a.getCard((data, error) => {
+            try {
+              if (stub) {
+                const displayE = 'Error 400 received on request';
+                runErrorAsserts(data, error, 'AD.500', 'Test-nokia_nsp_network_management-connectorRest-handleEndResponse', displayE);
+              } else {
+                runCommonAsserts(data, error);
+              }
+              saveMockData('NetworkInventoryRestconfAPI', 'getCard', 'default', data);
+              done();
+            } catch (err) {
+              log.error(`Test Failure: ${err}`);
+              done(err);
+            }
+          });
+        } catch (error) {
+          log.error(`Adapter Exception: ${error}`);
+          done(error);
+        }
+      }).timeout(attemptTimeout);
+    });
+
+    describe('#getSpecificNECards - errors', () => {
+      it('should work if integrated but since no mockdata should error when run standalone', (done) => {
+        try {
+          a.getSpecificNECards('fakedata', 'fakedata', (data, error) => {
+            try {
+              if (stub) {
+                const displayE = 'Error 400 received on request';
+                runErrorAsserts(data, error, 'AD.500', 'Test-nokia_nsp_network_management-connectorRest-handleEndResponse', displayE);
+              } else {
+                runCommonAsserts(data, error);
+              }
+              saveMockData('NetworkInventoryRestconfAPI', 'getSpecificNECards', 'default', data);
+              done();
+            } catch (err) {
+              log.error(`Test Failure: ${err}`);
+              done(err);
+            }
+          });
+        } catch (error) {
+          log.error(`Adapter Exception: ${error}`);
+          done(error);
+        }
+      }).timeout(attemptTimeout);
+    });
+
+    describe('#getPort - errors', () => {
+      it('should work if integrated but since no mockdata should error when run standalone', (done) => {
+        try {
+          a.getPort((data, error) => {
+            try {
+              if (stub) {
+                const displayE = 'Error 400 received on request';
+                runErrorAsserts(data, error, 'AD.500', 'Test-nokia_nsp_network_management-connectorRest-handleEndResponse', displayE);
+              } else {
+                runCommonAsserts(data, error);
+              }
+              saveMockData('NetworkInventoryRestconfAPI', 'getPort', 'default', data);
+              done();
+            } catch (err) {
+              log.error(`Test Failure: ${err}`);
+              done(err);
+            }
+          });
+        } catch (error) {
+          log.error(`Adapter Exception: ${error}`);
+          done(error);
+        }
+      }).timeout(attemptTimeout);
+    });
+
+    describe('#getPortFromSpecificNE - errors', () => {
+      it('should work if integrated but since no mockdata should error when run standalone', (done) => {
+        try {
+          a.getPortFromSpecificNE('fakedata', 'fakedata', (data, error) => {
+            try {
+              if (stub) {
+                const displayE = 'Error 400 received on request';
+                runErrorAsserts(data, error, 'AD.500', 'Test-nokia_nsp_network_management-connectorRest-handleEndResponse', displayE);
+              } else {
+                runCommonAsserts(data, error);
+              }
+              saveMockData('NetworkInventoryRestconfAPI', 'getPortFromSpecificNE', 'default', data);
+              done();
+            } catch (err) {
+              log.error(`Test Failure: ${err}`);
+              done(err);
+            }
+          });
+        } catch (error) {
+          log.error(`Adapter Exception: ${error}`);
+          done(error);
+        }
+      }).timeout(attemptTimeout);
+    });
+
+    describe('#getPortFromSpecificNETransceiverDetails - errors', () => {
+      it('should work if integrated but since no mockdata should error when run standalone', (done) => {
+        try {
+          a.getPortFromSpecificNETransceiverDetails('fakedata', 'fakedata', (data, error) => {
+            try {
+              if (stub) {
+                const displayE = 'Error 400 received on request';
+                runErrorAsserts(data, error, 'AD.500', 'Test-nokia_nsp_network_management-connectorRest-handleEndResponse', displayE);
+              } else {
+                runCommonAsserts(data, error);
+              }
+              saveMockData('NetworkInventoryRestconfAPI', 'getPortFromSpecificNETransceiverDetails', 'default', data);
+              done();
+            } catch (err) {
+              log.error(`Test Failure: ${err}`);
+              done(err);
+            }
+          });
+        } catch (error) {
+          log.error(`Adapter Exception: ${error}`);
+          done(error);
+        }
+      }).timeout(attemptTimeout);
+    });
+
+    describe('#getLags - errors', () => {
+      it('should work if integrated but since no mockdata should error when run standalone', (done) => {
+        try {
+          a.getLags((data, error) => {
+            try {
+              if (stub) {
+                const displayE = 'Error 400 received on request';
+                runErrorAsserts(data, error, 'AD.500', 'Test-nokia_nsp_network_management-connectorRest-handleEndResponse', displayE);
+              } else {
+                runCommonAsserts(data, error);
+              }
+              saveMockData('NetworkInventoryRestconfAPI', 'getLags', 'default', data);
+              done();
+            } catch (err) {
+              log.error(`Test Failure: ${err}`);
+              done(err);
+            }
+          });
+        } catch (error) {
+          log.error(`Adapter Exception: ${error}`);
+          done(error);
+        }
+      }).timeout(attemptTimeout);
+    });
+
+    describe('#getSpecificNELag - errors', () => {
+      it('should work if integrated but since no mockdata should error when run standalone', (done) => {
+        try {
+          a.getSpecificNELag('fakedata', (data, error) => {
+            try {
+              if (stub) {
+                const displayE = 'Error 400 received on request';
+                runErrorAsserts(data, error, 'AD.500', 'Test-nokia_nsp_network_management-connectorRest-handleEndResponse', displayE);
+              } else {
+                runCommonAsserts(data, error);
+              }
+              saveMockData('NetworkInventoryRestconfAPI', 'getSpecificNELag', 'default', data);
+              done();
+            } catch (err) {
+              log.error(`Test Failure: ${err}`);
+              done(err);
+            }
+          });
+        } catch (error) {
+          log.error(`Adapter Exception: ${error}`);
+          done(error);
+        }
+      }).timeout(attemptTimeout);
+    });
+
+    describe('#getSpecificNELagWithFields - errors', () => {
+      it('should work if integrated but since no mockdata should error when run standalone', (done) => {
+        try {
+          a.getSpecificNELagWithFields('fakedata', 'fakedata', 'fakedata', (data, error) => {
+            try {
+              if (stub) {
+                const displayE = 'Error 400 received on request';
+                runErrorAsserts(data, error, 'AD.500', 'Test-nokia_nsp_network_management-connectorRest-handleEndResponse', displayE);
+              } else {
+                runCommonAsserts(data, error);
+              }
+              saveMockData('NetworkInventoryRestconfAPI', 'getSpecificNELagWithFields', 'default', data);
+              done();
+            } catch (err) {
+              log.error(`Test Failure: ${err}`);
+              done(err);
+            }
+          });
+        } catch (error) {
+          log.error(`Adapter Exception: ${error}`);
+          done(error);
+        }
+      }).timeout(attemptTimeout);
+    });
+
+    describe('#getRadio - errors', () => {
+      it('should work if integrated or standalone with mockdata', (done) => {
+        try {
+          a.getRadio((data, error) => {
+            try {
+              if (stub) {
+                runCommonAsserts(data, error);
+                assert.equal(true, Array.isArray(data.response['nsp-equipment:radio']));
+              } else {
+                runCommonAsserts(data, error);
+              }
+              saveMockData('NetworkInventoryRestconfAPI', 'getRadio', 'default', data);
+              done();
+            } catch (err) {
+              log.error(`Test Failure: ${err}`);
+              done(err);
+            }
+          });
+        } catch (error) {
+          log.error(`Adapter Exception: ${error}`);
+          done(error);
+        }
+      }).timeout(attemptTimeout);
+    });
   });
 });
