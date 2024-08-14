@@ -47,7 +47,9 @@
         "link": "https://network.developer.nokia.com/",
         "public": true
       }
-    ]
+    ],
+    "workshopLinks": [],
+    "workshopHomePage": "https://www.itential.com/get-started/"
   },
   "assets": [],
   "relatedItems": {
@@ -58,5 +60,6 @@
     "transformationProjects": [],
     "exampleProjects": []
   },
-  "supportLevel": "community"
+  "supportLevel": "community",
+  "techAlliance": false
 }
