@@ -36,13 +36,17 @@ const samProps = require(`${adaptdir}/sampleProperties.json`).properties;
 // these variables can be changed to run in integrated mode so easier to set them here
 // always check these in with bogus data!!!
 samProps.stub = true;
-samProps.host = 'replace.hostorip.here';
-samProps.authentication.username = 'username';
-samProps.authentication.password = 'password';
-samProps.protocol = 'http';
-samProps.port = 80;
-samProps.ssl.enabled = false;
-samProps.ssl.accept_invalid_cert = false;
+
+// uncomment if connecting
+// samProps.host = 'replace.hostorip.here';
+// samProps.authentication.username = 'username';
+// samProps.authentication.password = 'password';
+// samProps.authentication.token = 'password';
+// samProps.protocol = 'http';
+// samProps.port = 80;
+// samProps.ssl.enabled = false;
+// samProps.ssl.accept_invalid_cert = false;
+
 if (samProps.request.attempt_timeout < 30000) {
   samProps.request.attempt_timeout = 30000;
 }
@@ -762,8 +766,8 @@ describe('[integration] nokia_nsp_network_management Adapter Test', () => {
         'required-network-state': 'active',
         'ibn:intent-specific-data': {
           'create_http_user:create_http_user': {
-            password: 'bnNwdXNlcg==',
-            passwordConfirm: 'bnNwdXNlcg=='
+            password: samProps.authentication.token,
+            passwordConfirm: samProps.authentication.token
           }
         }
       }

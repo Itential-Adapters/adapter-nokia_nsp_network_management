@@ -1,8 +1,10 @@
 {
   "name": "adapter-nokia_nsp_network_management",
   "webName": "nokia_nsp_network_management",
+  "supportLevel": "community",
   "vendor": "Nokia",
   "product": "NSP Network Infrastructure Management",
+  "techAlliance": false,
   "osVersions": [],
   "apiVersions": [
     "24.4"
@@ -26,8 +28,8 @@
   "documentation": {
     "storeLink": "",
     "npmLink": "https://www.npmjs.com/package/@itentialopensource/adapter-nokia_nsp_network_management",
-    "repoLink": "https://gitlab.com/@itentialopensource/adapters/adapter-nokia_nsp_network_management",
-    "docLink": "https://docs.itential.com/opensource/docs/nokia_nsp_network_management",
+    "repoLink": "https://gitlab.com/itentialopensource/adapters/adapter-nokia_nsp_network_management",
+    "docLink": "https://gitlab.com/itentialopensource/adapters/adapter-nokia_nsp_network_management/-/blob/master/README.md?ref_type=heads",
     "demoLinks": [],
     "trainingLinks": [
       {
@@ -38,7 +40,7 @@
     "faqLink": "https://docs.itential.com/opensource/docs/troubleshooting-an-adapter",
     "contributeLink": "https://gitlab.com/itentialopensource/adapters/contributing-guide",
     "issueLink": "https://itential.atlassian.net/servicedesk/customer/portals",
-    "webLink": "https://www.itential.com/adapters/nsp-network",
+    "webLink": "https://www.itential.com/adapters/nokia-nsp-network-management/",
     "vendorLink": "https://www.nokia.com",
     "productLink": "https://www.nokia.com/networks/ip-networks/network-services-platform/",
     "apiLinks": [
@@ -59,7 +61,5 @@
     "workflowProjects": [],
     "transformationProjects": [],
     "exampleProjects": []
-  },
-  "supportLevel": "community",
-  "techAlliance": false
+  }
 }
