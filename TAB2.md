@@ -314,8 +314,7 @@ Sample Properties can be used to help you configure the adapter in the Itential 
     }
   }
 ```
-### Swagger
+### [Swagger](https://gitlab.com/itentialopensource/adapters/adapter-nokia_nsp_network_management/-/blob/master/report/adapter-openapi.json) 
 
-Note: The content for this section may be missing as its corresponding .json file is unavailable. This sections will be updated once adapter-openapi.json file is added.
 ## [Generic Adapter Information](https://gitlab.com/itentialopensource/adapters/adapter-nokia_nsp_network_management/-/blob/master/README.md) 
 
