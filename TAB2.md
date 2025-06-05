@@ -11,7 +11,7 @@
 ## Specific Adapter Information
 ### Authentication
 
-This document will go through the steps for authenticating the Nokia NSP Network Infrastructure Management adapter with OAuth Authentication. Properly configuring the properties for an adapter in IAP is critical for getting the adapter online. You can read more about adapter authentication <a href="https://docs.itential.com/opensource/docs/authentication" target="_blank">HERE</a>. 
+This document will go through the steps for authenticating the Nokia NSP Network Infrastructure Management adapter with OAuth Authentication. Properly configuring the properties for an adapter in Itential Platform is critical for getting the adapter online. You can read more about adapter authentication <a href="https://docs.itential.com/opensource/docs/authentication" target="_blank">HERE</a>. 
 
 #### OAuth Two Step Token Authentication
 The Nokia NSP Network Infrastructure Management adapter requires OAuth Two Step Token Authentication. If you change authentication methods, you should change this section accordingly and merge it back into the adapter repository.
@@ -20,7 +20,7 @@ Nokia NSP Network Infrastructure Management requires Basic Authentication on the
 
 STEPS  
 1. Ensure you have access to a Nokia NSP Network Infrastructure Management server and that it is running
-2. Follow the steps in the README.md to import the adapter into IAP if you have not already done so
+2. Follow the steps in the README.md to import the adapter into Itential Platform if you have not already done so
 3. Use the properties below for the ```properties.authentication``` field
 ```json
 "authentication": {
@@ -39,8 +39,8 @@ STEPS
 
 #### Troubleshooting
 - Make sure you copied over the correct username and password.
-- Turn on debug level logs for the adapter in IAP Admin Essentials.
-- Turn on auth_logging for the adapter in IAP Admin Essentials (adapter properties).
+- Turn on debug level logs for the adapter in Itential Platform Admin Essentials.
+- Turn on auth_logging for the adapter in Itential Platform Admin Essentials (adapter properties).
 - Investigate the logs - in particular:
   - The FULL REQUEST log to make sure the proper headers are being sent with the request.
   - The FULL BODY log to make sure the payload is accurate.
@@ -50,7 +50,7 @@ STEPS
 
 ### Sample Properties
 
-Sample Properties can be used to help you configure the adapter in the Itential Automation Platform. You will need to update connectivity information such as the host, port, protocol and credentials.
+Sample Properties can be used to help you configure the adapter in the Itential Platform. You will need to update connectivity information such as the host, port, protocol and credentials.
 
 ```json
   "properties": {
@@ -147,18 +147,22 @@ Sample Properties can be used to help you configure the adapter in the Itential 
       "enabled": false,
       "accept_invalid_cert": false,
       "ca_file": "",
+      "ca_file_content": "",
       "key_file": "",
       "cert_file": "",
       "secure_protocol": "",
       "ciphers": ""
     },
     "mongo": {
+      "url": "",
       "host": "",
       "port": 0,
       "database": "",
+      "dbAuth": false,
       "username": "",
       "password": "",
       "replSet": "",
+      "addSrv": false,
       "db_ssl": {
         "enabled": false,
         "accept_invalid_cert": false,

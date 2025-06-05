@@ -10,7 +10,7 @@ Product Page: https://www.nokia.com/networks/ip-networks/network-services-platfo
 We classify Nokia NSP Network Infrastructure Management into the SD-WAN/SASE domain as Nokia NSP Network Infrastructure Management provides a Software Defined Wide Area Network (SD-WAN) solution. 
 
 ## Why Integrate
-The Nokia NSP Network Infrastructure Management adapter from Itential is used to integrate the Itential Automation Platform (IAP) with Nokia's NSP Network Infrastructure Management API's to aid in retrieval of various resources from Nokia NSP.
+The Nokia NSP Network Infrastructure Management adapter from Itential is used to integrate the Itential Platform with Nokia's NSP Network Infrastructure Management API's to aid in retrieval of various resources from Nokia NSP.
 
 With this adapter you have the ability to perform operations with Nokia NSP Network Infrastructure Management on items such as:
 
