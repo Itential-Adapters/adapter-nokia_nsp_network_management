@@ -1,6 +1,6 @@
 {
   "name": "@itentialopensource/adapter-nokia_nsp_network_management",
-  "version": "0.2.6",
+  "version": "0.3.0",
   "description": "This adapter integrates with system described as: NSP Network Infrastructure Management",
   "main": "adapter.js",
   "systemName": "nokia_nsp_network_management",
