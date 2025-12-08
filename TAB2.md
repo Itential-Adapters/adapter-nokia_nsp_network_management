@@ -79,6 +79,9 @@ Sample Properties can be used to help you configure the adapter in the Itential 
       "client_id": "",
       "client_secret": "",
       "grant_type": "client_credentials",
+      "auth_request_datatype": "",
+      "auth_response_datatype": "",
+      "token_response_placement": "",
       "sensitive": [],
       "multiStepAuthCalls": [
         {
