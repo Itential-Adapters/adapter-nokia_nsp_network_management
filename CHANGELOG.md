@@ -1,4 +1,12 @@
 
+## 0.6.3 [03-04-2026]
+
+* Changes made at 2026.03.04_08:52AM
+
+See merge request itentialopensource/adapters/adapter-nokia_nsp_network_management!33
+
+---
+
 ## 0.6.2 [02-23-2026]
 
 * Changes made at 2026.02.22_15:36PM
